@@ -1,5 +1,5 @@
 //
-//  pmgDetailViewController.h
+//  pmqDetailViewController.h
 //  Matematika
 //
 //  Created by Jan Damek on 22.05.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface pmgDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface pmqDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 

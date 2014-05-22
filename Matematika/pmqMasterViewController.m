@@ -1,20 +1,20 @@
 //
-//  pmgMasterViewController.m
+//  pmqMasterViewController.m
 //  Matematika
 //
 //  Created by Jan Damek on 22.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
-#import "pmgMasterViewController.h"
+#import "pmqMasterViewController.h"
 
-#import "pmgDetailViewController.h"
+#import "pmqDetailViewController.h"
 
-@interface pmgMasterViewController ()
+@interface pmqMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation pmgMasterViewController
+@implementation pmqMasterViewController
 
 - (void)awakeFromNib
 {
@@ -33,7 +33,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (pmgDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (pmqDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)didReceiveMemoryWarning

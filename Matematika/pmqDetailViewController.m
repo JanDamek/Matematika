@@ -1,19 +1,20 @@
 //
-//  pmgDetailViewController.m
+//  pmqDetailViewController.m
 //  Matematika
 //
 //  Created by Jan Damek on 22.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
-#import "pmgDetailViewController.h"
+#import "pmqDetailViewController.h"
 
-@interface pmgDetailViewController ()
+@interface pmqDetailViewController ()
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
-@implementation pmgDetailViewController
+@implementation pmqDetailViewController
 
 #pragma mark - Managing the detail item
 

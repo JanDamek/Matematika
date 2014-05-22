@@ -1,5 +1,5 @@
 //
-//  pmgAppDelegate.h
+//  pmqAppDelegate.h
 //  Matematika
 //
 //  Created by Jan Damek on 22.05.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface pmgAppDelegate : UIResponder <UIApplicationDelegate>
+@interface pmqAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

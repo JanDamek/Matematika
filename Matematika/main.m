@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "pmgAppDelegate.h"
+#import "pmqAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([pmgAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([pmqAppDelegate class]));
     }
 }

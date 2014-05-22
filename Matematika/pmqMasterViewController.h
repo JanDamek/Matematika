@@ -1,5 +1,5 @@
 //
-//  pmgMasterViewController.h
+//  pmqMasterViewController.h
 //  Matematika
 //
 //  Created by Jan Damek on 22.05.14.
@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class pmgDetailViewController;
+@class pmqDetailViewController;
 
 #import <CoreData/CoreData.h>
 
-@interface pmgMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface pmqMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) pmgDetailViewController *detailViewController;
+@property (strong, nonatomic) pmqDetailViewController *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
