@@ -18,7 +18,7 @@
 
 @interface pmqData : NSObject
 
--(void)saveContext:(NSManagedObjectContext*)context;
+-(void)testParse;
 
 #pragma mark - Lesson definition
 

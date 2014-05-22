@@ -8,10 +8,12 @@
 
 #import "pmqData.h"
 #import "pmqAppDelegate.h"
+#import "pmqParseXMLToData.h"
 
 @interface pmqData()
 
 @property (strong, nonatomic, getter = getManagedObjectContext) NSManagedObjectContext *managedObjectContext;
+-(void)saveContext:(NSManagedObjectContext*)context;
 
 @end
 
@@ -36,6 +38,12 @@ static NSString *testsCache = @"testsCache";
 static NSString *questionsCache = @"questionsCache";
 
 #pragma mark - global definition
+
+-(void)testParse{
+    if ([self.lessons.fetchedObjects count]<=5){
+        [[[pmqParseXMLToData alloc] init] doParse];
+    }
+}
 
 -(NSManagedObjectContext *)getManagedObjectContext{
     if (!_managedObjectContext){
@@ -187,7 +195,7 @@ static NSString *questionsCache = @"questionsCache";
 #pragma mark - Pages definition
 
 -(NSFetchedResultsController *)getPages{
-    if (!_answers){
+    if (!_pages){
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Pages" inManagedObjectContext:self.managedObjectContext];
@@ -243,7 +251,7 @@ static NSString *questionsCache = @"questionsCache";
 #pragma mark - Results definition
 
 -(NSFetchedResultsController *)getResults{
-    if (!_answers){
+    if (!_results){
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Results" inManagedObjectContext:self.managedObjectContext];
@@ -299,7 +307,7 @@ static NSString *questionsCache = @"questionsCache";
 #pragma mark - Intros definition
 
 -(NSFetchedResultsController *)getIntros{
-    if (!_answers){
+    if (!_intros){
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Intros" inManagedObjectContext:self.managedObjectContext];
@@ -316,7 +324,7 @@ static NSString *questionsCache = @"questionsCache";
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:answersCache];
+        NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:introsCache];
         //aFetchedResultsController.delegate = self;
         _intros = aFetchedResultsController;
         
@@ -355,7 +363,7 @@ static NSString *questionsCache = @"questionsCache";
 #pragma mark - Tests definition
 
 -(NSFetchedResultsController *)getTest{
-    if (!_answers){
+    if (!_tests){
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tests" inManagedObjectContext:self.managedObjectContext];
@@ -411,7 +419,7 @@ static NSString *questionsCache = @"questionsCache";
 #pragma mark - Questions definition
 
 -(NSFetchedResultsController *)getQuestions{
-    if (!_answers){
+    if (!_questions){
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Questions" inManagedObjectContext:self.managedObjectContext];

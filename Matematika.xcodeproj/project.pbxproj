@@ -36,6 +36,7 @@
 		F5276486192E260B001BEC6B /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276485192E260B001BEC6B /* Pages.m */; };
 		F5276489192E260B001BEC6B /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276488192E260B001BEC6B /* Questions.m */; };
 		F527648C192E260B001BEC6B /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = F527648B192E260B001BEC6B /* Answers.m */; };
+		F527648F192E290D001BEC6B /* pmqParseXMLToData.m in Sources */ = {isa = PBXBuildFile; fileRef = F527648E192E290D001BEC6B /* pmqParseXMLToData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		F5276488192E260B001BEC6B /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
 		F527648A192E260B001BEC6B /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = Matematika/DataModel/Answers.h; sourceTree = "<group>"; };
 		F527648B192E260B001BEC6B /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answers.m; path = Matematika/DataModel/Answers.m; sourceTree = "<group>"; };
+		F527648D192E290D001BEC6B /* pmqParseXMLToData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pmqParseXMLToData.h; path = Matematika/pmqParseXMLToData.h; sourceTree = "<group>"; };
+		F527648E192E290D001BEC6B /* pmqParseXMLToData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pmqParseXMLToData.m; path = Matematika/pmqParseXMLToData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				F5276479192E260A001BEC6B /* Results.m */,
 				F5276460192E1AA2001BEC6B /* pmqData.h */,
 				F5276461192E1AA2001BEC6B /* pmqData.m */,
+				F527648D192E290D001BEC6B /* pmqParseXMLToData.h */,
+				F527648E192E290D001BEC6B /* pmqParseXMLToData.m */,
 			);
 			name = DataModel;
 			path = ..;
@@ -359,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F527640C192E0E98001BEC6B /* main.m in Sources */,
+				F527648F192E290D001BEC6B /* pmqParseXMLToData.m in Sources */,
 				F5276483192E260B001BEC6B /* Tests.m in Sources */,
 				F5276480192E260B001BEC6B /* Intros.m in Sources */,
 				F5276462192E1AA2001BEC6B /* pmqData.m in Sources */,
