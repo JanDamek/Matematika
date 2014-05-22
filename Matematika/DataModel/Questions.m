@@ -7,12 +7,15 @@
 //
 
 #import "Questions.h"
+#import "Answers.h"
+#import "Results.h"
+#import "Tests.h"
 
 
 @implementation Questions
 
 @dynamic content;
-@dynamic welcome_sound;
+@dynamic order;
 @dynamic relationship_answer;
 @dynamic relationship_result;
 @dynamic relationship_test;

@@ -13,8 +13,9 @@
 
 @interface Answers : NSManagedObject
 
-@property (nonatomic) int16_t time;
+@property (nonatomic, retain) NSNumber * time;
 @property (nonatomic, retain) NSString * answer;
+@property (nonatomic, retain) NSNumber * order;
 @property (nonatomic, retain) Questions *relationship_question;
 
 @end

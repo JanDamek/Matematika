@@ -9,11 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Lessons, Pages;
 
 @interface Intros : NSManagedObject
 
-@property (nonatomic) int16_t order;
-@property (nonatomic, retain) NSManagedObject *relationship_lesson;
-@property (nonatomic, retain) NSManagedObject *relationship_pages;
+@property (nonatomic, retain) NSNumber * order;
+@property (nonatomic, retain) Lessons *relationship_lesson;
+@property (nonatomic, retain) NSSet *relationship_pages;
+@end
+
+@interface Intros (CoreDataGeneratedAccessors)
+
+- (void)addRelationship_pagesObject:(Pages *)value;
+- (void)removeRelationship_pagesObject:(Pages *)value;
+- (void)addRelationship_pages:(NSSet *)values;
+- (void)removeRelationship_pages:(NSSet *)values;
 
 @end

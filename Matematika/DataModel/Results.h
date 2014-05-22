@@ -13,8 +13,8 @@
 
 @interface Results : NSManagedObject
 
-@property (nonatomic) NSTimeInterval date;
-@property (nonatomic) int16_t score;
+@property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) Tests *relationship_test;
 @property (nonatomic, retain) NSSet *relationship_questions;
 @end

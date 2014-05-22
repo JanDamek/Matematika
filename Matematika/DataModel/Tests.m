@@ -7,12 +7,16 @@
 //
 
 #import "Tests.h"
+#import "Lessons.h"
 #import "Questions.h"
+#import "Results.h"
 
 
 @implementation Tests
 
 @dynamic time_limit;
+@dynamic order;
+@dynamic welcome_sound;
 @dynamic relationship_lesson;
 @dynamic relationship_results;
 @dynamic relationship_question;

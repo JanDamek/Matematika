@@ -7,6 +7,8 @@
 //
 
 #import "Intros.h"
+#import "Lessons.h"
+#import "Pages.h"
 
 
 @implementation Intros

@@ -14,6 +14,7 @@
 
 @dynamic time;
 @dynamic answer;
+@dynamic order;
 @dynamic relationship_question;
 
 @end

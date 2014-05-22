@@ -13,9 +13,9 @@
 
 @interface Pages : NSManagedObject
 
-@property (nonatomic) int16_t fixed;
+@property (nonatomic, retain) NSNumber * fixed;
 @property (nonatomic, retain) NSString * content;
-@property (nonatomic) int16_t order;
+@property (nonatomic, retain) NSNumber * order;
 @property (nonatomic, retain) Intros *relationship_intro;
 
 @end

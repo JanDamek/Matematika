@@ -8,7 +8,7 @@
 
 #import "pmqAppDelegate.h"
 
-#import "pmgMasterViewController.h"
+#import "pmqMasterViewController.h"
 
 @implementation pmqAppDelegate
 
@@ -25,11 +25,11 @@
         splitViewController.delegate = (id)navigationController.topViewController;
         
         UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
-        pmgMasterViewController *controller = (pmgMasterViewController *)masterNavigationController.topViewController;
+        pmqMasterViewController *controller = (pmqMasterViewController *)masterNavigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     } else {
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        pmgMasterViewController *controller = (pmgMasterViewController *)navigationController.topViewController;
+        pmqMasterViewController *controller = (pmqMasterViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
     return YES;
