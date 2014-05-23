@@ -1,22 +1,21 @@
 //
-//  Results.m
+//  LastResults.m
 //  Matematika
 //
 //  Created by Jan Damek on 23.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
+#import "LastResults.h"
 #import "Results.h"
-#import "Questions.h"
 #import "Tests.h"
 
 
-@implementation Results
+@implementation LastResults
 
-@dynamic date;
-@dynamic score;
-@dynamic relationship_questions;
+@dynamic start_date;
+@dynamic stop_date;
 @dynamic relationship_test;
-@dynamic relationship_last;
+@dynamic relationship_result;
 
 @end

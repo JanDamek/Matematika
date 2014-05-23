@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface pmqDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface pmqDetailLesonsViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UINavigationItem *label;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
-#import "pmqMasterViewController.h"
+#import "pmqLessonsViewController.h"
+#import "pmqDetailLesonsViewController.h"
+#import "Lessons.h"
 
-#import "pmqDetailViewController.h"
-
-@interface pmqMasterViewController ()
+@interface pmqLessonsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation pmqMasterViewController
+@implementation pmqLessonsViewController
 
 - (void)awakeFromNib
 {
@@ -29,7 +29,11 @@
 {
     [super viewDidLoad];
 
-    self.detailViewController = (pmqDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (pmqDetailLesonsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    [self doSelectRow:indexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,8 +64,7 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,16 +85,20 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // The table view should not be re-orderable.
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)doSelectRow:(NSIndexPath*)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         self.detailViewController.detailItem = object;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self doSelectRow:indexPath];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -204,8 +211,11 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"name"] description];
+    Lessons *object = (Lessons*)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = object.name;
+    if ([object.demo intValue]==1){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 }
 
 @end

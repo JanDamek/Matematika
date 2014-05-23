@@ -7,7 +7,7 @@
 //
 
 #import "pmqAppDelegate.h"
-#import "pmqMasterViewController.h"
+#import "pmqLessonsViewController.h"
 
 @implementation pmqAppDelegate
 
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     _data = [[pmqData alloc] init];
-    [_data testParse];
+    [_data testParseXMLGameData];
 
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -29,11 +29,11 @@
         splitViewController.delegate = (id)navigationController.topViewController;
         
         UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
-        pmqMasterViewController *controller = (pmqMasterViewController *)masterNavigationController.topViewController;
+        pmqLessonsViewController *controller = (pmqLessonsViewController *)masterNavigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     } else {
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        pmqMasterViewController *controller = (pmqMasterViewController *)navigationController.topViewController;
+        pmqLessonsViewController *controller = (pmqLessonsViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
     
@@ -121,7 +121,9 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Matematika.sqlite"];
-    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+
+    //remove database
+//    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

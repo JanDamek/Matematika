@@ -18,7 +18,7 @@
 
 @interface pmqData : NSObject
 
--(void)testParse;
+-(void)testParseXMLGameData;
 
 #pragma mark - Lesson definition
 

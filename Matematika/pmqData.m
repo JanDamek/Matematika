@@ -39,7 +39,7 @@ static NSString *questionsCache = @"questionsCache";
 
 #pragma mark - global definition
 
--(void)testParse{
+-(void)testParseXMLGameData{
     if ([self.lessons.fetchedObjects count]<=5){
         [[[pmqParseXMLToData alloc] init] doParse];
     }

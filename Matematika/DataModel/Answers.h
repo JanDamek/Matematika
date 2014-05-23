@@ -2,7 +2,7 @@
 //  Answers.h
 //  Matematika
 //
-//  Created by Jan Damek on 22.05.14.
+//  Created by Jan Damek on 23.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -13,9 +13,10 @@
 
 @interface Answers : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * time;
 @property (nonatomic, retain) NSString * answer;
 @property (nonatomic, retain) NSNumber * order;
+@property (nonatomic, retain) NSNumber * time;
+@property (nonatomic, retain) NSNumber * correct;
 @property (nonatomic, retain) Questions *relationship_question;
 
 @end

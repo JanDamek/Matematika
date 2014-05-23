@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -19,53 +19,21 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Pmq Master View Controller - Master-->
+        <!--Pmq Lessons View Controller - Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
-                <tableViewController title="Master" id="pGg-6v-bdr" customClass="pmqMasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pz-XF-uhl">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="jUr-3t-vfg"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
-                            <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
-                </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
+                <tableViewController title="Master" id="pGg-6v-bdr" customClass="pmqLessonsViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Lekce" id="tQt-TN-PWz"/>
+                </tableViewController>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--Pmq Detail View Controller - Detail-->
+        <!--Pmq Detail Lesons View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="pmqDetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="pmqDetailLesonsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
@@ -75,28 +43,193 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-5M-9Gs">
-                                <rect key="frame" x="20" y="276" width="280" height="17"/>
+                                <rect key="frame" x="20" y="93" width="280" height="17"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzf-Tb-R2j">
+                                <rect key="frame" x="20" y="518" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vysledky testu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4pl-ET-FMS" kind="push" identifier="vt_detail" id="syv-7k-7PO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-TH-cGG">
+                                <rect key="frame" x="174" y="518" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Procvicovani chyb">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Hhq-Fw-ZHh" kind="push" identifier="pc_detail" id="OcV-ey-Nn0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-n9-2SL">
+                                <rect key="frame" x="128" y="163" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jak na to">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIh-db-aCm" kind="push" identifier="jnt_detail" id="zCJ-Cg-c0n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-2A-OxY">
+                                <rect key="frame" x="116" y="238" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Procvicovani">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="23C-Gf-chc" kind="push" identifier="p_detail" id="LKq-rK-Kar"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhO-F7-AcP">
+                                <rect key="frame" x="104" y="330" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Zkouseni na cas">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Fqs-K3-adf" kind="push" identifier="zns_detail" id="vNl-Aw-24z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pLZ-n9-2SL" firstAttribute="centerX" secondItem="Y92-2A-OxY" secondAttribute="centerX" id="0Dh-9O-0y6"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="62x-JV-TTJ"/>
-                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" id="JzS-HC-Rnl"/>
+                            <constraint firstItem="pLZ-n9-2SL" firstAttribute="centerX" secondItem="vhO-F7-AcP" secondAttribute="centerX" id="85d-88-aWb"/>
+                            <constraint firstItem="jFB-TH-cGG" firstAttribute="leading" secondItem="gzf-Tb-R2j" secondAttribute="trailing" constant="54" id="Dqi-Me-JgD"/>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" constant="-182.5" id="JzS-HC-Rnl"/>
+                            <constraint firstItem="pLZ-n9-2SL" firstAttribute="top" secondItem="Lei-5M-9Gs" secondAttribute="bottom" constant="53" id="Mu6-yU-MbC"/>
+                            <constraint firstAttribute="bottom" secondItem="jFB-TH-cGG" secondAttribute="bottom" constant="20" id="NoA-8c-Spo"/>
+                            <constraint firstItem="Y92-2A-OxY" firstAttribute="top" secondItem="pLZ-n9-2SL" secondAttribute="bottom" constant="45" id="Sl2-SQ-PtL"/>
+                            <constraint firstAttribute="trailing" secondItem="jFB-TH-cGG" secondAttribute="trailing" constant="20" id="Syz-CH-gsF"/>
+                            <constraint firstItem="gzf-Tb-R2j" firstAttribute="baseline" secondItem="jFB-TH-cGG" secondAttribute="baseline" id="YpU-J6-Pw9"/>
+                            <constraint firstItem="gzf-Tb-R2j" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="Yww-5H-xcd"/>
+                            <constraint firstItem="gzf-Tb-R2j" firstAttribute="leading" secondItem="Lei-5M-9Gs" secondAttribute="leading" id="h3D-rU-lhw"/>
+                            <constraint firstItem="pLZ-n9-2SL" firstAttribute="centerX" secondItem="Lei-5M-9Gs" secondAttribute="centerX" id="ohW-RP-0ca"/>
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gzf-Tb-R2j" secondAttribute="bottom" constant="20" id="qq7-Va-rJi"/>
+                            <constraint firstItem="vhO-F7-AcP" firstAttribute="top" secondItem="Y92-2A-OxY" secondAttribute="bottom" constant="62" id="vIK-g3-Uno"/>
+                            <constraint firstAttribute="bottom" secondItem="gzf-Tb-R2j" secondAttribute="bottom" constant="20" symbolic="YES" id="vK7-IT-YFX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
+                        <outlet property="jak_na_to" destination="pLZ-n9-2SL" id="K5D-Uq-l1Z"/>
+                        <outlet property="label" destination="cra-N8-TIN" id="LOS-sr-rrf"/>
+                        <outlet property="procvicovani" destination="Y92-2A-OxY" id="8wz-4b-hpC"/>
+                        <outlet property="procvicovani_chyb" destination="jFB-TH-cGG" id="igr-vE-Vk6"/>
+                        <outlet property="vysledky_testu" destination="gzf-Tb-R2j" id="7Vg-YZ-RvY"/>
+                        <outlet property="zkouseni_na_cas" destination="vhO-F7-AcP" id="6Rt-yJ-8xj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
+        </scene>
+        <!--View Controller - Vysledky testu-->
+        <scene sceneID="bRh-eg-B4S">
+            <objects>
+                <viewController id="4pl-ET-FMS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bzF-AS-JqL"/>
+                        <viewControllerLayoutGuide type="bottom" id="GHo-Hk-ros"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J0B-lv-RRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vysledky testu" id="9sS-xc-Pfn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgP-t5-ESR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="901"/>
+        </scene>
+        <!--View Controller - Procvicovani chyb-->
+        <scene sceneID="Uiy-XM-dOS">
+            <objects>
+                <viewController id="Hhq-Fw-ZHh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6G-fa-h1r"/>
+                        <viewControllerLayoutGuide type="bottom" id="EmL-Sd-LRK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QKc-W1-VOB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Procvicovani chyb" id="UOf-T9-4lO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QB6-cr-R7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="901"/>
+        </scene>
+        <!--View Controller - Zkouseni na cas-->
+        <scene sceneID="Rgi-ci-wI9">
+            <objects>
+                <viewController id="Fqs-K3-adf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEt-lU-v36"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYu-kl-Zyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vjw-5x-MT4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zkouseni na cas" id="N1c-Ro-GK7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFC-sC-Eqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="-679"/>
+        </scene>
+        <!--View Controller - Procvicovani-->
+        <scene sceneID="IKT-ZL-3w0">
+            <objects>
+                <viewController id="23C-Gf-chc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BTh-rv-hkV"/>
+                        <viewControllerLayoutGuide type="bottom" id="pOb-97-n9T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KoF-4Q-8Df">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Procvicovani" id="mUR-Q8-cFd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXs-IG-sgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="64"/>
+        </scene>
+        <!--Pmq Intros View Controller - Jak na to-->
+        <scene sceneID="ZyA-BC-b9s">
+            <objects>
+                <viewController id="cIh-db-aCm" customClass="pmqIntrosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B70-mE-GCa"/>
+                        <viewControllerLayoutGuide type="bottom" id="nvM-xy-Xyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C6r-YS-sRb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Jak na to" id="YnW-ji-FvB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-gD-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="901"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

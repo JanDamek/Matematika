@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class pmqDetailViewController;
+@class pmqDetailLesonsViewController;
 
 #import <CoreData/CoreData.h>
 
-@interface pmqMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface pmqLessonsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) pmqDetailViewController *detailViewController;
+@property (strong, nonatomic) pmqDetailLesonsViewController *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

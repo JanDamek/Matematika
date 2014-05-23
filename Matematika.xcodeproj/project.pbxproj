@@ -17,8 +17,8 @@
 		F5276413192E0E98001BEC6B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5276411192E0E98001BEC6B /* Main_iPhone.storyboard */; };
 		F5276416192E0E98001BEC6B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5276414192E0E98001BEC6B /* Main_iPad.storyboard */; };
 		F5276419192E0E98001BEC6B /* Matematika.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */; };
-		F527641C192E0E98001BEC6B /* pmqMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527641B192E0E98001BEC6B /* pmqMasterViewController.m */; };
-		F527641F192E0E98001BEC6B /* pmqDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527641E192E0E98001BEC6B /* pmqDetailViewController.m */; };
+		F527641C192E0E98001BEC6B /* pmqLessonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527641B192E0E98001BEC6B /* pmqLessonsViewController.m */; };
+		F527641F192E0E98001BEC6B /* pmqDetailLesonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527641E192E0E98001BEC6B /* pmqDetailLesonsViewController.m */; };
 		F5276421192E0E98001BEC6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5276420192E0E98001BEC6B /* Images.xcassets */; };
 		F5276428192E0E98001BEC6B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5276427192E0E98001BEC6B /* XCTest.framework */; };
 		F5276429192E0E98001BEC6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52763FD192E0E98001BEC6B /* Foundation.framework */; };
@@ -37,6 +37,9 @@
 		F5276489192E260B001BEC6B /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276488192E260B001BEC6B /* Questions.m */; };
 		F527648C192E260B001BEC6B /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = F527648B192E260B001BEC6B /* Answers.m */; };
 		F527648F192E290D001BEC6B /* pmqParseXMLToData.m in Sources */ = {isa = PBXBuildFile; fileRef = F527648E192E290D001BEC6B /* pmqParseXMLToData.m */; };
+		F5276492192E992C001BEC6B /* pmqQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276491192E992C001BEC6B /* pmqQuestions.m */; };
+		F538AB87192F3980000DAC6A /* LastResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB86192F3980000DAC6A /* LastResults.m */; };
+		F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +67,10 @@
 		F5276412192E0E98001BEC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		F5276415192E0E98001BEC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		F5276418192E0E98001BEC6B /* Matematika.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Matematika.xcdatamodel; sourceTree = "<group>"; };
-		F527641A192E0E98001BEC6B /* pmqMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pmqMasterViewController.h; sourceTree = "<group>"; };
-		F527641B192E0E98001BEC6B /* pmqMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pmqMasterViewController.m; sourceTree = "<group>"; };
-		F527641D192E0E98001BEC6B /* pmqDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pmqDetailViewController.h; sourceTree = "<group>"; };
-		F527641E192E0E98001BEC6B /* pmqDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pmqDetailViewController.m; sourceTree = "<group>"; };
+		F527641A192E0E98001BEC6B /* pmqLessonsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pmqLessonsViewController.h; sourceTree = "<group>"; };
+		F527641B192E0E98001BEC6B /* pmqLessonsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pmqLessonsViewController.m; sourceTree = "<group>"; };
+		F527641D192E0E98001BEC6B /* pmqDetailLesonsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pmqDetailLesonsViewController.h; sourceTree = "<group>"; };
+		F527641E192E0E98001BEC6B /* pmqDetailLesonsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pmqDetailLesonsViewController.m; sourceTree = "<group>"; };
 		F5276420192E0E98001BEC6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5276426192E0E98001BEC6B /* MatematikaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatematikaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5276427192E0E98001BEC6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -77,8 +80,8 @@
 		F5276442192E0FB1001BEC6B /* game_definition.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = game_definition.xml; sourceTree = "<group>"; };
 		F527645D192E1A21001BEC6B /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		F527645E192E1A21001BEC6B /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
-		F5276460192E1AA2001BEC6B /* pmqData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pmqData.h; path = Matematika/pmqData.h; sourceTree = "<group>"; };
-		F5276461192E1AA2001BEC6B /* pmqData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pmqData.m; path = Matematika/pmqData.m; sourceTree = "<group>"; };
+		F5276460192E1AA2001BEC6B /* pmqData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqData.h; sourceTree = "<group>"; };
+		F5276461192E1AA2001BEC6B /* pmqData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqData.m; sourceTree = "<group>"; };
 		F5276478192E260A001BEC6B /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Matematika/DataModel/Results.h; sourceTree = "<group>"; };
 		F5276479192E260A001BEC6B /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Matematika/DataModel/Results.m; sourceTree = "<group>"; };
 		F527647B192E260B001BEC6B /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
@@ -93,8 +96,14 @@
 		F5276488192E260B001BEC6B /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
 		F527648A192E260B001BEC6B /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = Matematika/DataModel/Answers.h; sourceTree = "<group>"; };
 		F527648B192E260B001BEC6B /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answers.m; path = Matematika/DataModel/Answers.m; sourceTree = "<group>"; };
-		F527648D192E290D001BEC6B /* pmqParseXMLToData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pmqParseXMLToData.h; path = Matematika/pmqParseXMLToData.h; sourceTree = "<group>"; };
-		F527648E192E290D001BEC6B /* pmqParseXMLToData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pmqParseXMLToData.m; path = Matematika/pmqParseXMLToData.m; sourceTree = "<group>"; };
+		F527648D192E290D001BEC6B /* pmqParseXMLToData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqParseXMLToData.h; sourceTree = "<group>"; };
+		F527648E192E290D001BEC6B /* pmqParseXMLToData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqParseXMLToData.m; sourceTree = "<group>"; };
+		F5276490192E992C001BEC6B /* pmqQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqQuestions.h; sourceTree = "<group>"; };
+		F5276491192E992C001BEC6B /* pmqQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqQuestions.m; sourceTree = "<group>"; };
+		F538AB85192F3980000DAC6A /* LastResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LastResults.h; path = Matematika/DataModel/LastResults.h; sourceTree = "<group>"; };
+		F538AB86192F3980000DAC6A /* LastResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LastResults.m; path = Matematika/DataModel/LastResults.m; sourceTree = "<group>"; };
+		F538AB88192F5C69000DAC6A /* pmqIntrosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqIntrosViewController.h; sourceTree = "<group>"; };
+		F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqIntrosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +171,7 @@
 				F5276440192E0F6B001BEC6B /* viewControllers */,
 				F527643F192E0F5B001BEC6B /* storyboards */,
 				F527643E192E0F41001BEC6B /* DataModel */,
+				F538AB69192F2320000DAC6A /* work_with_data */,
 				F527640E192E0E98001BEC6B /* pmqAppDelegate.h */,
 				F527640F192E0E98001BEC6B /* pmqAppDelegate.m */,
 				F5276420192E0E98001BEC6B /* Images.xcassets */,
@@ -203,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */,
+				F538AB85192F3980000DAC6A /* LastResults.h */,
+				F538AB86192F3980000DAC6A /* LastResults.m */,
 				F527648A192E260B001BEC6B /* Answers.h */,
 				F527648B192E260B001BEC6B /* Answers.m */,
 				F5276487192E260B001BEC6B /* Questions.h */,
@@ -217,10 +229,6 @@
 				F527647C192E260B001BEC6B /* Lessons.m */,
 				F5276478192E260A001BEC6B /* Results.h */,
 				F5276479192E260A001BEC6B /* Results.m */,
-				F5276460192E1AA2001BEC6B /* pmqData.h */,
-				F5276461192E1AA2001BEC6B /* pmqData.m */,
-				F527648D192E290D001BEC6B /* pmqParseXMLToData.h */,
-				F527648E192E290D001BEC6B /* pmqParseXMLToData.m */,
 			);
 			name = DataModel;
 			path = ..;
@@ -238,10 +246,12 @@
 		F5276440192E0F6B001BEC6B /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F527641A192E0E98001BEC6B /* pmqMasterViewController.h */,
-				F527641B192E0E98001BEC6B /* pmqMasterViewController.m */,
-				F527641D192E0E98001BEC6B /* pmqDetailViewController.h */,
-				F527641E192E0E98001BEC6B /* pmqDetailViewController.m */,
+				F527641A192E0E98001BEC6B /* pmqLessonsViewController.h */,
+				F527641B192E0E98001BEC6B /* pmqLessonsViewController.m */,
+				F527641D192E0E98001BEC6B /* pmqDetailLesonsViewController.h */,
+				F527641E192E0E98001BEC6B /* pmqDetailLesonsViewController.m */,
+				F538AB88192F5C69000DAC6A /* pmqIntrosViewController.h */,
+				F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -261,6 +271,19 @@
 				F527645E192E1A21001BEC6B /* XMLReader.m */,
 			);
 			name = common;
+			sourceTree = "<group>";
+		};
+		F538AB69192F2320000DAC6A /* work_with_data */ = {
+			isa = PBXGroup;
+			children = (
+				F5276460192E1AA2001BEC6B /* pmqData.h */,
+				F5276461192E1AA2001BEC6B /* pmqData.m */,
+				F5276490192E992C001BEC6B /* pmqQuestions.h */,
+				F5276491192E992C001BEC6B /* pmqQuestions.m */,
+				F527648D192E290D001BEC6B /* pmqParseXMLToData.h */,
+				F527648E192E290D001BEC6B /* pmqParseXMLToData.m */,
+			);
+			name = work_with_data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +330,7 @@
 		F52763F2192E0E98001BEC6B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = pmg;
+				CLASSPREFIX = pmq;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "PMQ-Software";
 				TargetAttributes = {
@@ -371,12 +394,15 @@
 				F5276410192E0E98001BEC6B /* pmqAppDelegate.m in Sources */,
 				F5276489192E260B001BEC6B /* Questions.m in Sources */,
 				F527647A192E260A001BEC6B /* Results.m in Sources */,
+				F5276492192E992C001BEC6B /* pmqQuestions.m in Sources */,
 				F527648C192E260B001BEC6B /* Answers.m in Sources */,
 				F5276419192E0E98001BEC6B /* Matematika.xcdatamodeld in Sources */,
 				F527645F192E1A21001BEC6B /* XMLReader.m in Sources */,
+				F538AB87192F3980000DAC6A /* LastResults.m in Sources */,
 				F5276486192E260B001BEC6B /* Pages.m in Sources */,
-				F527641F192E0E98001BEC6B /* pmqDetailViewController.m in Sources */,
-				F527641C192E0E98001BEC6B /* pmqMasterViewController.m in Sources */,
+				F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */,
+				F527641F192E0E98001BEC6B /* pmqDetailLesonsViewController.m in Sources */,
+				F527641C192E0E98001BEC6B /* pmqLessonsViewController.m in Sources */,
 				F527647D192E260B001BEC6B /* Lessons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +618,7 @@
 				F527643A192E0E98001BEC6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F527643B192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "MatematikaTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +627,7 @@
 				F527643D192E0E98001BEC6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
