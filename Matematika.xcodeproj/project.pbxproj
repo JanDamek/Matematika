@@ -40,6 +40,8 @@
 		F5276492192E992C001BEC6B /* pmqQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276491192E992C001BEC6B /* pmqQuestions.m */; };
 		F538AB87192F3980000DAC6A /* LastResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB86192F3980000DAC6A /* LastResults.m */; };
 		F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */; };
+		F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */; };
+		F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		F538AB86192F3980000DAC6A /* LastResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LastResults.m; path = Matematika/DataModel/LastResults.m; sourceTree = "<group>"; };
 		F538AB88192F5C69000DAC6A /* pmqIntrosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqIntrosViewController.h; sourceTree = "<group>"; };
 		F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqIntrosViewController.m; sourceTree = "<group>"; };
+		F5A70BCB19328B26004CE257 /* pmqExpleinCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCollectionView.h; sourceTree = "<group>"; };
+		F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqExpleinCollectionView.m; sourceTree = "<group>"; };
+		F5A70BCE19328B59004CE257 /* pmqExpleinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCell.h; sourceTree = "<group>"; };
+		F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqExpleinCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +258,10 @@
 				F527641E192E0E98001BEC6B /* pmqDetailLesonsViewController.m */,
 				F538AB88192F5C69000DAC6A /* pmqIntrosViewController.h */,
 				F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */,
+				F5A70BCB19328B26004CE257 /* pmqExpleinCollectionView.h */,
+				F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */,
+				F5A70BCE19328B59004CE257 /* pmqExpleinCell.h */,
+				F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -400,6 +410,8 @@
 				F527645F192E1A21001BEC6B /* XMLReader.m in Sources */,
 				F538AB87192F3980000DAC6A /* LastResults.m in Sources */,
 				F5276486192E260B001BEC6B /* Pages.m in Sources */,
+				F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */,
+				F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */,
 				F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */,
 				F527641F192E0E98001BEC6B /* pmqDetailLesonsViewController.m in Sources */,
 				F527641C192E0E98001BEC6B /* pmqLessonsViewController.m in Sources */,

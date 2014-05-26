@@ -116,11 +116,11 @@
 #pragma mark - segue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"jnt_default"]) {
-        Lessons *l = (Lessons*)self.detailItem;
-        Intros *object = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
+    Lessons *l = (Lessons*)self.detailItem;
+    Intros *object = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
+    if ([[segue identifier] isEqualToString:@"jnt_detail"]) {
         ((pmqIntrosViewController*)[segue destinationViewController]).data = object;
-    }
+    } 
 }
 
 @end

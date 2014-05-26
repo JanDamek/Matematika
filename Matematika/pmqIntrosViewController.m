@@ -7,14 +7,26 @@
 //
 
 #import "pmqIntrosViewController.h"
+#import "pmqExpleinCollectionView.h"
+#import "Pages.h"
 
 @interface pmqIntrosViewController ()
+
+@property (weak, nonatomic) IBOutlet UIWebView *WebView;
+@property (weak, nonatomic) IBOutlet pmqExpleinCollectionView *explainGrid;
+@property (weak, nonatomic) IBOutlet UIButton *btnPrev;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+
+@property (strong, nonatomic) Pages *pages;
+@property int act_page;
 
 @end
 
 @implementation pmqIntrosViewController
 
 @synthesize data = _data;
+@synthesize pages = _pages;
+@synthesize act_page = _act_page;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,10 +43,21 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)setData:(Intros *)data{
+    _data = data;
+    _act_page = 0;
+    
+    [self next:_btnNext];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)drawPage{
+    NSString *s = _pages.content;
 }
 
 /*
@@ -47,5 +70,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)next:(UIButton *)sender {
+    NSEnumerator *n = [_data.relationship_pages objectEnumerator];
+    _pages = [n nextObject];
+    _act_page++;
+    
+    [_btnNext setEnabled:_act_page<=[_data.relationship_pages count]];
+    
+    [self drawPage];
+}
+
+- (IBAction)preview:(id)sender {
+
+}
+
 
 @end
