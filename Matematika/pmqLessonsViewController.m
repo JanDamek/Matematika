@@ -30,9 +30,11 @@
     [super viewDidLoad];
 
     self.detailViewController = (pmqDetailLesonsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[[prefs objectForKey:@"last"] intValue] inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    
     [self doSelectRow:indexPath];
 }
 
@@ -91,6 +93,11 @@
 -(void)doSelectRow:(NSIndexPath*)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
+        [prefs synchronize];
+        
         Lessons *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         if ([object.demo intValue]==0){
             [self performSegueWithIdentifier:@"nakup_popover" sender:self];
@@ -108,6 +115,11 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
+        [prefs synchronize];
+        
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
     }
