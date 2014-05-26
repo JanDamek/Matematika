@@ -2,7 +2,7 @@
 //  Pages.h
 //  Matematika
 //
-//  Created by Jan Damek on 23.05.14.
+//  Created by Jan Damek on 26.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * content;
 @property (nonatomic, retain) NSNumber * fixed;
 @property (nonatomic, retain) NSNumber * order;
+@property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) Intros *relationship_intro;
 
 @end

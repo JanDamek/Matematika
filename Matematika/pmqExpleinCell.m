@@ -10,9 +10,6 @@
 
 @interface pmqExpleinCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView *img;
-@property (weak, nonatomic) IBOutlet UILabel *lab;
-
 @end
 
 @implementation pmqExpleinCell

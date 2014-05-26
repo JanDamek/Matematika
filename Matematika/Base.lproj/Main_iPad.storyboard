@@ -259,6 +259,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-gu-SZ2" customClass="pmqExpleinCollectionView">
                                 <rect key="frame" x="44" y="104" width="614" height="559"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8pf-3E-PxU">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -277,7 +278,7 @@
                                                     <rect key="frame" x="16" y="33" width="68" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LqX-N3-cb3">
@@ -293,6 +294,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="NqH-3d-zu9" id="y2z-n9-s9x"/>
+                                    <outlet property="delegate" destination="NqH-3d-zu9" id="CnY-Hi-B5j"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -309,10 +314,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Jak na to" id="POy-23-H6K"/>
                     <connections>
-                        <outlet property="WebView" destination="JYc-NR-wko" id="l02-m4-rR9"/>
                         <outlet property="btnNext" destination="znS-Sr-3B5" id="kgc-LE-KYS"/>
                         <outlet property="btnPrev" destination="apW-2I-Zwj" id="tLb-2H-SWc"/>
                         <outlet property="explainGrid" destination="Rix-gu-SZ2" id="2Aq-jM-UZo"/>
+                        <outlet property="webView" destination="JYc-NR-wko" id="nFb-sG-F9P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j02-vj-B2v" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -43,6 +43,7 @@
         l.lesson_id = [NSNumber numberWithInt:lesson_id];
         l.demo = [NSNumber numberWithInt:[[i valueForKey:@"demo"] intValue]];
         l.name = [i valueForKey:@"name"];
+        l.name = [l.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
         
         Intros *intros = [self.d newIntros];
         [l addRelationship_introObject:intros];
@@ -52,7 +53,9 @@
             [intros addRelationship_pagesObject:p];
 
             p.fixed = [NSNumber numberWithInt:[[page valueForKey:@"fixed"] intValue]];
+            p.type = [page valueForKey:@"type"];
             p.content = [page valueForKey:@"text"];
+            p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
             [self.d savePages];
         }
         [self.d saveIntros];
@@ -67,6 +70,7 @@
             [test addRelationship_questionObject:q];
             
             q.content = [question valueForKey:@"text"];
+            q.content = [q.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
             [self.d saveQuestions];
         }
         [self.d saveTests];

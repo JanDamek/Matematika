@@ -33,13 +33,14 @@
 		F527647D192E260B001BEC6B /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F527647C192E260B001BEC6B /* Lessons.m */; };
 		F5276480192E260B001BEC6B /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F527647F192E260B001BEC6B /* Intros.m */; };
 		F5276483192E260B001BEC6B /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276482192E260B001BEC6B /* Tests.m */; };
-		F5276486192E260B001BEC6B /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276485192E260B001BEC6B /* Pages.m */; };
 		F5276489192E260B001BEC6B /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276488192E260B001BEC6B /* Questions.m */; };
 		F527648C192E260B001BEC6B /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = F527648B192E260B001BEC6B /* Answers.m */; };
 		F527648F192E290D001BEC6B /* pmqParseXMLToData.m in Sources */ = {isa = PBXBuildFile; fileRef = F527648E192E290D001BEC6B /* pmqParseXMLToData.m */; };
 		F5276492192E992C001BEC6B /* pmqQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276491192E992C001BEC6B /* pmqQuestions.m */; };
 		F538AB87192F3980000DAC6A /* LastResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB86192F3980000DAC6A /* LastResults.m */; };
 		F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */; };
+		F53F581F1933397A00956AEB /* pmqPages.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F581E1933397A00956AEB /* pmqPages.m */; };
+		F53F58221933432200956AEB /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F58211933432200956AEB /* Pages.m */; };
 		F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */; };
 		F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */; };
 /* End PBXBuildFile section */
@@ -92,8 +93,6 @@
 		F527647F192E260B001BEC6B /* Intros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.m; path = Matematika/DataModel/Intros.m; sourceTree = "<group>"; };
 		F5276481192E260B001BEC6B /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests.h; path = Matematika/DataModel/Tests.h; sourceTree = "<group>"; };
 		F5276482192E260B001BEC6B /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tests.m; path = Matematika/DataModel/Tests.m; sourceTree = "<group>"; };
-		F5276484192E260B001BEC6B /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
-		F5276485192E260B001BEC6B /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
 		F5276487192E260B001BEC6B /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
 		F5276488192E260B001BEC6B /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
 		F527648A192E260B001BEC6B /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = Matematika/DataModel/Answers.h; sourceTree = "<group>"; };
@@ -106,6 +105,11 @@
 		F538AB86192F3980000DAC6A /* LastResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LastResults.m; path = Matematika/DataModel/LastResults.m; sourceTree = "<group>"; };
 		F538AB88192F5C69000DAC6A /* pmqIntrosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqIntrosViewController.h; sourceTree = "<group>"; };
 		F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqIntrosViewController.m; sourceTree = "<group>"; };
+		F53F581D1933397A00956AEB /* pmqPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqPages.h; sourceTree = "<group>"; };
+		F53F581E1933397A00956AEB /* pmqPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqPages.m; sourceTree = "<group>"; };
+		F53F58201933432200956AEB /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
+		F53F58211933432200956AEB /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
+		F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Matematika 2.xcdatamodel"; sourceTree = "<group>"; };
 		F5A70BCB19328B26004CE257 /* pmqExpleinCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCollectionView.h; sourceTree = "<group>"; };
 		F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqExpleinCollectionView.m; sourceTree = "<group>"; };
 		F5A70BCE19328B59004CE257 /* pmqExpleinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCell.h; sourceTree = "<group>"; };
@@ -219,14 +223,14 @@
 			isa = PBXGroup;
 			children = (
 				F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */,
+				F53F58201933432200956AEB /* Pages.h */,
+				F53F58211933432200956AEB /* Pages.m */,
 				F538AB85192F3980000DAC6A /* LastResults.h */,
 				F538AB86192F3980000DAC6A /* LastResults.m */,
 				F527648A192E260B001BEC6B /* Answers.h */,
 				F527648B192E260B001BEC6B /* Answers.m */,
 				F5276487192E260B001BEC6B /* Questions.h */,
 				F5276488192E260B001BEC6B /* Questions.m */,
-				F5276484192E260B001BEC6B /* Pages.h */,
-				F5276485192E260B001BEC6B /* Pages.m */,
 				F5276481192E260B001BEC6B /* Tests.h */,
 				F5276482192E260B001BEC6B /* Tests.m */,
 				F527647E192E260B001BEC6B /* Intros.h */,
@@ -292,6 +296,8 @@
 				F5276491192E992C001BEC6B /* pmqQuestions.m */,
 				F527648D192E290D001BEC6B /* pmqParseXMLToData.h */,
 				F527648E192E290D001BEC6B /* pmqParseXMLToData.m */,
+				F53F581D1933397A00956AEB /* pmqPages.h */,
+				F53F581E1933397A00956AEB /* pmqPages.m */,
 			);
 			name = work_with_data;
 			sourceTree = "<group>";
@@ -399,9 +405,11 @@
 				F527640C192E0E98001BEC6B /* main.m in Sources */,
 				F527648F192E290D001BEC6B /* pmqParseXMLToData.m in Sources */,
 				F5276483192E260B001BEC6B /* Tests.m in Sources */,
+				F53F58221933432200956AEB /* Pages.m in Sources */,
 				F5276480192E260B001BEC6B /* Intros.m in Sources */,
 				F5276462192E1AA2001BEC6B /* pmqData.m in Sources */,
 				F5276410192E0E98001BEC6B /* pmqAppDelegate.m in Sources */,
+				F53F581F1933397A00956AEB /* pmqPages.m in Sources */,
 				F5276489192E260B001BEC6B /* Questions.m in Sources */,
 				F527647A192E260A001BEC6B /* Results.m in Sources */,
 				F5276492192E992C001BEC6B /* pmqQuestions.m in Sources */,
@@ -409,7 +417,6 @@
 				F5276419192E0E98001BEC6B /* Matematika.xcdatamodeld in Sources */,
 				F527645F192E1A21001BEC6B /* XMLReader.m in Sources */,
 				F538AB87192F3980000DAC6A /* LastResults.m in Sources */,
-				F5276486192E260B001BEC6B /* Pages.m in Sources */,
 				F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */,
 				F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */,
 				F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */,
@@ -647,9 +654,10 @@
 		F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */,
 				F5276418192E0E98001BEC6B /* Matematika.xcdatamodel */,
 			);
-			currentVersion = F5276418192E0E98001BEC6B /* Matematika.xcdatamodel */;
+			currentVersion = F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */;
 			name = Matematika.xcdatamodeld;
 			path = Matematika/Matematika.xcdatamodeld;
 			sourceTree = "<group>";

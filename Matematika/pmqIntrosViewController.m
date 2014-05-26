@@ -9,16 +9,22 @@
 #import "pmqIntrosViewController.h"
 #import "pmqExpleinCollectionView.h"
 #import "Pages.h"
+#import "pmqPages.h"
+#import "pmqExpleinCell.h"
 
-@interface pmqIntrosViewController ()
+@interface pmqIntrosViewController (){
+    float w;
+    NSEnumerator *n;
+}
 
-@property (weak, nonatomic) IBOutlet UIWebView *WebView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet pmqExpleinCollectionView *explainGrid;
 @property (weak, nonatomic) IBOutlet UIButton *btnPrev;
 @property (weak, nonatomic) IBOutlet UIButton *btnNext;
 
 @property (strong, nonatomic) Pages *pages;
 @property int act_page;
+@property (strong, nonatomic) pmqPages *p;
 
 @end
 
@@ -27,6 +33,9 @@
 @synthesize data = _data;
 @synthesize pages = _pages;
 @synthesize act_page = _act_page;
+@synthesize explainGrid = _explainGrid;
+@synthesize webView = _webView;
+@synthesize p = _p;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,12 +50,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self prepareData];
+}
+
+-(pmqPages *)p{
+    if (!_p){
+        _p = [[pmqPages alloc]init];
+    }
+    return _p;
 }
 
 -(void)setData:(Intros *)data{
     _data = data;
     _act_page = 0;
-    
+    n = [_data.relationship_pages objectEnumerator];
+   
     [self next:_btnNext];
 }
 
@@ -56,8 +74,23 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)drawPage{
-    NSString *s = _pages.content;
+-(void)prepareData{
+    self.p.data = _pages;
+    if ([self.p numOfColumns]==1){
+        [_explainGrid setHidden:YES];
+        [_webView setHidden:NO];
+        [_webView loadHTMLString:_pages.content baseURL:[NSURL URLWithString:@""]];
+    }else{
+        [_webView setHidden:YES];
+        [_explainGrid setHidden:NO];
+    w = _explainGrid.frame.size.width / ([self.p numOfColumns]+1);
+    
+        [_explainGrid reloadData];}
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(w, w);
 }
 
 /*
@@ -72,17 +105,33 @@
 */
 
 - (IBAction)next:(UIButton *)sender {
-    NSEnumerator *n = [_data.relationship_pages objectEnumerator];
     _pages = [n nextObject];
     _act_page++;
     
-    [_btnNext setEnabled:_act_page<=[_data.relationship_pages count]];
+    [_btnNext setEnabled:_act_page<=([_data.relationship_pages count]-1)];
     
-    [self drawPage];
+    [self prepareData];
 }
 
 - (IBAction)preview:(id)sender {
 
+}
+
+#pragma mark - collection delegate
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [self.p numOfItems];
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    pmqExpleinCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ExpleinCell" forIndexPath:indexPath];
+    cell.lab.text = [self.p charAtPos:indexPath.row];
+    
+    return cell;
 }
 
 

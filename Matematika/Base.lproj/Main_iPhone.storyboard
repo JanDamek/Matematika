@@ -270,6 +270,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-HM-tK4" customClass="pmqExpleinCollectionView">
                                 <rect key="frame" x="10" y="71" width="305" height="410"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KdH-3c-Eel">
                                     <size key="itemSize" width="48" height="48"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -304,6 +305,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cIh-db-aCm" id="4Nq-uh-QNA"/>
+                                    <outlet property="delegate" destination="cIh-db-aCm" id="vOM-lX-Agx"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA9-dm-biy">
                                 <rect key="frame" x="10" y="518" width="46" height="30"/>
@@ -330,10 +335,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Jak na to" id="YnW-ji-FvB"/>
                     <connections>
-                        <outlet property="WebView" destination="9kS-3e-8Lm" id="iK0-eL-xwZ"/>
                         <outlet property="btnNext" destination="aAk-bw-Lc1" id="aJY-iS-qWP"/>
                         <outlet property="btnPrev" destination="xA9-dm-biy" id="fKM-L2-A87"/>
                         <outlet property="explainGrid" destination="pJW-HM-tK4" id="vUm-CW-lUy"/>
+                        <outlet property="webView" destination="9kS-3e-8Lm" id="vcJ-Di-Gkq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-gD-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
