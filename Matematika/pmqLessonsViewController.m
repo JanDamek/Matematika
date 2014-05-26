@@ -91,8 +91,11 @@
 -(void)doSelectRow:(NSIndexPath*)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        self.detailViewController.detailItem = object;
+        Lessons *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        if ([object.demo intValue]==0){
+            [self performSegueWithIdentifier:@"nakup_popover" sender:self];
+        } else
+            self.detailViewController.detailItem = object;
     }
 }
 

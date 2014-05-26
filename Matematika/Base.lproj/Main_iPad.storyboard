@@ -377,7 +377,7 @@
                     <navigationItem key="navigationItem" title="Lekce" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" title="Nákup" id="Fxm-Bg-5PG">
                             <connections>
-                                <segue destination="tz7-XL-Aw8" kind="popover" popoverAnchorBarButtonItem="Fxm-Bg-5PG" id="qzv-81-eUu">
+                                <segue destination="tz7-XL-Aw8" kind="popover" identifier="nakup_popover" popoverAnchorBarButtonItem="Fxm-Bg-5PG" id="qzv-81-eUu">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>

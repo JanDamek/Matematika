@@ -46,17 +46,22 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [products count];
+    int i = [products count];
+    if (i==0) i++;
+    return i;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nakupCell" forIndexPath:indexPath];
-    
+    if ([products count]==0) {
+        cell.textLabel.text = NSLocalizedString(@"no in apprchase items", nil);
+        cell.detailTextLabel.text = @"";
+    }else{
     SKProduct *p = (SKProduct*)[products objectAtIndex:indexPath.row];
     
     cell.textLabel.text = p.localizedTitle;
     cell.detailTextLabel.text = p.localizedDescription;
-    
+    }
     return cell;
 }
 
