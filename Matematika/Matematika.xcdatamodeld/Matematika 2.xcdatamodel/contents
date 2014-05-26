@@ -25,6 +25,7 @@
         </attribute>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="purchase" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="relationship_intro" toMany="YES" deletionRule="Nullify" destinationEntity="Intros" inverseName="relationship_lesson" inverseEntity="Intros" syncable="YES"/>
         <relationship name="relationship_test" toMany="YES" deletionRule="Nullify" destinationEntity="Tests" inverseName="relationship_lesson" inverseEntity="Tests" syncable="YES"/>
         <userInfo/>
@@ -63,7 +64,7 @@
         <element name="Answers" positionX="315" positionY="279" width="128" height="120"/>
         <element name="Intros" positionX="270" positionY="225" width="128" height="88"/>
         <element name="LastResults" positionX="288" positionY="288" width="128" height="103"/>
-        <element name="Lessons" positionX="261" positionY="189" width="128" height="133"/>
+        <element name="Lessons" positionX="261" positionY="189" width="128" height="150"/>
         <element name="Pages" positionX="261" positionY="216" width="128" height="120"/>
         <element name="Questions" positionX="306" positionY="243" width="128" height="118"/>
         <element name="Results" positionX="324" positionY="306" width="128" height="120"/>

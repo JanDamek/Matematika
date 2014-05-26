@@ -2,7 +2,7 @@
 //  Lessons.h
 //  Matematika
 //
-//  Created by Jan Damek on 23.05.14.
+//  Created by Jan Damek on 26.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSNumber * lesson_id;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * order;
+@property (nonatomic, retain) NSString * purchase;
 @property (nonatomic, retain) NSSet *relationship_intro;
 @property (nonatomic, retain) NSSet *relationship_test;
 @end

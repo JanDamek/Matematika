@@ -7,10 +7,15 @@
         <!--Navigation Controller-->
         <scene sceneID="cUi-kZ-frf">
             <objects>
-                <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NLO-1e-gaN">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
                     </connections>
@@ -61,12 +66,90 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="qqs-9Z-dxv"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lekce" id="tQt-TN-PWz"/>
+                    <toolbarItems>
+                        <barButtonItem title="Vysledky testu" id="eEA-5S-9RS">
+                            <connections>
+                                <segue destination="4pl-ET-FMS" kind="push" identifier="vt_all" id="f0V-0Z-oe2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="cxb-bh-Kvq"/>
+                        <barButtonItem title="Procvicovani chyb" id="mny-yw-nMG">
+                            <connections>
+                                <segue destination="Hhq-Fw-ZHh" kind="push" identifier="pc_all" id="Rvq-Ta-fMs"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Lekce" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" title="Nakup" id="dDJ-XD-Vc9">
+                            <connections>
+                                <segue destination="xmf-dS-TLo" kind="push" id="Kwk-q3-jzB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
+        </scene>
+        <!--Pmq Purchase - Nakup-->
+        <scene sceneID="nmE-DZ-tlL">
+            <objects>
+                <tableViewController id="xmf-dS-TLo" customClass="pmqPurchase" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ccN-yE-6vj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="DJR-3v-tw2">
+                            <rect key="frame" x="0.0" y="130" width="320" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nakupCell" textLabel="En3-U7-VHk" detailTextLabel="eca-Fl-jY4" style="IBUITableViewCellStyleSubtitle" id="icd-9p-H0x">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="icd-9p-H0x" id="15o-5k-Ogd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="En3-U7-VHk">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eca-Fl-jY4">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xmf-dS-TLo" id="zyK-5f-zTQ"/>
+                            <outlet property="delegate" destination="xmf-dS-TLo" id="fEt-gs-qrn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Nakup" id="vKg-N8-vnp">
+                        <barButtonItem key="rightBarButtonItem" title="Obnova nakupu" id="HqK-3D-Mt4">
+                            <connections>
+                                <action selector="restore" destination="xmf-dS-TLo" id="7VJ-Lq-qsD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ani" destination="DJR-3v-tw2" id="tGB-bf-I0A"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkC-1v-Yba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="-647"/>
         </scene>
         <!--Pmq Detail Lesons View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -87,26 +170,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzf-Tb-R2j">
-                                <rect key="frame" x="20" y="518" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vysledky testu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4pl-ET-FMS" kind="push" identifier="vt_detail" id="syv-7k-7PO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-TH-cGG">
-                                <rect key="frame" x="174" y="518" width="126" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Procvicovani chyb">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Hhq-Fw-ZHh" kind="push" identifier="pc_detail" id="OcV-ey-Nn0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-n9-2SL">
                                 <rect key="frame" x="128" y="163" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,30 +206,33 @@
                             <constraint firstItem="pLZ-n9-2SL" firstAttribute="centerX" secondItem="Y92-2A-OxY" secondAttribute="centerX" id="0Dh-9O-0y6"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="62x-JV-TTJ"/>
                             <constraint firstItem="pLZ-n9-2SL" firstAttribute="centerX" secondItem="vhO-F7-AcP" secondAttribute="centerX" id="85d-88-aWb"/>
-                            <constraint firstItem="jFB-TH-cGG" firstAttribute="leading" secondItem="gzf-Tb-R2j" secondAttribute="trailing" constant="54" id="Dqi-Me-JgD"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" constant="-182.5" id="JzS-HC-Rnl"/>
                             <constraint firstItem="pLZ-n9-2SL" firstAttribute="top" secondItem="Lei-5M-9Gs" secondAttribute="bottom" constant="53" id="Mu6-yU-MbC"/>
-                            <constraint firstAttribute="bottom" secondItem="jFB-TH-cGG" secondAttribute="bottom" constant="20" id="NoA-8c-Spo"/>
                             <constraint firstItem="Y92-2A-OxY" firstAttribute="top" secondItem="pLZ-n9-2SL" secondAttribute="bottom" constant="45" id="Sl2-SQ-PtL"/>
-                            <constraint firstAttribute="trailing" secondItem="jFB-TH-cGG" secondAttribute="trailing" constant="20" id="Syz-CH-gsF"/>
-                            <constraint firstItem="gzf-Tb-R2j" firstAttribute="baseline" secondItem="jFB-TH-cGG" secondAttribute="baseline" id="YpU-J6-Pw9"/>
-                            <constraint firstItem="gzf-Tb-R2j" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="Yww-5H-xcd"/>
-                            <constraint firstItem="gzf-Tb-R2j" firstAttribute="leading" secondItem="Lei-5M-9Gs" secondAttribute="leading" id="h3D-rU-lhw"/>
                             <constraint firstItem="pLZ-n9-2SL" firstAttribute="centerX" secondItem="Lei-5M-9Gs" secondAttribute="centerX" id="ohW-RP-0ca"/>
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gzf-Tb-R2j" secondAttribute="bottom" constant="20" id="qq7-Va-rJi"/>
                             <constraint firstItem="vhO-F7-AcP" firstAttribute="top" secondItem="Y92-2A-OxY" secondAttribute="bottom" constant="62" id="vIK-g3-Uno"/>
-                            <constraint firstAttribute="bottom" secondItem="gzf-Tb-R2j" secondAttribute="bottom" constant="20" symbolic="YES" id="vK7-IT-YFX"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Vysledky testu" id="Th7-ik-OwR">
+                            <connections>
+                                <segue destination="4pl-ET-FMS" kind="push" identifier="vt_detail" id="FOp-Na-1rj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4DW-nu-n3w"/>
+                        <barButtonItem title="Procvicovani chyb" id="OIg-Fi-vOU">
+                            <connections>
+                                <segue destination="Hhq-Fw-ZHh" kind="push" identifier="pc_detail" id="Fm3-hk-1Ak"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
                         <outlet property="jak_na_to" destination="pLZ-n9-2SL" id="K5D-Uq-l1Z"/>
                         <outlet property="label" destination="cra-N8-TIN" id="LOS-sr-rrf"/>
                         <outlet property="procvicovani" destination="Y92-2A-OxY" id="8wz-4b-hpC"/>
-                        <outlet property="procvicovani_chyb" destination="jFB-TH-cGG" id="igr-vE-Vk6"/>
-                        <outlet property="vysledky_testu" destination="gzf-Tb-R2j" id="7Vg-YZ-RvY"/>
                         <outlet property="zkouseni_na_cas" destination="vhO-F7-AcP" id="6Rt-yJ-8xj"/>
                     </connections>
                 </viewController>
@@ -266,6 +332,7 @@
                                 <rect key="frame" x="10" y="71" width="300" height="410"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-HM-tK4" customClass="pmqExpleinCollectionView">
                                 <rect key="frame" x="10" y="71" width="305" height="410"/>
@@ -351,4 +418,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="FOp-Na-1rj"/>
+        <segue reference="Fm3-hk-1Ak"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,10 +7,15 @@
         <!--Navigation Controller-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
-                <navigationController id="RMx-3f-FxP" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="RMx-3f-FxP" sceneMemberID="viewController">
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8jw-nV-twy">
+                        <rect key="frame" x="0.0" y="724" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
                     </connections>
@@ -38,32 +43,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szm-YA-ok3">
-                                <rect key="frame" x="20" y="718" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="117" id="ONc-Pb-1dN"/>
-                                </constraints>
-                                <state key="normal" title="Vysledky testu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bT0-L9-qSJ" kind="push" identifier="vt_detail" id="iBS-Yh-PC6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-rE-708">
-                                <rect key="frame" x="535" y="718" width="148" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="148" id="aMs-mu-OMu"/>
-                                </constraints>
-                                <state key="normal" title="Procvicovani chyb">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="TOP-nW-lnv" kind="push" identifier="pc_detail" id="5ET-rb-buT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W4-iS-tbH">
                                 <rect key="frame" x="280" y="223" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -97,27 +76,39 @@
                                     <segue destination="I4l-hI-wR3" kind="push" identifier="znc_detail" id="8Jq-4X-jn2"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zv-La-BJm">
+                                <rect key="frame" x="1" y="724" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Vysledky testu" id="fl3-ae-OMi">
+                                        <connections>
+                                            <segue destination="bT0-L9-qSJ" kind="push" identifier="vt_detail" id="1IV-vH-090"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="g0y-ly-arP"/>
+                                    <barButtonItem title="Procvicovani chyb" id="mSY-RS-phC">
+                                        <connections>
+                                            <segue destination="TOP-nW-lnv" kind="push" identifier="pc_detail" id="DDP-oo-tdR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="szm-YA-ok3" secondAttribute="bottom" constant="20" id="AK3-ae-tIY"/>
                             <constraint firstItem="l7U-Eg-gI6" firstAttribute="top" secondItem="diG-Pu-NrK" secondAttribute="bottom" constant="79" id="DdO-Va-ilI"/>
                             <constraint firstItem="diG-Pu-NrK" firstAttribute="top" secondItem="5W4-iS-tbH" secondAttribute="bottom" constant="84" id="I4a-Q5-VVQ"/>
-                            <constraint firstAttribute="bottom" secondItem="b7f-rE-708" secondAttribute="bottom" constant="20" id="LlR-Yn-y62"/>
                             <constraint firstItem="l7U-Eg-gI6" firstAttribute="leading" secondItem="diG-Pu-NrK" secondAttribute="leading" id="OyW-ty-ae0"/>
+                            <constraint firstItem="4Zv-La-BJm" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="1" id="PbN-UA-dYo"/>
                             <constraint firstItem="l7U-Eg-gI6" firstAttribute="trailing" secondItem="5W4-iS-tbH" secondAttribute="trailing" id="RuE-w9-07F"/>
                             <constraint firstItem="l7U-Eg-gI6" firstAttribute="trailing" secondItem="diG-Pu-NrK" secondAttribute="trailing" id="SHl-o7-GLf"/>
-                            <constraint firstItem="b7f-rE-708" firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" id="SUx-SU-j17"/>
+                            <constraint firstAttribute="trailing" secondItem="4Zv-La-BJm" secondAttribute="trailing" constant="-1" id="TM7-lq-h77"/>
                             <constraint firstItem="l7U-Eg-gI6" firstAttribute="leading" secondItem="5W4-iS-tbH" secondAttribute="leading" id="WCH-FA-0h6"/>
-                            <constraint firstAttribute="trailing" secondItem="b7f-rE-708" secondAttribute="trailing" constant="20" id="Zwo-T2-4xK"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="30" id="aag-cJ-dcq"/>
-                            <constraint firstItem="szm-YA-ok3" firstAttribute="baseline" secondItem="b7f-rE-708" secondAttribute="baseline" id="dJJ-7P-jgG"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="l7U-Eg-gI6" secondAttribute="bottom" constant="292" id="jqS-7P-har"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="kkh-Hu-UiJ"/>
-                            <constraint firstItem="szm-YA-ok3" firstAttribute="leading" secondItem="0XM-y9-sOw" secondAttribute="leading" id="mhR-EH-PHp"/>
-                            <constraint firstItem="szm-YA-ok3" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" id="pdZ-ab-aUF"/>
                             <constraint firstItem="l7U-Eg-gI6" firstAttribute="centerX" secondItem="0XM-y9-sOw" secondAttribute="centerX" id="qpf-av-D0V"/>
-                            <constraint firstAttribute="bottom" secondItem="szm-YA-ok3" secondAttribute="bottom" constant="20" symbolic="YES" id="wZY-zh-aZW"/>
+                            <constraint firstAttribute="bottom" secondItem="4Zv-La-BJm" secondAttribute="bottom" id="ud1-n4-K8e"/>
                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="yk5-XZ-ZLt"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -129,8 +120,6 @@
                         <outlet property="jak_na_to" destination="5W4-iS-tbH" id="6rn-aU-LR0"/>
                         <outlet property="label" destination="mOI-FS-AaM" id="Zhe-r9-GmP"/>
                         <outlet property="procvicovani" destination="diG-Pu-NrK" id="GzV-ZV-eJc"/>
-                        <outlet property="procvicovani_chyb" destination="b7f-rE-708" id="ox5-tp-4Mq"/>
-                        <outlet property="vysledky_testu" destination="szm-YA-ok3" id="pUB-I0-LvF"/>
                         <outlet property="zkouseni_na_cas" destination="l7U-Eg-gI6" id="S3X-QT-RuT"/>
                     </connections>
                 </viewController>
@@ -240,7 +229,7 @@
                                     <action selector="next:" destination="NqH-3d-zu9" eventType="touchUpInside" id="DB9-PC-O2M"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-NR-wko">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-NR-wko">
                                 <rect key="frame" x="44" y="104" width="614" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -322,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j02-vj-B2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="-686"/>
+            <point key="canvasLocation" x="2737" y="-686"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -380,12 +369,86 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="BjJ-AX-aBV"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lekce" id="Zdf-7t-Un8"/>
+                    <toolbarItems>
+                        <barButtonItem title="Vysledky testu" id="Q8e-F9-d7b"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="y5d-y2-BQd"/>
+                        <barButtonItem title="Procvicovani chyb" id="lBn-eX-UGn"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Lekce" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" title="Nákup" id="Fxm-Bg-5PG">
+                            <connections>
+                                <segue destination="tz7-XL-Aw8" kind="popover" popoverAnchorBarButtonItem="Fxm-Bg-5PG" id="qzv-81-eUu">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="-630"/>
+            <point key="canvasLocation" x="85" y="-630"/>
+        </scene>
+        <!--Pmq Purchase - Nákup-->
+        <scene sceneID="1e7-PB-qLJ">
+            <objects>
+                <tableViewController id="JWp-eW-b1h" customClass="pmqPurchase" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="333-Yj-d2q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="8Km-Rn-3H2">
+                            <rect key="frame" x="0.0" y="130" width="320" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nakupCell" textLabel="TVB-BD-7fe" detailTextLabel="B0c-Hv-AcH" style="IBUITableViewCellStyleSubtitle" id="PBN-sb-423">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PBN-sb-423" id="jkV-7U-Imo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TVB-BD-7fe">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B0c-Hv-AcH">
+                                            <rect key="frame" x="15" y="25" width="32" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JWp-eW-b1h" id="nL4-qo-6fv"/>
+                            <outlet property="delegate" destination="JWp-eW-b1h" id="MDe-eo-cIS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Nákup" id="vsa-DN-eKP">
+                        <barButtonItem key="rightBarButtonItem" title="Obnova nakupu" id="UVq-1g-IHz">
+                            <connections>
+                                <action selector="restore" destination="JWp-eW-b1h" id="6Kg-Su-BAN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                    <connections>
+                        <outlet property="ani" destination="8Km-Rn-3H2" id="dhh-yf-mat"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zal-bt-9Vh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -401,6 +464,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-366" y="248"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r2j-Qv-aYw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tz7-XL-Aw8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Loa-4v-8ES">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JWp-eW-b1h" kind="relationship" relationship="rootViewController" id="rI8-b9-T86"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZs-JI-hv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-496"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

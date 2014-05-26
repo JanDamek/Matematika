@@ -30,7 +30,6 @@
 		F527645F192E1A21001BEC6B /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F527645E192E1A21001BEC6B /* XMLReader.m */; };
 		F5276462192E1AA2001BEC6B /* pmqData.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276461192E1AA2001BEC6B /* pmqData.m */; };
 		F527647A192E260A001BEC6B /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276479192E260A001BEC6B /* Results.m */; };
-		F527647D192E260B001BEC6B /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F527647C192E260B001BEC6B /* Lessons.m */; };
 		F5276480192E260B001BEC6B /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F527647F192E260B001BEC6B /* Intros.m */; };
 		F5276483192E260B001BEC6B /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276482192E260B001BEC6B /* Tests.m */; };
 		F5276489192E260B001BEC6B /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276488192E260B001BEC6B /* Questions.m */; };
@@ -41,6 +40,9 @@
 		F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */; };
 		F53F581F1933397A00956AEB /* pmqPages.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F581E1933397A00956AEB /* pmqPages.m */; };
 		F53F58221933432200956AEB /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F58211933432200956AEB /* Pages.m */; };
+		F53F58271933849000956AEB /* pmqPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F58261933849000956AEB /* pmqPurchase.m */; };
+		F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F582819338BA600956AEB /* StoreKit.framework */; };
+		F53F582C1933916400956AEB /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F582B1933916400956AEB /* Lessons.m */; };
 		F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */; };
 		F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */; };
 /* End PBXBuildFile section */
@@ -87,8 +89,6 @@
 		F5276461192E1AA2001BEC6B /* pmqData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqData.m; sourceTree = "<group>"; };
 		F5276478192E260A001BEC6B /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Matematika/DataModel/Results.h; sourceTree = "<group>"; };
 		F5276479192E260A001BEC6B /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Matematika/DataModel/Results.m; sourceTree = "<group>"; };
-		F527647B192E260B001BEC6B /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
-		F527647C192E260B001BEC6B /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
 		F527647E192E260B001BEC6B /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
 		F527647F192E260B001BEC6B /* Intros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.m; path = Matematika/DataModel/Intros.m; sourceTree = "<group>"; };
 		F5276481192E260B001BEC6B /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests.h; path = Matematika/DataModel/Tests.h; sourceTree = "<group>"; };
@@ -110,6 +110,11 @@
 		F53F58201933432200956AEB /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
 		F53F58211933432200956AEB /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
 		F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Matematika 2.xcdatamodel"; sourceTree = "<group>"; };
+		F53F58251933849000956AEB /* pmqPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqPurchase.h; sourceTree = "<group>"; };
+		F53F58261933849000956AEB /* pmqPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqPurchase.m; sourceTree = "<group>"; };
+		F53F582819338BA600956AEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F53F582A1933916400956AEB /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
+		F53F582B1933916400956AEB /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
 		F5A70BCB19328B26004CE257 /* pmqExpleinCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCollectionView.h; sourceTree = "<group>"; };
 		F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqExpleinCollectionView.m; sourceTree = "<group>"; };
 		F5A70BCE19328B59004CE257 /* pmqExpleinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCell.h; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 			files = (
 				F5276400192E0E98001BEC6B /* CoreGraphics.framework in Frameworks */,
 				F5276404192E0E98001BEC6B /* CoreData.framework in Frameworks */,
+				F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */,
 				F5276402192E0E98001BEC6B /* UIKit.framework in Frameworks */,
 				F52763FE192E0E98001BEC6B /* Foundation.framework in Frameworks */,
 			);
@@ -164,6 +170,7 @@
 		F52763FC192E0E98001BEC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F53F582819338BA600956AEB /* StoreKit.framework */,
 				F52763FD192E0E98001BEC6B /* Foundation.framework */,
 				F52763FF192E0E98001BEC6B /* CoreGraphics.framework */,
 				F5276401192E0E98001BEC6B /* UIKit.framework */,
@@ -176,6 +183,7 @@
 		F5276405192E0E98001BEC6B /* Matematika */ = {
 			isa = PBXGroup;
 			children = (
+				F53F58241933847900956AEB /* inAppPurchase */,
 				F527645C192E1A0D001BEC6B /* common */,
 				F5276441192E0F9E001BEC6B /* definition */,
 				F5276440192E0F6B001BEC6B /* viewControllers */,
@@ -223,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */,
+				F53F582A1933916400956AEB /* Lessons.h */,
+				F53F582B1933916400956AEB /* Lessons.m */,
 				F53F58201933432200956AEB /* Pages.h */,
 				F53F58211933432200956AEB /* Pages.m */,
 				F538AB85192F3980000DAC6A /* LastResults.h */,
@@ -235,8 +245,6 @@
 				F5276482192E260B001BEC6B /* Tests.m */,
 				F527647E192E260B001BEC6B /* Intros.h */,
 				F527647F192E260B001BEC6B /* Intros.m */,
-				F527647B192E260B001BEC6B /* Lessons.h */,
-				F527647C192E260B001BEC6B /* Lessons.m */,
 				F5276478192E260A001BEC6B /* Results.h */,
 				F5276479192E260A001BEC6B /* Results.m */,
 			);
@@ -292,14 +300,23 @@
 			children = (
 				F5276460192E1AA2001BEC6B /* pmqData.h */,
 				F5276461192E1AA2001BEC6B /* pmqData.m */,
-				F5276490192E992C001BEC6B /* pmqQuestions.h */,
-				F5276491192E992C001BEC6B /* pmqQuestions.m */,
 				F527648D192E290D001BEC6B /* pmqParseXMLToData.h */,
 				F527648E192E290D001BEC6B /* pmqParseXMLToData.m */,
+				F5276490192E992C001BEC6B /* pmqQuestions.h */,
+				F5276491192E992C001BEC6B /* pmqQuestions.m */,
 				F53F581D1933397A00956AEB /* pmqPages.h */,
 				F53F581E1933397A00956AEB /* pmqPages.m */,
 			);
 			name = work_with_data;
+			sourceTree = "<group>";
+		};
+		F53F58241933847900956AEB /* inAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				F53F58251933849000956AEB /* pmqPurchase.h */,
+				F53F58261933849000956AEB /* pmqPurchase.m */,
+			);
+			name = inAppPurchase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +367,17 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "PMQ-Software";
 				TargetAttributes = {
+					F52763F9192E0E98001BEC6B = {
+						DevelopmentTeam = GR74KSG8M9;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
+					};
 					F5276425192E0E98001BEC6B = {
 						TestTargetID = F52763F9192E0E98001BEC6B;
 					};
@@ -403,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F527640C192E0E98001BEC6B /* main.m in Sources */,
+				F53F58271933849000956AEB /* pmqPurchase.m in Sources */,
 				F527648F192E290D001BEC6B /* pmqParseXMLToData.m in Sources */,
 				F5276483192E260B001BEC6B /* Tests.m in Sources */,
 				F53F58221933432200956AEB /* Pages.m in Sources */,
@@ -420,9 +449,9 @@
 				F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */,
 				F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */,
 				F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */,
+				F53F582C1933916400956AEB /* Lessons.m in Sources */,
 				F527641F192E0E98001BEC6B /* pmqDetailLesonsViewController.m in Sources */,
 				F527641C192E0E98001BEC6B /* pmqLessonsViewController.m in Sources */,
-				F527647D192E260B001BEC6B /* Lessons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,10 +586,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -570,10 +602,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

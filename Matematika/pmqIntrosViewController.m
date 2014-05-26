@@ -77,6 +77,7 @@
 -(void)prepareData{
     self.p.data = _pages;
     if ([self.p numOfColumns]==1){
+        w = 50;
         [_explainGrid setHidden:YES];
         [_webView setHidden:NO];
         [_webView loadHTMLString:_pages.content baseURL:[NSURL URLWithString:@""]];
