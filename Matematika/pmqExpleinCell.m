@@ -45,7 +45,7 @@
     // set the duration of the animation
     [scaleAnimation setDuration: .5];
     
-    // animate your label layer = rock and roll!
+    // animate your layer = rock and roll!
     [[self layer] addAnimation:scaleAnimation forKey:@"scaleText"];
 }
 

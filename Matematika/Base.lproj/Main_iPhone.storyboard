@@ -354,20 +354,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-iL-ELT">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-iL-ELT">
                                                     <rect key="frame" x="4" y="7" width="40" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-8B-v2w">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-8B-v2w">
                                                     <rect key="frame" x="4" y="4" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bO6-8B-v2w" secondAttribute="bottom" constant="4" id="6xx-Tu-Rv3"/>
+                                            <constraint firstAttribute="trailing" secondItem="8qy-iL-ELT" secondAttribute="trailing" constant="4" id="8V3-cL-QRa"/>
+                                            <constraint firstItem="bO6-8B-v2w" firstAttribute="top" secondItem="6Ja-Ri-h54" secondAttribute="top" constant="4" id="JJ6-tY-DW6"/>
+                                            <constraint firstItem="8qy-iL-ELT" firstAttribute="top" secondItem="6Ja-Ri-h54" secondAttribute="top" constant="7" id="Vh2-Ab-u1X"/>
+                                            <constraint firstItem="8qy-iL-ELT" firstAttribute="centerY" secondItem="bO6-8B-v2w" secondAttribute="centerY" id="X3R-Dc-BeG"/>
+                                            <constraint firstItem="8qy-iL-ELT" firstAttribute="leading" secondItem="6Ja-Ri-h54" secondAttribute="leading" constant="4" id="c8L-ip-yam"/>
+                                            <constraint firstAttribute="trailing" secondItem="bO6-8B-v2w" secondAttribute="trailing" constant="4" id="cnp-PS-pRq"/>
+                                            <constraint firstItem="bO6-8B-v2w" firstAttribute="leading" secondItem="6Ja-Ri-h54" secondAttribute="leading" constant="4" id="sGF-WE-gqa"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="img" destination="bO6-8B-v2w" id="TXV-E3-tWN"/>
                                             <outlet property="lab" destination="8qy-iL-ELT" id="gsc-fM-rYR"/>

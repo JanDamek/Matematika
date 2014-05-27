@@ -270,7 +270,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LqX-N3-cb3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LqX-N3-cb3">
                                                     <rect key="frame" x="5" y="5" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -281,10 +281,14 @@
                                         <constraints>
                                             <constraint firstItem="LqX-N3-cb3" firstAttribute="leading" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="5" id="75B-nh-7WJ"/>
                                             <constraint firstItem="I40-jn-zFy" firstAttribute="centerY" secondItem="AAN-m8-Cze" secondAttribute="centerY" id="7Zq-fh-MrD"/>
+                                            <constraint firstItem="LqX-N3-cb3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AAN-m8-Cze" secondAttribute="top" constant="5" id="8pb-Jg-Voc"/>
+                                            <constraint firstAttribute="bottom" secondItem="LqX-N3-cb3" secondAttribute="bottom" constant="5" id="91b-Ua-Gm5"/>
                                             <constraint firstAttribute="trailing" secondItem="I40-jn-zFy" secondAttribute="trailing" constant="16" id="Jdp-wy-gDY"/>
+                                            <constraint firstAttribute="trailing" secondItem="LqX-N3-cb3" secondAttribute="trailing" constant="5" id="LwP-yU-iV6"/>
                                             <constraint firstItem="LqX-N3-cb3" firstAttribute="top" secondItem="AAN-m8-Cze" secondAttribute="top" constant="5" id="R8Z-3Y-FFQ"/>
                                             <constraint firstItem="I40-jn-zFy" firstAttribute="centerY" secondItem="LqX-N3-cb3" secondAttribute="centerY" id="g6P-V9-idd"/>
                                             <constraint firstItem="I40-jn-zFy" firstAttribute="centerX" secondItem="LqX-N3-cb3" secondAttribute="centerX" id="gUc-it-n3X"/>
+                                            <constraint firstItem="LqX-N3-cb3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="5" id="hk8-ty-2hd"/>
                                             <constraint firstItem="I40-jn-zFy" firstAttribute="leading" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="16" id="mD8-qY-LbX"/>
                                         </constraints>
                                         <connections>
