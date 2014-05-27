@@ -145,9 +145,8 @@
     }
     
     if (indexPath.row+1 == _p.actualIndex){
-        [cell setBackgroundColor:[UIColor whiteColor]];
-         } else [cell setBackgroundColor:[UIColor grayColor]];
-    
+        [cell highlite];
+    }
     return cell;
 }
 
