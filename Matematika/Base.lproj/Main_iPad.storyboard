@@ -249,34 +249,44 @@
                                 <rect key="frame" x="44" y="104" width="614" height="559"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8pf-3E-PxU">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="8pf-3E-PxU">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExpleinCell" id="AAN-m8-Cze" customClass="pmqExpleinCell">
-                                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                        <rect key="frame" x="5" y="5" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I40-jn-zFy">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I40-jn-zFy">
                                                     <rect key="frame" x="16" y="33" width="68" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LqX-N3-cb3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LqX-N3-cb3">
                                                     <rect key="frame" x="5" y="5" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="LqX-N3-cb3" firstAttribute="leading" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="5" id="75B-nh-7WJ"/>
+                                            <constraint firstItem="I40-jn-zFy" firstAttribute="centerY" secondItem="AAN-m8-Cze" secondAttribute="centerY" id="7Zq-fh-MrD"/>
+                                            <constraint firstAttribute="trailing" secondItem="I40-jn-zFy" secondAttribute="trailing" constant="16" id="Jdp-wy-gDY"/>
+                                            <constraint firstItem="LqX-N3-cb3" firstAttribute="top" secondItem="AAN-m8-Cze" secondAttribute="top" constant="5" id="R8Z-3Y-FFQ"/>
+                                            <constraint firstItem="I40-jn-zFy" firstAttribute="centerY" secondItem="LqX-N3-cb3" secondAttribute="centerY" id="g6P-V9-idd"/>
+                                            <constraint firstItem="I40-jn-zFy" firstAttribute="centerX" secondItem="LqX-N3-cb3" secondAttribute="centerX" id="gUc-it-n3X"/>
+                                            <constraint firstItem="I40-jn-zFy" firstAttribute="leading" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="16" id="mD8-qY-LbX"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="img" destination="LqX-N3-cb3" id="Rn7-BN-7hj"/>
                                             <outlet property="lab" destination="I40-jn-zFy" id="2IZ-b3-Mph"/>

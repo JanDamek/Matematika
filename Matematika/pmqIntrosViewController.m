@@ -85,8 +85,8 @@
     }else{
         [_webView setHidden:YES];
         [_explainGrid setHidden:NO];
-        w = _explainGrid.frame.size.width / ([self.p numOfColumns]+1);
-        h = _explainGrid.frame.size.height / ([self.p numOfRows]+1);
+        w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 20 ) / [self.p numOfColumns];
+        h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 20) / [self.p numOfRows] ;
     
         [_explainGrid reloadData];}
 }
@@ -102,7 +102,7 @@
         _pages = [n nextObject];
         _act_page++;
         
-        [_btnNext setEnabled:_act_page<=([_data.relationship_pages count]-1)];
+        //[_btnNext setEnabled:_act_page<=([_data.relationship_pages count]-1)];
 
         [self prepareData];
     } else {
@@ -143,6 +143,11 @@
         [cell.img setHidden:NO];
         [cell.lab setHidden:YES];
     }
+    
+    if (indexPath.row+1 == _p.actualIndex){
+        [cell setBackgroundColor:[UIColor whiteColor]];
+         } else [cell setBackgroundColor:[UIColor grayColor]];
+    
     return cell;
 }
 

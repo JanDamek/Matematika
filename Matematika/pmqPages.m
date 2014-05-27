@@ -46,9 +46,11 @@
 #pragma mark - methodts for work with data
 
 -(BOOL)next{
+    
     _actualIndex++;
-    _drawToIndex = _numOfItems;
-    if (_actualIndex<_numOfItems){
+    
+    if (_actualIndex<=_numOfColumns){
+        _drawToIndex = _numOfItems;
         return YES;
     } else  return NO;
 }
@@ -60,7 +62,7 @@
         item = [test_pos objectAtIndex:1];
     }
     if ((_drawToIndex ==_numOfItems) |
-        ((_drawToIndex-1)<=_actualIndex)
+        ((_drawToIndex)<=_actualIndex)
         ) {
         if ([item hasSuffix:@"#"]) {
             return [UIImage imageNamed:item];
@@ -87,9 +89,12 @@
         _numOfColumns = -1;
         _charAtPos = [[NSMutableArray alloc]init];
         
-        _rows = [_data.content componentsSeparatedByString:@"\n"];
+        NSString *r = [_data.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+        
+        _rows = [r componentsSeparatedByString:@"\n"];
         for (NSString *s in _rows) {
             NSString *item = [s stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+            item = [item stringByReplacingOccurrencesOfString:@"   " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
@@ -101,6 +106,7 @@
         }
         for (NSString *s in _rows) {
             NSString *item = [s stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+            item = [item stringByReplacingOccurrencesOfString:@"   " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];

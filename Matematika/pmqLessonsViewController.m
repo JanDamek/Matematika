@@ -230,6 +230,8 @@
     cell.textLabel.text = object.name;
     if ([object.demo intValue]==1){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
 }
 
