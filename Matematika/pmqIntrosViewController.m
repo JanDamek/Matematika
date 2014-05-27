@@ -7,18 +7,18 @@
 //
 
 #import "pmqIntrosViewController.h"
-#import "pmqExpleinCollectionView.h"
 #import "Pages.h"
 #import "pmqPages.h"
 #import "pmqExpleinCell.h"
 
 @interface pmqIntrosViewController (){
     float w;
+    float h;
     NSEnumerator *n;
 }
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet pmqExpleinCollectionView *explainGrid;
+@property (weak, nonatomic) IBOutlet UICollectionView *explainGrid;
 @property (weak, nonatomic) IBOutlet UIButton *btnPrev;
 @property (weak, nonatomic) IBOutlet UIButton *btnNext;
 
@@ -78,40 +78,42 @@
     self.p.data = _pages;
     if ([self.p numOfColumns]==1){
         w = 50;
+        h = 50;
         [_explainGrid setHidden:YES];
         [_webView setHidden:NO];
         [_webView loadHTMLString:_pages.content baseURL:[NSURL URLWithString:@""]];
     }else{
         [_webView setHidden:YES];
         [_explainGrid setHidden:NO];
-    w = _explainGrid.frame.size.width / ([self.p numOfColumns]+1);
+        w = _explainGrid.frame.size.width / ([self.p numOfColumns]+1);
+        h = _explainGrid.frame.size.height / ([self.p numOfRows]+1);
     
         [_explainGrid reloadData];}
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(w, w);
+    return CGSizeMake(w, h);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)next:(UIButton *)sender {
-    _pages = [n nextObject];
-    _act_page++;
+    if (!_pages){
+        _pages = [n nextObject];
+        _act_page++;
+        
+        [_btnNext setEnabled:_act_page<=([_data.relationship_pages count]-1)];
+
+        [self prepareData];
+    } else {
+        if (![_p next]){
+            _pages = nil;
+            [self next:sender];
+            
+        }else
+            [_explainGrid reloadData];
+    }
     
-    [_btnNext setEnabled:_act_page<=([_data.relationship_pages count]-1)];
-    
-    [self prepareData];
 }
 
 - (IBAction)preview:(id)sender {
@@ -130,8 +132,17 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     pmqExpleinCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ExpleinCell" forIndexPath:indexPath];
-    cell.lab.text = [self.p charAtPos:indexPath.row];
-    
+    id object = [self.p objectForItemIndex:indexPath.row];
+
+    if ([object isKindOfClass:[NSString class]]){
+        cell.lab.text = (NSString*)object;
+        [cell.img setHidden:YES];
+        [cell.lab setHidden:NO];
+    } else {
+        cell.img.image = (UIImage*)object;
+        [cell.img setHidden:NO];
+        [cell.lab setHidden:YES];
+    }
     return cell;
 }
 

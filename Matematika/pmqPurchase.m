@@ -20,7 +20,7 @@
 
 @synthesize ani;
 
-#define kProductIdentifier @"put your product id (the one that we just made in iTunesConnect) in here"
+#define kProductIdentifier @"jandamek.iradiohd"
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -54,7 +54,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nakupCell" forIndexPath:indexPath];
     if ([products count]==0) {
-        cell.textLabel.text = NSLocalizedString(@"no in apprchase items", nil);
+        cell.textLabel.text = NSLocalizedString(@"no InApp purchase items", nil);
         cell.detailTextLabel.text = @"";
     }else{
     SKProduct *p = (SKProduct*)[products objectAtIndex:indexPath.row];

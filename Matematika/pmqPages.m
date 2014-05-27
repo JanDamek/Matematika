@@ -9,58 +9,112 @@
 #import "pmqPages.h"
 
 @interface pmqPages(){
-    int _numOfColumns;
+    
+    int _drawToIndex;
+    
     NSMutableArray *_charAtPos;
+    NSArray *_rows;
 }
+
 @end
 
 @implementation pmqPages
 
 @synthesize data = _data;
+@synthesize numOfRows = _numOfRows;
+@synthesize numOfColumns = _numOfColumns;
+@synthesize actualIndex = _actualIndex;
+@synthesize numOfItems = _numOfItems;
+
+#pragma mark - property getters
 
 -(void)setData:(Pages *)data{
     _data = data;
     [self prepareData];
 }
 
+-(int)numOfItems{
+    return _numOfItems;
+}
+-(int)numOfRows{
+    return _numOfRows;
+}
 -(int)numOfColumns{
     return _numOfColumns;
 }
 
--(NSString*)charAtPos:(int)pos{
-    if (pos<[_charAtPos count]){
-        return [_charAtPos objectAtIndex:pos];
-    } else return @"";
+#pragma mark - methodts for work with data
+
+-(BOOL)next{
+    _actualIndex++;
+    _drawToIndex = _numOfItems;
+    if (_actualIndex<_numOfItems){
+        return YES;
+    } else  return NO;
+}
+-(id)objectForItemIndex:(int)index{
+    NSString *item = [_charAtPos objectAtIndex:index];
+    NSArray *test_pos = [item componentsSeparatedByString:@":"];
+    if ([test_pos count]>1) {
+        _drawToIndex = [[test_pos objectAtIndex:0] intValue];
+        item = [test_pos objectAtIndex:1];
+    }
+    if ((_drawToIndex ==_numOfItems) |
+        ((_drawToIndex-1)<=_actualIndex)
+        ) {
+        if ([item hasSuffix:@"#"]) {
+            return [UIImage imageNamed:item];
+        } else {
+            
+            if ([item hasSuffix:@"."]){
+                return @"";
+            } else
+                return item;
+        }
+    }else return @"";
 }
 
--(int)numOfItems{
-    return [_charAtPos count];
-}
+#pragma mark - preparation of data
 
 -(void)prepareData{
+    _actualIndex = 0;
+    
     if ([_data.type isEqualToString:@"html"]) {
         _numOfColumns = 1;
         _charAtPos = [[NSMutableArray alloc]init];
         [_charAtPos addObject:_data.content];
     }else{
         _numOfColumns = -1;
-        NSArray *ch = [_data.content componentsSeparatedByString:@" "];
         _charAtPos = [[NSMutableArray alloc]init];
-        for (NSString *s in ch) {
-            NSString *item = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-            item = [item stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
-            if (![item isEqualToString:@"\n"] && ![item isEqualToString:@""]){
-                NSArray *ni = [item componentsSeparatedByString:@"\n"];
-                for (NSString *ss in ni) {
-                    [_charAtPos addObject:ss];
-                    if (_numOfColumns==-1) {
-                        if ([ss rangeOfString:@":" options:NSCaseInsensitiveSearch].location!=NSNotFound){
-                            _numOfColumns = [_charAtPos count]-1;
-                        }}
-                }
+        
+        _rows = [_data.content componentsSeparatedByString:@"\n"];
+        for (NSString *s in _rows) {
+            NSString *item = [s stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+            item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+            item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+            item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+            NSArray *item_in_row = [item componentsSeparatedByString:@" "];
+            int i = [item_in_row count];
+            if (_numOfColumns < i ) {
+                _numOfColumns = i;
+            }
+        }
+        for (NSString *s in _rows) {
+            NSString *item = [s stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+            item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+            item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+            item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+            NSArray *item_in_row = [item componentsSeparatedByString:@" "];
+            int i = [item_in_row count];
+            [_charAtPos addObjectsFromArray:item_in_row];
+            for (int y=i; y<_numOfColumns; y++) {
+                [_charAtPos addObject:@" "];
             }
         }
     }
+    _numOfRows = [_rows count];
+    _numOfItems = [_charAtPos count];
+    _drawToIndex = _numOfItems;
 }
 
 @end

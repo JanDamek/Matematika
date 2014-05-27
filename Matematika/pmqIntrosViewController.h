@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Intros.h"
 
-@interface pmqIntrosViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface pmqIntrosViewController : UIViewController 
 
 @property (nonatomic, strong) Intros *data;
 

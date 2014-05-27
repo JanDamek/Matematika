@@ -43,7 +43,12 @@
 		F53F58271933849000956AEB /* pmqPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F58261933849000956AEB /* pmqPurchase.m */; };
 		F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F582819338BA600956AEB /* StoreKit.framework */; };
 		F53F582C1933916400956AEB /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F582B1933916400956AEB /* Lessons.m */; };
-		F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */; };
+		F53F583419348AA600956AEB /* 1#.png in Resources */ = {isa = PBXBuildFile; fileRef = F53F582E19348AA600956AEB /* 1#.png */; };
+		F53F583519348AA600956AEB /* 2#.png in Resources */ = {isa = PBXBuildFile; fileRef = F53F582F19348AA600956AEB /* 2#.png */; };
+		F53F583619348AA600956AEB /* 3#.png in Resources */ = {isa = PBXBuildFile; fileRef = F53F583019348AA600956AEB /* 3#.png */; };
+		F53F583719348AA600956AEB /* 4#.png in Resources */ = {isa = PBXBuildFile; fileRef = F53F583119348AA600956AEB /* 4#.png */; };
+		F53F583819348AA600956AEB /* 5#.png in Resources */ = {isa = PBXBuildFile; fileRef = F53F583219348AA600956AEB /* 5#.png */; };
+		F53F583919348AA600956AEB /* 6#.png in Resources */ = {isa = PBXBuildFile; fileRef = F53F583319348AA600956AEB /* 6#.png */; };
 		F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */; };
 /* End PBXBuildFile section */
 
@@ -115,8 +120,12 @@
 		F53F582819338BA600956AEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F53F582A1933916400956AEB /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
 		F53F582B1933916400956AEB /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
-		F5A70BCB19328B26004CE257 /* pmqExpleinCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCollectionView.h; sourceTree = "<group>"; };
-		F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqExpleinCollectionView.m; sourceTree = "<group>"; };
+		F53F582E19348AA600956AEB /* 1#.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1#.png"; sourceTree = "<group>"; };
+		F53F582F19348AA600956AEB /* 2#.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2#.png"; sourceTree = "<group>"; };
+		F53F583019348AA600956AEB /* 3#.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3#.png"; sourceTree = "<group>"; };
+		F53F583119348AA600956AEB /* 4#.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4#.png"; sourceTree = "<group>"; };
+		F53F583219348AA600956AEB /* 5#.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5#.png"; sourceTree = "<group>"; };
+		F53F583319348AA600956AEB /* 6#.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6#.png"; sourceTree = "<group>"; };
 		F5A70BCE19328B59004CE257 /* pmqExpleinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqExpleinCell.h; sourceTree = "<group>"; };
 		F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqExpleinCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +192,7 @@
 		F5276405192E0E98001BEC6B /* Matematika */ = {
 			isa = PBXGroup;
 			children = (
+				F53F582D193488D000956AEB /* images */,
 				F53F58241933847900956AEB /* inAppPurchase */,
 				F527645C192E1A0D001BEC6B /* common */,
 				F5276441192E0F9E001BEC6B /* definition */,
@@ -270,8 +280,6 @@
 				F527641E192E0E98001BEC6B /* pmqDetailLesonsViewController.m */,
 				F538AB88192F5C69000DAC6A /* pmqIntrosViewController.h */,
 				F538AB89192F5C69000DAC6A /* pmqIntrosViewController.m */,
-				F5A70BCB19328B26004CE257 /* pmqExpleinCollectionView.h */,
-				F5A70BCC19328B26004CE257 /* pmqExpleinCollectionView.m */,
 				F5A70BCE19328B59004CE257 /* pmqExpleinCell.h */,
 				F5A70BCF19328B59004CE257 /* pmqExpleinCell.m */,
 			);
@@ -317,6 +325,19 @@
 				F53F58261933849000956AEB /* pmqPurchase.m */,
 			);
 			name = inAppPurchase;
+			sourceTree = "<group>";
+		};
+		F53F582D193488D000956AEB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F53F582E19348AA600956AEB /* 1#.png */,
+				F53F582F19348AA600956AEB /* 2#.png */,
+				F53F583019348AA600956AEB /* 3#.png */,
+				F53F583119348AA600956AEB /* 4#.png */,
+				F53F583219348AA600956AEB /* 5#.png */,
+				F53F583319348AA600956AEB /* 6#.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +428,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53F583919348AA600956AEB /* 6#.png in Resources */,
+				F53F583719348AA600956AEB /* 4#.png in Resources */,
+				F53F583819348AA600956AEB /* 5#.png in Resources */,
 				F5276416192E0E98001BEC6B /* Main_iPad.storyboard in Resources */,
 				F5276443192E0FB1001BEC6B /* game_definition.xml in Resources */,
+				F53F583519348AA600956AEB /* 2#.png in Resources */,
+				F53F583619348AA600956AEB /* 3#.png in Resources */,
 				F5276421192E0E98001BEC6B /* Images.xcassets in Resources */,
+				F53F583419348AA600956AEB /* 1#.png in Resources */,
 				F5276413192E0E98001BEC6B /* Main_iPhone.storyboard in Resources */,
 				F527640A192E0E98001BEC6B /* InfoPlist.strings in Resources */,
 			);
@@ -447,7 +474,6 @@
 				F527645F192E1A21001BEC6B /* XMLReader.m in Sources */,
 				F538AB87192F3980000DAC6A /* LastResults.m in Sources */,
 				F5A70BD019328B59004CE257 /* pmqExpleinCell.m in Sources */,
-				F5A70BCD19328B26004CE257 /* pmqExpleinCollectionView.m in Sources */,
 				F538AB8A192F5C69000DAC6A /* pmqIntrosViewController.m in Sources */,
 				F53F582C1933916400956AEB /* Lessons.m in Sources */,
 				F527641F192E0E98001BEC6B /* pmqDetailLesonsViewController.m in Sources */,
