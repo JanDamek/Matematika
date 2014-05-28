@@ -1,0 +1,81 @@
+
+/* Class = "IBUILabel"; text = "Detail view content goes here"; ObjectID = "0XM-y9-sOw"; */
+"0XM-y9-sOw.text" = "Detail view content goes here";
+
+/* Class = "IBUIButton"; normalTitle = "Jak na to"; ObjectID = "5W4-iS-tbH"; */
+"5W4-iS-tbH.normalTitle" = "Jak na to";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
+"7bK-jq-Zjz.title" = "Master";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "B0c-Hv-AcH"; */
+"B0c-Hv-AcH.text" = "Detail";
+
+/* Class = "IBUINavigationItem"; title = "Vysledky testu"; ObjectID = "BUp-2Z-iet"; */
+"BUp-2Z-iet.title" = "Vysledky testu";
+
+/* Class = "IBUIBarButtonItem"; title = "Nákup"; ObjectID = "Fxm-Bg-5PG"; */
+"Fxm-Bg-5PG.title" = "Nákup";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "I40-jn-zFy"; */
+"I40-jn-zFy.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "Procvicovani chyb"; ObjectID = "Ioi-Pg-LNB"; */
+"Ioi-Pg-LNB.title" = "Procvicovani chyb";
+
+/* Class = "IBUIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
+"JEX-9P-axG.title" = "Detail";
+
+/* Class = "IBUINavigationItem"; title = "Zkouseni na cas"; ObjectID = "NBd-ci-uC8"; */
+"NBd-ci-uC8.title" = "Zkouseni na cas";
+
+/* Class = "IBUINavigationItem"; title = "Jak na to"; ObjectID = "POy-23-H6K"; */
+"POy-23-H6K.title" = "Jak na to";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "PhS-j3-D2a"; */
+"PhS-j3-D2a.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "Procvicovani"; ObjectID = "Q76-80-yHK"; */
+"Q76-80-yHK.title" = "Procvicovani";
+
+/* Class = "IBUIBarButtonItem"; title = "Vysledky testu"; ObjectID = "Q8e-F9-d7b"; */
+"Q8e-F9-d7b.title" = "Vysledky testu";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "TVB-BD-7fe"; */
+"TVB-BD-7fe.text" = "Title";
+
+/* Class = "IBUIBarButtonItem"; title = "Obnova nakupu"; ObjectID = "UVq-1g-IHz"; */
+"UVq-1g-IHz.title" = "Obnova nakupu";
+
+/* Class = "IBUINavigationItem"; title = "Lekce"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "Lekce";
+
+/* Class = "IBUIButton"; normalTitle = "Prev"; ObjectID = "apW-2I-Zwj"; */
+"apW-2I-Zwj.normalTitle" = "Prev";
+
+/* Class = "IBUIButton"; normalTitle = "Procvicovani"; ObjectID = "diG-Pu-NrK"; */
+"diG-Pu-NrK.normalTitle" = "Procvicovani";
+
+/* Class = "IBUIBarButtonItem"; title = "Vysledky testu"; ObjectID = "fl3-ae-OMi"; */
+"fl3-ae-OMi.title" = "Vysledky testu";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "gBa-ww-3cx"; */
+"gBa-ww-3cx.text" = "Detail";
+
+/* Class = "IBUIButton"; normalTitle = "Zkouseni na cas"; ObjectID = "l7U-Eg-gI6"; */
+"l7U-Eg-gI6.normalTitle" = "Zkouseni na cas";
+
+/* Class = "IBUIBarButtonItem"; title = "Procvicovani chyb"; ObjectID = "lBn-eX-UGn"; */
+"lBn-eX-UGn.title" = "Procvicovani chyb";
+
+/* Class = "IBUINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
+"mOI-FS-AaM.title" = "Detail";
+
+/* Class = "IBUIBarButtonItem"; title = "Procvicovani chyb"; ObjectID = "mSY-RS-phC"; */
+"mSY-RS-phC.title" = "Procvicovani chyb";
+
+/* Class = "IBUINavigationItem"; title = "Nákup"; ObjectID = "vsa-DN-eKP"; */
+"vsa-DN-eKP.title" = "Nákup";
+
+/* Class = "IBUIButton"; normalTitle = "Next"; ObjectID = "znS-Sr-3B5"; */
+"znS-Sr-3B5.normalTitle" = "Next";
