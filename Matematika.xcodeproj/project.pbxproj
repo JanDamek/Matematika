@@ -713,16 +713,16 @@
 		F5276405192E0E98001BEC6B /* Matematika */ = {
 			isa = PBXGroup;
 			children = (
-				F5F0F07E19364541003C4FFA /* resources */,
-				F5F0F07119364524003C4FFA /* work_with_data */,
-				F5F0F05E19364511003C4FFA /* controllers */,
-				F5F0F05A19364500003C4FFA /* InAppPurchase */,
 				F527645C192E1A0D001BEC6B /* common */,
-				F527643F192E0F5B001BEC6B /* storyboards */,
 				F527643E192E0F41001BEC6B /* DataModel */,
+				F5F0F05E19364511003C4FFA /* controllers */,
+				F5F0F07119364524003C4FFA /* work_with_data */,
+				F5F0F05A19364500003C4FFA /* InAppPurchase */,
+				F527643F192E0F5B001BEC6B /* storyboards */,
 				F527640E192E0E98001BEC6B /* pmqAppDelegate.h */,
 				F527640F192E0E98001BEC6B /* pmqAppDelegate.m */,
 				F5276420192E0E98001BEC6B /* Images.xcassets */,
+				F5F0F07E19364541003C4FFA /* resources */,
 				F5276406192E0E98001BEC6B /* Supporting Files */,
 			);
 			path = Matematika;
