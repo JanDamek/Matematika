@@ -10,10 +10,15 @@
 #import "Tests.h"
 #import "Questions.h"
 #import "Results.h"
-#import "LastResults.h"
+#import "UIArcTimerView.h"
 
-@interface pmqTestingViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+enum TestMode {
+    tmNone, tmTest, tmTestOnTime, tmTestFails, tmTestOverAll, tmTestOverAllFail
+};
+
+@interface pmqTestingViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UIArcTimerViewDelegate>
 
 @property (nonatomic, strong) Tests *data;
+@property enum TestMode testMode;
 
 @end

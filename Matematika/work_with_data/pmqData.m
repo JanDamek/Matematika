@@ -22,7 +22,6 @@
 @synthesize managedObjectContext = _managedObjectContext;
 
 @synthesize lessons = _lessons;
-@synthesize answers = _answers;
 @synthesize pages = _pages;
 @synthesize results = _results;
 @synthesize intros = _intros;
@@ -30,7 +29,6 @@
 @synthesize questions = _questions;
 
 static NSString *lessonsCache = @"lessonsCache";
-static NSString *answersCache = @"answersCache";
 static NSString *pagesCache = @"pagesCache";
 static NSString *resultsCache = @"resultsCache";
 static NSString *introsCache = @"introsCache";
@@ -134,62 +132,6 @@ static NSString *questionsCache = @"questionsCache";
     }
     
     return [self newLessons];
-}
-
-#pragma mark - Answers definition
-
--(NSFetchedResultsController *)getAnswers{
-    if (!_answers){
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        // Edit the entity name as appropriate.
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Answers" inManagedObjectContext:self.managedObjectContext];
-        [fetchRequest setEntity:entity];
-        
-        // Set the batch size to a suitable number.
-        [fetchRequest setFetchBatchSize:20];
-        
-        // Edit the sort key as appropriate.
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:NO];
-        NSArray *sortDescriptors = @[sortDescriptor];
-        
-        [fetchRequest setSortDescriptors:sortDescriptors];
-        
-        // Edit the section name key path and cache name if appropriate.
-        // nil for section name key path means "no sections".
-        NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:answersCache];
-        //aFetchedResultsController.delegate = self;
-        _answers = aFetchedResultsController;
-        
-        NSError *error = nil;
-        if (![self.answers performFetch:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }
-    
-    return _answers;
-}
-
--(Answers*)newAnswers{
-    NSManagedObjectContext *context = [self.answers managedObjectContext];
-    NSEntityDescription *entity = [[self.answers fetchRequest] entity];
-    Answers *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    return newManagedObject;
-}
-
--(void)saveAnswers{
-    NSManagedObjectContext *context = [self.answers managedObjectContext];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
 }
 
 #pragma mark - Pages definition

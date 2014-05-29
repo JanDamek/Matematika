@@ -10,10 +10,11 @@
 
 @interface pmqQuestions : NSObject
 
-@property (readonly, nonatomic, getter = getCorrect) NSString* corect_answer;
 @property (retain, nonatomic) Questions *q;
 
-- (NSString*) position_char :(int)index;
-- (NSArray*) answer_posibilitys;
+@property (readonly, nonatomic, getter = getCorrect) NSString* corect_answer;
+@property (readonly, nonatomic) NSArray* answers;
+@property (readonly, nonatomic) NSString *fistPartQuestion;
+@property (readonly, nonatomic) NSString *secondPartQuestion;
 
 @end

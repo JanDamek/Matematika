@@ -41,5 +41,9 @@
     }
 }
 
+-(void)noAnswer{
+    _img.image = [UIImage imageNamed:@"1"];    
+}
+
 
 @end

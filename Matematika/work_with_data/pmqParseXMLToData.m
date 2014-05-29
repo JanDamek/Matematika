@@ -43,8 +43,12 @@
         l.lesson_id = [NSNumber numberWithInt:lesson_id];
         l.demo = [NSNumber numberWithInt:[[i valueForKey:@"demo"] intValue]];
         l.name = [i valueForKey:@"name"];
-        l.name = [l.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+        l.rating = [NSNumber numberWithInt:0];
+        l.name = [l.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
         
+        Tests *test = [self.d newTests];
+        l.relationship_test = test;
+
         Intros *intros = [self.d newIntros];
         [l addRelationship_introObject:intros];
         NSDictionary *intr = [i valueForKey:@"intro"];
@@ -55,22 +59,21 @@
             p.fixed = [NSNumber numberWithInt:[[page valueForKey:@"fixed"] intValue]];
             p.type = [page valueForKey:@"type"];
             p.content = [page valueForKey:@"text"];
-            p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+            p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
             [self.d savePages];
         }
         [self.d saveIntros];
         
-        Tests *test = [self.d newTests];
-        [l addRelationship_testObject:test];
         NSDictionary *te = [i valueForKey:@"test"];
         test.time_limit = [NSNumber numberWithInt:[[te valueForKey:@"timeLimit"] intValue]];
         test.welcome_sound = [te valueForKey:@"welcomeSound"];
+        test.test_length = [NSNumber numberWithInt:[[in_data valueForKey:@"testLength"] intValue]];
         for (NSDictionary *question in [te valueForKey:@"question"]) {
             Questions *q = [self.d newQuestions];
             [test addRelationship_questionObject:q];
             
             q.content = [question valueForKey:@"text"];
-            q.content = [q.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+            q.content = [q.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
             [self.d saveQuestions];
         }
         [self.d saveTests];

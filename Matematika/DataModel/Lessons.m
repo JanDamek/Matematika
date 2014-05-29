@@ -2,7 +2,7 @@
 //  Lessons.m
 //  Matematika
 //
-//  Created by Jan Damek on 26.05.14.
+//  Created by Jan Damek on 29.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @dynamic name;
 @dynamic order;
 @dynamic purchase;
+@dynamic rating;
 @dynamic relationship_intro;
 @dynamic relationship_test;
 

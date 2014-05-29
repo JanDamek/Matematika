@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "Lessons.h"
-#import "Answers.h"
 #import "Pages.h"
 #import "Results.h"
 #import "Intros.h"
@@ -26,12 +25,6 @@
 -(Lessons*)newLessons;
 -(void)saveLessons;
 -(Lessons*)findLessonId:(int)lesson_id;
-
-#pragma mark - Answers definition
-
-@property (strong, nonatomic, getter = getAnswers) NSFetchedResultsController *answers;
--(Answers*)newAnswers;
--(void)saveAnswers;
 
 #pragma mark - Pages definition
 

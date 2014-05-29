@@ -2,22 +2,21 @@
 //  Results.h
 //  Matematika
 //
-//  Created by Jan Damek on 23.05.14.
+//  Created by Jan Damek on 29.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Questions, Tests, LastResults;
+@class Questions, Tests;
 
 @interface Results : NSManagedObject
 
+@property (nonatomic, retain) NSNumber * rate;
 @property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) NSSet *relationship_questions;
 @property (nonatomic, retain) Tests *relationship_test;
-@property (nonatomic, retain) LastResults *relationship_last;
 @end
 
 @interface Results (CoreDataGeneratedAccessors)

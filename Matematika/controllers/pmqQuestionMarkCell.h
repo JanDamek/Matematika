@@ -12,4 +12,6 @@
 
 @property BOOL correct;
 
+-(void)noAnswer;
+
 @end

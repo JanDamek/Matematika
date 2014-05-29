@@ -10,7 +10,7 @@
 
 @class UIArcTimerView;
 
-@protocol UIArcTimerViewDelegate
+@protocol UIArcTimerViewDelegate <NSObject>
 
 -(void)terminatedTimer:(UIArcTimerView*)timerView;
 
@@ -18,15 +18,19 @@
 
 @interface UIArcTimerView : UIView
 
-@property int percent;
+@property float percent;
 
 @property int timeToCount;
 @property int timeLeft;
+
+@property bool countDown;
 
 @property (nonatomic, strong) UIColor *roundColor;
 @property (nonatomic, strong) UIColor *fillColor;
 @property (nonatomic, strong) UIColor *circleColor;
 @property (nonatomic, strong) UIColor *textColor;
+
+@property float timeAnimation;
 
 @property id<UIArcTimerViewDelegate> delegate;
 

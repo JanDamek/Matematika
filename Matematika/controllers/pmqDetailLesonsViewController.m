@@ -14,6 +14,7 @@
 #import "Results.h"
 #import "pmqQuestions.h"
 #import "pmqIntrosViewController.h"
+#import "pmqTestingViewController.h"
 
 @interface pmqDetailLesonsViewController (){
     bool _isInit;
@@ -57,17 +58,13 @@
         if ([self.detailItem isKindOfClass:[Lessons class]]){
             Lessons *l = (Lessons*)self.detailItem;
             self.label.title = l.name;
-            Tests *t = (Tests*)[[l.relationship_test objectEnumerator]nextObject];
+            Tests *t = l.relationship_test;
             Intros *i = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
             
             [self.jak_na_to setHidden:([i.relationship_pages count]==0)];
             
             self.detailDescriptionLabel.text = [NSString stringWithFormat:@"pocet stranek: %i - pocet otazek: %i - pocet vysledku: %i",  [i.relationship_pages count],[t.relationship_question count],[t.relationship_results count]];
-            for (Questions *q in t.relationship_question) {
-                pmqQuestions *qw = [[pmqQuestions alloc] init];
-                qw.q = q;
-                [qw position_char:0];
-            }
+
         } else
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"name"] description];
     }
@@ -118,9 +115,13 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     Lessons *l = (Lessons*)self.detailItem;
     Intros *object = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
+
     if ([[segue identifier] isEqualToString:@"jnt_detail"]) {
         ((pmqIntrosViewController*)[segue destinationViewController]).data = object;
-    } 
+    }else if ([[segue identifier] isEqualToString:@"p_detail"]) {
+        ((pmqTestingViewController*)[segue destinationViewController]).data = l.relationship_test;
+        ((pmqTestingViewController*)[segue destinationViewController]).testMode = tmTest;
+    }
 }
 
 @end

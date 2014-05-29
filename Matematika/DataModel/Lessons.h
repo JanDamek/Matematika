@@ -2,7 +2,7 @@
 //  Lessons.h
 //  Matematika
 //
-//  Created by Jan Damek on 26.05.14.
+//  Created by Jan Damek on 29.05.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -18,8 +18,9 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * order;
 @property (nonatomic, retain) NSString * purchase;
+@property (nonatomic, retain) NSNumber * rating;
 @property (nonatomic, retain) NSSet *relationship_intro;
-@property (nonatomic, retain) NSSet *relationship_test;
+@property (nonatomic, retain) Tests *relationship_test;
 @end
 
 @interface Lessons (CoreDataGeneratedAccessors)
@@ -28,10 +29,5 @@
 - (void)removeRelationship_introObject:(Intros *)value;
 - (void)addRelationship_intro:(NSSet *)values;
 - (void)removeRelationship_intro:(NSSet *)values;
-
-- (void)addRelationship_testObject:(Tests *)value;
-- (void)removeRelationship_testObject:(Tests *)value;
-- (void)addRelationship_test:(NSSet *)values;
-- (void)removeRelationship_test:(NSSet *)values;
 
 @end

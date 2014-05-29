@@ -10,6 +10,10 @@
 
 @interface UIArcTimerView () {
     
+    UILabel *_text;
+    
+    NSTimer *_timer;
+    
     CGFloat startAngle;
     CGFloat endAngle;
 }
@@ -21,6 +25,7 @@
 @synthesize percent = _percent;
 @synthesize timeToCount = _timeToCount;
 @synthesize timeLeft = _timeLeft;
+@synthesize countDown = _countDown;
 
 @synthesize roundColor = _roundColor;
 @synthesize fillColor = _fillColor;
@@ -28,9 +33,28 @@
 
 @synthesize delegate = _delegate;
 
+#pragma mark - initialization
+
 -(void)maindeclare{
     // Initialization code
     self.backgroundColor = [UIColor whiteColor];
+    
+    _timer = nil;
+    
+    float size;
+    if (self.frame.size.width > self.frame.size.height){
+        size = self.frame.size.height;
+    }else{
+        size = self.frame.size.width;
+    }
+    float fontSize = size / 3;
+    float fontWith = fontSize * 1.6;
+    CGRect textRect = CGRectMake((self.frame.size.width / 2.0) - fontWith/2.0, (self.frame.size.height / 2.0) - fontSize/2.0, fontWith, fontSize);
+    _text = [[UILabel alloc] initWithFrame:textRect];
+    [self addSubview:_text];
+    _text.font = [UIFont fontWithName: @"Helvetica-Bold" size: fontSize * 0.95];
+    [_text setTextColor:[UIColor blackColor]];
+    [_text setTextAlignment:NSTextAlignmentCenter];
     
     // Determine our start and stop angles for the arc (in radians)
     startAngle = M_PI * 1.5;
@@ -42,7 +66,10 @@
     _textColor = [UIColor blackColor];
     
     _timeLeft = 0;
-    _timeToCount = 0;
+    _timeToCount = 10;
+    _countDown = YES;
+    
+    _timeAnimation = 0.3;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -70,13 +97,63 @@
     return self;
 }
 
--(int)percent{
+#pragma mark - propertis
+
+-(void)setTextColor:(UIColor *)textColor{
+    _textColor = textColor;
+    _text.textColor = _textColor;
+    [self setNeedsDisplay];
+}
+
+-(float)percent{
     return _percent;
 }
 
--(void)setPercent:(int)percent{
+-(void)setPercent:(float)percent{
     _percent = percent;
+    if (_percent>=100){
+        _percent = 100;
+        [self stopTimer];
+    }
     [self setNeedsDisplay];
+}
+
+-(int)timeToCount{
+    return _timeToCount;
+}
+
+-(void)setTimeToCount:(int)timeToCount{
+    _timeToCount = timeToCount;
+    _timeLeft = _timeToCount;
+    self.percent = 0;
+}
+
+#pragma mark - draw
+
+-(void)setAnimationScale:(CALayer*)layer{
+    CAKeyframeAnimation *scaleAnimation =
+    [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    
+    // Set the animation's delegate to self so that we can add callbacks if we want
+    scaleAnimation.delegate = self;
+    
+    // Create the transform; we'll scale x and y by 1.5, leaving z alone
+    // since this is a 2D animation.
+    CATransform3D transform = CATransform3DMakeScale(1.5, 1.5, 1); // Scale in x and y
+    
+    // Add the keyframes.  Note we have to start and end with CATransformIdentity,
+    // so that the label starts from and returns to its non-transformed state.
+    [scaleAnimation setValues:[NSArray arrayWithObjects:
+                               [NSValue valueWithCATransform3D:CATransform3DIdentity],
+                               [NSValue valueWithCATransform3D:transform],
+                               [NSValue valueWithCATransform3D:CATransform3DIdentity],
+                               nil]];
+    
+    // set the duration of the animation
+    [scaleAnimation setDuration: _timeAnimation];
+    
+    // animate your layer = rock and roll!
+    [layer addAnimation:scaleAnimation forKey:@"scaleText"];
 }
 
 - (void)drawRect:(CGRect)rect
@@ -90,7 +167,17 @@
     float okraj = size * 0.05;
     
     // Display our percentage as a string
-    NSString* textContent = [NSString stringWithFormat:@"%d", self.percent];
+//    NSString* textContent = [NSString stringWithFormat:@"%d", (int)self.percent];
+    if (_countDown){
+        NSString *old = _text.text;
+        _timeLeft = _timeToCount * ((99-_percent)/100)+1;
+        _text.text = [NSString stringWithFormat:@"%d", _timeLeft];
+        
+        if (![old isEqualToString:_text.text]){
+            [self setAnimationScale:[_text layer]];
+        }
+    } else
+        _text.text = [NSString stringWithFormat:@"%d", (int)self.percent];
     
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
     // Create our arc, with the correct angles
@@ -139,17 +226,34 @@
     bezierPath2.lineWidth = 1;
     [_circleColor setStroke];
     [bezierPath2 stroke];
+}
 
-    float fontSize = size / 3;
-    float fontWith = fontSize * 1.6;
-    // Text Drawing
-    CGRect textRect = CGRectMake((rect.size.width / 2.0) - fontWith/2.0, (rect.size.height / 2.0) - fontSize/2.0, fontWith, fontSize);
-    [_textColor setFill];
-   
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    [textContent drawInRect:textRect withAttributes:@{NSFontAttributeName: [UIFont fontWithName: @"Helvetica-Bold" size: fontSize * 0.95], NSParagraphStyleAttributeName: paragraphStyle }];
+#pragma mark - metods
+
+-(void)onTimer:(NSTimer*)timer{
+    self.percent = _percent + 0.1;
+}
+
+-(void)stopTimer{
+    if (_timer){
+        [_timer invalidate];
+        _timer = nil;
+        if ([_delegate respondsToSelector:@selector(terminatedTimer:)]){
+            [_delegate terminatedTimer:self];
+        }
+    }
+}
+
+-(void)startTimer{
+    [_timer invalidate];
+    
+    float timeBeat = _timeToCount / 1000;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:timeBeat target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
+}
+
+-(void)startTimer:(int)timeToCount{
+    self.timeToCount = timeToCount;
+    [self startTimer];
 }
 
 @end
