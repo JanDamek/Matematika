@@ -181,6 +181,18 @@
                                     <outlet property="delegate" destination="YSQ-WZ-sxf" id="jjg-do-JDO"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-kx-1Ty" customClass="UIArcTimerView">
+                                <rect key="frame" x="251" y="205" width="92" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aMr-zr-oR2">
+                                <rect key="frame" x="184" y="620" width="256" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slideChange:" destination="YSQ-WZ-sxf" eventType="valueChanged" id="rVr-Hy-hOf"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -188,6 +200,8 @@
                     <navigationItem key="navigationItem" title="Procvicovani" id="Q76-80-yHK"/>
                     <connections>
                         <outlet property="marks" destination="9CB-So-AXO" id="oTH-Yl-gx7"/>
+                        <outlet property="slider" destination="aMr-zr-oR2" id="nBR-Ue-P0m"/>
+                        <outlet property="timerView" destination="1Tu-kx-1Ty" id="u8v-x6-UxN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDA-y6-Mmq" userLabel="First Responder" sceneMemberID="firstResponder"/>

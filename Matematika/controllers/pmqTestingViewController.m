@@ -8,6 +8,7 @@
 
 #import "pmqTestingViewController.h"
 #import "pmqQuestionMarkCell.h"
+#import "UIArcTimerView.h"
 
 @interface pmqTestingViewController ()
 
@@ -16,11 +17,19 @@
 @property (strong, nonatomic) NSArray *r;
 @property (strong, nonatomic) LastResults *lr;
 
+@property (weak, nonatomic) IBOutlet UIArcTimerView *timerView;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
 @end
 
 @implementation pmqTestingViewController
 
 @synthesize marks = _marks, q = _q, r = _r, lr = _lr;
+@synthesize timerView = _timerView, slider = _slider;
+
+- (IBAction)slideChange:(id)sender {
+    _timerView.percent = _slider.value;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
