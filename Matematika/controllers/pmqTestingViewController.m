@@ -65,6 +65,12 @@
     [self prepareTest];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:answered];
+    
+    [self loadFromLastTest];
+}
+
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(mark_size, mark_size);
@@ -156,6 +162,7 @@
         _questionLabel2.text = pmqQ.secondPartQuestion;
         [_questionLabel2 sizeToFit];
         CGRect s = _questionLabel2.frame;
+        s.origin.y = _questionLabel1.frame.origin.y;
         
         if (_testMode == tmTest){
             [_questionMark setHidden:NO];
@@ -163,17 +170,30 @@
             
             CGRect p = _questionMark.frame;
             p.origin.x = _questionLabel1.frame.origin.x + _questionLabel1.frame.size.width;
-            p.origin.y = _questionLabel1.frame.origin.y;
+            p.origin.y = _questionLabel1.frame.origin.y - ((_questionMark.frame.size.height - _questionLabel1.frame.size.height)/2);
             _questionMark.frame=p;
             s.origin.x = _questionMark.frame.origin.x + _questionMark.frame.size.width;
         }else{
             [_questionMark setHidden:YES];
             [_timerView setHidden:NO];
-            CGRect p = CGRectOffset(_questionLabel1.frame, _questionLabel1.frame.size.width, 0);
-            [_timerView setFrame:p];
-            s = CGRectOffset(_questionLabel2.frame, _timerView.frame.size.width, 0);
+
+            CGRect p = _timerView.frame;
+            p.origin.x = _questionLabel1.frame.origin.x + _questionLabel1.frame.size.width;
+            p.origin.y = _questionLabel1.frame.origin.y- ((_timerView.frame.size.height - _questionLabel1.frame.size.height)/2);
+            _timerView.frame=p;
+            s.origin.x = _questionMark.frame.origin.x + _timerView.frame.size.width;
+            [_timerView startTimer:[_data.time_limit intValue]];
         }
         _questionLabel2.frame=s;
+        
+        [_questionLabel1 setNeedsDisplay];
+        [_questionLabel2 setNeedsDisplay];
+        [_timerView setNeedsDisplay];
+        [_questionMark setNeedsDisplay];
+        [_questionLabel1 setNeedsUpdateConstraints];
+        [_questionLabel2 setNeedsUpdateConstraints];
+        [_timerView setNeedsUpdateConstraints];
+        [_questionMark setNeedsUpdateConstraints];
         
         [self.view setNeedsDisplay];
        
@@ -197,6 +217,7 @@
 }
 
 -(void)prepareTest{
+    answered = 0;
         pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
     
         switch (_testMode) {
@@ -227,7 +248,16 @@
     q.last_answer = [NSNumber numberWithBool:sender.tag==1];
     answered++;
     
-    [self loadFromLastTest];
+    if (answered<[_data.test_length intValue]){
+        [self loadFromLastTest];
+    } else {
+        if (_testMode==tmTest) {
+            _testMode = tmTestOnTime;
+            [self prepareTest];
+        } else {
+            //TODO: show test result
+        }
+    }
 }
 
 #pragma mark - collection delegate & dataSource

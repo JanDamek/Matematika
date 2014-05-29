@@ -52,6 +52,7 @@
     CGRect textRect = CGRectMake((self.frame.size.width / 2.0) - fontWith/2.0, (self.frame.size.height / 2.0) - fontSize/2.0, fontWith, fontSize);
     _text = [[UILabel alloc] initWithFrame:textRect];
     [self addSubview:_text];
+    
     _text.font = [UIFont fontWithName: @"Helvetica-Bold" size: fontSize * 0.95];
     [_text setTextColor:[UIColor blackColor]];
     [_text setTextAlignment:NSTextAlignmentCenter];
@@ -226,6 +227,11 @@
     bezierPath2.lineWidth = 1;
     [_circleColor setStroke];
     [bezierPath2 stroke];
+    
+    float fontSize = size / 3;
+    float fontWith = fontSize * 1.6;
+    CGRect textRect = CGRectMake((self.frame.size.width / 2.0) - fontWith/2.0, (self.frame.size.height / 2.0) - fontSize/2.0, fontWith, fontSize);
+    _text.frame = textRect;
 }
 
 #pragma mark - metods
