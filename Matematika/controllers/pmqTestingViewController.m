@@ -146,8 +146,6 @@
             [_questions addObject:q];
         [questions removeObject:q];
     }
-    
-    [self loadFromLastTest];
 }
 
 -(void)loadFromLastTest{
@@ -181,7 +179,7 @@
             p.origin.x = _questionLabel1.frame.origin.x + _questionLabel1.frame.size.width;
             p.origin.y = _questionLabel1.frame.origin.y- ((_timerView.frame.size.height - _questionLabel1.frame.size.height)/2);
             _timerView.frame=p;
-            s.origin.x = _questionMark.frame.origin.x + _timerView.frame.size.width;
+            s.origin.x = _timerView.frame.origin.x + _timerView.frame.size.width;
             [_timerView startTimer:[_data.time_limit intValue]];
         }
         _questionLabel2.frame=s;
@@ -190,10 +188,6 @@
         [_questionLabel2 setNeedsDisplay];
         [_timerView setNeedsDisplay];
         [_questionMark setNeedsDisplay];
-        [_questionLabel1 setNeedsUpdateConstraints];
-        [_questionLabel2 setNeedsUpdateConstraints];
-        [_timerView setNeedsUpdateConstraints];
-        [_questionMark setNeedsUpdateConstraints];
         
         [self.view setNeedsDisplay];
        
