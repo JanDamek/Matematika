@@ -279,6 +279,7 @@
 
 -(void)terminatedTimer:(UIArcTimerView *)timerView{
     _timerView.percent = 0;
+    [self answerButtonAction:nil];
 }
 
 
