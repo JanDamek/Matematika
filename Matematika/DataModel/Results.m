@@ -2,7 +2,7 @@
 //  Results.m
 //  Matematika
 //
-//  Created by Jan Damek on 29.05.14.
+//  Created by Jan Damek on 01.06.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 
 @implementation Results
 
-@dynamic rate;
 @dynamic date;
+@dynamic rate;
 @dynamic relationship_questions;
 @dynamic relationship_test;
 

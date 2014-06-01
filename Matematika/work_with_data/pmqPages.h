@@ -17,6 +17,7 @@
 @property (readonly) int numOfColumns;
 @property (readonly) int numOfItems;
 @property (readonly) int actualIndex;
+@property (readonly) NSString *actualChar;
 
 -(BOOL)next;
 -(id)objectForItemIndex:(int)index;

@@ -24,13 +24,14 @@
 		F527642B192E0E98001BEC6B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5276403192E0E98001BEC6B /* CoreData.framework */; };
 		F5276433192E0E98001BEC6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5276431192E0E98001BEC6B /* InfoPlist.strings */; };
 		F5276435192E0E98001BEC6B /* MatematikaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5276434192E0E98001BEC6B /* MatematikaTests.m */; };
+		F53E607A193B650500E3EE3E /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E6079193B650500E3EE3E /* Pages.m */; };
+		F53E607D193B650500E3EE3E /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E607C193B650500E3EE3E /* Results.m */; };
+		F53E6080193B650500E3EE3E /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E607F193B650500E3EE3E /* Lessons.m */; };
+		F53E6083193B650500E3EE3E /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E6082193B650500E3EE3E /* Intros.m */; };
+		F53E6086193B650600E3EE3E /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E6085193B650500E3EE3E /* Questions.m */; };
+		F53E6089193B650600E3EE3E /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E6088193B650600E3EE3E /* Tests.m */; };
+		F53E608C193B8A4800E3EE3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F53E608E193B8A4800E3EE3E /* Localizable.strings */; };
 		F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F582819338BA600956AEB /* StoreKit.framework */; };
-		F59C33C01937ACE6002F06D9 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = F59C33BF1937ACE6002F06D9 /* Results.m */; };
-		F59C33C31937ACE6002F06D9 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F59C33C21937ACE6002F06D9 /* Tests.m */; };
-		F59C33C61937ACE6002F06D9 /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F59C33C51937ACE6002F06D9 /* Pages.m */; };
-		F59C33C91937ACE6002F06D9 /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F59C33C81937ACE6002F06D9 /* Intros.m */; };
-		F59C33CC1937ACE7002F06D9 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59C33CB1937ACE7002F06D9 /* Questions.m */; };
-		F59C33CF1937ACE7002F06D9 /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F59C33CE1937ACE7002F06D9 /* Lessons.m */; };
 		F5F0F00119363ED1003C4FFA /* UIArcTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F00019363ED1003C4FFA /* UIArcTimerView.m */; };
 		F5F0F059193644DB003C4FFA /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F057193644DB003C4FFA /* XMLReader.m */; };
 		F5F0F05D19364500003C4FFA /* pmqPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F05C19364500003C4FFA /* pmqPurchase.m */; };
@@ -337,20 +338,23 @@
 		F5276430192E0E98001BEC6B /* MatematikaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MatematikaTests-Info.plist"; sourceTree = "<group>"; };
 		F5276432192E0E98001BEC6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F5276434192E0E98001BEC6B /* MatematikaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatematikaTests.m; sourceTree = "<group>"; };
+		F53E6078193B650500E3EE3E /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
+		F53E6079193B650500E3EE3E /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
+		F53E607B193B650500E3EE3E /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Matematika/DataModel/Results.h; sourceTree = "<group>"; };
+		F53E607C193B650500E3EE3E /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Matematika/DataModel/Results.m; sourceTree = "<group>"; };
+		F53E607E193B650500E3EE3E /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
+		F53E607F193B650500E3EE3E /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
+		F53E6081193B650500E3EE3E /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
+		F53E6082193B650500E3EE3E /* Intros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.m; path = Matematika/DataModel/Intros.m; sourceTree = "<group>"; };
+		F53E6084193B650500E3EE3E /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
+		F53E6085193B650500E3EE3E /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
+		F53E6087193B650600E3EE3E /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests.h; path = Matematika/DataModel/Tests.h; sourceTree = "<group>"; };
+		F53E6088193B650600E3EE3E /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tests.m; path = Matematika/DataModel/Tests.m; sourceTree = "<group>"; };
+		F53E608F193B8A4D00E3EE3E /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F53E6090193B8A4E00E3EE3E /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F53E6092193B8A7F00E3EE3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Matematika 2.xcdatamodel"; sourceTree = "<group>"; };
 		F53F582819338BA600956AEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		F59C33BE1937ACE6002F06D9 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Matematika/DataModel/Results.h; sourceTree = "<group>"; };
-		F59C33BF1937ACE6002F06D9 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Matematika/DataModel/Results.m; sourceTree = "<group>"; };
-		F59C33C11937ACE6002F06D9 /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests.h; path = Matematika/DataModel/Tests.h; sourceTree = "<group>"; };
-		F59C33C21937ACE6002F06D9 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tests.m; path = Matematika/DataModel/Tests.m; sourceTree = "<group>"; };
-		F59C33C41937ACE6002F06D9 /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
-		F59C33C51937ACE6002F06D9 /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
-		F59C33C71937ACE6002F06D9 /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
-		F59C33C81937ACE6002F06D9 /* Intros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.m; path = Matematika/DataModel/Intros.m; sourceTree = "<group>"; };
-		F59C33CA1937ACE7002F06D9 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
-		F59C33CB1937ACE7002F06D9 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
-		F59C33CD1937ACE7002F06D9 /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
-		F59C33CE1937ACE7002F06D9 /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
 		F5F0EFFF19363ED1003C4FFA /* UIArcTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIArcTimerView.h; path = common/UIArcTimerView.h; sourceTree = "<group>"; };
 		F5F0F00019363ED1003C4FFA /* UIArcTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIArcTimerView.m; path = common/UIArcTimerView.m; sourceTree = "<group>"; };
 		F5F0F04B19364278003C4FFA /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
@@ -733,6 +737,7 @@
 				F5276408192E0E98001BEC6B /* InfoPlist.strings */,
 				F527640B192E0E98001BEC6B /* main.m */,
 				F527640D192E0E98001BEC6B /* Matematika-Prefix.pch */,
+				F53E608E193B8A4800E3EE3E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -758,19 +763,19 @@
 		F527643E192E0F41001BEC6B /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				F59C33CD1937ACE7002F06D9 /* Lessons.h */,
-				F59C33CE1937ACE7002F06D9 /* Lessons.m */,
-				F59C33CA1937ACE7002F06D9 /* Questions.h */,
-				F59C33CB1937ACE7002F06D9 /* Questions.m */,
-				F59C33C71937ACE6002F06D9 /* Intros.h */,
-				F59C33C81937ACE6002F06D9 /* Intros.m */,
-				F59C33C41937ACE6002F06D9 /* Pages.h */,
-				F59C33C51937ACE6002F06D9 /* Pages.m */,
-				F59C33C11937ACE6002F06D9 /* Tests.h */,
-				F59C33C21937ACE6002F06D9 /* Tests.m */,
-				F59C33BE1937ACE6002F06D9 /* Results.h */,
-				F59C33BF1937ACE6002F06D9 /* Results.m */,
 				F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */,
+				F53E6078193B650500E3EE3E /* Pages.h */,
+				F53E6079193B650500E3EE3E /* Pages.m */,
+				F53E607B193B650500E3EE3E /* Results.h */,
+				F53E607C193B650500E3EE3E /* Results.m */,
+				F53E607E193B650500E3EE3E /* Lessons.h */,
+				F53E607F193B650500E3EE3E /* Lessons.m */,
+				F53E6081193B650500E3EE3E /* Intros.h */,
+				F53E6082193B650500E3EE3E /* Intros.m */,
+				F53E6084193B650500E3EE3E /* Questions.h */,
+				F53E6085193B650500E3EE3E /* Questions.m */,
+				F53E6087193B650600E3EE3E /* Tests.h */,
+				F53E6088193B650600E3EE3E /* Tests.m */,
 			);
 			name = DataModel;
 			path = ..;
@@ -1280,6 +1285,7 @@
 				F5F0F20B19364542003C4FFA /* sk_20.mp3 in Resources */,
 				F5F0F1A319364542003C4FFA /* cz_30.mp3 in Resources */,
 				F5F0F20819364542003C4FFA /* sk_18.mp3 in Resources */,
+				F53E608C193B8A4800E3EE3E /* Localizable.strings in Resources */,
 				F5F0F1A219364542003C4FFA /* cz_3.mp3 in Resources */,
 				F5F0F24219364542003C4FFA /* sk_70.mp3 in Resources */,
 				F5F0F21F19364542003C4FFA /* sk_39.mp3 in Resources */,
@@ -1548,28 +1554,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59C33C01937ACE6002F06D9 /* Results.m in Sources */,
 				F5F0F07C19364524003C4FFA /* pmqParseXMLToData.m in Sources */,
-				F59C33C91937ACE6002F06D9 /* Intros.m in Sources */,
 				F527640C192E0E98001BEC6B /* main.m in Sources */,
-				F59C33C31937ACE6002F06D9 /* Tests.m in Sources */,
 				F5F0F05D19364500003C4FFA /* pmqPurchase.m in Sources */,
+				F53E607A193B650500E3EE3E /* Pages.m in Sources */,
+				F53E607D193B650500E3EE3E /* Results.m in Sources */,
+				F53E6089193B650600E3EE3E /* Tests.m in Sources */,
 				F5F0F06B19364511003C4FFA /* pmqDetailLesonsViewController.m in Sources */,
 				F5F0F06E19364511003C4FFA /* pmqLessonsViewController.m in Sources */,
-				F59C33C61937ACE6002F06D9 /* Pages.m in Sources */,
 				F5F0F07019364511003C4FFA /* pmqTestingViewController.m in Sources */,
 				F5F0F059193644DB003C4FFA /* XMLReader.m in Sources */,
 				F5276410192E0E98001BEC6B /* pmqAppDelegate.m in Sources */,
 				F5F0F07B19364524003C4FFA /* pmqPages.m in Sources */,
 				F5F0F07A19364524003C4FFA /* pmqData.m in Sources */,
 				F5F0F00119363ED1003C4FFA /* UIArcTimerView.m in Sources */,
+				F53E6083193B650500E3EE3E /* Intros.m in Sources */,
 				F5F0F06C19364511003C4FFA /* pmqExpleinCell.m in Sources */,
 				F5F0F07D19364524003C4FFA /* pmqQuestions.m in Sources */,
 				F5276419192E0E98001BEC6B /* Matematika.xcdatamodeld in Sources */,
 				F5F0F06D19364511003C4FFA /* pmqIntrosViewController.m in Sources */,
-				F59C33CF1937ACE7002F06D9 /* Lessons.m in Sources */,
-				F59C33CC1937ACE7002F06D9 /* Questions.m in Sources */,
+				F53E6080193B650500E3EE3E /* Lessons.m in Sources */,
 				F5F0F06F19364511003C4FFA /* pmqQuestionMarkCell.m in Sources */,
+				F53E6086193B650600E3EE3E /* Questions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1630,6 +1636,16 @@
 				F5F0F052193642AD003C4FFA /* sk */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F53E608E193B8A4800E3EE3E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F53E608F193B8A4D00E3EE3E /* cs */,
+				F53E6090193B8A4E00E3EE3E /* sk */,
+				F53E6092193B8A7F00E3EE3E /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

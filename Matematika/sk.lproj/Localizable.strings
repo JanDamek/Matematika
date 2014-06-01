@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Matematika
+
+  Created by Jan Damek on 01.06.14.
+  Copyright (c) 2014 PMQ-Software. All rights reserved.
+*/
+
+"lng" = "sk_";
+
+"÷" = "divide";
+"=" = "equals";
+">" = "greater";
+"<" = "lesser";
+"-" = "minus";
+"x" = "multiply";
+"×" = "multiply";
+"+" = "plus";

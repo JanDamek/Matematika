@@ -14,4 +14,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *label;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+-(void)performProcvicovani;
+
 @end

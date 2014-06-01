@@ -63,7 +63,7 @@
             
             [self.jak_na_to setHidden:([i.relationship_pages count]==0)];
             
-            self.detailDescriptionLabel.text = [NSString stringWithFormat:@"pocet stranek: %i - pocet otazek: %i - pocet vysledku: %i",  [i.relationship_pages count],[t.relationship_question count],[t.relationship_results count]];
+            self.detailDescriptionLabel.text = [NSString stringWithFormat:@"pocet stranek: %i - pocet otazek: %i",  [i.relationship_pages count],[t.relationship_question count]];
 
         } else
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"name"] description];
@@ -121,7 +121,22 @@
     }else if ([[segue identifier] isEqualToString:@"p_detail"]) {
         ((pmqTestingViewController*)[segue destinationViewController]).data = l.relationship_test;
         ((pmqTestingViewController*)[segue destinationViewController]).testMode = tmTest;
+    }if ([[segue identifier] isEqualToString:@"znc_detail"]) {
+        ((pmqTestingViewController*)[segue destinationViewController]).data = l.relationship_test;
+        ((pmqTestingViewController*)[segue destinationViewController]).testMode = tmTestOnTime;
     }
+
+}
+
+-(void)performProcvicovani{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+
+    Lessons *l = (Lessons*)self.detailItem;
+
+    pmqTestingViewController *t = [self.storyboard instantiateViewControllerWithIdentifier:@"procvicovani"];
+   t.data = l.relationship_test;
+   t.testMode = tmTest;
+   [self.navigationController pushViewController:t animated:YES];
 }
 
 @end

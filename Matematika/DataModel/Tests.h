@@ -2,7 +2,7 @@
 //  Tests.h
 //  Matematika
 //
-//  Created by Jan Damek on 29.05.14.
+//  Created by Jan Damek on 01.06.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -18,8 +18,8 @@
 @property (nonatomic, retain) NSNumber * time_limit;
 @property (nonatomic, retain) NSString * welcome_sound;
 @property (nonatomic, retain) Lessons *relationship_lesson;
+@property (nonatomic, retain) Results *relationship_results;
 @property (nonatomic, retain) NSSet *relationship_question;
-@property (nonatomic, retain) NSSet *relationship_results;
 @end
 
 @interface Tests (CoreDataGeneratedAccessors)
@@ -28,10 +28,5 @@
 - (void)removeRelationship_questionObject:(Questions *)value;
 - (void)addRelationship_question:(NSSet *)values;
 - (void)removeRelationship_question:(NSSet *)values;
-
-- (void)addRelationship_resultsObject:(Results *)value;
-- (void)removeRelationship_resultsObject:(Results *)value;
-- (void)addRelationship_results:(NSSet *)values;
-- (void)removeRelationship_results:(NSSet *)values;
 
 @end

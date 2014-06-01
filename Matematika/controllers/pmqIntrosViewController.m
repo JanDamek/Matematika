@@ -8,13 +8,18 @@
 
 #import "pmqIntrosViewController.h"
 #import "Pages.h"
+#import "Lessons.h"
 #import "pmqPages.h"
 #import "pmqExpleinCell.h"
+#import "pmqTestingViewController.h"
+#import "pmqDetailLesonsViewController.h"
 
 @interface pmqIntrosViewController (){
     float w;
     float h;
     NSEnumerator *n;
+    
+    AVAudioPlayer *_player;
 }
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -53,6 +58,11 @@
     [self prepareData];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self next:nil];
+}
+
 -(pmqPages *)p{
     if (!_p){
         _p = [[pmqPages alloc]init];
@@ -64,7 +74,7 @@
     _data = data;
     _act_page = 0;
     n = [_data.relationship_pages objectEnumerator];
-   
+    
     [self next:_btnNext];
 }
 
@@ -87,7 +97,7 @@
         [_explainGrid setHidden:NO];
         w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 20 ) / [self.p numOfColumns];
         h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 20) / [self.p numOfRows] ;
-    
+        
         [_explainGrid reloadData];}
 }
 
@@ -100,24 +110,50 @@
 - (IBAction)next:(UIButton *)sender {
     if (!_pages){
         _pages = [n nextObject];
-        _act_page++;
-        
-        //[_btnNext setEnabled:_act_page<=([_data.relationship_pages count]-1)];
-
-        [self prepareData];
+        if (_pages){
+            _act_page++;
+            
+            [self prepareData];
+            
+            [self next:sender];
+        } else {
+            pmqDetailLesonsViewController *d = [self.navigationController.viewControllers objectAtIndex:0];
+            [d performSelector:@selector(performProcvicovani)];
+        }
     } else {
         if (![_p next]){
             _pages = nil;
             [self next:sender];
             
-        }else
+        }else{
             [_explainGrid reloadData];
+            
+            if (_player.isPlaying) {
+                [_player stop];
+            }
+            NSString *sound_file = NSLocalizedString([_p actualChar], nil);
+
+            sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
+                          sound_file];
+            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:sound_file
+                                                 ofType:@"mp3"]];
+            _player = [[AVAudioPlayer alloc]
+                       initWithContentsOfURL:url
+                       error:nil];
+            _player.delegate = self;
+            [_player play];
+        }
     }
     
 }
 
 - (IBAction)preview:(id)sender {
+    
+}
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    [self next:nil];
 }
 
 #pragma mark - collection delegate
@@ -133,7 +169,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     pmqExpleinCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ExpleinCell" forIndexPath:indexPath];
     id object = [self.p objectForItemIndex:indexPath.row];
-
+    
     if ([object isKindOfClass:[NSString class]]){
         cell.lab.text = (NSString*)object;
         [cell.img setHidden:YES];
@@ -149,6 +185,5 @@
     }
     return cell;
 }
-
 
 @end

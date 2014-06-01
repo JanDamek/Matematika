@@ -45,7 +45,7 @@
         <attribute name="welcome_sound" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="relationship_lesson" maxCount="1" deletionRule="Nullify" destinationEntity="Lessons" inverseName="relationship_test" inverseEntity="Lessons" syncable="YES"/>
         <relationship name="relationship_question" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Questions" inverseName="relationship_test" inverseEntity="Questions" syncable="YES"/>
-        <relationship name="relationship_results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="relationship_test" inverseEntity="Results" syncable="YES"/>
+        <relationship name="relationship_results" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Results" inverseName="relationship_test" inverseEntity="Results" syncable="YES"/>
     </entity>
     <elements>
         <element name="Intros" positionX="270" positionY="225" width="128" height="88"/>

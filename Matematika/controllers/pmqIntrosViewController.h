@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "Intros.h"
 
-@interface pmqIntrosViewController : UIViewController 
+@interface pmqIntrosViewController : UIViewController <AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) Intros *data;
 

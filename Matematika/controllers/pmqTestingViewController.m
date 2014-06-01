@@ -19,11 +19,12 @@
     NSMutableArray *_questions;
     
     int answered;
+    
+    AVAudioPlayer *_player;
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *marks;
 @property (strong, nonatomic) NSArray *q;
-@property (strong, nonatomic) NSArray *r;
 
 @property (weak, nonatomic) IBOutlet UIArcTimerView *timerView;
 @property (weak, nonatomic) IBOutlet UIImageView *questionMark;
@@ -36,7 +37,7 @@
 
 @implementation pmqTestingViewController
 
-@synthesize marks = _marks, q = _q, r= _r;
+@synthesize marks = _marks, q = _q;
 @synthesize timerView = _timerView;
 @synthesize answerButtons = _answerButtons;
 @synthesize testMode = _testMode;
@@ -69,6 +70,19 @@
     [super viewDidAppear:answered];
     
     [self loadFromLastTest];
+    
+    if ([_data.welcome_sound hasSuffix:@"mp3"]) {
+        NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
+        sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                             pathForResource:sounf_file
+                                             ofType:@"mp3"]];
+        _player = [[AVAudioPlayer alloc]
+                                      initWithContentsOfURL:url
+                                      error:nil];
+        _player.delegate = self;
+        [_player play];
+    }
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -89,8 +103,6 @@
     _data = data;
     
     _q = [data.relationship_question allObjects];
-    _r = [data.relationship_results allObjects];
-
     
     mark_size = (_marks.frame.size.width - 120) / [_data.test_length intValue];
 }
@@ -185,12 +197,13 @@
         _questionLabel2.frame=s;
         
         [_questionLabel1 setNeedsDisplay];
+        [_questionLabel1 setHidden:NO];
         [_questionLabel2 setNeedsDisplay];
+        [_questionLabel2 setHidden:NO];
+        
         [_timerView setNeedsDisplay];
         [_questionMark setNeedsDisplay];
         
-        [self.view setNeedsDisplay];
-       
         int i=0;
         for (UIButton *b in _answerButtons) {
             if (i<[pmqQ.answers count]){
@@ -208,6 +221,7 @@
         }
         
     }
+
 }
 
 -(void)prepareTest{
@@ -242,12 +256,30 @@
     q.last_answer = [NSNumber numberWithBool:sender.tag==1];
     answered++;
     
+    NSString *sound_file;
+    if (sender==nil){
+        sound_file = @"snd_timeout";
+    } else if ([q.last_answer intValue]==1){
+        sound_file = @"snd_correct";
+    } else sound_file = @"snd_failed";
+    
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                         pathForResource:sound_file
+                                         ofType:@"mp3"]];
+    _player = [[AVAudioPlayer alloc]
+               initWithContentsOfURL:url
+               error:nil];
+    _player.delegate = self;
+    [_player play];
+    
+    
     if (answered<[_data.test_length intValue]){
         [self loadFromLastTest];
     } else {
         if (_testMode==tmTest) {
             _testMode = tmTestOnTime;
             [self prepareTest];
+            [self loadFromLastTest];
         } else {
             //TODO: show test result
         }

@@ -42,6 +42,9 @@
 -(int)numOfColumns{
     return _numOfColumns;
 }
+-(NSString *)actualChar{
+    return [_charAtPos objectAtIndex:_actualIndex-1];
+}
 
 #pragma mark - methodts for work with data
 
@@ -49,11 +52,16 @@
     
     _actualIndex++;
     
+    NSString *item = [_charAtPos objectAtIndex:_actualIndex-1];
+    if ([item isEqualToString:@" "] && _actualIndex<=_numOfColumns)
+        [self next];
+    
     if (_actualIndex<=_numOfColumns){
         _drawToIndex = _numOfItems;
         return YES;
     } else  return NO;
 }
+
 -(id)objectForItemIndex:(int)index{
     NSString *item = [_charAtPos objectAtIndex:index];
     NSArray *test_pos = [item componentsSeparatedByString:@":"];

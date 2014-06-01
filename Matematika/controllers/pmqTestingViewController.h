@@ -11,12 +11,13 @@
 #import "Questions.h"
 #import "Results.h"
 #import "UIArcTimerView.h"
+#import <AVFoundation/AVFoundation.h>
 
 enum TestMode {
     tmNone, tmTest, tmTestOnTime, tmTestFails, tmTestOverAll, tmTestOverAllFail
 };
 
-@interface pmqTestingViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UIArcTimerViewDelegate>
+@interface pmqTestingViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UIArcTimerViewDelegate, AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) Tests *data;
 @property enum TestMode testMode;

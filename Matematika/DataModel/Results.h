@@ -2,7 +2,7 @@
 //  Results.h
 //  Matematika
 //
-//  Created by Jan Damek on 29.05.14.
+//  Created by Jan Damek on 01.06.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 
 @interface Results : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * rate;
 @property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSNumber * rate;
 @property (nonatomic, retain) NSSet *relationship_questions;
 @property (nonatomic, retain) Tests *relationship_test;
 @end
