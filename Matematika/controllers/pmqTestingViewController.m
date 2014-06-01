@@ -13,7 +13,7 @@
 #import "pmqQuestions.h"
 
 @interface pmqTestingViewController (){
-
+    
     float mark_size;
     
     NSMutableArray *_questions;
@@ -78,8 +78,8 @@
                                              pathForResource:sounf_file
                                              ofType:@"mp3"]];
         _player = [[AVAudioPlayer alloc]
-                                      initWithContentsOfURL:url
-                                      error:nil];
+                   initWithContentsOfURL:url
+                   error:nil];
         _player.delegate = self;
         [_player play];
     }
@@ -117,7 +117,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-
+    
     pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
     [d.data saveResults];
     [d.data saveTests];
@@ -186,7 +186,7 @@
         }else{
             [_questionMark setHidden:YES];
             [_timerView setHidden:NO];
-
+            
             CGRect p = _timerView.frame;
             p.origin.x = _questionLabel1.frame.origin.x + _questionLabel1.frame.size.width;
             p.origin.y = _questionLabel1.frame.origin.y- ((_timerView.frame.size.height - _questionLabel1.frame.size.height)/2);
@@ -214,41 +214,42 @@
                 } else b.tag = 0;
                 [b setTitle:s forState:UIControlStateNormal];
             } else {
-                b.titleLabel.text = @"";
+                [b setTitle:@"" forState:UIControlStateNormal];
+
             }
             i++;
             [b setHidden:[b.titleLabel.text isEqualToString:@""]];
         }
         
     }
-
+    
 }
 
 -(void)prepareTest{
     answered = 0;
-        pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+    pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
     
-        switch (_testMode) {
-            case tmTest:
-            case tmTestOnTime:
-                [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:NO];
-                break;
-                
-            case tmTestFails:
-                [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy]firstFail:YES];
-                break;
-                
-            case tmTestOverAll:
-                [self prepareQuestions:[[d.data.questions fetchedObjects] mutableCopy] firstFail:NO];
-                break;
-                
-            case tmTestOverAllFail:
-                [self prepareQuestions:[[d.data.questions fetchedObjects] mutableCopy] firstFail:YES];
-                break;
-                
-            default:
-                break;
-        }
+    switch (_testMode) {
+        case tmTest:
+        case tmTestOnTime:
+            [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:NO];
+            break;
+            
+        case tmTestFails:
+            [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy]firstFail:YES];
+            break;
+            
+        case tmTestOverAll:
+            [self prepareQuestions:[[d.data.questions fetchedObjects] mutableCopy] firstFail:NO];
+            break;
+            
+        case tmTestOverAllFail:
+            [self prepareQuestions:[[d.data.questions fetchedObjects] mutableCopy] firstFail:YES];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (IBAction)answerButtonAction:(UIButton *)sender {
@@ -282,6 +283,23 @@
             [self loadFromLastTest];
         } else {
             //TODO: show test result
+            pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+            Results *r = _data.relationship_results;
+            if (!r){
+                r = [d.data newResults];
+                _data.relationship_results = r;
+            }
+            NSArray *rq = [r.relationship_questions allObjects];
+            for (Questions *q in rq) {
+                [r removeRelationship_questionsObject:q];
+            }
+            for (int i=0; i<[_questions count]; i++) {
+                Questions *q = [_questions objectAtIndex:i];
+                [r addRelationship_questionsObject:q];
+            }
+            r.date = [NSDate date];
+            
+            [d.data saveResults];
         }
     }
 }

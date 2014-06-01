@@ -21,7 +21,7 @@
 "I40-jn-zFy.text" = "Label";
 
 /* Class = "IBUINavigationItem"; title = "Procvicovani chyb"; ObjectID = "Ioi-Pg-LNB"; */
-"Ioi-Pg-LNB.title" = "Procvicovani chyb";
+"Ioi-Pg-LNB.title" = "Procvičování chyb";
 
 /* Class = "IBUIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
 "JEX-9P-axG.title" = "Detail";
@@ -36,16 +36,16 @@
 "PhS-j3-D2a.text" = "Title";
 
 /* Class = "IBUINavigationItem"; title = "Procvicovani"; ObjectID = "Q76-80-yHK"; */
-"Q76-80-yHK.title" = "Procvicovani";
+"Q76-80-yHK.title" = "Procvičování";
 
 /* Class = "IBUIBarButtonItem"; title = "Vysledky testu"; ObjectID = "Q8e-F9-d7b"; */
-"Q8e-F9-d7b.title" = "Vysledky testu";
+"Q8e-F9-d7b.title" = "Výsledky testu";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "TVB-BD-7fe"; */
 "TVB-BD-7fe.text" = "Title";
 
 /* Class = "IBUIBarButtonItem"; title = "Obnova nakupu"; ObjectID = "UVq-1g-IHz"; */
-"UVq-1g-IHz.title" = "Obnova nakupu";
+"UVq-1g-IHz.title" = "Obnova nákupů";
 
 /* Class = "IBUINavigationItem"; title = "Lekce"; ObjectID = "Zdf-7t-Un8"; */
 "Zdf-7t-Un8.title" = "Lekce";
@@ -54,28 +54,28 @@
 "apW-2I-Zwj.normalTitle" = "Prev";
 
 /* Class = "IBUIButton"; normalTitle = "Procvicovani"; ObjectID = "diG-Pu-NrK"; */
-"diG-Pu-NrK.normalTitle" = "Procvicovani";
+"diG-Pu-NrK.normalTitle" = "Procvičování";
 
 /* Class = "IBUIBarButtonItem"; title = "Vysledky testu"; ObjectID = "fl3-ae-OMi"; */
-"fl3-ae-OMi.title" = "Vysledky testu";
+"fl3-ae-OMi.title" = "Výsledky testů";
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "gBa-ww-3cx"; */
 "gBa-ww-3cx.text" = "Detail";
 
 /* Class = "IBUIButton"; normalTitle = "Zkouseni na cas"; ObjectID = "l7U-Eg-gI6"; */
-"l7U-Eg-gI6.normalTitle" = "Zkouseni na cas";
+"l7U-Eg-gI6.normalTitle" = "Zkoušení na čas";
 
 /* Class = "IBUIBarButtonItem"; title = "Procvicovani chyb"; ObjectID = "lBn-eX-UGn"; */
-"lBn-eX-UGn.title" = "Procvicovani chyb";
+"lBn-eX-UGn.title" = "Procvičování chyb";
 
 /* Class = "IBUINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
 "mOI-FS-AaM.title" = "Detail";
 
 /* Class = "IBUIBarButtonItem"; title = "Procvicovani chyb"; ObjectID = "mSY-RS-phC"; */
-"mSY-RS-phC.title" = "Procvicovani chyb";
+"mSY-RS-phC.title" = "Procvičování chyb";
 
 /* Class = "IBUINavigationItem"; title = "Nákup"; ObjectID = "vsa-DN-eKP"; */
 "vsa-DN-eKP.title" = "Nákup";
 
 /* Class = "IBUIButton"; normalTitle = "Next"; ObjectID = "znS-Sr-3B5"; */
-"znS-Sr-3B5.normalTitle" = "Next";
+"znS-Sr-3B5.normalTitle" = "Další";

@@ -52,10 +52,11 @@
     
     _actualIndex++;
     
-    NSString *item = [_charAtPos objectAtIndex:_actualIndex-1];
-    if ([item isEqualToString:@" "] && _actualIndex<=_numOfColumns)
-        [self next];
-    
+    if (_actualIndex<=_numOfColumns){
+        NSString *item = [_charAtPos objectAtIndex:_actualIndex-1];
+        if ([item isEqualToString:@" "] && _actualIndex<=_numOfColumns)
+            [self next];
+    }
     if (_actualIndex<=_numOfColumns){
         _drawToIndex = _numOfItems;
         return YES;

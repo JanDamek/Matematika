@@ -128,21 +128,28 @@
         }else{
             [_explainGrid reloadData];
             
-            if (_player.isPlaying) {
-                [_player stop];
+            if ([_p.data.type isEqualToString:@"html"])
+            {
+                
+            }else{
+                if (_player.isPlaying) {
+                    [_player stop];
+                }
+                NSString *sound_file = NSLocalizedString([_p actualChar], nil);
+                sound_file = [sound_file stringByReplacingOccurrencesOfString:@"(" withString:@""];
+                sound_file = [sound_file stringByReplacingOccurrencesOfString:@")" withString:@""];
+                
+                sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
+                              sound_file];
+                NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                     pathForResource:sound_file
+                                                     ofType:@"mp3"]];
+                _player = [[AVAudioPlayer alloc]
+                           initWithContentsOfURL:url
+                           error:nil];
+                _player.delegate = self;
+                [_player play];
             }
-            NSString *sound_file = NSLocalizedString([_p actualChar], nil);
-
-            sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
-                          sound_file];
-            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                 pathForResource:sound_file
-                                                 ofType:@"mp3"]];
-            _player = [[AVAudioPlayer alloc]
-                       initWithContentsOfURL:url
-                       error:nil];
-            _player.delegate = self;
-            [_player play];
         }
     }
     

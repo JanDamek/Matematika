@@ -33,30 +33,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="J1c-6B-h7s" detailTextLabel="iPQ-5q-HvW" style="IBUITableViewCellStyleValue1" id="wMl-Tj-cmT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wMl-Tj-cmT" customClass="pmqLessonTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wMl-Tj-cmT" id="E6U-7t-Laj">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J1c-6B-h7s">
-                                            <rect key="frame" x="15" y="11" width="33" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="202" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-5R-Cb9">
+                                            <rect key="frame" x="20" y="11" width="202" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iPQ-5q-HvW">
-                                            <rect key="frame" x="241" y="11" width="44" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_0star.png" translatesAutoresizingMaskIntoConstraints="NO" id="1m7-Za-qf8">
+                                            <rect key="frame" x="230" y="14" width="70" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="TQg-7W-cnW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="status_locked.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-So-Fng">
+                                            <rect key="frame" x="259" y="14" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PAP-5R-Cb9" firstAttribute="leading" secondItem="E6U-7t-Laj" secondAttribute="leading" constant="20" symbolic="YES" id="23Q-Gb-a45"/>
+                                        <constraint firstItem="1m7-Za-qf8" firstAttribute="top" secondItem="E6U-7t-Laj" secondAttribute="top" constant="14" id="D3k-Kh-sdU"/>
+                                        <constraint firstAttribute="trailing" secondItem="PAP-5R-Cb9" secondAttribute="trailing" constant="98" id="VUM-dE-iRz"/>
+                                        <constraint firstItem="1m7-Za-qf8" firstAttribute="centerY" secondItem="E6U-7t-Laj" secondAttribute="centerY" id="jFt-d2-sEq"/>
+                                        <constraint firstItem="1m7-Za-qf8" firstAttribute="centerY" secondItem="PAP-5R-Cb9" secondAttribute="centerY" id="nh7-0b-rQx"/>
+                                        <constraint firstAttribute="trailing" secondItem="1m7-Za-qf8" secondAttribute="trailing" constant="20" symbolic="YES" id="vZV-ai-k9a"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="lessonName" destination="PAP-5R-Cb9" id="I90-co-i1K"/>
+                                    <outlet property="lockedImage" destination="n2g-So-Fng" id="HRh-cx-HnY"/>
+                                    <outlet property="ratingImage" destination="1m7-Za-qf8" id="Auw-28-xnE"/>
                                     <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="O5K-T1-4pd"/>
                                 </connections>
                             </tableViewCell>
@@ -89,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="335" y="64"/>
         </scene>
         <!--Pmq Purchase - Nakup-->
         <scene sceneID="nmE-DZ-tlL">
@@ -425,13 +440,17 @@
             <point key="canvasLocation" x="1433" y="901"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="status_0star.png" width="166" height="30"/>
+        <image name="status_locked.png" width="165" height="65"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FOp-Na-1rj"/>
-        <segue reference="Fm3-hk-1Ak"/>
+        <segue reference="f0V-0Z-oe2"/>
+        <segue reference="Rvq-Ta-fMs"/>
     </inferredMetricsTieBreakers>
 </document>
