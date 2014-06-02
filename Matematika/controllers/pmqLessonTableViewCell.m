@@ -11,13 +11,15 @@
 @interface pmqLessonTableViewCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *ratingImage;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImage;
 
 @end
 
 @implementation pmqLessonTableViewCell
 
-@synthesize ratingImage=_ratingImage;
-
+@synthesize ratingImage = _ratingImage;
+@synthesize bgImage = _bgImage;
+@synthesize rowNumber = _rowNumber;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -41,6 +43,19 @@
 }
 
 #pragma mark - methods
+
+-(int)rowNumber{
+    return _rowNumber;
+}
+
+-(void)setRowNumber:(int)rowNumber{
+    if (rowNumber % 2){
+        _bgImage.image = [UIImage imageNamed:@"bg_list_even.9.png"];
+    }else{
+        _bgImage.image = [UIImage imageNamed:@"bg_list_odd.9.png"];        
+    }
+    _rowNumber = rowNumber;
+}
 
 -(void)setLock{
 

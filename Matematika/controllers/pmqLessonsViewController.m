@@ -220,6 +220,9 @@
     Lessons *object = (Lessons*)[self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.lessonName.text = object.name;
+    [cell.lessonName sizeToFit];
+    
+    cell.rowNumber = indexPath.row;
     
     if ([object.demo intValue]==1){
         [cell setRating:[object.rating intValue]];
