@@ -8,7 +8,9 @@
 
 #import "pmqLessonTableViewCell.h"
 
-@interface pmqLessonTableViewCell()
+@interface pmqLessonTableViewCell(){
+    bool _selected;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *ratingImage;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImage;
@@ -49,16 +51,28 @@
 }
 
 -(void)setRowNumber:(int)rowNumber{
+//    UIView *v = [[UIView alloc] initWithFrame:self.frame];
     if (rowNumber % 2){
         _bgImage.image = [UIImage imageNamed:@"bg_list_even.9.png"];
+
+//        UIImageView *s = [[UIImageView alloc] initWithFrame:v.frame];
+//        s.image = [UIImage imageNamed:@"bg_list_odd.9.png"];
+//        [v addSubview:s];
+        
+//        self.selectedBackgroundView = v;
     }else{
         _bgImage.image = [UIImage imageNamed:@"bg_list_odd.9.png"];        
+
+//        UIImageView *s = [[UIImageView alloc] initWithFrame:v.frame];
+//        s.image = [UIImage imageNamed:@"bg_list_even.9.png"];
+//        [v addSubview:s];
+        
+//        self.selectedBackgroundView = v;
     }
     _rowNumber = rowNumber;
 }
 
 -(void)setLock{
-
     _ratingImage.image = [UIImage imageNamed:@"status_locked"];
 }
 

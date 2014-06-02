@@ -24,6 +24,11 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.opaque = NO;
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_overlay.png"]];
+
        
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     
@@ -58,6 +63,8 @@
         cell.detailTextLabel.text = @"";
     }else{
     SKProduct *p = (SKProduct*)[products objectAtIndex:indexPath.row];
+        
+        cell.backgroundColor = [UIColor clearColor];
     
     cell.textLabel.text = p.localizedTitle;
     cell.detailTextLabel.text = p.localizedDescription;

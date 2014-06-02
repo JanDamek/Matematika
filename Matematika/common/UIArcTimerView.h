@@ -37,5 +37,6 @@
 -(void)stopTimer;
 -(void)startTimer;
 -(void)startTimer:(int)timeToCount;
+-(void)invalidateTimer;
 
 @end

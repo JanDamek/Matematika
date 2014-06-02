@@ -18,6 +18,7 @@
     float w;
     float h;
     NSEnumerator *n;
+    bool isReadyToPlay;
     
     AVAudioPlayer *_player;
 }
@@ -53,6 +54,7 @@
 
 - (void)viewDidLoad
 {
+    isReadyToPlay = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self prepareData];
@@ -60,7 +62,8 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self next:nil];
+    //[self next:nil];
+    isReadyToPlay = YES;
 }
 
 -(pmqPages *)p{
@@ -122,16 +125,17 @@
         }
     } else {
         if (![_p next]){
-            _pages = nil;
-            [self next:sender];
-            
+            if (sender){
+                _pages = nil;
+                [self next:sender];
+            }
         }else{
             [_explainGrid reloadData];
             
             if ([_p.data.type isEqualToString:@"html"])
             {
                 
-            }else{
+            }else if (isReadyToPlay) {
                 if (_player.isPlaying) {
                     [_player stop];
                 }

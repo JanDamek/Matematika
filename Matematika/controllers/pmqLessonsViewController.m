@@ -17,10 +17,12 @@
 
 @implementation pmqLessonsViewController
 
+@synthesize tableView = _tableView;
+
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.clearsSelectionOnViewWillAppear = NO;
+//        self.clearsSelectionOnViewWillAppear = NO;
         self.preferredContentSize = CGSizeMake(320.0, 600.0);
     }
     [super awakeFromNib];
@@ -37,6 +39,7 @@
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
     
     [self doSelectRow:indexPath];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,8 +96,7 @@
 
 -(void)doSelectRow:(NSIndexPath*)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {        
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
         [prefs synchronize];
@@ -218,6 +220,15 @@
 - (void)configureCell:(pmqLessonTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Lessons *object = (Lessons*)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor clearColor];
+    
+    UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
+    [selectionView setBackgroundColor:[UIColor clearColor]];
+    UIImageView *i = [[UIImageView alloc] initWithFrame:selectionView.bounds];
+    i.image = [UIImage imageNamed:@"list_hover.9.png"];
+    [selectionView addSubview:i];
+    cell.selectedBackgroundView = selectionView;
     
     cell.lessonName.text = object.name;
     [cell.lessonName sizeToFit];

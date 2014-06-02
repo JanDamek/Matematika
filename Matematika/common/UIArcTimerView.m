@@ -240,6 +240,10 @@
     self.percent = _percent + 0.1;
 }
 
+-(void)invalidateTimer{
+    [_timer invalidate];
+}
+
 -(void)stopTimer{
     if (_timer){
         [_timer invalidate];

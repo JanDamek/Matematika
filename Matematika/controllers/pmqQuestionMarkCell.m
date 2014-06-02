@@ -35,14 +35,14 @@
 -(void)setCorrect:(BOOL)correct{
     _correct = correct;
     if (correct){
-        _img.image = [UIImage imageNamed:@"3"];
+        _img.image = [UIImage imageNamed:@"star_ok"];
     }else{
-        _img.image = [UIImage imageNamed:@"2"];
+        _img.image = [UIImage imageNamed:@"star_err"];
     }
 }
 
 -(void)noAnswer{
-    _img.image = [UIImage imageNamed:@"1"];    
+    _img.image = [UIImage imageNamed:@"star_bg"];
 }
 
 

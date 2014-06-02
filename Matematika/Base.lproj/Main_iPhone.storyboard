@@ -28,50 +28,39 @@
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="pmqLessonsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="W3I-DQ-9Wo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="W3I-DQ-9Wo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wMl-Tj-cmT" customClass="pmqLessonTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="wMl-Tj-cmT" customClass="pmqLessonTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wMl-Tj-cmT" id="E6U-7t-Laj">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="202" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-5R-Cb9">
-                                            <rect key="frame" x="20" y="11" width="202" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_list_even.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="BLe-Wo-etp">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="40" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-zb-4kP">
+                                            <rect key="frame" x="41" y="6" width="40" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_0star.png" translatesAutoresizingMaskIntoConstraints="NO" id="1m7-Za-qf8">
-                                            <rect key="frame" x="230" y="14" width="70" height="15"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="status_1star.png" translatesAutoresizingMaskIntoConstraints="NO" id="JK3-kd-49h">
+                                            <rect key="frame" x="188" y="32" width="90" height="20"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="TQg-7W-cnW"/>
-                                            </constraints>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="status_locked.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-So-Fng">
-                                            <rect key="frame" x="259" y="14" width="61" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="PAP-5R-Cb9" firstAttribute="leading" secondItem="E6U-7t-Laj" secondAttribute="leading" constant="20" symbolic="YES" id="23Q-Gb-a45"/>
-                                        <constraint firstItem="1m7-Za-qf8" firstAttribute="top" secondItem="E6U-7t-Laj" secondAttribute="top" constant="14" id="D3k-Kh-sdU"/>
-                                        <constraint firstAttribute="trailing" secondItem="PAP-5R-Cb9" secondAttribute="trailing" constant="98" id="VUM-dE-iRz"/>
-                                        <constraint firstItem="1m7-Za-qf8" firstAttribute="centerY" secondItem="E6U-7t-Laj" secondAttribute="centerY" id="jFt-d2-sEq"/>
-                                        <constraint firstItem="1m7-Za-qf8" firstAttribute="centerY" secondItem="PAP-5R-Cb9" secondAttribute="centerY" id="nh7-0b-rQx"/>
-                                        <constraint firstAttribute="trailing" secondItem="1m7-Za-qf8" secondAttribute="trailing" constant="20" symbolic="YES" id="vZV-ai-k9a"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="lessonName" destination="PAP-5R-Cb9" id="I90-co-i1K"/>
-                                    <outlet property="lockedImage" destination="n2g-So-Fng" id="HRh-cx-HnY"/>
-                                    <outlet property="ratingImage" destination="1m7-Za-qf8" id="Auw-28-xnE"/>
+                                    <outlet property="bgImage" destination="BLe-Wo-etp" id="oUt-b0-AjT"/>
+                                    <outlet property="lessonName" destination="fU9-zb-4kP" id="Q0G-dJ-Kp3"/>
+                                    <outlet property="ratingImage" destination="JK3-kd-49h" id="3Dm-re-NWA"/>
                                     <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="O5K-T1-4pd"/>
                                 </connections>
                             </tableViewCell>
@@ -441,8 +430,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="status_0star.png" width="166" height="30"/>
-        <image name="status_locked.png" width="165" height="65"/>
+        <image name="bg_list_even.9.png" width="260" height="64"/>
+        <image name="status_1star.png" width="166" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -115,6 +115,12 @@
     _testMode = testMode;
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+
+    [_timerView invalidateTimer];
+}
+
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     
@@ -282,7 +288,7 @@
             [self prepareTest];
             [self loadFromLastTest];
         } else {
-            //TODO: show test result
+
             pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
             Results *r = _data.relationship_results;
             if (!r){
@@ -300,6 +306,8 @@
             r.date = [NSDate date];
             
             [d.data saveResults];
+            //TODO: show test result
+        
         }
     }
 }

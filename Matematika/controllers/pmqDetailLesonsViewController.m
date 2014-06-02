@@ -24,8 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *procvicovani;
 @property (weak, nonatomic) IBOutlet UIButton *jak_na_to;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-@property (weak, nonatomic) IBOutlet UIButton *vysledky_testu;
-@property (weak, nonatomic) IBOutlet UIButton *procvicovani_chyb;
 
 - (void)configureView;
 @end
@@ -57,16 +55,11 @@
     if (self.detailItem) {
         if ([self.detailItem isKindOfClass:[Lessons class]]){
             Lessons *l = (Lessons*)self.detailItem;
-            self.label.title = l.name;
-            Tests *t = l.relationship_test;
+            self.label.text = l.name;
             Intros *i = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
             
             [self.jak_na_to setHidden:([i.relationship_pages count]==0)];
-            
-            self.detailDescriptionLabel.text = [NSString stringWithFormat:@"pocet stranek: %i - pocet otazek: %i",  [i.relationship_pages count],[t.relationship_question count]];
-
-        } else
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"name"] description];
+        }
     }
 }
 

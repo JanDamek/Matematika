@@ -12,9 +12,11 @@
 
 #import <CoreData/CoreData.h>
 
-@interface pmqLessonsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface pmqLessonsViewController : UIViewController <NSFetchedResultsControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) pmqDetailLesonsViewController *detailViewController;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
