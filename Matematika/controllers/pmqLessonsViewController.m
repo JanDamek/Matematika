@@ -10,8 +10,15 @@
 #import "pmqDetailLesonsViewController.h"
 #import "Lessons.h"
 #import "pmqLessonTableViewCell.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface pmqLessonsViewController ()
+@interface pmqLessonsViewController (){
+    bool isReady;
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *btnVysledkyTestu;
+@property (weak, nonatomic) IBOutlet UIButton *btnProcvicovaniChyb;
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
@@ -22,7 +29,7 @@
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        self.clearsSelectionOnViewWillAppear = NO;
+        //        self.clearsSelectionOnViewWillAppear = NO;
         self.preferredContentSize = CGSizeMake(320.0, 600.0);
     }
     [super awakeFromNib];
@@ -31,7 +38,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    isReady = NO;
+    
+    self.btnProcvicovaniChyb.layer.cornerRadius = 7;
+    self.btnVysledkyTestu.layer.cornerRadius = 7;
+    
     self.detailViewController = (pmqDetailLesonsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -46,6 +58,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    isReady = YES;
 }
 
 #pragma mark - Table View
@@ -81,12 +98,12 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-    }   
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,16 +113,23 @@
 
 -(void)doSelectRow:(NSIndexPath*)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {        
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
         [prefs synchronize];
         
         Lessons *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         if ([object.demo intValue]==0){
-            [self performSegueWithIdentifier:@"nakup_popover" sender:self];
-        } else
+            if (isReady){
+                [self performSegueWithIdentifier:@"nakup_popover" sender:self];
+            }else {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+                [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+                [self doSelectRow:indexPath];
+            }
+        } else {
             self.detailViewController.detailItem = object;
+        }
     }
 }
 
@@ -118,7 +142,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-
+        
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
         [prefs synchronize];
@@ -158,14 +182,14 @@
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
     
     return _fetchedResultsController;
-}    
+}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {

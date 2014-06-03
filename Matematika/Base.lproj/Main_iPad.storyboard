@@ -113,7 +113,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tz7-XL-Aw8" kind="popover" popoverAnchorView="NRC-hb-8yt" id="csu-sG-Dfw">
+                                    <segue destination="tz7-XL-Aw8" kind="popover" identifier="nakup_popover" popoverAnchorView="NRC-hb-8yt" id="csu-sG-Dfw">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -154,6 +154,8 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btnProcvicovaniChyb" destination="d5m-63-MTh" id="CH5-1d-Jfo"/>
+                        <outlet property="btnVysledkyTestu" destination="vOe-bO-bsC" id="7h4-oE-CSy"/>
                         <outlet property="tableView" destination="owS-pe-NoK" id="5EG-wn-xbV"/>
                     </connections>
                 </viewController>
@@ -178,34 +180,37 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_board_square.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="1ow-Fk-js1">
-                                <rect key="frame" x="20" y="110" width="665" height="547"/>
+                                <rect key="frame" x="20" y="110" width="681" height="591"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W4-iS-tbH">
                                 <rect key="frame" x="190" y="157" width="322" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="-3" maxY="0.0"/>
-                                <state key="normal" title="Jak na to" image="img_exercise.png"/>
+                                <state key="normal" title="Jak na to" image="img_intro.png"/>
                                 <connections>
                                     <segue destination="NqH-3d-zu9" kind="push" identifier="jnt_detail" id="60f-S9-SBu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diG-Pu-NrK">
-                                <rect key="frame" x="280" y="337" width="144" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diG-Pu-NrK">
+                                <rect key="frame" x="172" y="326" width="359" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Procvicovani">
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Procvicovani" image="img_trial.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="YSQ-WZ-sxf" kind="push" identifier="p_detail" id="4wz-Zb-sEt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-Eg-gI6">
-                                <rect key="frame" x="280" y="446" width="144" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-Eg-gI6">
+                                <rect key="frame" x="144" y="495" width="414" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Zkouseni na cas">
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Zkouseni na cas" image="img_exercise.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -248,6 +253,10 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-fu-qCy">
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-JS-Ee1">
                                 <rect key="frame" x="102" y="181" width="500" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -267,7 +276,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-kx-1Ty" customClass="UIArcTimerView">
                                 <rect key="frame" x="252" y="232" width="92" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9CB-So-AXO">
                                 <rect key="frame" x="102" y="86" width="498" height="54"/>
@@ -311,7 +320,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <outlet property="delegate" destination="YSQ-WZ-sxf" id="jjg-do-JDO"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnn-kG-JSn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnn-kG-JSn">
                                 <rect key="frame" x="102" y="431" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -323,7 +332,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <action selector="answerButtonAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="j2I-p3-Xhp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoF-JP-Mc0">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoF-JP-Mc0">
                                 <rect key="frame" x="277" y="431" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -335,7 +344,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <action selector="answerButtonAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="9Qk-on-vm1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJU-dx-dzl">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJU-dx-dzl">
                                 <rect key="frame" x="452" y="431" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,7 +356,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <action selector="answerButtonAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="zPP-Ck-SLZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYI-hd-AgM">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYI-hd-AgM">
                                 <rect key="frame" x="102" y="588" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -359,7 +368,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <action selector="answerButtonAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="hc3-H5-Hm7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-Or-HHz">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-Or-HHz">
                                 <rect key="frame" x="277" y="588" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -371,7 +380,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <action selector="answerButtonAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="5Ce-aA-Yf9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zO-4R-Ocx">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zO-4R-Ocx">
                                 <rect key="frame" x="452" y="588" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -387,12 +396,32 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <rect key="frame" x="187" y="231" width="65" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-XB-oNw">
+                                <rect key="frame" x="285" y="524" width="133" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStartAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="ZjX-9G-tps"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zmacknutim tlacitka start zahajite test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="450" translatesAutoresizingMaskIntoConstraints="NO" id="KX6-8W-w9K">
+                                <rect key="frame" x="126" y="212" width="450" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Procvicovani" id="Q76-80-yHK"/>
                     <connections>
+                        <outlet property="btnStart" destination="gGr-XB-oNw" id="huw-d2-y9L"/>
+                        <outlet property="lblStart" destination="KX6-8W-w9K" id="kcI-gX-lH0"/>
                         <outlet property="marks" destination="9CB-So-AXO" id="oTH-Yl-gx7"/>
                         <outlet property="questionLabel1" destination="TFg-JS-Ee1" id="Pfj-Xm-tK7"/>
                         <outlet property="questionLabel2" destination="G0P-YI-ioK" id="qvP-Ne-YOC"/>
@@ -408,7 +437,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDA-y6-Mmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="776"/>
+            <point key="canvasLocation" x="1484" y="832"/>
         </scene>
         <!--Pmq Intros View Controller - Jak na to-->
         <scene sceneID="VFI-B7-2hU">
@@ -422,20 +451,29 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znS-Sr-3B5">
-                                <rect key="frame" x="626" y="695" width="32" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eeq-Gh-tbF">
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next">
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_board_pn.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-mh-gH5">
+                                <rect key="frame" x="44" y="559" width="614" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znS-Sr-3B5">
+                                <rect key="frame" x="559" y="656" width="118" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_next_base.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="btn_next_pressed.png"/>
                                 <connections>
                                     <action selector="next:" destination="NqH-3d-zu9" eventType="touchUpInside" id="DB9-PC-O2M"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-NR-wko">
-                                <rect key="frame" x="44" y="104" width="614" height="559"/>
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-NR-wko">
+                                <rect key="frame" x="44" y="104" width="614" height="457"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apW-2I-Zwj">
@@ -449,7 +487,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-gu-SZ2">
-                                <rect key="frame" x="44" y="104" width="614" height="559"/>
+                                <rect key="frame" x="44" y="104" width="614" height="456"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="8pf-3E-PxU">
@@ -507,15 +545,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="JYc-NR-wko" firstAttribute="top" secondItem="61F-fQ-GYo" secondAttribute="top" constant="104" id="EgW-IN-iN1"/>
-                            <constraint firstAttribute="bottom" secondItem="JYc-NR-wko" secondAttribute="bottom" constant="105" id="Taw-Ss-Jfo"/>
-                            <constraint firstAttribute="trailing" secondItem="znS-Sr-3B5" secondAttribute="trailing" constant="45" id="gEr-nT-GAH"/>
-                            <constraint firstItem="JYc-NR-wko" firstAttribute="leading" secondItem="61F-fQ-GYo" secondAttribute="leading" constant="44" id="jHI-gA-kMQ"/>
-                            <constraint firstAttribute="bottom" secondItem="znS-Sr-3B5" secondAttribute="bottom" constant="43" id="jgm-Fp-cbf"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JYc-NR-wko" secondAttribute="bottom" constant="105" id="jwb-Tz-fwc"/>
-                            <constraint firstAttribute="trailing" secondItem="JYc-NR-wko" secondAttribute="trailing" constant="45" id="oU3-Xt-Lzd"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Jak na to" id="POy-23-H6K"/>
@@ -528,7 +557,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j02-vj-B2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="-226"/>
+            <point key="canvasLocation" x="1484" y="-157"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -647,13 +676,18 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
     </scenes>
     <resources>
         <image name="1.png" width="179" height="190"/>
+        <image name="bg_board_pn.9.png" width="801" height="282"/>
         <image name="bg_board_square.9.png" width="681" height="94"/>
         <image name="bg_list_even.9.png" width="260" height="64"/>
         <image name="bg_overlay.png" width="160" height="256"/>
         <image name="btn_green_base.9.png" width="40" height="68"/>
+        <image name="btn_next_base.png" width="80" height="97"/>
+        <image name="btn_next_pressed.png" width="80" height="97"/>
         <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
         <image name="img_exercise.png" width="162" height="161"/>
+        <image name="img_intro.png" width="162" height="161"/>
+        <image name="img_trial.png" width="162" height="161"/>
         <image name="list_shadow_bottom.9.png" width="62" height="48"/>
         <image name="list_shadow_top.9.png" width="62" height="48"/>
         <image name="pmq_mini.png" width="74" height="37"/>

@@ -11,6 +11,7 @@
 #import "Lessons.h"
 #import "pmqAppDelegate.h"
 #import "pmqQuestions.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface pmqTestingViewController (){
     
@@ -32,6 +33,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel2;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
+@property (weak, nonatomic) IBOutlet UIButton *btnStart;
+@property (weak, nonatomic) IBOutlet UILabel *lblStart;
 
 @end
 
@@ -59,17 +62,31 @@
     // Do any additional setup after loading the view.
     _timerView.delegate = self;
     mark_size = (_marks.frame.size.width - 120) / 12;
+    
+    self.btnStart.layer.cornerRadius = 10;
+    
+    for (UIButton *b in self.answerButtons) {
+        b.layer.cornerRadius = 10;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //[self prepareTest];
+}
+- (IBAction)btnStartAction:(id)sender {
+    [self.lblStart setHidden:YES];
+    [self.btnStart setHidden:YES];
+    [_questionLabel1 setHidden:NO];
+    [_questionLabel2 setHidden:NO];
+    
     [self prepareTest];
+    
+    [self loadFromLastTest];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:answered];
-    
-    [self loadFromLastTest];
+    [super viewDidAppear:animated];
     
     if ([_data.welcome_sound hasSuffix:@"mp3"]) {
         NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
@@ -112,12 +129,27 @@
 }
 
 -(void)setTestMode:(enum TestMode)testMode{
+    answered = 0;
+    [_marks reloadData];
+    
+    [self.lblStart setHidden:NO];
+    [self.btnStart setHidden:NO];
+    
+    [self.questionLabel1 setHidden:YES];
+    [self.timerView setHidden:YES];
+    [self.questionLabel2 setHidden:YES];
+    [self.questionMark setHidden:YES];
+    
+    for (UIButton *b in self.answerButtons) {
+        [b setHidden:YES];
+    }
+    
     _testMode = testMode;
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-
+    
     [_timerView invalidateTimer];
 }
 
@@ -173,10 +205,13 @@
         pmqQuestions *pmqQ = [[pmqQuestions alloc]init];
         pmqQ.q = (Questions*)[_questions objectAtIndex:answered];
         
+        
         _questionLabel1.text = pmqQ.fistPartQuestion;
         [_questionLabel1 sizeToFit];
+        
         _questionLabel2.text = pmqQ.secondPartQuestion;
         [_questionLabel2 sizeToFit];
+        
         CGRect s = _questionLabel2.frame;
         s.origin.y = _questionLabel1.frame.origin.y;
         
@@ -219,12 +254,13 @@
                     b.tag = 1;
                 } else b.tag = 0;
                 [b setTitle:s forState:UIControlStateNormal];
+                [b setHidden:NO];
             } else {
+                [b setHidden:YES];
                 [b setTitle:@"" forState:UIControlStateNormal];
-
+                
             }
             i++;
-            [b setHidden:[b.titleLabel.text isEqualToString:@""]];
         }
         
     }
@@ -258,15 +294,88 @@
     }
 }
 
+-(void)markCorrect{
+    [UIView beginAnimations:@"correct" context:nil];
+    
+    if (_testMode ==  tmTest) {
+        [_questionMark setHidden:YES];
+        [_questionLabel1 setHidden:YES];
+        
+    }else{
+        
+    }
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelegate:self];
+    [UIView commitAnimations];
+}
+
+-(void)prepareNextQuestion{
+    [UIView beginAnimations:@"next" context:nil];
+
+    for (UIButton *b in self.answerButtons) {
+        b.backgroundColor = [UIColor lightGrayColor];
+    }
+    
+    [self loadFromLastTest];
+
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelegate:self];
+    [UIView commitAnimations];
+}
+
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+    if ([(NSString*)anim isEqualToString:@"answer"]){
+     
+        [self performSelector:@selector(markCorrect) withObject:nil afterDelay:1];
+        
+    } else if ( [(NSString*)anim isEqualToString:@"correct"] ){
+
+        [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:0.2];
+    }
+}
+
+-(void)animateAnswer:(UIButton*)button{
+    
+    [_marks reloadData];
+    
+    [UIView beginAnimations:@"answer" context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelegate:self];
+    
+    if (button.tag==1){
+        button.backgroundColor = [UIColor greenColor];
+    } else {
+        button.backgroundColor = [UIColor redColor];
+    }
+    
+    for (UIButton *b in self.answerButtons) {
+        if (b.tag==1){
+            b.backgroundColor = [UIColor greenColor];
+        }
+        if ([b isEqual:button] || b.tag==1) {
+            [b setHidden:NO];
+        } else [b setHidden:YES];
+    }
+    
+    [UIView commitAnimations];
+}
+
 - (IBAction)answerButtonAction:(UIButton *)sender {
-    Questions *q = [_questions objectAtIndex:answered];
-    q.last_answer = [NSNumber numberWithBool:sender.tag==1];
+    
+    if (_testMode != tmTest) {
+        Questions *q = [_questions objectAtIndex:answered];
+        q.last_answer = [NSNumber numberWithBool:sender.tag==1];
+        float inTime = _timerView.timeToCount*(_timerView.percent/100);
+        if (inTime==0) inTime = _timerView.timeToCount;
+        q.time_of_answer = [NSNumber numberWithFloat:inTime];
+    }
     answered++;
     
     NSString *sound_file;
     if (sender==nil){
         sound_file = @"snd_timeout";
-    } else if ([q.last_answer intValue]==1){
+    } else if (sender.tag==1){
         sound_file = @"snd_correct";
     } else sound_file = @"snd_failed";
     
@@ -281,14 +390,15 @@
     
     
     if (answered<[_data.test_length intValue]){
-        [self loadFromLastTest];
+        [self animateAnswer:sender];
     } else {
         if (_testMode==tmTest) {
-            _testMode = tmTestOnTime;
-            [self prepareTest];
-            [self loadFromLastTest];
+            
+            self.testMode = tmTestOnTime;
+            //            [self prepareTest];
+            //            [self loadFromLastTest];
         } else {
-
+            
             pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
             Results *r = _data.relationship_results;
             if (!r){
@@ -299,15 +409,23 @@
             for (Questions *q in rq) {
                 [r removeRelationship_questionsObject:q];
             }
+            float total_time = 0;
+            int bad_answer = 0;
             for (int i=0; i<[_questions count]; i++) {
                 Questions *q = [_questions objectAtIndex:i];
+                total_time += [q.time_of_answer floatValue];
+                if ([q.last_answer integerValue]==0){
+                    bad_answer++;
+                }
                 [r addRelationship_questionsObject:q];
             }
+            r.total_time = [NSNumber numberWithFloat:total_time];
+            r.bad_answers = [NSNumber numberWithInt:bad_answer];
             r.date = [NSDate date];
             
             [d.data saveResults];
             //TODO: show test result
-        
+            
         }
     }
 }

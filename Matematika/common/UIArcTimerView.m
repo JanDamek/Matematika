@@ -37,8 +37,7 @@
 
 -(void)maindeclare{
     // Initialization code
-    self.backgroundColor = [UIColor whiteColor];
-    
+   
     _timer = nil;
     
     float size;

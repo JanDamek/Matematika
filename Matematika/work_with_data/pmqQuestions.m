@@ -50,7 +50,7 @@
         }
     }
     [_a removeObjectAtIndex:correct_index];
-
+    
     int count_question = 0;
     int test_length = 6;
     NSMutableArray *a = [[NSMutableArray alloc]init];
@@ -60,17 +60,24 @@
         NSString *q;
         if (index<[_a count]) {
             q = [_a objectAtIndex:index];
-        } else q = @"";
+        } else q = nil;
         
         if (q && ![q isEqualToString:_corect_answer]){
             [a addObject:q];
-            count_question++;
         }
+        count_question++;
         [_a removeObject:q];
     }
-    int div = RAND_MAX / [a count];
-    int index = rand() / div;
-    [a replaceObjectAtIndex:index withObject:ca];
+    if ([a count]>=6){
+        int div = RAND_MAX / [a count];
+        int index = rand() / div;
+        [a replaceObjectAtIndex:index withObject:ca];
+    } else
+    {
+        int div = RAND_MAX / [a count];
+        int index = rand() / div;
+        [a insertObject:ca atIndex:index];
+    }
     _answers = [[NSArray alloc] initWithArray:a];
 }
 

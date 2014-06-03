@@ -62,8 +62,27 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //[self next:nil];
+
     isReadyToPlay = YES;
+    
+    @try {
+        NSString *sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
+                                @"intro"];
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                             pathForResource:sound_file
+                                             ofType:@"mp3"]];
+        _player = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:url
+                   error:nil];
+        _player.delegate = self;
+        [_player play];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception);
+    }
+    @finally {
+    }
+    
 }
 
 -(pmqPages *)p{
