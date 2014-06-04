@@ -22,6 +22,7 @@
     int answered;
     
     AVAudioPlayer *_player;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *marks;
@@ -31,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *questionMark;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *labelAnswer;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
@@ -44,6 +46,7 @@
 @synthesize timerView = _timerView;
 @synthesize answerButtons = _answerButtons;
 @synthesize testMode = _testMode;
+@synthesize labelAnswer = _labelAnswer;
 
 #pragma mark - initialization
 
@@ -297,13 +300,6 @@
 -(void)markCorrect{
     [UIView beginAnimations:@"correct" context:nil];
     
-    if (_testMode ==  tmTest) {
-        [_questionMark setHidden:YES];
-        [_questionLabel1 setHidden:YES];
-        
-    }else{
-        
-    }
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
@@ -312,6 +308,7 @@
 -(void)prepareNextQuestion{
     [UIView beginAnimations:@"next" context:nil];
 
+    [_labelAnswer setHidden:YES];
     for (UIButton *b in self.answerButtons) {
         b.backgroundColor = [UIColor lightGrayColor];
     }
@@ -327,11 +324,11 @@
     
     if ([(NSString*)anim isEqualToString:@"answer"]){
      
-        [self performSelector:@selector(markCorrect) withObject:nil afterDelay:1];
+        [self performSelector:@selector(markCorrect) withObject:nil afterDelay:0.2];
         
     } else if ( [(NSString*)anim isEqualToString:@"correct"] ){
 
-        [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:0.2];
+        [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:1];
     }
 }
 
@@ -352,16 +349,27 @@
     for (UIButton *b in self.answerButtons) {
         if (b.tag==1){
             b.backgroundColor = [UIColor greenColor];
+            _labelAnswer.text = b.currentTitle;
+            [_labelAnswer sizeToFit];
         }
         if ([b isEqual:button] || b.tag==1) {
             [b setHidden:NO];
         } else [b setHidden:YES];
     }
     
+    if (_testMode ==  tmTest) {
+        [_questionMark setHidden:YES];
+        [_labelAnswer setHidden:NO];
+    }else{
+        
+    }
+    
     [UIView commitAnimations];
 }
 
 - (IBAction)answerButtonAction:(UIButton *)sender {
+    
+    _labelAnswer.frame = _questionMark.frame;
     
     if (_testMode != tmTest) {
         Questions *q = [_questions objectAtIndex:answered];
