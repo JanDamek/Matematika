@@ -87,6 +87,7 @@
 		F53E6101193C940C00E3EE3E /* title_hp.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60EA193C940C00E3EE3E /* title_hp.png */; };
 		F53E6102193C940C00E3EE3E /* title_mm.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60EB193C940C00E3EE3E /* title_mm.png */; };
 		F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F582819338BA600956AEB /* StoreKit.framework */; };
+		F5BB04F0193FBE510025EBFB /* pmqResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BB04EF193FBE510025EBFB /* pmqResultCell.m */; };
 		F5F0F00119363ED1003C4FFA /* UIArcTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F00019363ED1003C4FFA /* UIArcTimerView.m */; };
 		F5F0F059193644DB003C4FFA /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F057193644DB003C4FFA /* XMLReader.m */; };
 		F5F0F05D19364500003C4FFA /* pmqPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F05C19364500003C4FFA /* pmqPurchase.m */; };
@@ -467,6 +468,8 @@
 		F53E60EB193C940C00E3EE3E /* title_mm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_mm.png; sourceTree = "<group>"; };
 		F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Matematika 2.xcdatamodel"; sourceTree = "<group>"; };
 		F53F582819338BA600956AEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F5BB04EE193FBE510025EBFB /* pmqResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqResultCell.h; sourceTree = "<group>"; };
+		F5BB04EF193FBE510025EBFB /* pmqResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqResultCell.m; sourceTree = "<group>"; };
 		F5F0EFFF19363ED1003C4FFA /* UIArcTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIArcTimerView.h; path = common/UIArcTimerView.h; sourceTree = "<group>"; };
 		F5F0F00019363ED1003C4FFA /* UIArcTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIArcTimerView.m; path = common/UIArcTimerView.m; sourceTree = "<group>"; };
 		F5F0F04D19364278003C4FFA /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -909,6 +912,19 @@
 			name = common;
 			sourceTree = "<group>";
 		};
+		F5BB04ED193FBE050025EBFB /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F53E6096193BAA9C00E3EE3E /* pmqLessonTableViewCell.h */,
+				F53E6097193BAA9C00E3EE3E /* pmqLessonTableViewCell.m */,
+				F5F0F06119364511003C4FFA /* pmqExpleinCell.h */,
+				F5F0F06219364511003C4FFA /* pmqExpleinCell.m */,
+				F5BB04EE193FBE510025EBFB /* pmqResultCell.h */,
+				F5BB04EF193FBE510025EBFB /* pmqResultCell.m */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		F5F0F05A19364500003C4FFA /* InAppPurchase */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,10 +937,9 @@
 		F5F0F05E19364511003C4FFA /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F5BB04ED193FBE050025EBFB /* cells */,
 				F5F0F05F19364511003C4FFA /* pmqDetailLesonsViewController.h */,
 				F5F0F06019364511003C4FFA /* pmqDetailLesonsViewController.m */,
-				F5F0F06119364511003C4FFA /* pmqExpleinCell.h */,
-				F5F0F06219364511003C4FFA /* pmqExpleinCell.m */,
 				F5F0F06319364511003C4FFA /* pmqIntrosViewController.h */,
 				F5F0F06419364511003C4FFA /* pmqIntrosViewController.m */,
 				F5F0F06519364511003C4FFA /* pmqLessonsViewController.h */,
@@ -935,8 +950,6 @@
 				F5F0F06A19364511003C4FFA /* pmqTestingViewController.m */,
 				F53E6093193B969A00E3EE3E /* pmqResultViewController.h */,
 				F53E6094193B969A00E3EE3E /* pmqResultViewController.m */,
-				F53E6096193BAA9C00E3EE3E /* pmqLessonTableViewCell.h */,
-				F53E6097193BAA9C00E3EE3E /* pmqLessonTableViewCell.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1777,6 +1790,7 @@
 				F5F0F05D19364500003C4FFA /* pmqPurchase.m in Sources */,
 				F53E607A193B650500E3EE3E /* Pages.m in Sources */,
 				F53E607D193B650500E3EE3E /* Results.m in Sources */,
+				F5BB04F0193FBE510025EBFB /* pmqResultCell.m in Sources */,
 				F53E6089193B650600E3EE3E /* Tests.m in Sources */,
 				F5F0F06B19364511003C4FFA /* pmqDetailLesonsViewController.m in Sources */,
 				F5F0F06E19364511003C4FFA /* pmqLessonsViewController.m in Sources */,

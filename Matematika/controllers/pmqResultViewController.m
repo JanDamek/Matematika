@@ -7,14 +7,17 @@
 //
 
 #import "pmqResultViewController.h"
+#import "pmqResultCell.h"
 
 @interface pmqResultViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation pmqResultViewController
 
-@synthesize data = _data;
+@synthesize tableView = _tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,8 +42,17 @@
 
 #pragma mark - property getters and setters
 
--(void)setData:(Results *)data{
-    _data = data;
+
+#pragma mark - UITableViewDelegate, UITableViewDatasource
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    pmqResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor clearColor];
+    return cell;
 }
 
 /*

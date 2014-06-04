@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Results.h"
 
-@interface pmqResultViewController : UITableViewController
-
-@property (nonatomic, strong) Results * data;
+@interface pmqResultViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

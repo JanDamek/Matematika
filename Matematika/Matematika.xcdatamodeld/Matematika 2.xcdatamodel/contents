@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="1" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="1" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="14A238x" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Intros" representedClassName="Intros" syncable="YES">
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="relationship_lesson" maxCount="1" deletionRule="Nullify" destinationEntity="Lessons" inverseName="relationship_intro" inverseEntity="Lessons" syncable="YES"/>
@@ -10,9 +10,9 @@
         <attribute name="lesson_id" optional="YES" attributeType="Integer 16" defaultValueString="0">
             <userInfo/>
         </attribute>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="purchase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purchase" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="relationship_intro" toMany="YES" deletionRule="Nullify" destinationEntity="Intros" inverseName="relationship_lesson" inverseEntity="Intros" syncable="YES"/>
         <relationship name="relationship_test" maxCount="1" deletionRule="Nullify" destinationEntity="Tests" inverseName="relationship_lesson" inverseEntity="Tests" syncable="YES"/>
@@ -27,8 +27,7 @@
     </entity>
     <entity name="Questions" representedClassName="Questions" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="last_answer" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="last_answer" optional="YES" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
         <attribute name="time_of_answer" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="relationship_result" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="relationship_questions" inverseEntity="Results" syncable="YES"/>
         <relationship name="relationship_test" toMany="YES" deletionRule="Nullify" destinationEntity="Tests" inverseName="relationship_question" inverseEntity="Tests" syncable="YES"/>
@@ -54,7 +53,7 @@
         <element name="Intros" positionX="270" positionY="225" width="128" height="88"/>
         <element name="Lessons" positionX="261" positionY="189" width="128" height="165"/>
         <element name="Pages" positionX="261" positionY="216" width="128" height="120"/>
-        <element name="Questions" positionX="306" positionY="243" width="128" height="133"/>
+        <element name="Questions" positionX="306" positionY="243" width="128" height="118"/>
         <element name="Results" positionX="324" positionY="306" width="128" height="133"/>
         <element name="Tests" positionX="288" positionY="234" width="128" height="148"/>
     </elements>

@@ -10,6 +10,8 @@
 #import "pmqDetailLesonsViewController.h"
 #import "Lessons.h"
 #import "pmqLessonTableViewCell.h"
+#import "pmqResultViewController.h"
+#import "pmqTestingViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface pmqLessonsViewController (){
@@ -149,7 +151,12 @@
         
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
-    }
+    } else
+        if ([[segue identifier] isEqualToString:@"procvicovani"]) {
+            
+            pmqTestingViewController *t = [segue destinationViewController];
+            t.testMode = tmTestOverAllFail;
+        }
 }
 
 #pragma mark - Fetched results controller

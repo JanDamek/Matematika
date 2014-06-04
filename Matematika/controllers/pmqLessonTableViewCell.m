@@ -8,9 +8,7 @@
 
 #import "pmqLessonTableViewCell.h"
 
-@interface pmqLessonTableViewCell(){
-    bool _selected;
-}
+@interface pmqLessonTableViewCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *ratingImage;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImage;

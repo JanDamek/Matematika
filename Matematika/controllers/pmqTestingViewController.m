@@ -169,7 +169,9 @@
 -(void)prepareQuestions:(NSMutableArray*)questions firstFail:(bool)firstFail{
     int count_question = 0;
     int test_length = [_data.test_length intValue];
-    
+    if (test_length==0) {
+        test_length = 12;
+    }
     _questions = [[NSMutableArray alloc] init];
     
     if (firstFail){
@@ -409,7 +411,7 @@
             
             pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
             Results *r = _data.relationship_results;
-            if (!r){
+            if (!r && _data){
                 r = [d.data newResults];
                 _data.relationship_results = r;
             }
