@@ -29,6 +29,16 @@
     [self doParseContent];
 }
 
+-(NSString *)resultQuestion{
+    NSString *co;
+    if ([_q.last_answer boolValue]){
+        co = _corect_answer;
+    } else
+        co = @"?";
+    
+    return [NSString stringWithFormat:@"%@%@%@", self.fistPartQuestion, co, self.secondPartQuestion ];
+}
+
 #pragma mark - parse question content
 
 -(void) doParseContent{

@@ -134,7 +134,7 @@
     cell.progress.tintColor = answerColor;
     cell.time.tintColor = answerColor;
     
-    cell.question.text = pmq.fistPartQuestion;
+    cell.question.text = pmq.resultQuestion;
     
     cell.progress.progress = [q.time_of_answer floatValue] / [_dataResult.relationship_test.time_limit floatValue];
     

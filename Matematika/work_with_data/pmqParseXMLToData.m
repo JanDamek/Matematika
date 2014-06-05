@@ -31,6 +31,7 @@
 }
 
 -(void)doParse{
+    int lesson_order = 0;
     NSString *filePath = [ [ NSBundle mainBundle ] pathForResource: @"game_definition" ofType: @"xml" ];
     NSString *xml = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
     NSDictionary *in_data = [[XMLReader dictionaryForXMLString:xml error:NULL] valueForKey:@"PMQcalculations"];
@@ -45,6 +46,8 @@
         l.name = [i valueForKey:@"name"];
         l.rating = [NSNumber numberWithInt:0];
         l.name = [l.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+        l.order = [NSNumber numberWithInt:lesson_order];
+        lesson_order++;
         
         Tests *test = [self.d newTests];
         l.relationship_test = test;

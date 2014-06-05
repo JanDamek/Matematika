@@ -72,6 +72,9 @@
     for (UIButton *b in self.answerButtons) {
         b.layer.cornerRadius = 10;
     }
+    
+    _timerView.fillColor = [UIColor greenColor];
+    _timerView.roundColor = [UIColor darkGrayColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -143,6 +146,7 @@
     [self.timerView setHidden:YES];
     [self.questionLabel2 setHidden:YES];
     [self.questionMark setHidden:YES];
+    [self.labelAnswer setHidden:YES];
     
     for (UIButton *b in self.answerButtons) {
         [b setHidden:YES];
@@ -378,7 +382,8 @@
         [_questionMark setHidden:YES];
         [_labelAnswer setHidden:NO];
     }else{
-        
+        [_timerView setHidden:YES];
+        [_labelAnswer setHidden:NO];
     }
     
     [UIView commitAnimations];
@@ -388,15 +393,18 @@
     
     [_timerView invalidateTimer];
     
-    _labelAnswer.frame = _questionMark.frame;
+    if (_testMode==tmTest){
+        _labelAnswer.frame = _questionMark.frame;
+    } else
+        _labelAnswer.frame = _timerView.frame;
     
-    if (_testMode != tmTest) {
+//    if (_testMode != tmTest) {
         Questions *q = [_questions objectAtIndex:answered];
         q.last_answer = [NSNumber numberWithBool:sender.tag==1];
         float inTime = _timerView.timeToCount*(_timerView.percent/100);
         if (inTime==0) inTime = _timerView.timeToCount;
         q.time_of_answer = [NSNumber numberWithFloat:inTime];
-    }
+//    }
     answered++;
     
     NSString *sound_file;

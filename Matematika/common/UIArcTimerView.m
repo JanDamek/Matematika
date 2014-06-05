@@ -166,8 +166,6 @@
     }
     float okraj = size * 0.05;
     
-    // Display our percentage as a string
-//    NSString* textContent = [NSString stringWithFormat:@"%d", (int)self.percent];
     if (_countDown){
         NSString *old = _text.text;
         _timeLeft = _timeToCount * ((99-_percent)/100)+1;

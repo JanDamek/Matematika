@@ -17,4 +17,6 @@
 @property (readonly, nonatomic) NSString *fistPartQuestion;
 @property (readonly, nonatomic) NSString *secondPartQuestion;
 
+@property (readonly, nonatomic) NSString *resultQuestion;
+
 @end
