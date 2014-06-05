@@ -11,6 +11,12 @@
 @interface pmqResultCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *lessonName;
+@property (weak, nonatomic) IBOutlet UILabel *dateOfTest;
+@property (weak, nonatomic) IBOutlet UILabel *testOk;
+@property (weak, nonatomic) IBOutlet UILabel *testCount;
+@property (weak, nonatomic) IBOutlet UILabel *testTime;
+@property (weak, nonatomic) IBOutlet UIButton * btnTest;
+
 @property int rowNumber;
 
 @end

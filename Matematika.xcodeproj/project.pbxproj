@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5003C2A1940A6AD0088D9D4 /* pmqResultInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5003C291940A6AD0088D9D4 /* pmqResultInfoViewController.m */; };
 		F52763FE192E0E98001BEC6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52763FD192E0E98001BEC6B /* Foundation.framework */; };
 		F5276400192E0E98001BEC6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52763FF192E0E98001BEC6B /* CoreGraphics.framework */; };
 		F5276402192E0E98001BEC6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5276401192E0E98001BEC6B /* UIKit.framework */; };
@@ -374,6 +375,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5003C281940A6AD0088D9D4 /* pmqResultInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqResultInfoViewController.h; sourceTree = "<group>"; };
+		F5003C291940A6AD0088D9D4 /* pmqResultInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqResultInfoViewController.m; sourceTree = "<group>"; };
 		F52763FA192E0E98001BEC6B /* Matematika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matematika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52763FD192E0E98001BEC6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F52763FF192E0E98001BEC6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -950,6 +953,8 @@
 				F5F0F06A19364511003C4FFA /* pmqTestingViewController.m */,
 				F53E6093193B969A00E3EE3E /* pmqResultViewController.h */,
 				F53E6094193B969A00E3EE3E /* pmqResultViewController.m */,
+				F5003C281940A6AD0088D9D4 /* pmqResultInfoViewController.h */,
+				F5003C291940A6AD0088D9D4 /* pmqResultInfoViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1801,6 +1806,7 @@
 				F5F0F07B19364524003C4FFA /* pmqPages.m in Sources */,
 				F5F0F07A19364524003C4FFA /* pmqData.m in Sources */,
 				F5F0F00119363ED1003C4FFA /* UIArcTimerView.m in Sources */,
+				F5003C2A1940A6AD0088D9D4 /* pmqResultInfoViewController.m in Sources */,
 				F53E6083193B650500E3EE3E /* Intros.m in Sources */,
 				F5F0F06C19364511003C4FFA /* pmqExpleinCell.m in Sources */,
 				F5F0F07D19364524003C4FFA /* pmqQuestions.m in Sources */,

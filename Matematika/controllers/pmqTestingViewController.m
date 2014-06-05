@@ -168,6 +168,11 @@
 
 -(void)prepareQuestions:(NSMutableArray*)questions firstFail:(bool)firstFail{
     int count_question = 0;
+    
+    if ([questions count]<[_data.test_length intValue]) {
+        _data.test_length = [NSNumber numberWithInt:[questions count]];
+    }
+    
     int test_length = [_data.test_length intValue];
     if (test_length==0) {
         test_length = 12;
@@ -208,7 +213,9 @@
         [_marks reloadData];
         
         pmqQuestions *pmqQ = [[pmqQuestions alloc]init];
+        if (answered < [_questions count]){
         pmqQ.q = (Questions*)[_questions objectAtIndex:answered];
+        } else pmqQ.q = (Questions*)[_questions objectAtIndex:answered - [_questions count]];
         
         
         _questionLabel1.text = pmqQ.fistPartQuestion;
@@ -371,6 +378,8 @@
 
 - (IBAction)answerButtonAction:(UIButton *)sender {
     
+    [_timerView invalidateTimer];
+    
     _labelAnswer.frame = _questionMark.frame;
     
     if (_testMode != tmTest) {
@@ -434,6 +443,7 @@
             r.date = [NSDate date];
             
             [d.data saveResults];
+            [[d.data.results managedObjectContext] refreshObject:r mergeChanges:YES];
             //TODO: show test result
             
         }

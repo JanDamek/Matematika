@@ -203,7 +203,7 @@ static NSString *questionsCache = @"questionsCache";
         [fetchRequest setFetchBatchSize:20];
         
         // Edit the sort key as appropriate.
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
         NSArray *sortDescriptors = @[sortDescriptor];
         
         [fetchRequest setSortDescriptors:sortDescriptors];
