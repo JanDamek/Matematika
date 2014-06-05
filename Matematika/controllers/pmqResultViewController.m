@@ -10,6 +10,7 @@
 #import "pmqResultCell.h"
 #import "pmqAppDelegate.h"
 #import "pmqResultInfoViewController.h"
+#import "pmqTestingViewController.h"
 
 @interface pmqResultViewController ()
 
@@ -66,8 +67,16 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     pmqResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell" forIndexPath:indexPath];
+
     cell.backgroundColor = [UIColor clearColor];
     
+    UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
+    [selectionView setBackgroundColor:[UIColor clearColor]];
+    UIImageView *i = [[UIImageView alloc] initWithFrame:selectionView.bounds];
+    i.image = [UIImage imageNamed:@"list_hover.9.png"];
+    [selectionView addSubview:i];
+    cell.selectedBackgroundView = selectionView;
+
     cell.rowNumber = indexPath.row;
     
     Results *r = [self.results objectAtIndexPath:indexPath];
@@ -75,20 +84,23 @@
     cell.lessonName.text = r.relationship_test.relationship_lesson.name;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];// here set format which you want...
+    [dateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
     NSString *convertedString = [dateFormatter stringFromDate:r.date];
     
     cell.dateOfTest.text = convertedString;
+    
     cell.testOk.text = [NSString stringWithFormat:@"%i", [r.bad_answers intValue]];
+
     cell.testCount.text = [NSString stringWithFormat:@"%i", [r.relationship_test.test_length intValue]];
     
-    [dateFormatter setDateFormat:@"hh:mm"];// here set format which you want...
     int min = [r.total_time floatValue] / 60;
     int sec = [r.total_time floatValue] - (min*60);
     cell.testTime.text = [NSString stringWithFormat:@"%02i:%02i", min, sec];
+
     if ([r.bad_answers intValue]>0){
         [cell.btnTest setHidden:NO];
-    } else [cell.btnTest setHidden:YES];
+    } else
+        [cell.btnTest setHidden:YES];
     
     return cell;
 }
@@ -105,7 +117,16 @@
          Results *object = [[self results] objectAtIndexPath:indexPath];
          [(pmqResultInfoViewController*)[segue destinationViewController] setDataResult:object];
      }
+     else
+         if ([[segue identifier] isEqualToString:@"procvicovaniChyb"]) {
+             UIButton *b = (UIButton*)sender;
+             UITableViewCell *cell = (UITableViewCell *)b.superview.superview.superview;
+             NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+             
+             Results *object = [[self results] objectAtIndexPath:indexPath];
+             [(pmqTestingViewController*)[segue destinationViewController] setData:object.relationship_test];
+             [(pmqTestingViewController*)[segue destinationViewController] setTestMode:tmTestFails];
+         }
  }
-
 
 @end

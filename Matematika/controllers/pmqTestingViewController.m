@@ -11,6 +11,7 @@
 #import "Lessons.h"
 #import "pmqAppDelegate.h"
 #import "pmqQuestions.h"
+#import "pmqTestResultInfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface pmqTestingViewController (){
@@ -214,7 +215,7 @@
         
         pmqQuestions *pmqQ = [[pmqQuestions alloc]init];
         if (answered < [_questions count]){
-        pmqQ.q = (Questions*)[_questions objectAtIndex:answered];
+            pmqQ.q = (Questions*)[_questions objectAtIndex:answered];
         } else pmqQ.q = (Questions*)[_questions objectAtIndex:answered - [_questions count]];
         
         
@@ -267,8 +268,10 @@
                 } else b.tag = 0;
                 [b setTitle:s forState:UIControlStateNormal];
                 [b setHidden:NO];
+                [b setEnabled:YES];
             } else {
                 [b setHidden:YES];
+                [b setEnabled:NO];
                 [b setTitle:@"" forState:UIControlStateNormal];
                 
             }
@@ -315,28 +318,32 @@
 }
 
 -(void)prepareNextQuestion{
-    [UIView beginAnimations:@"next" context:nil];
-
-    [_labelAnswer setHidden:YES];
-    for (UIButton *b in self.answerButtons) {
-        b.backgroundColor = [UIColor lightGrayColor];
+    if (answered<[_data.test_length intValue]){
+        [UIView beginAnimations:@"next" context:nil];
+        
+        [_labelAnswer setHidden:YES];
+        for (UIButton *b in self.answerButtons) {
+            b.backgroundColor = [UIColor lightGrayColor];
+        }
+        
+        [self loadFromLastTest];
+        
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationDelegate:self];
+        [UIView commitAnimations];
+    }else{
+        [self makeResult];
     }
-    
-    [self loadFromLastTest];
-
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationDelegate:self];
-    [UIView commitAnimations];
 }
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     
     if ([(NSString*)anim isEqualToString:@"answer"]){
-     
+        
         [self performSelector:@selector(markCorrect) withObject:nil afterDelay:0.2];
         
     } else if ( [(NSString*)anim isEqualToString:@"correct"] ){
-
+        
         [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:1];
     }
 }
@@ -361,6 +368,7 @@
             _labelAnswer.text = b.currentTitle;
             [_labelAnswer sizeToFit];
         }
+        [b setEnabled:NO];
         if ([b isEqual:button] || b.tag==1) {
             [b setHidden:NO];
         } else [b setHidden:YES];
@@ -408,9 +416,11 @@
     [_player play];
     
     
-    if (answered<[_data.test_length intValue]){
-        [self animateAnswer:sender];
-    } else {
+    [self animateAnswer:sender];
+}
+
+-(void)makeResult{
+    {
         if (_testMode==tmTest) {
             
             self.testMode = tmTestOnTime;
@@ -442,10 +452,29 @@
             r.bad_answers = [NSNumber numberWithInt:bad_answer];
             r.date = [NSDate date];
             
-            [d.data saveResults];
-            [[d.data.results managedObjectContext] refreshObject:r mergeChanges:YES];
-            //TODO: show test result
+            int test_length = [r.relationship_test.test_length intValue];
+            float max_time = [r.relationship_test.time_limit intValue]*test_length;
             
+            float rate =5 * ((float)test_length - (float)bad_answer)/(float)test_length;
+            rate -= 2 * (total_time/max_time);
+            rate = floorf(rate+0.49);
+            
+            r.rate = [NSNumber numberWithInt:(int)rate];
+            
+            r.relationship_test.relationship_lesson.rating = r.rate;
+            
+            [d.data saveLessons];
+            [d.data saveResults];
+            
+            NSError *error =nil;
+            [d.data.results performFetch:&error];
+            NSAssert(!error, @"Error performing fetch request: %@", error);
+            [d.data.lessons performFetch:&error];
+            NSAssert(!error, @"Error performing fetch request: %@", error);
+            
+            UIViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"TestResult"];
+            [(pmqTestResultInfoViewController*)c setResult:r];
+            [self.navigationController pushViewController:c animated:YES];
         }
     }
 }
