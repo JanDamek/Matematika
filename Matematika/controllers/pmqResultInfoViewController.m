@@ -9,8 +9,14 @@
 #import "pmqResultInfoViewController.h"
 #import "Tests.h"
 #import "Lessons.h"
+#import "Questions.h"
+#import "pmqQuestions.h"
+#import "pmqResultQuestionCell.h"
 
-@interface pmqResultInfoViewController ()
+@interface pmqResultInfoViewController (){
+    NSArray *questions;
+    NSMutableArray *pmqQ;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *btnVysledkyTestu;
 @property (weak, nonatomic) IBOutlet UIButton *btnRetry;
@@ -73,6 +79,14 @@
 
 -(void)setDataResult:(Results *)dataResult{
     _dataResult = dataResult;
+    questions = [_dataResult.relationship_questions allObjects];
+    pmqQ = [[NSMutableArray alloc] initWithCapacity:[questions count]];
+    
+    for (Questions *q in questions) {
+        pmqQuestions *pmq = [[pmqQuestions alloc] init];
+        pmq.q = q;
+        [pmqQ addObject:pmq];
+    }
 }
 
 #pragma mark - Navigation
@@ -91,6 +105,42 @@
 
 -(IBAction)btnNextAction:(id)sender{
     
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [questions count];
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    pmqResultQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"resultCell" forIndexPath:indexPath];
+    
+    Questions *q = [questions objectAtIndex:indexPath.row];
+    
+    pmqQuestions *pmq = [pmqQ objectAtIndex:indexPath.row];
+    
+    if ([q.time_of_answer intValue] == [_dataResult.relationship_test.time_limit intValue]){
+        [cell.timeOut setHidden:NO];
+    } else [cell.timeOut setHidden:YES];
+    
+    UIColor *answerColor;
+    if ([q.last_answer boolValue]) {
+        answerColor = [UIColor whiteColor];
+    } else answerColor = [UIColor redColor];
+    
+    cell.question.textColor = answerColor;
+    cell.progress.tintColor = answerColor;
+    cell.time.tintColor = answerColor;
+    
+    cell.question.text = pmq.fistPartQuestion;
+    
+    cell.progress.progress = [q.time_of_answer floatValue] / [_dataResult.relationship_test.time_limit floatValue];
+    
+    cell.time.text = [NSString stringWithFormat:@"%.2f s", [q.time_of_answer floatValue] ];
+    
+    return cell;
 }
 
 /*

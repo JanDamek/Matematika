@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Results.h"
 
-@interface pmqResultInfoViewController : UIViewController
+@interface pmqResultInfoViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) Results *dataResult;
 
