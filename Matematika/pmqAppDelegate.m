@@ -22,6 +22,17 @@
     _data = [[pmqData alloc] init];
     [_data testParseXMLGameData];
     
+#pragma mark - nastaveni NavigationBar
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Bradley Hand" size:25] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[UIColor greenColor] forKey:NSForegroundColorAttributeName ];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
+ 
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal]];
+    [attributes setValue:[UIFont fontWithName:@"Bradley Hand" size:18] forKey:NSFontAttributeName];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+#pragma mark - vytvoreni controleru pro iPhone nebo iPad
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;

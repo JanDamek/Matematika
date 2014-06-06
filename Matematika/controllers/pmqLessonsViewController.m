@@ -44,6 +44,12 @@
     
     isReady = NO;
     
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    
+    
     self.btnProcvicovaniChyb.layer.cornerRadius = 7;
     self.btnVysledkyTestu.layer.cornerRadius = 7;
     

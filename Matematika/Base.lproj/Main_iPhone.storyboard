@@ -302,13 +302,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <segue destination="DGS-M5-6W6" kind="push" identifier="znc_detail" id="4Wn-qj-xVy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqc-Uj-N4r">
-                                <rect key="frame" x="20" y="34" width="280" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -317,7 +310,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                     <size key="freeformSize" width="703" height="768"/>
                     <connections>
                         <outlet property="jak_na_to" destination="D2D-fd-kW6" id="Gpa-zF-u24"/>
-                        <outlet property="label" destination="dqc-Uj-N4r" id="8V1-lk-qph"/>
                         <outlet property="procvicovani" destination="xgl-d8-vDs" id="t6I-4y-UlV"/>
                         <outlet property="zkouseni_na_cas" destination="GX4-iB-AnY" id="m3v-CQ-EZO"/>
                     </connections>

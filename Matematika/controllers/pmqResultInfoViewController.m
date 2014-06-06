@@ -47,7 +47,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    
     [self setViews];
 }
 
@@ -114,6 +119,9 @@
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
+
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     pmqResultQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"resultCell" forIndexPath:indexPath];
     
@@ -130,8 +138,16 @@
         answerColor = [UIColor whiteColor];
     } else answerColor = [UIColor redColor];
     
+    CGRect r = cell.progress.frame;
+    r.size.height +=2;
+    cell.progress.frame = r;
+    
     cell.question.textColor = answerColor;
-    cell.progress.tintColor = answerColor;
+    if ([q.last_answer boolValue]) {
+        cell.progress.progressTintColor = Rgb2UIColor(0xd8, 0xdc, 0x41);
+    }else {
+        cell.progress.progressTintColor = Rgb2UIColor(0xf1, 0x63, 0x65);
+    }
     cell.time.tintColor = answerColor;
     
     cell.question.text = pmq.resultQuestion;

@@ -11,7 +11,6 @@
 @interface pmqDetailLesonsViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *label;
 
 -(void)performProcvicovani;
 
