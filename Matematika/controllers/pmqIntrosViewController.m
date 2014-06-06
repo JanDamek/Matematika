@@ -125,7 +125,15 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 20 ) / [self.p numOfColumns];
+    h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 20) / [self.p numOfRows] ;
+
     return CGSizeMake(w, h);
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [_explainGrid reloadData];
 }
 
 
