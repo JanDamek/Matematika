@@ -1083,11 +1083,11 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                    <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExpleinCell" id="AAN-m8-Cze" customClass="pmqExpleinCell">
-                                        <rect key="frame" x="5" y="5" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="5" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -1313,7 +1313,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4wz-Zb-sEt"/>
-        <segue reference="lf1-kM-SZV"/>
+        <segue reference="ho6-o6-cuz"/>
+        <segue reference="ltq-Pq-x17"/>
     </inferredMetricsTieBreakers>
 </document>

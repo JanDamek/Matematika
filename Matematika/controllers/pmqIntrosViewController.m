@@ -62,7 +62,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-
+    
     isReadyToPlay = YES;
     
     @try {
@@ -117,17 +117,17 @@
     }else{
         [_webView setHidden:YES];
         [_explainGrid setHidden:NO];
-        w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 20 ) / [self.p numOfColumns];
-        h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 20) / [self.p numOfRows] ;
+        w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 10 ) / [self.p numOfColumns];
+        h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 10) / [self.p numOfRows] ;
         
         [_explainGrid reloadData];}
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 20 ) / [self.p numOfColumns];
-    h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 20) / [self.p numOfRows] ;
-
+    w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 10 ) / [self.p numOfColumns];
+    h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 10) / [self.p numOfRows] ;
+    
     return CGSizeMake(w, h);
 }
 
@@ -166,20 +166,26 @@
                 if (_player.isPlaying) {
                     [_player stop];
                 }
-                NSString *sound_file = NSLocalizedString([_p actualChar], nil);
-                sound_file = [sound_file stringByReplacingOccurrencesOfString:@"(" withString:@""];
-                sound_file = [sound_file stringByReplacingOccurrencesOfString:@")" withString:@""];
-                
-                sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
-                              sound_file];
-                NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                     pathForResource:sound_file
-                                                     ofType:@"mp3"]];
-                _player = [[AVAudioPlayer alloc]
-                           initWithContentsOfURL:url
-                           error:nil];
-                _player.delegate = self;
-                [_player play];
+                @try {
+                    NSString *sound_file = NSLocalizedString([_p actualChar], nil);
+                    sound_file = [sound_file stringByReplacingOccurrencesOfString:@"(" withString:@""];
+                    sound_file = [sound_file stringByReplacingOccurrencesOfString:@")" withString:@""];
+                    
+                    sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
+                                  sound_file];
+                    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                         pathForResource:sound_file
+                                                         ofType:@"mp3"]];
+                    _player = [[AVAudioPlayer alloc]
+                               initWithContentsOfURL:url
+                               error:nil];
+                    _player.delegate = self;
+                    [_player play];
+                }
+                @catch (NSException *exception) {
+                }
+                @finally {
+                }
             }
         }
     }
