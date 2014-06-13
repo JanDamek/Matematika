@@ -39,10 +39,6 @@
                                 <rect key="frame" x="-12" y="19" width="344" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title_hp.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-LM-jVn">
-                                <rect key="frame" x="0.0" y="16" width="320" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pmq_mini.png" translatesAutoresizingMaskIntoConstraints="NO" id="M7U-ri-8kj">
                                 <rect key="frame" x="10" y="33" width="50" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -695,7 +691,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKV-de-b9x">
-                                <rect key="frame" x="102" y="181" width="500" height="92"/>
+                                <rect key="frame" x="20" y="231" width="500" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
@@ -703,7 +699,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tct-wL-bs7">
-                                <rect key="frame" x="112" y="191" width="500" height="92"/>
+                                <rect key="frame" x="20" y="234" width="500" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
@@ -711,7 +707,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXx-Mn-fC5">
-                                <rect key="frame" x="102" y="281" width="4709" height="96"/>
+                                <rect key="frame" x="20" y="236" width="4709" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
@@ -766,7 +762,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 </connections>
                             </collectionView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-RD-avt">
-                                <rect key="frame" x="102" y="431" width="150" height="100"/>
+                                <rect key="frame" x="20" y="374" width="89" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -778,7 +774,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUq-CI-s6g">
-                                <rect key="frame" x="277" y="431" width="150" height="100"/>
+                                <rect key="frame" x="117" y="374" width="89" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -842,7 +838,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3F-U4-6eO">
-                                <rect key="frame" x="285" y="324" width="133" height="66"/>
+                                <rect key="frame" x="95" y="273" width="133" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -853,12 +849,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <action selector="btnStartAction:" destination="DGS-M5-6W6" eventType="touchUpInside" id="8Pp-dR-lj7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Zmacknutim tlacitka start zahajite test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="67" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-gJ-TNO">
-                                <rect key="frame" x="126" y="212" width="67" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtJ-jg-qGM">
                                 <rect key="frame" x="611" y="321" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -869,6 +859,12 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <segue destination="SNZ-e9-UZ3" kind="push" identifier="vysledekTestu" id="wzo-If-L2G"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zmacknutim tlacitka start zahajite test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="285" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-gJ-TNO">
+                                <rect key="frame" x="18" y="56" width="285" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -876,12 +872,9 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             <constraint firstAttribute="trailing" secondItem="xdN-SE-EIX" secondAttribute="trailing" id="7Jz-nj-qOG"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" constant="86" id="AqH-BP-Ke1"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="102" id="Isb-gN-Tbn"/>
-                            <constraint firstItem="jAU-gJ-TNO" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" constant="212" id="JaL-cR-OWj"/>
                             <constraint firstAttribute="bottom" secondItem="N3F-U4-6eO" secondAttribute="bottom" constant="178" id="UpL-N4-NFn"/>
-                            <constraint firstItem="jAU-gJ-TNO" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="126" id="aRF-vr-dox"/>
                             <constraint firstAttribute="trailing" secondItem="RE7-Ld-yMu" secondAttribute="trailing" constant="103" id="b83-eg-XWS"/>
                             <constraint firstItem="xdN-SE-EIX" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" id="kVL-Gq-4Ez"/>
-                            <constraint firstAttribute="trailing" secondItem="jAU-gJ-TNO" secondAttribute="trailing" constant="127" id="tFS-ly-uo6"/>
                             <constraint firstItem="xdN-SE-EIX" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" id="yvH-4Y-yGV"/>
                         </constraints>
                     </view>
@@ -1193,7 +1186,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <image name="status_0star.png" width="166" height="30"/>
         <image name="status_1star.png" width="166" height="30"/>
         <image name="timeout.png" width="600" height="619"/>
-        <image name="title_hp.png" width="416" height="183"/>
         <image name="title_mm.png" width="318" height="90"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1203,6 +1195,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Mfg-ut-3jK"/>
-        <segue reference="Zbr-Vh-iGv"/>
+        <segue reference="NY0-pU-EMG"/>
     </inferredMetricsTieBreakers>
 </document>

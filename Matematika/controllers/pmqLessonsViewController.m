@@ -49,6 +49,10 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
+    UIImageView *v = [[UIImageView alloc] initWithFrame:self.navigationController.navigationBar.bounds];
+    v.image = [UIImage imageNamed:@"title_hp.png"];
+    v.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = v;
     
     self.btnProcvicovaniChyb.layer.cornerRadius = 7;
     self.btnVysledkyTestu.layer.cornerRadius = 7;

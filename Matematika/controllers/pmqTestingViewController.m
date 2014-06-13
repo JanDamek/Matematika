@@ -78,7 +78,13 @@
         b.layer.cornerRadius = 10;
     }
     
-    _timerView.fillColor = [UIColor greenColor];
+    UIImage *img = [UIImage imageNamed:@"timer_fg.png"];
+    CGSize size = CGSizeMake(_timerView.frame.size.width,_timerView.frame.size.height);
+    UIGraphicsBeginImageContext(size);
+    [img drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage * newimage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    _timerView.fillColor = [UIColor colorWithPatternImage:newimage];
     _timerView.roundColor = [UIColor darkGrayColor];
 }
 
@@ -86,6 +92,7 @@
     [super viewWillAppear:animated];
     //[self prepareTest];
 }
+
 - (IBAction)btnStartAction:(id)sender {
     [self.lblStart setHidden:YES];
     [self.btnStart setHidden:YES];
@@ -102,15 +109,21 @@
     
     if ([_data.welcome_sound hasSuffix:@"mp3"]) {
         NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
-        sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
-        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                             pathForResource:sounf_file
-                                             ofType:@"mp3"]];
-        _player = [[AVAudioPlayer alloc]
-                   initWithContentsOfURL:url
-                   error:nil];
-        _player.delegate = self;
-        [_player play];
+        @try {
+            sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
+            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:sounf_file
+                                                 ofType:@"mp3"]];
+            _player = [[AVAudioPlayer alloc]
+                       initWithContentsOfURL:url
+                       error:nil];
+            _player.delegate = self;
+            [_player play];
+        }
+        @catch (NSException *exception) {
+        }
+        @finally {
+        }
     }
 }
 
@@ -155,6 +168,7 @@
     
     for (UIButton *b in self.answerButtons) {
         [b setHidden:YES];
+        b.backgroundColor = [UIColor lightGrayColor];
     }
     
     _testMode = testMode;
@@ -319,11 +333,11 @@
 }
 
 -(void)markCorrect{
-    [UIView beginAnimations:@"correct" context:nil];
-    
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationDelegate:self];
-    [UIView commitAnimations];
+    //    [UIView beginAnimations:@"correct" context:nil];
+    //
+    //    [UIView setAnimationDuration:0.5];
+    //    [UIView setAnimationDelegate:self];
+    //    [UIView commitAnimations];
 }
 
 -(void)prepareNextQuestion{
@@ -403,13 +417,13 @@
     } else
         _labelAnswer.frame = _timerView.frame;
     
-//    if (_testMode != tmTest) {
-        Questions *q = [_questions objectAtIndex:answered];
-        q.last_answer = [NSNumber numberWithBool:sender.tag==1];
-        float inTime = _timerView.timeToCount*(_timerView.percent/100);
-        if (inTime==0) inTime = _timerView.timeToCount;
-        q.time_of_answer = [NSNumber numberWithFloat:inTime];
-//    }
+    //    if (_testMode != tmTest) {
+    Questions *q = [_questions objectAtIndex:answered];
+    q.last_answer = [NSNumber numberWithBool:sender.tag==1];
+    float inTime = _timerView.timeToCount*(_timerView.percent/100);
+    if (inTime==0) inTime = _timerView.timeToCount;
+    q.time_of_answer = [NSNumber numberWithFloat:inTime];
+    //    }
     answered++;
     
     NSString *sound_file;
