@@ -11,7 +11,7 @@
 @interface pmqLessonTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *lessonName;
-@property int rowNumber;
+@property NSInteger rowNumber;
 
 -(void)setLock;
 -(void)setRating:(int)rate;

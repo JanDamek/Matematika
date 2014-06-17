@@ -83,7 +83,7 @@
     self.inTime.text = [NSString stringWithFormat:@"%02i:%02i", min, sec];
     
     self.badAnswer.text = [_result.bad_answers stringValue];
-    self.totalQuestion.text = [NSString stringWithFormat:@"%i", [_result.relationship_questions count]];
+    self.totalQuestion.text = [NSString stringWithFormat:@"%lu", (unsigned long)[_result.relationship_questions count]];
 }
 
 -(void)setResult:(Results *)result{

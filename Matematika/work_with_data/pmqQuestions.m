@@ -50,7 +50,7 @@
     _secondPartQuestion = [q objectAtIndex:1];
     s = [[question objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
     NSMutableArray *_a = [[s componentsSeparatedByString:@" "] mutableCopy];
-    int correct_index=-1;
+    NSUInteger correct_index=-1;
     NSString *ca = @"";
     for (NSString *s in _a) {
         if ([s hasPrefix:@"*"]) {

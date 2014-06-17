@@ -129,7 +129,7 @@
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
+        [prefs setObject:[NSNumber numberWithInteger:indexPath.row] forKey:@"last"];
         [prefs synchronize];
         
         Lessons *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
@@ -158,7 +158,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"last"];
+        [prefs setObject:[NSNumber numberWithInteger:indexPath.row] forKey:@"last"];
         [prefs synchronize];
         
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];

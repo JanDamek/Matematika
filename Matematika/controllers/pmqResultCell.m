@@ -10,7 +10,7 @@
 
 @interface pmqResultCell(){
 
-    int _rowNumber;
+    NSInteger _rowNumber;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgImage;
@@ -33,11 +33,11 @@
 
 #pragma mark - methods
 
--(int)rowNumber{
+-(NSInteger)rowNumber{
     return _rowNumber;
 }
 
--(void)setRowNumber:(int)rowNumber{
+-(void)setRowNumber:(NSInteger)rowNumber{
     if (rowNumber % 2){
         _bgImage.image = [UIImage imageNamed:@"bg_list2_even.9.png"];
     }else{

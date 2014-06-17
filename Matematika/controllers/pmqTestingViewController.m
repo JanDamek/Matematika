@@ -194,7 +194,7 @@
     int count_question = 0;
     
     if ([questions count]<[_data.test_length intValue]) {
-        _data.test_length = [NSNumber numberWithInt:[questions count]];
+        _data.test_length = [NSNumber numberWithInteger:[questions count]];
     }
     
     int test_length = [_data.test_length intValue];

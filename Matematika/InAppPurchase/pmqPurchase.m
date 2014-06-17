@@ -51,7 +51,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    int i = [products count];
+    NSUInteger i = [products count];
     if (i==0) i++;
     return i;
 }
@@ -77,7 +77,7 @@
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
     SKProduct *validProduct = nil;
-    int count = [response.products count];
+    NSUInteger count = [response.products count];
     if(count > 0){
         validProduct = [response.products objectAtIndex:0];
         NSLog(@"Products Available!");
@@ -105,7 +105,7 @@
 
 - (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
-    NSLog(@"received restored transactions: %i", queue.transactions.count);
+    NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
     for (SKPaymentTransaction *transaction in queue.transactions)
     {
         if(SKPaymentTransactionStateRestored){

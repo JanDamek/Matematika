@@ -13,13 +13,13 @@
 
 @property (nonatomic, strong) Pages *data;
 
-@property (readonly) int numOfRows;
-@property (readonly) int numOfColumns;
-@property (readonly) int numOfItems;
-@property (readonly) int actualIndex;
+@property (readonly) NSUInteger numOfRows;
+@property (readonly) NSUInteger numOfColumns;
+@property (readonly) NSUInteger numOfItems;
+@property (readonly) NSUInteger actualIndex;
 @property (readonly) NSString *actualChar;
 
 -(BOOL)next;
--(id)objectForItemIndex:(int)index;
+-(id)objectForItemIndex:(NSInteger)index;
 
 @end

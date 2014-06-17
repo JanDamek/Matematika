@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *testTime;
 @property (weak, nonatomic) IBOutlet UIButton * btnTest;
 
-@property int rowNumber;
+@property NSInteger rowNumber;
 
 @end

@@ -10,7 +10,7 @@
 
 @interface pmqPages(){
     
-    int _drawToIndex;
+    NSUInteger _drawToIndex;
     
     NSMutableArray *_charAtPos;
     NSArray *_rows;
@@ -33,13 +33,13 @@
     [self prepareData];
 }
 
--(int)numOfItems{
+-(NSUInteger)numOfItems{
     return _numOfItems;
 }
--(int)numOfRows{
+-(NSUInteger)numOfRows{
     return _numOfRows;
 }
--(int)numOfColumns{
+-(NSUInteger)numOfColumns{
     return _numOfColumns;
 }
 -(NSString *)actualChar{
@@ -63,7 +63,7 @@
     } else  return NO;
 }
 
--(id)objectForItemIndex:(int)index{
+-(id)objectForItemIndex:(NSInteger)index{
     NSString *item = [_charAtPos objectAtIndex:index];
     NSArray *test_pos = [item componentsSeparatedByString:@":"];
     if ([test_pos count]>1) {
@@ -108,7 +108,7 @@
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             NSArray *item_in_row = [item componentsSeparatedByString:@" "];
-            int i = [item_in_row count];
+            NSUInteger i = [item_in_row count];
             if (_numOfColumns < i ) {
                 _numOfColumns = i;
             }
@@ -120,9 +120,9 @@
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             item = [item stringByReplacingOccurrencesOfString:@"  " withString:@" "];
             NSArray *item_in_row = [item componentsSeparatedByString:@" "];
-            int i = [item_in_row count];
+            NSUInteger i = [item_in_row count];
             [_charAtPos addObjectsFromArray:item_in_row];
-            for (int y=i; y<_numOfColumns; y++) {
+            for (NSUInteger y=i; y<_numOfColumns; y++) {
                 [_charAtPos addObject:@" "];
             }
         }

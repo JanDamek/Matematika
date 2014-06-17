@@ -44,11 +44,11 @@
 
 #pragma mark - methods
 
--(int)rowNumber{
+-(NSInteger)rowNumber{
     return _rowNumber;
 }
 
--(void)setRowNumber:(int)rowNumber{
+-(void)setRowNumber:(NSInteger)rowNumber{
 //    UIView *v = [[UIView alloc] initWithFrame:self.frame];
     if (rowNumber % 2){
         _bgImage.image = [UIImage imageNamed:@"bg_list_even.9.png"];
