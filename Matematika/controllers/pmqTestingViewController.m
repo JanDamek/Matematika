@@ -333,11 +333,11 @@
 }
 
 -(void)markCorrect{
-    //    [UIView beginAnimations:@"correct" context:nil];
-    //
-    //    [UIView setAnimationDuration:0.5];
-    //    [UIView setAnimationDelegate:self];
-    //    [UIView commitAnimations];
+        [UIView beginAnimations:@"correct" context:nil];
+    
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationDelegate:self];
+        [UIView commitAnimations];
 }
 
 -(void)prepareNextQuestion{

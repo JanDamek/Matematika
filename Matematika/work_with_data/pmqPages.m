@@ -60,7 +60,7 @@
     if (_actualIndex<=_numOfColumns){
         _drawToIndex = _numOfItems;
         return YES;
-    } else  return NO;
+    } else return NO;
 }
 
 -(id)objectForItemIndex:(NSInteger)index{
