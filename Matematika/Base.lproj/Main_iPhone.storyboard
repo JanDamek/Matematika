@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-1558" y="-1630"/>
         </scene>
-        <!--Pmq Lessons View Controller - Title-->
+        <!--Pmq Lessons View Controller - Lekce-->
         <scene sceneID="9qF-dI-9mK">
             <objects>
                 <viewController id="2dm-sP-irr" customClass="pmqLessonsViewController" sceneMemberID="viewController">
@@ -100,16 +100,6 @@
                                 <rect key="frame" x="-12" y="503" width="344" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-OF-bYo">
-                                <rect key="frame" x="224" y="22" width="85" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Nakup" backgroundImage="btn_green_base.9.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4xC-8U-rRZ" kind="push" identifier="nakup_popover" id="BBD-sM-Cnm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Qeq-01-HFJ">
                                 <rect key="frame" x="10" y="515" width="110" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,7 +162,13 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="EWm-R0-6ly"/>
+                    <navigationItem key="navigationItem" title="Lekce" id="EWm-R0-6ly">
+                        <barButtonItem key="rightBarButtonItem" title="Nákup" id="UWz-oq-GhD">
+                            <connections>
+                                <segue destination="4xC-8U-rRZ" kind="push" identifier="nakup_popover" id="pPs-1D-gDk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnProcvicovaniChyb" destination="PXd-MH-vvM" id="Lvr-Qo-N2t"/>
                         <outlet property="btnVysledkyTestu" destination="Qeq-01-HFJ" id="S8c-44-Wme"/>
@@ -1161,7 +1157,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <image name="bg_list2_even.9.png" width="260" height="64"/>
         <image name="bg_list_even.9.png" width="260" height="64"/>
         <image name="bg_overlay.png" width="160" height="256"/>
-        <image name="btn_green_base.9.png" width="40" height="68"/>
         <image name="btn_next_base.png" width="80" height="97"/>
         <image name="btn_next_pressed.png" width="80" height="97"/>
         <image name="ico_fix.png" width="89" height="110"/>
@@ -1186,7 +1181,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Bsb-qE-tlr"/>
+        <segue reference="NY0-pU-EMG"/>
         <segue reference="Mfg-ut-3jK"/>
     </inferredMetricsTieBreakers>
 </document>

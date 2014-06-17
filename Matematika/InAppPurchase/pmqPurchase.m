@@ -58,6 +58,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nakupCell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor clearColor];
     if ([products count]==0) {
         cell.textLabel.text = NSLocalizedString(@"no InApp purchase items", nil);
         cell.detailTextLabel.text = @"";

@@ -61,10 +61,11 @@
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[[prefs objectForKey:@"last"] intValue] inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-    
-    [self doSelectRow:indexPath];
-    
+    if (indexPath.row>[self tableView:self.tableView numberOfRowsInSection:indexPath.section]){
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        
+        [self doSelectRow:indexPath];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -177,7 +178,7 @@
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-
+    
     pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
     d.data.lessons.delegate = self;
     self.fetchedResultsController = d.data.lessons;
