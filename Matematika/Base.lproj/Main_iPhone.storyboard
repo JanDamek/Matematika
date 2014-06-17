@@ -711,8 +711,8 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-Ld-yMu">
-                                <rect key="frame" x="102" y="86" width="115" height="0.0"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-Ld-yMu">
+                                <rect key="frame" x="20" y="86" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mtF-5T-rrX">
@@ -863,9 +863,9 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             <constraint firstAttribute="bottom" secondItem="xdN-SE-EIX" secondAttribute="bottom" id="1cR-6c-cU1"/>
                             <constraint firstAttribute="trailing" secondItem="xdN-SE-EIX" secondAttribute="trailing" id="7Jz-nj-qOG"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" constant="86" id="AqH-BP-Ke1"/>
-                            <constraint firstItem="RE7-Ld-yMu" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="102" id="Isb-gN-Tbn"/>
+                            <constraint firstItem="RE7-Ld-yMu" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="20" id="Isb-gN-Tbn"/>
                             <constraint firstAttribute="bottom" secondItem="N3F-U4-6eO" secondAttribute="bottom" constant="129" id="UpL-N4-NFn"/>
-                            <constraint firstAttribute="trailing" secondItem="RE7-Ld-yMu" secondAttribute="trailing" constant="103" id="b83-eg-XWS"/>
+                            <constraint firstAttribute="trailing" secondItem="RE7-Ld-yMu" secondAttribute="trailing" constant="20" id="b83-eg-XWS"/>
                             <constraint firstItem="xdN-SE-EIX" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" id="kVL-Gq-4Ez"/>
                             <constraint firstItem="xdN-SE-EIX" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" id="yvH-4Y-yGV"/>
                         </constraints>
@@ -1181,7 +1181,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4Wn-qj-xVy"/>
+        <segue reference="Zbr-Vh-iGv"/>
         <segue reference="Mfg-ut-3jK"/>
     </inferredMetricsTieBreakers>
 </document>

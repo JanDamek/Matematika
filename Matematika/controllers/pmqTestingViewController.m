@@ -433,6 +433,8 @@
         sound_file = @"snd_correct";
     } else sound_file = @"snd_failed";
     
+    @try {
+
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:sound_file
                                          ofType:@"mp3"]];
@@ -441,6 +443,13 @@
                error:nil];
     _player.delegate = self;
     [_player play];
+    }
+    @catch (NSException *exception) {
+
+    }
+    @finally {
+
+    }
     
     
     [self animateAnswer:sender];

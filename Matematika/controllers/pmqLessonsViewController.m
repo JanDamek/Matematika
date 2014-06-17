@@ -161,8 +161,18 @@
         [prefs setObject:[NSNumber numberWithInteger:indexPath.row] forKey:@"last"];
         [prefs synchronize];
         
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
+        Lessons *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        if ([object.demo intValue]==0){
+            if (isReady){
+                [self performSegueWithIdentifier:@"nakup_popover" sender:self];
+            }else {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+                [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+                [self doSelectRow:indexPath];
+            }
+        } else {
+            [[segue destinationViewController] setDetailItem:object];
+        }
     } else
         if ([[segue identifier] isEqualToString:@"procvicovani"]) {
             

@@ -65,7 +65,10 @@
     int test_length = 6;
     NSMutableArray *a = [[NSMutableArray alloc]init];
     while (count_question<test_length) {
-        int div = RAND_MAX / [_a count];
+        int div;
+        if ([_a count] > 0) {
+            div = RAND_MAX / [_a count];
+        } else div = 1;
         int index = rand() / div;
         NSString *q;
         if (index<[_a count]) {
