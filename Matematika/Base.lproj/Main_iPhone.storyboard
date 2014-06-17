@@ -256,26 +256,24 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_board_square.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-uZ-lOD">
-                                <rect key="frame" x="20" y="71" width="280" height="450"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_square.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-uZ-lOD">
+                                <rect key="frame" x="20" y="89" width="280" height="432"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
-                                <rect key="frame" x="42" y="111" width="300" height="80"/>
+                                <rect key="frame" x="75" y="109" width="170" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="-3" maxY="0.0"/>
-                                <state key="normal" title="Jak na to" image="img_intro.png"/>
+                                <state key="normal" title="Jak na to"/>
                                 <connections>
                                     <segue destination="06h-WC-F2r" kind="push" identifier="jnt_detail" id="lgw-Tx-iLy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-d8-vDs">
-                                <rect key="frame" x="42" y="237" width="359" height="80"/>
+                                <rect key="frame" x="40" y="232" width="241" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Procvicovani" image="img_trial.png">
+                                <state key="normal" title="Procvicovani">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -283,11 +281,10 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX4-iB-AnY">
-                                <rect key="frame" x="42" y="361" width="414" height="80"/>
+                                <rect key="frame" x="24" y="339" width="273" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Zkouseni na cas" image="img_exercise.png">
+                                <state key="normal" title="Zkouseni na cas">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -296,6 +293,12 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" constant="20" id="FeA-GA-nfK"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" constant="89" id="QWj-fb-1ke"/>
+                            <constraint firstAttribute="bottom" secondItem="Fv8-uZ-lOD" secondAttribute="bottom" constant="47" id="QbI-sa-NZO"/>
+                            <constraint firstAttribute="trailing" secondItem="Fv8-uZ-lOD" secondAttribute="trailing" constant="20" id="Yqp-63-5J4"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="ldb-GH-sFe"/>
@@ -827,7 +830,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3F-U4-6eO">
-                                <rect key="frame" x="95" y="273" width="133" height="66"/>
+                                <rect key="frame" x="95" y="373" width="133" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -861,7 +864,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             <constraint firstAttribute="trailing" secondItem="xdN-SE-EIX" secondAttribute="trailing" id="7Jz-nj-qOG"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" constant="86" id="AqH-BP-Ke1"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="102" id="Isb-gN-Tbn"/>
-                            <constraint firstAttribute="bottom" secondItem="N3F-U4-6eO" secondAttribute="bottom" constant="178" id="UpL-N4-NFn"/>
+                            <constraint firstAttribute="bottom" secondItem="N3F-U4-6eO" secondAttribute="bottom" constant="129" id="UpL-N4-NFn"/>
                             <constraint firstAttribute="trailing" secondItem="RE7-Ld-yMu" secondAttribute="trailing" constant="103" id="b83-eg-XWS"/>
                             <constraint firstItem="xdN-SE-EIX" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" id="kVL-Gq-4Ez"/>
                             <constraint firstItem="xdN-SE-EIX" firstAttribute="top" secondItem="t0x-Cy-ePR" secondAttribute="top" id="yvH-4Y-yGV"/>
@@ -1161,9 +1164,6 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <image name="btn_next_pressed.png" width="80" height="97"/>
         <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
-        <image name="img_exercise.png" width="162" height="161"/>
-        <image name="img_intro.png" width="162" height="161"/>
-        <image name="img_trial.png" width="162" height="161"/>
         <image name="list_shadow_bottom.9.png" width="62" height="48"/>
         <image name="list_shadow_top.9.png" width="62" height="48"/>
         <image name="pmq_hp.png" width="145" height="74"/>
@@ -1181,7 +1181,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NY0-pU-EMG"/>
+        <segue reference="4Wn-qj-xVy"/>
         <segue reference="Mfg-ut-3jK"/>
     </inferredMetricsTieBreakers>
 </document>
