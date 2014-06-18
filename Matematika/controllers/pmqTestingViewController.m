@@ -24,6 +24,8 @@
     
     AVAudioPlayer *_player;
     
+    NSUInteger time_of_answer;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *marks;
@@ -335,7 +337,7 @@
 -(void)markCorrect{
         [UIView beginAnimations:@"correct" context:nil];
     
-        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationDuration:time_of_answer];
         [UIView setAnimationDelegate:self];
         [UIView commitAnimations];
 }
@@ -425,6 +427,11 @@
     q.time_of_answer = [NSNumber numberWithFloat:inTime];
     //    }
     answered++;
+    if (q.last_answer) {
+        time_of_answer = 1;
+    } else {
+        time_of_answer = 3;
+    }
     
     NSString *sound_file;
     if (sender==nil){

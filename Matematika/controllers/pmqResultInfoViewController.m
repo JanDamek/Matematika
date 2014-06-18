@@ -125,9 +125,11 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     pmqResultQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"resultCell" forIndexPath:indexPath];
     
-    Questions *q = [questions objectAtIndex:indexPath.row];
+    NSUInteger index= abs(indexPath.row - [questions count]) + 1;
     
-    pmqQuestions *pmq = [pmqQ objectAtIndex:indexPath.row];
+    Questions *q = [questions objectAtIndex:index];
+    
+    pmqQuestions *pmq = [pmqQ objectAtIndex:index];
     
     if ([q.time_of_answer intValue] == [_dataResult.relationship_test.time_limit intValue]){
         [cell.timeOut setHidden:NO];
