@@ -20,6 +20,8 @@
     NSEnumerator *n;
     bool isReadyToPlay;
     
+    UIFont *_font;
+    
     AVAudioPlayer *_player;
 }
 
@@ -125,6 +127,7 @@
         w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 10 ) / [self.p numOfColumns];
         h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 10) / [self.p numOfRows] ;
         
+        _font = [UIFont boldSystemFontOfSize:h / 2];
         [_explainGrid reloadData];}
 }
 
@@ -221,6 +224,7 @@
     
     if ([object isKindOfClass:[NSString class]]){
         cell.lab.text = (NSString*)object;
+        [cell.lab setFont:_font];
         [cell.img setHidden:YES];
         [cell.lab setHidden:NO];
     } else {

@@ -24,7 +24,7 @@
     
     AVAudioPlayer *_player;
     
-    NSUInteger time_of_answer;
+    NSUInteger time_to_show_answer;
     
 }
 
@@ -337,7 +337,11 @@
 -(void)markCorrect{
         [UIView beginAnimations:@"correct" context:nil];
     
-        [UIView setAnimationDuration:time_of_answer];
+    if (time_to_show_answer>1) {
+        [_labelAnswer setTextColor:[UIColor redColor]];
+    }
+    
+        [UIView setAnimationDuration:time_to_show_answer];
         [UIView setAnimationDelegate:self];
         [UIView commitAnimations];
 }
@@ -365,11 +369,12 @@
     
     if ([(NSString*)anim isEqualToString:@"answer"]){
         
-        [self performSelector:@selector(markCorrect) withObject:nil afterDelay:0.2];
+        [self performSelector:@selector(markCorrect) withObject:nil afterDelay:time_to_show_answer / 5];
         
     } else if ( [(NSString*)anim isEqualToString:@"correct"] ){
         
-        [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:1];
+        [_labelAnswer setTextColor:[UIColor blackColor]];
+        [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:time_to_show_answer];
     }
 }
 
@@ -427,10 +432,10 @@
     q.time_of_answer = [NSNumber numberWithFloat:inTime];
     //    }
     answered++;
-    if (q.last_answer) {
-        time_of_answer = 1;
+    if ([q.last_answer boolValue]) {
+        time_to_show_answer = 1;
     } else {
-        time_of_answer = 3;
+        time_to_show_answer = 3;
     }
     
     NSString *sound_file;
