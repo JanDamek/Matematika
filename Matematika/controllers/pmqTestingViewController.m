@@ -115,7 +115,7 @@
             sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
             NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                  pathForResource:sounf_file
-                                                 ofType:@"mp3"]];
+                                                 ofType:@"aac"]];
             _player = [[AVAudioPlayer alloc]
                        initWithContentsOfURL:url
                        error:nil];
@@ -449,7 +449,7 @@
 
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:sound_file
-                                         ofType:@"mp3"]];
+                                         ofType:@"aac"]];
     _player = [[AVAudioPlayer alloc]
                initWithContentsOfURL:url
                error:nil];

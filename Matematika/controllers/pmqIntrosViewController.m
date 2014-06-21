@@ -77,7 +77,7 @@
                                 @"intro"];
         NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                              pathForResource:sound_file
-                                             ofType:@"mp3"]];
+                                             ofType:@"aac"]];
         _player = [[AVAudioPlayer alloc]
                    initWithContentsOfURL:url
                    error:nil];
@@ -187,7 +187,7 @@
                                   sound_file];
                     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                          pathForResource:sound_file
-                                                         ofType:@"mp3"]];
+                                                         ofType:@"aac"]];
                     _player = [[AVAudioPlayer alloc]
                                initWithContentsOfURL:url
                                error:nil];
