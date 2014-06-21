@@ -1085,7 +1085,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I40-jn-zFy">
-                                                    <rect key="frame" x="16" y="35" width="68" height="30"/>
+                                                    <rect key="frame" x="15" y="5" width="70" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1104,12 +1104,14 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                             <constraint firstItem="I40-jn-zFy" firstAttribute="centerY" secondItem="LqX-N3-cb3" secondAttribute="centerY" id="8SM-ka-QyX"/>
                                             <constraint firstItem="LqX-N3-cb3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AAN-m8-Cze" secondAttribute="top" constant="5" id="8pb-Jg-Voc"/>
                                             <constraint firstAttribute="bottom" secondItem="LqX-N3-cb3" secondAttribute="bottom" constant="5" id="91b-Ua-Gm5"/>
-                                            <constraint firstItem="I40-jn-zFy" firstAttribute="top" secondItem="AAN-m8-Cze" secondAttribute="top" constant="35" id="D5e-oi-NNE"/>
+                                            <constraint firstItem="I40-jn-zFy" firstAttribute="top" secondItem="AAN-m8-Cze" secondAttribute="top" constant="5" id="D5e-oi-NNE"/>
                                             <constraint firstAttribute="trailing" secondItem="LqX-N3-cb3" secondAttribute="trailing" constant="5" id="LwP-yU-iV6"/>
                                             <constraint firstItem="LqX-N3-cb3" firstAttribute="top" secondItem="AAN-m8-Cze" secondAttribute="top" constant="5" id="R8Z-3Y-FFQ"/>
                                             <constraint firstItem="I40-jn-zFy" firstAttribute="centerX" secondItem="LqX-N3-cb3" secondAttribute="centerX" id="hQb-Ft-vYe"/>
                                             <constraint firstItem="LqX-N3-cb3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="5" id="hk8-ty-2hd"/>
-                                            <constraint firstItem="I40-jn-zFy" firstAttribute="leading" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="16" id="s05-JZ-QD1"/>
+                                            <constraint firstAttribute="trailing" secondItem="I40-jn-zFy" secondAttribute="trailing" constant="15" id="lmq-r5-iiN"/>
+                                            <constraint firstItem="I40-jn-zFy" firstAttribute="leading" secondItem="AAN-m8-Cze" secondAttribute="leading" constant="15" id="s05-JZ-QD1"/>
+                                            <constraint firstAttribute="bottom" secondItem="I40-jn-zFy" secondAttribute="bottom" constant="5" id="xeV-XY-v6E"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="img" destination="LqX-N3-cb3" id="Rn7-BN-7hj"/>

@@ -127,7 +127,6 @@
         w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 10 ) / [self.p numOfColumns];
         h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 10) / [self.p numOfRows] ;
         
-        _font = [UIFont boldSystemFontOfSize:h / 2];
         [_explainGrid reloadData];}
 }
 
@@ -136,6 +135,11 @@
     w = (_explainGrid.frame.size.width - (_p.numOfColumns * 5) - 10 ) / [self.p numOfColumns];
     h = (_explainGrid.frame.size.height - (_p.numOfColumns * 5) - 10) / [self.p numOfRows] ;
     
+    if (h<w){
+        _font = [UIFont boldSystemFontOfSize:h / 2];
+    } else
+        _font = [UIFont boldSystemFontOfSize:w / 2];
+
     return CGSizeMake(w, h);
 }
 
