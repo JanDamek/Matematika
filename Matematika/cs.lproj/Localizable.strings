@@ -8,12 +8,12 @@
 
 "lng" = "cz_";
 
-"result_0"="nic moc";
-"result_1"="Neni to nejlepsi";
-"result_2"="Je co zlepsovat";
-"result_3"="Pekny vysledek";
-"result_4"="Je to dobre";
-"result_5"="Super";
+"result_0"="Toto bylo slabé!";
+"result_1"="To je horší výsledek.";
+"result_2"="Uspokojivý výkon.";
+"result_3"="Pěkný výsledek.";
+"result_4"="Skoro bez chyby, super!";
+"result_5"="Naprosto bez chyb, skvěle!";
 
 "÷" = "divide";
 "=" = "equals";
@@ -23,3 +23,5 @@
 "x" = "multiply";
 "×" = "multiply";
 "+" = "plus";
+
+"no InApp purchase items" = "Nenalezené položky k nákupu.";

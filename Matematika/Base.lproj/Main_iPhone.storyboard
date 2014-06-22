@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-1558" y="-1630"/>
         </scene>
-        <!--Pmq Lessons View Controller - Lekce-->
+        <!--Pmq Lessons View Controller - Lessons-->
         <scene sceneID="9qF-dI-9mK">
             <objects>
                 <viewController id="2dm-sP-irr" customClass="pmqLessonsViewController" sceneMemberID="viewController">
@@ -94,6 +94,7 @@
                                             <outlet property="bgImage" destination="euH-TF-olb" id="q1s-SS-PrB"/>
                                             <outlet property="lessonName" destination="CKJ-Sv-jvF" id="Gnz-nt-zfj"/>
                                             <outlet property="ratingImage" destination="O5L-ZV-2om" id="e7K-k9-ilI"/>
+                                            <segue destination="Rru-Cb-joA" kind="push" trigger="accessoryAction" id="OFa-6l-yDl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,7 +119,7 @@
                                 <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <inset key="titleEdgeInsets" minX="-118" minY="5" maxX="0.0" maxY="5"/>
                                 <inset key="imageEdgeInsets" minX="70" minY="0.0" maxX="5" maxY="0.0"/>
-                                <state key="normal" title="Vysledky testu" image="ico_results.png">
+                                <state key="normal" title="All results" image="ico_results.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -137,10 +138,7 @@
                                 <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <inset key="titleEdgeInsets" minX="-119" minY="5" maxX="5" maxY="5"/>
                                 <inset key="imageEdgeInsets" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="ico_fix.png">
-                                    <string key="title" base64-UTF8="YES">
-EFByb2N2aWNvdmFuaeKAqGNoeWI
-</string>
+                                <state key="normal" title="Practicing errors" image="ico_fix.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -168,11 +166,11 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lekce" id="EWm-R0-6ly">
+                    <navigationItem key="navigationItem" title="Lessons" id="EWm-R0-6ly">
                         <barButtonItem key="leftBarButtonItem" image="btn_pmq_mini.png" id="hdU-9e-cer">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Nákup" id="UWz-oq-GhD">
+                        <barButtonItem key="rightBarButtonItem" title="Unlock" id="UWz-oq-GhD">
                             <connections>
                                 <segue destination="4xC-8U-rRZ" kind="push" identifier="nakup_popover" id="pPs-1D-gDk"/>
                             </connections>
@@ -188,7 +186,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
             </objects>
             <point key="canvasLocation" x="-626" y="-1606"/>
         </scene>
-        <!--Pmq Purchase - Nákup-->
+        <!--Pmq Purchase - Unlock-->
         <scene sceneID="8nW-i2-L7U">
             <objects>
                 <tableViewController id="4xC-8U-rRZ" customClass="pmqPurchase" sceneMemberID="viewController">
@@ -232,8 +230,8 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             <outlet property="delegate" destination="4xC-8U-rRZ" id="0vE-Ma-Nfy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nákup" id="sAS-RJ-xP4">
-                        <barButtonItem key="rightBarButtonItem" title="Obnova nakupu" id="r1d-od-tGo">
+                    <navigationItem key="navigationItem" title="Unlock" id="sAS-RJ-xP4">
+                        <barButtonItem key="rightBarButtonItem" title="Renewal" id="r1d-od-tGo">
                             <connections>
                                 <action selector="restore" destination="4xC-8U-rRZ" id="LQz-3U-FMq"/>
                             </connections>
@@ -270,19 +268,21 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
-                                <rect key="frame" x="75" y="109" width="170" height="80"/>
+                                <rect key="frame" x="49" y="122" width="223" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Jak na to"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="45" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Jak na to" image="img_intro.png"/>
                                 <connections>
                                     <segue destination="06h-WC-F2r" kind="push" identifier="jnt_detail" id="lgw-Tx-iLy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-d8-vDs">
-                                <rect key="frame" x="40" y="232" width="241" height="80"/>
+                                <rect key="frame" x="35" y="221" width="250" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Procvicovani">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="55" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Procvicovani" image="img_trial.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -290,10 +290,11 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX4-iB-AnY">
-                                <rect key="frame" x="24" y="339" width="273" height="80"/>
+                                <rect key="frame" x="29" y="326" width="262" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Zkouseni na cas">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="45" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Zkouseni na cas" image="img_exercise.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -322,7 +323,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
             </objects>
             <point key="canvasLocation" x="349" y="-2134"/>
         </scene>
-        <!--Pmq Result View Controller - Výsledky-->
+        <!--Pmq Result View Controller - Results-->
         <scene sceneID="O5y-La-NPH">
             <objects>
                 <viewController id="c8t-f0-qh8" customClass="pmqResultViewController" sceneMemberID="viewController">
@@ -445,7 +446,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                             <constraint firstAttribute="bottom" secondItem="AcH-jt-Lhi" secondAttribute="bottom" id="miH-2B-nb0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Výsledky" id="cP3-yc-cWV"/>
+                    <navigationItem key="navigationItem" title="Results" id="cP3-yc-cWV"/>
                     <connections>
                         <outlet property="tableView" destination="pno-kB-5yL" id="CMi-Ft-P3E"/>
                     </connections>
@@ -1298,6 +1299,9 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <image name="btn_pmq_mini.png" width="44" height="22"/>
         <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
+        <image name="img_exercise.png" width="81" height="80"/>
+        <image name="img_intro.png" width="81" height="80"/>
+        <image name="img_trial.png" width="81" height="80"/>
         <image name="list_shadow_bottom.9.png" width="62" height="48"/>
         <image name="list_shadow_top.9.png" width="62" height="48"/>
         <image name="pmq_hp.png" width="145" height="74"/>
@@ -1314,7 +1318,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NY0-pU-EMG"/>
         <segue reference="pxc-6V-N10"/>
+        <segue reference="Zbr-Vh-iGv"/>
     </inferredMetricsTieBreakers>
 </document>

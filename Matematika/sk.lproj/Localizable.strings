@@ -16,3 +16,12 @@
 "x" = "multiply";
 "×" = "multiply";
 "+" = "plus";
+
+"no InApp purchase items" = "Not found purchase items.";
+
+"result_0"="Toto bolo slabé!";
+"result_1"="To je horší výsledok.";
+"result_2"="Uspokojivý výkon.";
+"result_3"="Pekný výsledok.";
+"result_4"="Takmer bez chyby, super!";
+"result_5"="Úplne bez chýb, skvele!";

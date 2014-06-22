@@ -16,3 +16,12 @@
 "x" = "multiply";
 "×" = "multiply";
 "+" = "plus";
+
+"result_0"="That was weak!";
+"result_1"="This is worse.";
+"result_2"="You have to improve.";
+"result_3"="Nice result.";
+"result_4"="Almost error-free, super!";
+"result_5"="No errors, great!";
+
+"no InApp purchase items" = "Not found purchase items.";

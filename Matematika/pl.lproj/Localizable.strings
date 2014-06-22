@@ -16,3 +16,12 @@
 "x" = "multiply";
 "×" = "multiply";
 "+" = "plus";
+
+"no InApp purchase items" = "Not found purchase items.";
+
+"result_0"="Nienajlepiej…";
+"result_1"="To jest gorszy wynik.";
+"result_2"="Odpowiedź dostateczna.";
+"result_3"="Nieźle.";
+"result_4"="Prawie bez błędów, super!";
+"result_5"="Absolutnie bez błędów, świetnie!";

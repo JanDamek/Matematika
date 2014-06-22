@@ -195,7 +195,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="49R-rm-XBE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="49R-rm-XBE">
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -203,21 +203,21 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                 <rect key="frame" x="20" y="110" width="665" height="591"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W4-iS-tbH">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W4-iS-tbH">
                                 <rect key="frame" x="190" y="157" width="304" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="-3" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="-10" maxY="0.0"/>
                                 <state key="normal" title="Jak na to" image="img_intro.png"/>
                                 <connections>
                                     <segue destination="NqH-3d-zu9" kind="push" identifier="jnt_detail" id="60f-S9-SBu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diG-Pu-NrK">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diG-Pu-NrK">
                                 <rect key="frame" x="172" y="326" width="359" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="-10" maxY="0.0"/>
                                 <state key="normal" title="Procvicovani" image="img_trial.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -225,11 +225,11 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
                                     <segue destination="YSQ-WZ-sxf" kind="push" identifier="p_detail" id="4wz-Zb-sEt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-Eg-gI6">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-Eg-gI6">
                                 <rect key="frame" x="144" y="495" width="414" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="80" maxX="-10" maxY="0.0"/>
                                 <state key="normal" title="Zkouseni na cas" image="img_exercise.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1269,9 +1269,9 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <image name="btn_pmq_mini.png" width="44" height="22"/>
         <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
-        <image name="img_exercise.png" width="162" height="161"/>
-        <image name="img_intro.png" width="162" height="161"/>
-        <image name="img_trial.png" width="162" height="161"/>
+        <image name="img_exercise.png" width="81" height="80"/>
+        <image name="img_intro.png" width="81" height="80"/>
+        <image name="img_trial.png" width="81" height="80"/>
         <image name="list_shadow_bottom.9.png" width="62" height="48"/>
         <image name="list_shadow_top.9.png" width="62" height="48"/>
         <image name="pmq_hp.png" width="145" height="74"/>
@@ -1288,7 +1288,7 @@ EFByb2N2aWNvdmFuaeKAqGNoeWI
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vYP-xj-ZMy"/>
         <segue reference="lf1-kM-SZV"/>
+        <segue reference="4wz-Zb-sEt"/>
     </inferredMetricsTieBreakers>
 </document>
