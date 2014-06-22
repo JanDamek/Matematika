@@ -50,6 +50,9 @@
 @synthesize answerButtons = _answerButtons;
 @synthesize testMode = _testMode;
 @synthesize labelAnswer = _labelAnswer;
+@synthesize questionLabel1 = _questionLabel1;
+@synthesize questionLabel2 = _questionLabel2;
+@synthesize questionMark = _questionMark;
 
 #pragma mark - initialization
 
@@ -250,16 +253,34 @@
         _questionLabel2.text = pmqQ.secondPartQuestion;
         [_questionLabel2 sizeToFit];
         
+        CGRect v = self.view.frame;
+        int pos = v.size.width / 2;
+        
         CGRect s = _questionLabel2.frame;
         s.origin.y = _questionLabel1.frame.origin.y;
+        
+        pos -= ((s.size.width  + _timerView.frame.size.width + _questionLabel1.frame.size.width)/2);
+        v = _questionLabel1.frame;
+        v.origin.x = pos;
+        _questionLabel1.frame = v;
         
         if (_testMode == tmTest){
             [_questionMark setHidden:NO];
             [_timerView setHidden:YES];
             
+            int y;
+            int height;
+            if (_questionLabel1.frame.size.height>0){
+                y = _questionLabel1.frame.origin.y;
+                height = _questionLabel1.frame.size.height;
+            } else {
+                y = _questionLabel2.frame.origin.y;
+                height = _questionLabel2.frame.size.height;
+            }
+            
             CGRect p = _questionMark.frame;
             p.origin.x = _questionLabel1.frame.origin.x + _questionLabel1.frame.size.width;
-            p.origin.y = _questionLabel1.frame.origin.y - ((_questionMark.frame.size.height - _questionLabel1.frame.size.height)/2);
+            p.origin.y = y - ((_questionMark.frame.size.height - height)/2);
             _questionMark.frame=p;
             s.origin.x = _questionMark.frame.origin.x + _questionMark.frame.size.width;
         }else{
@@ -268,7 +289,18 @@
             
             CGRect p = _timerView.frame;
             p.origin.x = _questionLabel1.frame.origin.x + _questionLabel1.frame.size.width;
-            p.origin.y = _questionLabel1.frame.origin.y- ((_timerView.frame.size.height - _questionLabel1.frame.size.height)/2);
+            
+            int y;
+            int height;
+            if (_questionLabel1.frame.size.height>0){
+                y = _questionLabel1.frame.origin.y;
+                height = _questionLabel1.frame.size.height;
+            } else {
+                y = _questionLabel2.frame.origin.y;
+                height = _questionLabel2.frame.size.height;
+            }
+                
+            p.origin.y = y - ((_timerView.frame.size.height - height)/2);
             _timerView.frame=p;
             s.origin.x = _timerView.frame.origin.x + _timerView.frame.size.width;
             [_timerView startTimer:[_data.time_limit intValue]];
@@ -335,15 +367,15 @@
 }
 
 -(void)markCorrect{
-        [UIView beginAnimations:@"correct" context:nil];
+    [UIView beginAnimations:@"correct" context:nil];
     
     if (time_to_show_answer>1) {
         [_labelAnswer setTextColor:[UIColor redColor]];
     }
     
-        [UIView setAnimationDuration:time_to_show_answer];
-        [UIView setAnimationDelegate:self];
-        [UIView commitAnimations];
+    [UIView setAnimationDuration:time_to_show_answer];
+    [UIView setAnimationDelegate:self];
+    [UIView commitAnimations];
 }
 
 -(void)prepareNextQuestion{
@@ -397,6 +429,11 @@
             b.backgroundColor = [UIColor greenColor];
             _labelAnswer.text = b.currentTitle;
             [_labelAnswer sizeToFit];
+            if (_labelAnswer.frame.origin.x <_questionLabel2.frame.origin.x) {
+                CGRect p = _questionLabel2.frame;
+                p.origin.x = _labelAnswer.frame.origin.x + _labelAnswer.frame.size.width;
+                _questionLabel2.frame = p;
+            }
         }
         [b setEnabled:NO];
         if ([b isEqual:button] || b.tag==1) {
@@ -446,21 +483,20 @@
     } else sound_file = @"snd_failed";
     
     @try {
-
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                         pathForResource:sound_file
-                                         ofType:@"aac"]];
-    _player = [[AVAudioPlayer alloc]
-               initWithContentsOfURL:url
-               error:nil];
-    _player.delegate = self;
-    [_player play];
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                             pathForResource:sound_file
+                                             ofType:@"aac"]];
+        _player = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:url
+                   error:nil];
+        _player.delegate = self;
+        [_player play];
     }
     @catch (NSException *exception) {
-
+        
     }
     @finally {
-
+        
     }
     
     

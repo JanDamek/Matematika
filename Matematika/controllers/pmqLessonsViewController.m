@@ -49,8 +49,10 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-    UIImageView *v = [[UIImageView alloc] initWithFrame:self.navigationController.navigationBar.bounds];
-    v.image = [UIImage imageNamed:@"title_hp.png"];
+    CGRect p = self.navigationController.navigationBar.bounds;
+    UIImageView *v = [[UIImageView alloc] initWithFrame:p];
+    NSString *title_image = [NSString stringWithFormat:@"%@%@", NSLocalizedString(@"lng", nil),@"title_hp.png"];
+    v.image = [UIImage imageNamed:title_image];
     v.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = v;
     
@@ -144,17 +146,7 @@
         } else {
             self.detailViewController.detailItem = object;
         }
-    }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self doSelectRow:indexPath];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    }else if (isReady) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -170,15 +162,27 @@
                 [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
                 [self doSelectRow:indexPath];
             }
-        } else {
-            [[segue destinationViewController] setDetailItem:object];
+        }else{
+            pmqDetailLesonsViewController *d = [self.storyboard instantiateViewControllerWithIdentifier:@"detailView"];
+            [d setDetailItem:object];
+            [self.navigationController pushViewController:d animated:YES];
         }
-    } else
-        if ([[segue identifier] isEqualToString:@"procvicovani"]) {
-            
-            pmqTestingViewController *t = [segue destinationViewController];
-            t.testMode = tmTestOverAllFail;
-        }
+        
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self doSelectRow:indexPath];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"procvicovani"]) {
+        
+        pmqTestingViewController *t = [segue destinationViewController];
+        t.testMode = tmTestOverAllFail;
+    }
 }
 
 #pragma mark - Fetched results controller

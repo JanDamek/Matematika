@@ -127,8 +127,10 @@
 }
 
 -(void)performProcvicovani{
-    [self.navigationController popToRootViewControllerAnimated:NO];
-
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
+    
     Lessons *l = (Lessons*)self.detailItem;
 
     pmqTestingViewController *t = [self.storyboard instantiateViewControllerWithIdentifier:@"procvicovani"];

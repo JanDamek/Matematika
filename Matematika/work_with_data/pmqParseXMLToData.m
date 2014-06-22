@@ -31,7 +31,10 @@
 }
 
 -(void)doParse{
-    int lesson_order = 0;
+    NSInteger lesson_order = 1;
+    NSInteger intros_order = 1;
+    NSInteger pages_order = 1;
+
     NSString *definition = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
                             @"game_definition"];
     NSString *filePath = [ [ NSBundle mainBundle ] pathForResource: definition ofType: @"xml" ];
@@ -48,20 +51,31 @@
         l.name = [i valueForKey:@"name"];
         l.rating = [NSNumber numberWithInt:0];
         l.name = [l.name stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
-        l.order = [NSNumber numberWithInt:lesson_order];
+        l.order = [NSNumber numberWithInteger:lesson_order];
         lesson_order++;
         
         Tests *test = [self.d newTests];
         l.relationship_test = test;
 
         Intros *intros = [self.d newIntros];
+        intros.order = [NSNumber numberWithInteger:intros_order];
+        intros_order++;
         [l addRelationship_introObject:intros];
         NSDictionary *intr = [i valueForKey:@"intro"];
         for (NSDictionary *page in [intr valueForKey:@"page"]) {
             Pages *p = [self.d newPages];
             [intros addRelationship_pagesObject:p];
-
-            p.fixed = [NSNumber numberWithInt:[[page valueForKey:@"fixed"] intValue]];
+            
+            p.order = [NSNumber numberWithInteger:pages_order];
+            pages_order++;
+            int fixed;
+            @try {
+                fixed = [[page valueForKey:@"fixed"] intValue];
+            }
+            @catch (NSException *exception) {
+                fixed = 0;
+            }
+            p.fixed = [NSNumber numberWithInt:fixed];
             p.type = [page valueForKey:@"type"];
             p.content = [page valueForKey:@"text"];
             p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];

@@ -12,6 +12,7 @@
 #import "Questions.h"
 #import "pmqQuestions.h"
 #import "pmqResultQuestionCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface pmqResultInfoViewController (){
     NSArray *questions;
@@ -143,6 +144,7 @@
     CGRect r = cell.progress.frame;
     r.size.height +=2;
     cell.progress.frame = r;
+    cell.progress.layer.cornerRadius = 10;
     
     cell.question.textColor = answerColor;
     if ([q.last_answer boolValue]) {
@@ -154,6 +156,7 @@
     
     cell.question.text = pmq.resultQuestion;
     
+    [cell.progress setTransform:CGAffineTransformMakeScale(1.0, 3.0)];
     cell.progress.progress = [q.time_of_answer floatValue] / [_dataResult.relationship_test.time_limit floatValue];
     
     cell.time.text = [NSString stringWithFormat:@"%.2f s", [q.time_of_answer floatValue] ];

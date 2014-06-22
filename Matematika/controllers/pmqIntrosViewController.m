@@ -17,7 +17,7 @@
 @interface pmqIntrosViewController (){
     float w;
     float h;
-    NSEnumerator *n;
+    NSMutableArray *n;
     bool isReadyToPlay;
     
     UIFont *_font;
@@ -102,7 +102,10 @@
 -(void)setData:(Intros *)data{
     _data = data;
     _act_page = 0;
-    n = [_data.relationship_pages objectEnumerator];
+    n = [[NSMutableArray alloc] initWithCapacity:[_data.relationship_pages count]];
+    for (Pages *p in _data.relationship_pages) {
+        [n insertObject:p atIndex:0];
+    }
     
     [self next:_btnNext];
 }
@@ -151,7 +154,11 @@
 
 - (IBAction)next:(UIButton *)sender {
     if (!_pages){
-        _pages = [n nextObject];
+        if ([n count]>0){
+            _pages = [n objectAtIndex:[n count]-1];
+            [n removeObject:_pages];
+        } else
+            _pages = nil;
         if (_pages){
             _act_page++;
             
@@ -159,8 +166,13 @@
             
             [self next:sender];
         } else {
-            pmqDetailLesonsViewController *d = [self.navigationController.viewControllers objectAtIndex:0];
-            [d performSelector:@selector(performProcvicovani)];
+            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                pmqDetailLesonsViewController *d = [self.navigationController.viewControllers objectAtIndex:0];
+                [d performSelector:@selector(performProcvicovani)];
+            } else {
+                pmqDetailLesonsViewController *d = [self.navigationController.viewControllers objectAtIndex:1];
+                [d performSelector:@selector(performProcvicovani)];
+            }
         }
     } else {
         if (![_p next]){
@@ -219,6 +231,9 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    if (self.p.numOfColumns <= 1) {
+        return 0;
+    }
     return [self.p numOfItems];
 }
 
@@ -227,7 +242,15 @@
     id object = [self.p objectForItemIndex:indexPath.row];
     
     if ([object isKindOfClass:[NSString class]]){
-        cell.lab.text = (NSString*)object;
+        NSString *s;
+        if ([object hasSuffix:@"*"]) {
+            s = [object substringToIndex:[object length]-1];
+            [cell.lab setTextColor:[UIColor purpleColor]];
+        } else{
+            s = object;
+            [cell.lab setTextColor:[UIColor blackColor]];
+        }
+        cell.lab.text = s;
         [cell.lab setFont:_font];
         [cell.img setHidden:YES];
         [cell.lab setHidden:NO];

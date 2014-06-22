@@ -20,7 +20,7 @@
 
 @synthesize ani;
 
-#define kProductIdentifier @"jandamek.iradiohd"
+#define kProductIdentifier @"eu.pmq-software.matematika"
 
 -(void)viewDidLoad{
     [super viewDidLoad];

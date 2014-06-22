@@ -16,6 +16,8 @@
     
     CGFloat startAngle;
     CGFloat endAngle;
+    
+    NSDate *_startTime;
 }
 
 @end
@@ -234,6 +236,7 @@
 #pragma mark - metods
 
 -(void)onTimer:(NSTimer*)timer{
+    NSTimeInterval interval = [_startTime timeIntervalSinceNow];
     self.percent = _percent + 0.1;
 }
 
@@ -254,7 +257,9 @@
 -(void)startTimer{
     [_timer invalidate];
     
-    float timeBeat = _timeToCount / 1000;
+    _startTime = [NSDate date];
+    
+    float timeBeat = (float)_timeToCount / 1000;
     _timer = [NSTimer scheduledTimerWithTimeInterval:timeBeat target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
 }
 
