@@ -11,7 +11,10 @@
 #import "Tests.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface pmqTestResultInfoViewController ()
+@interface pmqTestResultInfoViewController (){
+    AVAudioPlayer *_player;
+    int playStatus;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *resultImage;
 @property (weak, nonatomic) IBOutlet UIImageView *starsResult;
@@ -96,6 +99,8 @@
     
     [_btnRetry setHidden: ([_result.bad_answers intValue]==0)];
     [_btnNext setHidden:YES]; //_result.relationship_test.relationship_lesson
+    
+    [self playResult];
 }
 
 -(void)setResult:(Results *)result{
@@ -103,6 +108,52 @@
     [self setViews];
 }
 
+-(void)playResult{
+    //todo play result
+    if (_result && !_player) {
+        @try {
+            playStatus = 1;
+            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"math_result1"
+                                                 ofType:@"aac"]];
+            _player = [[AVAudioPlayer alloc]
+                       initWithContentsOfURL:url
+                       error:nil];
+            _player.delegate = self;
+            [_player play];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"%@", exception);
+        }
+    }
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    if (playStatus==1){
+        playStatus = 2;
+        NSNumber *ok = [NSNumber numberWithInt:12-[_result.bad_answers intValue]];
+        NSString *file = [ok stringValue];
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                             pathForResource:file
+                                             ofType:@"aac"]];
+        _player = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:url
+                   error:nil];
+        _player.delegate = self;
+        [_player play];
+        
+    } else if (playStatus==2){
+        playStatus = 0;
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                             pathForResource:@"math_result2"
+                                             ofType:@"aac"]];
+        _player = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:url
+                   error:nil];
+        _player.delegate = self;
+        [_player play];
+    }
+}
 
 #pragma mark - Navigation
 

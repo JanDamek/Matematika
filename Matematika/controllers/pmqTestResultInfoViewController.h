@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Results.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface pmqTestResultInfoViewController : UIViewController
+@interface pmqTestResultInfoViewController : UIViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) Results *result;
 

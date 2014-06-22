@@ -66,10 +66,6 @@
     [self setViews];
 }
 
--(void)playResult{
-    //todo play result
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -86,14 +82,13 @@
     self.lblDatum.text = convertedString;
     self.lblPocetChyb.text = [NSString stringWithFormat:NSLocalizedString(@"%i (pocet prikladu %i)",nil), [_dataResult.bad_answers intValue], [_dataResult.relationship_test.test_length intValue]];
     
-    [dateFormatter setDateFormat:@"hh:mm"];// here set format which you want...
+    [dateFormatter setDateFormat:@"hh:mm"];
     int min = [_dataResult.total_time floatValue] / 60;
     int sec = [_dataResult.total_time floatValue] - (min*60);
     self.lblCelkovyCas.text = [NSString stringWithFormat:@"%02i:%02i", min, sec];
     
     [self.colPriklady reloadData];
     
-    [self playResult];
 }
 
 #pragma mark - propertys
