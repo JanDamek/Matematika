@@ -179,7 +179,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"procvicovani"]) {
-        
         pmqTestingViewController *t = [segue destinationViewController];
         t.testMode = tmTestOverAllFail;
     }

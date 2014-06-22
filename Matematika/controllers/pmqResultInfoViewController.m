@@ -12,6 +12,7 @@
 #import "Questions.h"
 #import "pmqQuestions.h"
 #import "pmqResultQuestionCell.h"
+#import "pmqTestingViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface pmqResultInfoViewController (){
@@ -19,9 +20,8 @@
     NSMutableArray *pmqQ;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *btnVysledkyTestu;
-@property (weak, nonatomic) IBOutlet UIButton *btnRetry;
-@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+@property (weak, nonatomic) IBOutlet UIButton *btnAllResults;
+@property (weak, nonatomic) IBOutlet UIButton *btnPracticeErrors;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblDatum;
 @property (weak, nonatomic) IBOutlet UILabel *lblLekce;
@@ -56,9 +56,8 @@
     
     [self setViews];
     
-    self.btnVysledkyTestu.layer.cornerRadius = 10;
-    self.btnRetry.layer.cornerRadius = 10;
-    self.btnNext.layer.cornerRadius = 10;
+    self.btnAllResults.layer.cornerRadius = 10;
+    self.btnPracticeErrors.layer.cornerRadius = 10;
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,22 +99,6 @@
 }
 
 #pragma mark - Navigation
-
--(IBAction)btnBackAction:(UIButton*)sender{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(IBAction)btnVysledkyTestuAction:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(IBAction)btnRetryAction:(id)sender{
-    
-}
-
--(IBAction)btnNextAction:(id)sender{
-    
-}
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [questions count];
@@ -168,13 +151,21 @@
     return cell;
 }
 
-/*
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    //allResults
+
+    if ([[segue identifier] isEqualToString:@"testErrors"]) {
+        pmqTestingViewController *t = [segue destinationViewController];
+        t.data = self.dataResult.relationship_test;
+        t.testMode = tmTestFails;
+    }
 }
-*/
+
 
 @end

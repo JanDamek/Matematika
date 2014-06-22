@@ -26,6 +26,8 @@
     
     NSUInteger time_to_show_answer;
     
+    bool isNew;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *marks;
@@ -68,6 +70,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    isNew = YES;
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
@@ -118,23 +122,28 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    if ([_data.welcome_sound hasSuffix:@"mp3"]) {
-        NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
-        @try {
-            sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
-            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                 pathForResource:sounf_file
-                                                 ofType:@"aac"]];
-            _player = [[AVAudioPlayer alloc]
-                       initWithContentsOfURL:url
-                       error:nil];
-            _player.delegate = self;
-            [_player play];
+    if (isNew) {
+        isNew = NO;
+        if ([_data.welcome_sound hasSuffix:@"mp3"]) {
+            NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
+            @try {
+                sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
+                NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                     pathForResource:sounf_file
+                                                     ofType:@"aac"]];
+                _player = [[AVAudioPlayer alloc]
+                           initWithContentsOfURL:url
+                           error:nil];
+                _player.delegate = self;
+                [_player play];
+            }
+            @catch (NSException *exception) {
+            }
+            @finally {
+            }
         }
-        @catch (NSException *exception) {
-        }
-        @finally {
-        }
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
