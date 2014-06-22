@@ -797,6 +797,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeout.png" translatesAutoresizingMaskIntoConstraints="NO" id="TMB-Na-5O1">
+                                <rect key="frame" x="20" y="210" width="280" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKV-de-b9x">
                                 <rect key="frame" x="20" y="143" width="500" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1045,6 +1049,7 @@
                         <outlet property="questionLabel1" destination="uKV-de-b9x" id="laI-pV-2wu"/>
                         <outlet property="questionLabel2" destination="PXx-Mn-fC5" id="bC4-uO-imn"/>
                         <outlet property="questionMark" destination="CPu-bx-OkP" id="pA0-hu-fhe"/>
+                        <outlet property="timeOutImage" destination="TMB-Na-5O1" id="Rck-xd-sjF"/>
                         <outlet property="timerView" destination="UpG-K6-zUt" id="z85-jv-gk0"/>
                         <outletCollection property="answerButtons" destination="6Gv-RD-avt" id="Bzo-vi-vss"/>
                         <outletCollection property="answerButtons" destination="NUq-CI-s6g" id="n86-K0-cPp"/>

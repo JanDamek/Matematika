@@ -40,6 +40,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel2;
 @property (weak, nonatomic) IBOutlet UILabel *labelAnswer;
 
+@property (weak, nonatomic) IBOutlet UIImageView *timeOutImage;
+
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 @property (weak, nonatomic) IBOutlet UILabel *lblStart;
@@ -56,6 +58,7 @@
 @synthesize questionLabel1 = _questionLabel1;
 @synthesize questionLabel2 = _questionLabel2;
 @synthesize questionMark = _questionMark;
+@synthesize timeOutImage = _timeOutImage;
 
 #pragma mark - initialization
 
@@ -487,16 +490,14 @@
     }else{
         [self makeResult];
     }
+    [_timeOutImage setHidden:YES];
 }
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     
     if ([(NSString*)anim isEqualToString:@"answer"]){
-        
         [self performSelector:@selector(markCorrect) withObject:nil afterDelay:time_to_show_answer / 5];
-        
     } else if ( [(NSString*)anim isEqualToString:@"correct"] ){
-        
         [_labelAnswer setTextColor:[UIColor blackColor]];
         [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:time_to_show_answer];
     }
@@ -570,6 +571,7 @@
     NSString *sound_file;
     if (sender==nil){
         sound_file = @"snd_timeout";
+        [_timeOutImage setHidden:NO];
     } else if (sender.tag==1){
         sound_file = @"snd_correct";
     } else sound_file = @"snd_failed";

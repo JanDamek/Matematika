@@ -989,6 +989,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeout.png" translatesAutoresizingMaskIntoConstraints="NO" id="NSx-mf-Zgv">
+                                <rect key="frame" x="20" y="213" width="280" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1045,6 +1049,7 @@
                         <outlet property="questionLabel1" destination="uKV-de-b9x" id="laI-pV-2wu"/>
                         <outlet property="questionLabel2" destination="PXx-Mn-fC5" id="bC4-uO-imn"/>
                         <outlet property="questionMark" destination="CPu-bx-OkP" id="pA0-hu-fhe"/>
+                        <outlet property="timeOutImage" destination="NSx-mf-Zgv" id="dQQ-aS-CRp"/>
                         <outlet property="timerView" destination="UpG-K6-zUt" id="z85-jv-gk0"/>
                         <outletCollection property="answerButtons" destination="6Gv-RD-avt" id="Bzo-vi-vss"/>
                         <outletCollection property="answerButtons" destination="NUq-CI-s6g" id="n86-K0-cPp"/>

@@ -707,6 +707,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeout.png" translatesAutoresizingMaskIntoConstraints="NO" id="GDj-MM-Eee">
+                                <rect key="frame" x="10" y="340" width="680" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-JS-Ee1">
                                 <rect key="frame" x="158" y="181" width="4709" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -921,6 +925,7 @@
                         <outlet property="questionLabel1" destination="TFg-JS-Ee1" id="Pfj-Xm-tK7"/>
                         <outlet property="questionLabel2" destination="G0P-YI-ioK" id="qvP-Ne-YOC"/>
                         <outlet property="questionMark" destination="9Tn-ug-V9X" id="ws1-jY-Wkj"/>
+                        <outlet property="timeOutImage" destination="GDj-MM-Eee" id="U7n-kF-BGD"/>
                         <outlet property="timerView" destination="1Tu-kx-1Ty" id="u8v-x6-UxN"/>
                         <outletCollection property="answerButtons" destination="Bnn-kG-JSn" id="DlA-pd-HXz"/>
                         <outletCollection property="answerButtons" destination="SoF-JP-Mc0" id="LJn-eP-oM8"/>
