@@ -88,6 +88,10 @@
     }
     [self.d saveLessons];
     
+    NSError *error =nil;
+    [self.d.lessons performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
+    
 }
 -(void)addPage:(NSDictionary*)page :(Intros*)intros :(NSInteger)pages_order{
     Pages *p = [self.d newPages];

@@ -10,6 +10,7 @@
 
 @interface pmqPurchase(){
     NSArray *products;
+    SKProductsRequest *productsRequest;
 }
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ani;
@@ -37,13 +38,18 @@
     if ([SKPaymentQueue canMakePayments]) {
         NSLog(@"Parental-controls are disabled");
         
-        SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:kProductIdentifier]];
+        productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:kProductIdentifier]];
         productsRequest.delegate = self;
         [productsRequest start];
     } else {
         NSLog(@"Parental-controls are enabled");
         //com.companion.onemonth ;
     }
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    productsRequest.delegate = nil;
+    [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

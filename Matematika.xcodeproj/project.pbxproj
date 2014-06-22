@@ -732,6 +732,7 @@
 		F522695B1956C0310064F6FC /* pl_title_hp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl_title_hp.png; sourceTree = "<group>"; };
 		F522695D1956C0310064F6FC /* sk_title_hp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sk_title_hp.png; sourceTree = "<group>"; };
 		F52269641956C0C00064F6FC /* btn_pmq_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pmq_mini.png; sourceTree = "<group>"; };
+		F52269791956E2740064F6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F52763FA192E0E98001BEC6B /* Matematika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matematika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52763FD192E0E98001BEC6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F52763FF192E0E98001BEC6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -3414,6 +3415,7 @@
 				F53E6092193B8A7F00E3EE3E /* en */,
 				F5FF08BC19558BB8008AEB89 /* pl */,
 				F5FF08C119558BEE008AEB89 /* de */,
+				F52269791956E2740064F6FC /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

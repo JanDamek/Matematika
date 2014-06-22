@@ -91,6 +91,12 @@
     UIGraphicsEndImageContext();
     _timerView.fillColor = [UIColor colorWithPatternImage:newimage];
     _timerView.roundColor = [UIColor darkGrayColor];
+    
+    [_questionLabel1 setHidden:YES];
+    [_questionLabel2 setHidden:YES];
+    [_questionMark setHidden:YES];
+    [_timerView setHidden:YES];
+    [_labelAnswer setHidden:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -137,6 +143,61 @@
     return CGSizeMake(mark_size, mark_size);
 }
 
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [self realignView];
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+}
+
+-(void)realignView{
+    int midl = self.view.frame.size.width / 2;
+    
+    [_questionLabel1 sizeToFit];
+    [_questionLabel2 sizeToFit];
+    [_labelAnswer sizeToFit];
+    
+    CGRect q1 = _questionLabel1.frame;
+    CGRect q2 = _questionLabel2.frame;
+    CGRect qM = _questionMark.frame;
+    CGRect ti = _timerView.frame;
+    CGRect lA = _labelAnswer.frame;
+    
+    int size = q1.size.width;
+    
+    if (!_labelAnswer.isHidden){
+        size += lA.size.width;
+    } else
+        if (!_questionMark.isHidden){
+            size += qM.size.width;
+        } else
+            if (!_timerView.isHidden){
+                size += ti.size.width;
+            };
+    
+    size += q2.size.width;
+    q1.origin.x = midl - (size / 2);
+    size = q1.origin.x + q1.size.width;
+    
+    if (!_labelAnswer.isHidden){
+        lA.origin.x = size;
+        size += lA.size.width;
+    } else
+        if (!_questionMark.isHidden){
+            qM.origin.x = size;
+            size += qM.size.width;
+        } else
+            if (!_timerView.isHidden){
+                ti.origin.x = size;
+                size += ti.size.width;
+            };
+    
+    q2.origin.x = size;
+    
+    _questionLabel1.frame = q1;
+    _questionLabel2.frame = q2;
+    _questionMark.frame = qM;
+    _timerView.frame = ti;
+    _labelAnswer.frame = lA;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -299,7 +360,7 @@
                 y = _questionLabel2.frame.origin.y;
                 height = _questionLabel2.frame.size.height;
             }
-                
+            
             p.origin.y = y - ((_timerView.frame.size.height - height)/2);
             _timerView.frame=p;
             s.origin.x = _timerView.frame.origin.x + _timerView.frame.size.width;

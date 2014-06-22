@@ -25,3 +25,5 @@
 "+" = "plus";
 
 "no InApp purchase items" = "Nenalezené položky k nákupu.";
+
+"%i (pocet prikladu %i)" = "%i (počet přikladů %i)";

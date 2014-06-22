@@ -55,6 +55,10 @@
     self.navigationController.navigationBar.translucent = YES;
     
     [self setViews];
+    
+    self.btnVysledkyTestu.layer.cornerRadius = 10;
+    self.btnRetry.layer.cornerRadius = 10;
+    self.btnNext.layer.cornerRadius = 10;
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import "pmqTestResultInfoViewController.h"
 #import "pmqResultInfoViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface pmqTestResultInfoViewController ()
 
@@ -18,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *inTime;
 @property (weak, nonatomic) IBOutlet UILabel *labelResult;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnTestResult;
+@property (weak, nonatomic) IBOutlet UIButton *btnRetry;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
 @end
 
 @implementation pmqTestResultInfoViewController
@@ -43,6 +47,10 @@
     self.navigationController.navigationBar.translucent = YES;
     
     [self setViews];
+    
+    self.btnNext.layer.cornerRadius = 10;
+    self.btnRetry.layer.cornerRadius = 10;
+    self.btnTestResult.layer.cornerRadius = 10;
 }
 
 - (void)didReceiveMemoryWarning
