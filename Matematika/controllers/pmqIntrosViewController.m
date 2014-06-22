@@ -73,10 +73,8 @@
     isReadyToPlay = YES;
     
     @try {
-        NSString *sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
-                                @"intro"];
         NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                             pathForResource:sound_file
+                                             pathForResource:@"intro"
                                              ofType:@"aac"]];
         _player = [[AVAudioPlayer alloc]
                    initWithContentsOfURL:url
@@ -195,8 +193,6 @@
                     sound_file = [sound_file stringByReplacingOccurrencesOfString:@"(" withString:@""];
                     sound_file = [sound_file stringByReplacingOccurrencesOfString:@")" withString:@""];
                     
-                    sound_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
-                                  sound_file];
                     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                          pathForResource:sound_file
                                                          ofType:@"aac"]];

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Results.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface pmqResultInfoViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface pmqResultInfoViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) Results *dataResult;
 

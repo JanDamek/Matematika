@@ -55,8 +55,6 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-    [self setViews];
-    
     self.btnAllResults.layer.cornerRadius = 10;
     self.btnPracticeErrors.layer.cornerRadius = 10;
 
@@ -64,6 +62,12 @@
     
     id parent = [self.navigationController.viewControllers objectAtIndex:[self.navigationController.viewControllers count]-2];
     [self.btnAllResults setHidden:[parent isKindOfClass:[pmqResultViewController class]]];
+    
+    [self setViews];
+}
+
+-(void)playResult{
+    //todo play result
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,6 +92,8 @@
     self.lblCelkovyCas.text = [NSString stringWithFormat:@"%02i:%02i", min, sec];
     
     [self.colPriklady reloadData];
+    
+    [self playResult];
 }
 
 #pragma mark - propertys

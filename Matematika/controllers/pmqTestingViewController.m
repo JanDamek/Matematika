@@ -127,7 +127,6 @@
         if ([_data.welcome_sound hasSuffix:@"mp3"]) {
             NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
             @try {
-                sounf_file = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", @"lng"),sounf_file];
                 NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                      pathForResource:sounf_file
                                                      ofType:@"aac"]];
