@@ -222,6 +222,8 @@
     _q = [data.relationship_question allObjects];
     
     mark_size = (_marks.frame.size.width - 120) / [_data.test_length intValue];
+    
+    self.navigationItem.title = data.relationship_lesson.name;
 }
 
 -(enum TestMode)testMode{

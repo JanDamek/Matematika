@@ -25,3 +25,5 @@
 "result_3"="Nieźle.";
 "result_4"="Prawie bez błędów, super!";
 "result_5"="Absolutnie bez błędów, świetnie!";
+
+"%i (pocet prikladu %i)" = "%i (liczba ćwiczeń %i)";

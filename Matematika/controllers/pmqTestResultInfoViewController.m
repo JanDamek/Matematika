@@ -8,6 +8,7 @@
 
 #import "pmqTestResultInfoViewController.h"
 #import "pmqResultInfoViewController.h"
+#import "Tests.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface pmqTestResultInfoViewController ()
@@ -92,6 +93,9 @@
     
     self.badAnswer.text = [_result.bad_answers stringValue];
     self.totalQuestion.text = [NSString stringWithFormat:@"%lu", (unsigned long)[_result.relationship_questions count]];
+    
+    [_btnRetry setHidden: ([_result.bad_answers intValue]==0)];
+    [_btnNext setHidden:YES]; //_result.relationship_test.relationship_lesson
 }
 
 -(void)setResult:(Results *)result{

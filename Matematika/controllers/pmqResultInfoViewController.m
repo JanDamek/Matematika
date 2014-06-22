@@ -13,6 +13,7 @@
 #import "pmqQuestions.h"
 #import "pmqResultQuestionCell.h"
 #import "pmqTestingViewController.h"
+#import "pmqResultViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface pmqResultInfoViewController (){
@@ -58,6 +59,11 @@
     
     self.btnAllResults.layer.cornerRadius = 10;
     self.btnPracticeErrors.layer.cornerRadius = 10;
+
+    [self.btnPracticeErrors setHidden:([_dataResult.bad_answers intValue]==0)];
+    
+    id parent = [self.navigationController.viewControllers objectAtIndex:[self.navigationController.viewControllers count]-2];
+    [self.btnAllResults setHidden:[parent isKindOfClass:[pmqResultViewController class]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,7 +76,7 @@
     self.lblLekce.text = _dataResult.relationship_test.relationship_lesson.name;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];// here set format which you want...
+    [dateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
     NSString *convertedString = [dateFormatter stringFromDate:_dataResult.date];
     
     self.lblDatum.text = convertedString;
@@ -96,6 +102,8 @@
         pmq.q = q;
         [pmqQ addObject:pmq];
     }
+    
+    [self.btnPracticeErrors setHidden:([_dataResult.bad_answers intValue]==0)];
 }
 
 #pragma mark - Navigation

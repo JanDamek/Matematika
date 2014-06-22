@@ -25,3 +25,5 @@
 "result_3"="Das ist besser.";
 "result_4"="Fast fehlerfrei, super!";
 "result_5"="Keine Fehle!";
+
+"%i (pocet prikladu %i)" = "%i (insgesamt = %i)";

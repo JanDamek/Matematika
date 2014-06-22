@@ -51,8 +51,7 @@
     
     CGRect p = self.navigationController.navigationBar.bounds;
     UIImageView *v = [[UIImageView alloc] initWithFrame:p];
-    NSString *title_image = [NSString stringWithFormat:@"%@%@", NSLocalizedString(@"lng", nil),@"title_hp.png"];
-    v.image = [UIImage imageNamed:title_image];
+    v.image = [UIImage imageNamed:@"title_hp.png"];
     v.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = v;
     

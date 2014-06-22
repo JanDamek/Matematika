@@ -35,9 +35,7 @@
     NSInteger intros_order = 1;
     NSInteger pages_order = 1;
     
-    NSString *definition = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
-                            @"game_definition"];
-    NSString *filePath = [ [ NSBundle mainBundle ] pathForResource: definition ofType: @"xml" ];
+    NSString *filePath = [ [ NSBundle mainBundle ] pathForResource: @"game_definition" ofType: @"xml" ];
     NSString *xml = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
     NSDictionary *in_data = [[XMLReader dictionaryForXMLString:xml error:NULL] valueForKey:@"PMQcalculations"];
     

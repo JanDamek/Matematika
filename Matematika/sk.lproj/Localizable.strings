@@ -25,3 +25,5 @@
 "result_3"="Pekný výsledok.";
 "result_4"="Takmer bez chyby, super!";
 "result_5"="Úplne bez chýb, skvele!";
+
+"%i (pocet prikladu %i)" = "%i (počet príkladov %i)";
