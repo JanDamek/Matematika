@@ -65,11 +65,15 @@
 /* Class = "IBUILabel"; text = "Press start to begin"; ObjectID = "KX6-8W-w9K"; */
 "KX6-8W-w9K.text" = "Press start to begin";
 
-/* Class = "IBUIButton"; normalTitle = "Practicing errors"; ObjectID = "KxR-Up-lDA"; */
-"KxR-Up-lDA.normalTitle" = "Practicing errors";
+/* Class = "IBUIButton"; normalTitle = "Practicing
+errors"; ObjectID = "KxR-Up-lDA"; */
+"KxR-Up-lDA.normalTitle" = "Practicing
+errors";
 
-/* Class = "IBUIButton"; normalTitle = "Practicing errors"; ObjectID = "L9R-mS-olZ"; */
-"L9R-mS-olZ.normalTitle" = "Practicing errors";
+/* Class = "IBUIButton"; normalTitle = "Practicing
+errors"; ObjectID = "L9R-mS-olZ"; */
+"L9R-mS-olZ.normalTitle" = "Practicing
+errors";
 
 /* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "M6m-Jw-g2K"; */
 "M6m-Jw-g2K.title" = "Back";
@@ -90,7 +94,7 @@
 "Ox5-KQ-Tfj.text" = "Label";
 
 /* Class = "IBUINavigationItem"; title = "Ho to do it?"; ObjectID = "POy-23-H6K"; */
-"POy-23-H6K.title" = "Ho to do it?";
+"POy-23-H6K.title" = "How to do it?";
 
 /* Class = "IBUINavigationItem"; title = "Practicing"; ObjectID = "Q76-80-yHK"; */
 "Q76-80-yHK.title" = "Practicing";
@@ -122,8 +126,10 @@
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "Wwo-PR-ECI"; */
 "Wwo-PR-ECI.text" = "Label";
 
-/* Class = "IBUIButton"; normalTitle = "All results"; ObjectID = "YKK-Qq-NAR"; */
-"YKK-Qq-NAR.normalTitle" = "All results";
+/* Class = "IBUIButton"; normalTitle = "All
+results"; ObjectID = "YKK-Qq-NAR"; */
+"YKK-Qq-NAR.normalTitle" = "All
+results";
 
 /* Class = "IBUIButton"; normalTitle = "Prev"; ObjectID = "apW-2I-Zwj"; */
 "apW-2I-Zwj.normalTitle" = "Prev";
@@ -131,8 +137,10 @@
 /* Class = "IBUILabel"; text = "examples"; ObjectID = "bUr-Sc-wfN"; */
 "bUr-Sc-wfN.text" = "examples";
 
-/* Class = "IBUIButton"; normalTitle = "Practicing errors"; ObjectID = "d5m-63-MTh"; */
-"d5m-63-MTh.normalTitle" = "Practicing errors";
+/* Class = "IBUIButton"; normalTitle = "Practicing
+errors"; ObjectID = "d5m-63-MTh"; */
+"d5m-63-MTh.normalTitle" = "Practicing
+errors";
 
 /* Class = "IBUILabel"; text = "Date"; ObjectID = "dbj-fl-YAy"; */
 "dbj-fl-YAy.text" = "Date";
@@ -191,8 +199,10 @@
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "uyj-Oq-Al0"; */
 "uyj-Oq-Al0.text" = "Label";
 
-/* Class = "IBUIButton"; normalTitle = "All results"; ObjectID = "vOe-bO-bsC"; */
-"vOe-bO-bsC.normalTitle" = "All results";
+/* Class = "IBUIButton"; normalTitle = "All
+results"; ObjectID = "vOe-bO-bsC"; */
+"vOe-bO-bsC.normalTitle" = "All
+results";
 
 /* Class = "IBUINavigationItem"; title = "Unlock"; ObjectID = "vsa-DN-eKP"; */
 "vsa-DN-eKP.title" = "Unlock";

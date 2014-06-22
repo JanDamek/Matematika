@@ -63,11 +63,65 @@
         id pp = [intr valueForKey:@"page"];
         if ([pp isKindOfClass:[NSArray class] ]) {
             for (NSDictionary *page in pp) {
-                [self addPage:page :intros :pages_order];
+                Pages *p = [self.d newPages];
+                [intros addRelationship_pagesObject:p];
+                
+                p.order = [NSNumber numberWithInteger:pages_order];
+                int fixed;
+                @try {
+                    fixed = [[page valueForKey:@"fixed"] intValue];
+                }
+                @catch (NSException *exception) {
+                    fixed = 0;
+                }
+                p.fixed = [NSNumber numberWithInt:fixed];
+                @try {
+                    p.type = [page valueForKey:@"type"];
+                }
+                @catch (NSException *exception) {
+                    
+                }
+                @try {
+                    p.content = [page valueForKey:@"text"];
+                }
+                @catch (NSException *exception) {
+                    p.content = @"";
+                }
+                p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+                [self.d savePages];
+                
                 pages_order++;
             }
         } else
-            [self addPage:pp :intros :pages_order];
+        {
+            Pages *p = [self.d newPages];
+            [intros addRelationship_pagesObject:p];
+            
+            p.order = [NSNumber numberWithInteger:pages_order];
+            int fixed;
+            @try {
+                fixed = [[pp valueForKey:@"fixed"] intValue];
+            }
+            @catch (NSException *exception) {
+                fixed = 0;
+            }
+            p.fixed = [NSNumber numberWithInt:fixed];
+            @try {
+                p.type = [pp valueForKey:@"type"];
+            }
+            @catch (NSException *exception) {
+                
+            }
+            @try {
+                p.content = [pp valueForKey:@"text"];
+            }
+            @catch (NSException *exception) {
+                p.content = @"";
+            }
+            p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+            [self.d savePages];
+            pages_order++;
+        }
         [self.d saveIntros];
         
         NSDictionary *te = [i valueForKey:@"test"];
@@ -84,40 +138,41 @@
         }
         [self.d saveTests];
     }
+    
     [self.d saveLessons];
     
+    [self makeOneOfAll];
+}
+
+-(void)makeOneOfAll{
     NSError *error =nil;
     [self.d.lessons performFetch:&error];
     NSAssert(!error, @"Error performing fetch request: %@", error);
     
-}
--(void)addPage:(NSDictionary*)page :(Intros*)intros :(NSInteger)pages_order{
-    Pages *p = [self.d newPages];
-    [intros addRelationship_pagesObject:p];
+    [self.d.intros performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
     
-    p.order = [NSNumber numberWithInteger:pages_order];
-    int fixed;
-    @try {
-        fixed = [[page valueForKey:@"fixed"] intValue];
+    [self.d.questions performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
+    
+    
+    Lessons *l = [_d newLessons];
+    l.name = NSLocalizedString(@"allQuestion", nil);
+    l.demo = [NSNumber numberWithInt:1];
+    l.order = [NSNumber numberWithInt:16959];
+    
+    l.relationship_test = [_d newTests];
+    l.relationship_test.time_limit = [NSNumber numberWithInt:12];
+    l.relationship_test.test_length = [NSNumber numberWithInt:12];
+    
+    for (Questions *q in [_d.questions fetchedObjects]) {
+        [l.relationship_test addRelationship_questionObject:q];
     }
-    @catch (NSException *exception) {
-        fixed = 0;
-    }
-    p.fixed = [NSNumber numberWithInt:fixed];
-    @try {
-        p.type = [page valueForKey:@"type"];
-    }
-    @catch (NSException *exception) {
-        
-    }
-    @try {
-        p.content = [page valueForKey:@"text"];
-    }
-    @catch (NSException *exception) {
-        p.content = @"";
-    }
-    p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
-    [self.d savePages];
+    
+    [_d saveLessons];
+    
+    [self.d.lessons performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
 }
 
 @end

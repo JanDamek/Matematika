@@ -1266,15 +1266,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_pn.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ci7-EP-bom">
-                                <rect key="frame" x="-13" y="362" width="346" height="150"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_pn.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ci7-EP-bom">
+                                <rect key="frame" x="-13" y="402" width="346" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Im-Li-RM0">
-                                <rect key="frame" x="265" y="412" width="35" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Im-Li-RM0">
+                                <rect key="frame" x="265" y="407" width="35" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="Xa9-0C-ZRb"/>
+                                    <constraint firstAttribute="width" constant="35" id="47t-ah-tE0"/>
+                                    <constraint firstAttribute="height" constant="53" id="Fb9-06-nZI"/>
                                 </constraints>
                                 <state key="normal" image="btn_next_base.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1285,7 +1286,7 @@
                                 </connections>
                             </button>
                             <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxL-M6-gbs">
-                                <rect key="frame" x="20" y="82" width="280" height="278"/>
+                                <rect key="frame" x="20" y="82" width="280" height="318"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -1301,7 +1302,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IaE-rw-ms0">
-                                <rect key="frame" x="8" y="75" width="292" height="295"/>
+                                <rect key="frame" x="8" y="73" width="292" height="327"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="hc1-dw-RYT">
@@ -1358,23 +1359,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Im-Li-RM0" firstAttribute="trailing" secondItem="FxL-M6-gbs" secondAttribute="trailing" id="5wq-nc-fwE"/>
-                            <constraint firstAttribute="bottom" secondItem="FxL-M6-gbs" secondAttribute="bottom" constant="120" id="8j7-M5-uWK"/>
+                            <constraint firstAttribute="bottom" secondItem="FxL-M6-gbs" secondAttribute="bottom" constant="80" id="8j7-M5-uWK"/>
+                            <constraint firstAttribute="bottom" secondItem="IaE-rw-ms0" secondAttribute="bottom" constant="80" id="AcO-Ji-44b"/>
                             <constraint firstAttribute="bottom" secondItem="au5-qN-FX6" secondAttribute="bottom" id="BMo-Wd-7tN"/>
                             <constraint firstAttribute="bottom" secondItem="Ci7-EP-bom" secondAttribute="bottom" constant="-32" id="CG5-o7-DUj"/>
                             <constraint firstItem="Ci7-EP-bom" firstAttribute="top" secondItem="FxL-M6-gbs" secondAttribute="bottom" constant="2" id="NMc-t1-ZP7"/>
-                            <constraint firstItem="6Im-Li-RM0" firstAttribute="top" secondItem="IaE-rw-ms0" secondAttribute="bottom" constant="42" id="P8l-7I-SsH"/>
                             <constraint firstAttribute="trailing" secondItem="FxL-M6-gbs" secondAttribute="trailing" constant="20" id="Pui-hA-PZj"/>
                             <constraint firstItem="FxL-M6-gbs" firstAttribute="top" secondItem="jgs-yw-ECM" secondAttribute="top" constant="82" id="R4E-yK-AQD"/>
-                            <constraint firstItem="IaE-rw-ms0" firstAttribute="top" secondItem="jgs-yw-ECM" secondAttribute="top" constant="75" id="U8Z-Kb-mLu"/>
+                            <constraint firstItem="IaE-rw-ms0" firstAttribute="top" secondItem="jgs-yw-ECM" secondAttribute="top" constant="73" id="U8Z-Kb-mLu"/>
                             <constraint firstItem="au5-qN-FX6" firstAttribute="leading" secondItem="jgs-yw-ECM" secondAttribute="leading" id="VdX-RL-bF5"/>
                             <constraint firstAttribute="trailing" secondItem="IaE-rw-ms0" secondAttribute="trailing" constant="20" id="b2V-tQ-gqk"/>
-                            <constraint firstAttribute="bottom" secondItem="IaE-rw-ms0" secondAttribute="bottom" constant="110" id="eNE-CP-H1T"/>
                             <constraint firstItem="Ci7-EP-bom" firstAttribute="centerX" secondItem="au5-qN-FX6" secondAttribute="centerX" id="hQs-Rk-gdf"/>
                             <constraint firstItem="au5-qN-FX6" firstAttribute="top" secondItem="jgs-yw-ECM" secondAttribute="top" id="oMV-1N-2fF"/>
                             <constraint firstItem="IaE-rw-ms0" firstAttribute="leading" secondItem="jgs-yw-ECM" secondAttribute="leading" constant="8" id="ofA-CC-kLx"/>
+                            <constraint firstAttribute="bottom" secondItem="6Im-Li-RM0" secondAttribute="bottom" constant="20" id="qci-jS-tE8"/>
                             <constraint firstItem="FxL-M6-gbs" firstAttribute="leading" secondItem="jgs-yw-ECM" secondAttribute="leading" constant="20" id="sg9-sf-M88"/>
-                            <constraint firstAttribute="bottom" secondItem="6Im-Li-RM0" secondAttribute="bottom" constant="20" symbolic="YES" id="sx2-pC-23f"/>
                             <constraint firstItem="Ci7-EP-bom" firstAttribute="leading" secondItem="jgs-yw-ECM" secondAttribute="leading" constant="-13" id="tZn-sz-ukG"/>
                             <constraint firstItem="Ci7-EP-bom" firstAttribute="centerX" secondItem="FxL-M6-gbs" secondAttribute="centerX" id="v0V-1M-IpX"/>
                         </constraints>
@@ -1426,8 +1425,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Bsb-qE-tlr"/>
-        <segue reference="vqW-OP-tgT"/>
-        <segue reference="pxc-6V-N10"/>
+        <segue reference="NY0-pU-EMG"/>
+        <segue reference="WSM-iP-pYD"/>
+        <segue reference="Mfg-ut-3jK"/>
     </inferredMetricsTieBreakers>
 </document>

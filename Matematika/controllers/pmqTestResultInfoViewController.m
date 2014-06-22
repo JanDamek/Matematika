@@ -44,7 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -65,27 +65,28 @@
 
 -(void)setViews{
     int r = [_result.rate intValue];
-
+    
     
     self.starsResult.image = [UIImage imageNamed:[NSString stringWithFormat:@"status_%istar", r ]];
     self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"result_%i", r ]];
     
-    self.resultImage.animationImages = [NSArray arrayWithObjects:
-                                        [UIImage imageNamed:@"boy21.png"],
-                                        [UIImage imageNamed:@"boy22.png"],
-                                        [UIImage imageNamed:@"boy23.png"],
-                                        [UIImage imageNamed:@"boy24.png"],
-                                        [UIImage imageNamed:@"boy25.png"],
-                                        [UIImage imageNamed:@"boy24.png"],
-                                        [UIImage imageNamed:@"boy23.png"],
-                                        [UIImage imageNamed:@"boy22.png"],
-                                        [UIImage imageNamed:@"boy21.png"]
-                                        ,nil
-                                        ];
-    self.resultImage.animationRepeatCount = -1;
-    self.resultImage.animationDuration = 1.75;
-    
-    [self.resultImage startAnimating];
+    if (r==5){
+        self.resultImage.animationImages = [NSArray arrayWithObjects:
+                                            [UIImage imageNamed:@"boy21.png"],
+                                            [UIImage imageNamed:@"boy22.png"],
+                                            [UIImage imageNamed:@"boy23.png"],
+                                            [UIImage imageNamed:@"boy24.png"],
+                                            [UIImage imageNamed:@"boy25.png"],
+                                            [UIImage imageNamed:@"boy24.png"],
+                                            [UIImage imageNamed:@"boy23.png"],
+                                            [UIImage imageNamed:@"boy22.png"],
+                                            [UIImage imageNamed:@"boy21.png"]
+                                            ,nil
+                                            ];
+        self.resultImage.animationRepeatCount = -1;
+        self.resultImage.animationDuration = 1.75;
+        [self.resultImage startAnimating];
+    }
     
     NSString *s = [NSString stringWithFormat:@"result_%i", r ];
     self.labelResult.text = NSLocalizedString(s, nil);

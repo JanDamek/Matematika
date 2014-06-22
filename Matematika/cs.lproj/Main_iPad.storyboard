@@ -1133,7 +1133,7 @@
             </objects>
             <point key="canvasLocation" x="2641" y="864"/>
         </scene>
-        <!--Pmq Intros View Controller - Ho to do it?-->
+        <!--Pmq Intros View Controller - Jak na to?-->
         <scene sceneID="VFI-B7-2hU">
             <objects>
                 <viewController id="NqH-3d-zu9" customClass="pmqIntrosViewController" sceneMemberID="viewController">
@@ -1149,8 +1149,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_pn.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-mh-gH5">
-                                <rect key="frame" x="-13" y="560" width="729" height="254"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_pn.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-mh-gH5">
+                                <rect key="frame" x="-13" y="643" width="729" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znS-Sr-3B5">
@@ -1168,7 +1168,7 @@
                                 </connections>
                             </button>
                             <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-NR-wko">
-                                <rect key="frame" x="44" y="104" width="614" height="457"/>
+                                <rect key="frame" x="44" y="104" width="614" height="540"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -1187,7 +1187,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-gu-SZ2">
-                                <rect key="frame" x="44" y="104" width="614" height="456"/>
+                                <rect key="frame" x="44" y="104" width="614" height="539"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="8pf-3E-PxU">
@@ -1253,7 +1253,7 @@
                             <constraint firstItem="KRm-mh-gH5" firstAttribute="leading" secondItem="61F-fQ-GYo" secondAttribute="leading" constant="-13" id="DZe-VJ-VT1"/>
                             <constraint firstItem="Rix-gu-SZ2" firstAttribute="top" secondItem="61F-fQ-GYo" secondAttribute="top" constant="104" id="Fvd-Cl-VgU"/>
                             <constraint firstItem="JYc-NR-wko" firstAttribute="trailing" secondItem="Rix-gu-SZ2" secondAttribute="trailing" id="Glp-4W-xen"/>
-                            <constraint firstAttribute="bottom" secondItem="Rix-gu-SZ2" secondAttribute="bottom" constant="208" id="NYG-I4-YUK"/>
+                            <constraint firstAttribute="bottom" secondItem="Rix-gu-SZ2" secondAttribute="bottom" constant="125" id="NYG-I4-YUK"/>
                             <constraint firstAttribute="bottom" secondItem="Eeq-Gh-tbF" secondAttribute="bottom" id="UXD-TQ-jR2"/>
                             <constraint firstItem="tUC-sc-fxp" firstAttribute="top" secondItem="apW-2I-Zwj" secondAttribute="bottom" constant="43" id="VEc-dR-5Li"/>
                             <constraint firstItem="Eeq-Gh-tbF" firstAttribute="leading" secondItem="61F-fQ-GYo" secondAttribute="leading" id="Vga-H4-ulb"/>
@@ -1270,8 +1270,8 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ho to do it?" id="POy-23-H6K">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Ou6-MW-lqr"/>
+                    <navigationItem key="navigationItem" title="Jak na to?" id="POy-23-H6K">
+                        <barButtonItem key="backBarButtonItem" title="Zpět" id="Ou6-MW-lqr"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnNext" destination="znS-Sr-3B5" id="kgc-LE-KYS"/>
@@ -1434,7 +1434,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ltq-Pq-x17"/>
-        <segue reference="ho6-o6-cuz"/>
+        <segue reference="4wz-Zb-sEt"/>
         <segue reference="yZR-Fw-cl2"/>
     </inferredMetricsTieBreakers>
 </document>

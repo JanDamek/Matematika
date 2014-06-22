@@ -1,12 +1,12 @@
 /* 
   Localizable.strings
   Matematika
+ 
+ German
 
   Created by Jan Damek on 01.06.14.
   Copyright (c) 2014 PMQ-Software. All rights reserved.
 */
-
-"lng" = "de_";
 
 "÷" = "divide";
 "=" = "equals";
@@ -27,3 +27,5 @@
 "result_5"="Keine Fehle!";
 
 "%i (pocet prikladu %i)" = "%i (insgesamt = %i)";
+
+"allQuestion" = "Lesson over all";

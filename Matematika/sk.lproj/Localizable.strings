@@ -1,12 +1,12 @@
 /* 
   Localizable.strings
   Matematika
+ 
+ Slovak
 
   Created by Jan Damek on 01.06.14.
   Copyright (c) 2014 PMQ-Software. All rights reserved.
 */
-
-"lng" = "sk_";
 
 "÷" = "divide";
 "=" = "equals";
@@ -27,3 +27,5 @@
 "result_5"="Úplne bez chýb, skvele!";
 
 "%i (pocet prikladu %i)" = "%i (počet príkladov %i)";
+
+"allQuestion" = "Lesson over all";

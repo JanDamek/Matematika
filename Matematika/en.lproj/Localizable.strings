@@ -2,11 +2,11 @@
   Localizable.strings
   Matematika
 
+ English
+ 
   Created by Jan Damek on 01.06.14.
   Copyright (c) 2014 PMQ-Software. All rights reserved.
 */
-
-"lng" = "en_";
 
 "÷" = "divide";
 "=" = "equals";
@@ -27,3 +27,5 @@
 "no InApp purchase items" = "Not found purchase items.";
 
 "%i (pocet prikladu %i)" = "%i (number of examples %i)";
+
+"allQuestion" = "Lesson over all";

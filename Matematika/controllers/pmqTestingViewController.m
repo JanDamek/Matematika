@@ -12,6 +12,7 @@
 #import "pmqAppDelegate.h"
 #import "pmqQuestions.h"
 #import "pmqTestResultInfoViewController.h"
+#import "Tests.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface pmqTestingViewController (){
@@ -424,13 +425,33 @@
             [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy]firstFail:YES];
             break;
             
-        case tmTestOverAll:
-            [self prepareQuestions:[[d.data.questions fetchedObjects] mutableCopy] firstFail:NO];
+        case tmTestOverAll:{
+            Tests *te;
+            for (Lessons *l in [d.data.lessons fetchedObjects]) {
+                if ([l.order intValue] == 16959){
+                    te =l.relationship_test;
+                    break;
+                }
+            }
+            self.data = te;
+
+            [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:NO];
             break;
+        }
             
-        case tmTestOverAllFail:
-            [self prepareQuestions:[[d.data.questions fetchedObjects] mutableCopy] firstFail:YES];
+        case tmTestOverAllFail:{
+            Tests *te;
+            for (Lessons *l in [d.data.lessons fetchedObjects]) {
+                if ([l.order intValue] == 16959){
+                    te =l.relationship_test;
+                    break;
+                }
+            }
+            self.data = te;
+
+            [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:YES];
             break;
+        }
             
         default:
             break;
