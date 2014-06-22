@@ -59,12 +59,12 @@
         intros.order = [NSNumber numberWithInteger:intros_order];
         intros_order++;
         [l addRelationship_introObject:intros];
+        
         NSDictionary *intr = [i valueForKey:@"intro"];
         id pp = [intr valueForKey:@"page"];
         if ([pp isKindOfClass:[NSArray class] ]) {
             for (NSDictionary *page in pp) {
                 Pages *p = [self.d newPages];
-                [intros addRelationship_pagesObject:p];
                 
                 p.order = [NSNumber numberWithInteger:pages_order];
                 int fixed;
@@ -88,14 +88,14 @@
                     p.content = @"";
                 }
                 p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
-                [self.d savePages];
                 
+                [intros addRelationship_pagesObject:p];
                 pages_order++;
+                [self.d savePages];
             }
         } else
         {
             Pages *p = [self.d newPages];
-            [intros addRelationship_pagesObject:p];
             
             p.order = [NSNumber numberWithInteger:pages_order];
             int fixed;
@@ -119,8 +119,9 @@
                 p.content = @"";
             }
             p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
-            [self.d savePages];
+            [intros addRelationship_pagesObject:p];
             pages_order++;
+            [self.d savePages];
         }
         [self.d saveIntros];
         

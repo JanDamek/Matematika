@@ -12,6 +12,7 @@
 #import "Tests.h"
 #import "Questions.h"
 #import "Results.h"
+#import "Pages.h"
 #import "pmqQuestions.h"
 #import "pmqIntrosViewController.h"
 #import "pmqTestingViewController.h"
@@ -57,8 +58,14 @@
             Lessons *l = (Lessons*)self.detailItem;
             self.navigationItem.title = l.name;
             Intros *i = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
-            
-            [self.jak_na_to setHidden:([i.relationship_pages count]==0)];
+            int p = [i.relationship_pages count];
+            if (p==1){
+                Pages *pp = [[i.relationship_pages objectEnumerator]nextObject];
+                if (!pp.content) {
+                    p=0;
+                }
+            }
+            [self.jak_na_to setHidden:(p==0)];
         }
     }
 }
