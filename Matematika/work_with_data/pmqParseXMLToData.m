@@ -34,13 +34,13 @@
     NSInteger lesson_order = 1;
     NSInteger intros_order = 1;
     NSInteger pages_order = 1;
-
+    
     NSString *definition = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"lng", nil),
                             @"game_definition"];
     NSString *filePath = [ [ NSBundle mainBundle ] pathForResource: definition ofType: @"xml" ];
     NSString *xml = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
     NSDictionary *in_data = [[XMLReader dictionaryForXMLString:xml error:NULL] valueForKey:@"PMQcalculations"];
-
+    
     
     for (NSDictionary *i in [in_data valueForKey:@"lesson"]) {
         
@@ -56,31 +56,20 @@
         
         Tests *test = [self.d newTests];
         l.relationship_test = test;
-
+        
         Intros *intros = [self.d newIntros];
         intros.order = [NSNumber numberWithInteger:intros_order];
         intros_order++;
         [l addRelationship_introObject:intros];
         NSDictionary *intr = [i valueForKey:@"intro"];
-        for (NSDictionary *page in [intr valueForKey:@"page"]) {
-            Pages *p = [self.d newPages];
-            [intros addRelationship_pagesObject:p];
-            
-            p.order = [NSNumber numberWithInteger:pages_order];
-            pages_order++;
-            int fixed;
-            @try {
-                fixed = [[page valueForKey:@"fixed"] intValue];
+        id pp = [intr valueForKey:@"page"];
+        if ([pp isKindOfClass:[NSArray class] ]) {
+            for (NSDictionary *page in pp) {
+                [self addPage:page :intros :pages_order];
+                pages_order++;
             }
-            @catch (NSException *exception) {
-                fixed = 0;
-            }
-            p.fixed = [NSNumber numberWithInt:fixed];
-            p.type = [page valueForKey:@"type"];
-            p.content = [page valueForKey:@"text"];
-            p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
-            [self.d savePages];
-        }
+        } else
+            [self addPage:pp :intros :pages_order];
         [self.d saveIntros];
         
         NSDictionary *te = [i valueForKey:@"test"];
@@ -99,6 +88,34 @@
     }
     [self.d saveLessons];
     
+}
+-(void)addPage:(NSDictionary*)page :(Intros*)intros :(NSInteger)pages_order{
+    Pages *p = [self.d newPages];
+    [intros addRelationship_pagesObject:p];
+    
+    p.order = [NSNumber numberWithInteger:pages_order];
+    int fixed;
+    @try {
+        fixed = [[page valueForKey:@"fixed"] intValue];
+    }
+    @catch (NSException *exception) {
+        fixed = 0;
+    }
+    p.fixed = [NSNumber numberWithInt:fixed];
+    @try {
+        p.type = [page valueForKey:@"type"];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @try {
+        p.content = [page valueForKey:@"text"];
+    }
+    @catch (NSException *exception) {
+        p.content = @"";
+    }
+    p.content = [p.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
+    [self.d savePages];
 }
 
 @end
