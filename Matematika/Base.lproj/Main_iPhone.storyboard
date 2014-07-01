@@ -267,7 +267,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_square.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-uZ-lOD">
-                                <rect key="frame" x="20" y="89" width="280" height="344"/>
+                                <rect key="frame" x="20" y="90" width="280" height="345"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
@@ -308,8 +308,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fv8-uZ-lOD" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" constant="20" id="FeA-GA-nfK"/>
-                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" constant="89" id="QWj-fb-1ke"/>
-                            <constraint firstAttribute="bottom" secondItem="Fv8-uZ-lOD" secondAttribute="bottom" constant="47" id="QbI-sa-NZO"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" constant="90" id="QWj-fb-1ke"/>
+                            <constraint firstAttribute="bottom" secondItem="Fv8-uZ-lOD" secondAttribute="bottom" constant="45" id="QbI-sa-NZO"/>
                             <constraint firstAttribute="trailing" secondItem="Fv8-uZ-lOD" secondAttribute="trailing" constant="20" id="Yqp-63-5J4"/>
                         </constraints>
                     </view>
@@ -1430,8 +1430,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NY0-pU-EMG"/>
         <segue reference="WSM-iP-pYD"/>
+        <segue reference="Zbr-Vh-iGv"/>
         <segue reference="Mfg-ut-3jK"/>
     </inferredMetricsTieBreakers>
 </document>
