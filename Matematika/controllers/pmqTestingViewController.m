@@ -105,6 +105,9 @@
     [_questionMark setHidden:YES];
     [_timerView setHidden:YES];
     [_labelAnswer setHidden:YES];
+    
+    [self.lblStart setHidden:YES];
+    [self.btnStart setHidden:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -148,6 +151,8 @@
     } else {
         [self.navigationController popViewControllerAnimated:YES];
     }
+    
+    [self performSelector:@selector(btnStartAction:) withObject:nil afterDelay:0.01];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -161,6 +166,8 @@
 }
 
 -(void)realignView{
+    [UIView beginAnimations:@"realign" context:nil];
+    
     int midl = self.view.frame.size.width / 2;
     
     [_questionLabel1 sizeToFit];
@@ -209,6 +216,8 @@
     _questionMark.frame = qM;
     _timerView.frame = ti;
     _labelAnswer.frame = lA;
+    [UIView setAnimationDuration:0.3];
+    [UIView commitAnimations];
 }
 
 - (void)didReceiveMemoryWarning

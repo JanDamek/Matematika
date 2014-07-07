@@ -58,7 +58,7 @@
             Lessons *l = (Lessons*)self.detailItem;
             self.navigationItem.title = l.name;
             Intros *i = (Intros*)[[l.relationship_intro objectEnumerator]nextObject];
-            int p = [i.relationship_pages count];
+            NSUInteger p = [i.relationship_pages count];
             if (p==1){
                 Pages *pp = [[i.relationship_pages objectEnumerator]nextObject];
                 if (!pp.content) {

@@ -122,7 +122,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     pmqResultQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"resultCell" forIndexPath:indexPath];
     
-    NSInteger index= abs(indexPath.row - [questions count])-1;
+    NSInteger index= ABS( indexPath.row - [questions count] ) - 1;
     
     Questions *q = [questions objectAtIndex:index];
     
