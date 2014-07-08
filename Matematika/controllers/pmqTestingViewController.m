@@ -83,7 +83,7 @@
     self.navigationController.navigationBar.translucent = YES;
     
     _timerView.delegate = self;
-    mark_size = (_marks.frame.size.width - 120) / 12;
+    mark_size = (_marks.frame.size.width - 180) / 12;
     
     self.btnStart.layer.cornerRadius = 10;
     
@@ -130,12 +130,11 @@
     [super viewDidAppear:animated];
     
     if (isNew) {
-        isNew = NO;
         if ([_data.welcome_sound hasSuffix:@"mp3"]) {
-            NSString *sounf_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
+            NSString *sound_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
             @try {
                 NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                     pathForResource:sounf_file
+                                                     pathForResource:sound_file
                                                      ofType:@"aac"]];
                 _player = [[AVAudioPlayer alloc]
                            initWithContentsOfURL:url
@@ -144,6 +143,9 @@
                 [_player play];
             }
             @catch (NSException *exception) {
+                isNew = NO;
+                [self btnStartAction:nil];
+                [self realignView];
             }
             @finally {
             }
@@ -152,7 +154,14 @@
         [self.navigationController popViewControllerAnimated:YES];
     }
     
-    [self performSelector:@selector(btnStartAction:) withObject:nil afterDelay:0.01];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    if (isNew) {
+        [self btnStartAction:nil];
+        [self performSelector:@selector(realignView) withObject:nil afterDelay:0.1];
+        isNew = NO;
+    }
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -233,7 +242,7 @@
     
     _q = [data.relationship_question allObjects];
     
-    mark_size = (_marks.frame.size.width - 120) / [_data.test_length intValue];
+    mark_size = (_marks.frame.size.width - 180) / [_data.test_length intValue];
     
     self.navigationItem.title = data.relationship_lesson.name;
 }
@@ -640,10 +649,11 @@
             r.date = [NSDate date];
             
             int test_length = [r.relationship_test.test_length intValue];
-            float max_time = [r.relationship_test.time_limit intValue]*test_length;
-            
             float rate =5 * ((float)test_length - (float)bad_answer)/(float)test_length;
-            rate -= 2 * (total_time/max_time);
+
+            //Pouze pro vysledek testu v zavislosti take na rychlosti odpovedi
+            //float max_time = [r.relationship_test.time_limit intValue]*test_length;
+            //rate -= 2 * (total_time/max_time);
             rate = floorf(rate+0.49);
             
             r.rate = [NSNumber numberWithInt:(int)rate];

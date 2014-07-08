@@ -742,7 +742,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9CB-So-AXO">
-                                <rect key="frame" x="102" y="86" width="498" height="54"/>
+                                <rect key="frame" x="50" y="86" width="603" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -790,7 +790,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="102" y="431" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -802,7 +802,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="277" y="431" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -814,7 +814,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="452" y="431" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -826,7 +826,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="102" y="588" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -838,7 +838,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="277" y="588" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -850,7 +850,7 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="452" y="588" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -899,13 +899,13 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                             <constraint firstItem="DuD-fu-qCy" firstAttribute="top" secondItem="X5S-x8-7QN" secondAttribute="top" id="Aor-z2-8Fk"/>
                             <constraint firstItem="y4k-Or-HHz" firstAttribute="leading" secondItem="JYI-hd-AgM" secondAttribute="trailing" constant="25" id="Ctv-p4-vOD"/>
                             <constraint firstAttribute="bottom" secondItem="DuD-fu-qCy" secondAttribute="bottom" id="FIw-Kj-U8j"/>
-                            <constraint firstAttribute="trailing" secondItem="9CB-So-AXO" secondAttribute="trailing" constant="103" id="HZU-Mb-tQY"/>
+                            <constraint firstAttribute="trailing" secondItem="9CB-So-AXO" secondAttribute="trailing" constant="50" id="HZU-Mb-tQY"/>
                             <constraint firstAttribute="bottom" secondItem="gGr-XB-oNw" secondAttribute="bottom" constant="163" id="Idf-Fc-MZE"/>
                             <constraint firstItem="KX6-8W-w9K" firstAttribute="top" secondItem="X5S-x8-7QN" secondAttribute="top" constant="212" id="Kh5-29-QH2"/>
                             <constraint firstItem="9CB-So-AXO" firstAttribute="top" secondItem="X5S-x8-7QN" secondAttribute="top" constant="86" id="NLL-EK-vP6"/>
                             <constraint firstAttribute="trailing" secondItem="gGr-XB-oNw" secondAttribute="trailing" constant="277" id="PHE-EW-FPC"/>
                             <constraint firstAttribute="trailing" secondItem="DuD-fu-qCy" secondAttribute="trailing" id="RUC-GQ-r3o"/>
-                            <constraint firstItem="9CB-So-AXO" firstAttribute="leading" secondItem="X5S-x8-7QN" secondAttribute="leading" constant="102" id="TL2-Jq-WtR"/>
+                            <constraint firstItem="9CB-So-AXO" firstAttribute="leading" secondItem="X5S-x8-7QN" secondAttribute="leading" constant="50" id="TL2-Jq-WtR"/>
                             <constraint firstItem="0zO-4R-Ocx" firstAttribute="leading" secondItem="y4k-Or-HHz" secondAttribute="trailing" constant="25" id="Zzn-vG-6vG"/>
                             <constraint firstItem="gGr-XB-oNw" firstAttribute="leading" secondItem="X5S-x8-7QN" secondAttribute="leading" constant="276" id="eon-mZ-uAg"/>
                             <constraint firstAttribute="centerX" secondItem="SoF-JP-Mc0" secondAttribute="centerX" id="g0b-qV-cHU"/>
