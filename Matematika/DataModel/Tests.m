@@ -2,7 +2,7 @@
 //  Tests.m
 //  Matematika
 //
-//  Created by Jan Damek on 03.06.14.
+//  Created by Jan Damek on 17.07.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -19,7 +19,7 @@
 @dynamic time_limit;
 @dynamic welcome_sound;
 @dynamic relationship_lesson;
-@dynamic relationship_results;
 @dynamic relationship_question;
+@dynamic relationship_results;
 
 @end

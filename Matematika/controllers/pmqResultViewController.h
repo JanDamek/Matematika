@@ -11,4 +11,6 @@
 
 @interface pmqResultViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 @end

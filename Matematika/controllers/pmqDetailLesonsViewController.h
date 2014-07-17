@@ -11,6 +11,7 @@
 @interface pmqDetailLesonsViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
 -(void)performProcvicovani;
 

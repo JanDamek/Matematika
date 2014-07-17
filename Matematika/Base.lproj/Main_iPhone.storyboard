@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -124,7 +124,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="c8t-f0-qh8" kind="push" id="WSM-iP-pYD"/>
+                                    <segue destination="c8t-f0-qh8" kind="push" identifier="all_res" id="WSM-iP-pYD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PXd-MH-vvM">
@@ -262,15 +262,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="pS2-mG-LcC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg_overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="pS2-mG-LcC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_square.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-uZ-lOD">
-                                <rect key="frame" x="20" y="90" width="280" height="345"/>
+                                <rect key="frame" x="20" y="88" width="280" height="345"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
                                 <rect key="frame" x="42" y="122" width="236" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -280,7 +280,7 @@
                                     <segue destination="06h-WC-F2r" kind="push" identifier="jnt_detail" id="lgw-Tx-iLy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-d8-vDs">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-d8-vDs">
                                 <rect key="frame" x="35" y="221" width="250" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -292,7 +292,7 @@
                                     <segue destination="DGS-M5-6W6" kind="push" identifier="p_detail" id="Zbr-Vh-iGv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX4-iB-AnY">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX4-iB-AnY">
                                 <rect key="frame" x="29" y="326" width="262" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -307,10 +307,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" constant="20" id="FeA-GA-nfK"/>
-                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" constant="90" id="QWj-fb-1ke"/>
-                            <constraint firstAttribute="bottom" secondItem="Fv8-uZ-lOD" secondAttribute="bottom" constant="45" id="QbI-sa-NZO"/>
-                            <constraint firstAttribute="trailing" secondItem="Fv8-uZ-lOD" secondAttribute="trailing" constant="20" id="Yqp-63-5J4"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="centerX" secondItem="pS2-mG-LcC" secondAttribute="centerX" id="8UZ-mL-xlO"/>
+                            <constraint firstAttribute="trailing" secondItem="Fv8-uZ-lOD" secondAttribute="trailing" constant="20" symbolic="YES" id="9nQ-2K-ebD"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="centerX" secondItem="xgl-d8-vDs" secondAttribute="centerX" id="GmM-eT-qo5"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" constant="20" symbolic="YES" id="KGv-VT-KqN"/>
+                            <constraint firstItem="czr-oI-dmS" firstAttribute="top" secondItem="Fv8-uZ-lOD" secondAttribute="bottom" constant="47" id="Wan-8F-AMk"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="centerX" secondItem="GX4-iB-AnY" secondAttribute="centerX" id="atp-DX-xv4"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="top" secondItem="Bos-5b-LJT" secondAttribute="bottom" constant="24" id="gSb-Yn-gi8"/>
+                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="centerX" secondItem="D2D-fd-kW6" secondAttribute="centerX" id="se7-iR-sZ6"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1430,8 +1434,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="pxc-6V-N10"/>
         <segue reference="WSM-iP-pYD"/>
-        <segue reference="Zbr-Vh-iGv"/>
-        <segue reference="Mfg-ut-3jK"/>
+        <segue reference="Bsb-qE-tlr"/>
     </inferredMetricsTieBreakers>
 </document>

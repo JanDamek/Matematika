@@ -24,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *zkouseni_na_cas;
 @property (weak, nonatomic) IBOutlet UIButton *procvicovani;
 @property (weak, nonatomic) IBOutlet UIButton *jak_na_to;
-@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
 - (void)configureView;
 @end

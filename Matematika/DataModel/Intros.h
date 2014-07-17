@@ -2,7 +2,7 @@
 //  Intros.h
 //  Matematika
 //
-//  Created by Jan Damek on 03.06.14.
+//  Created by Jan Damek on 17.07.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 

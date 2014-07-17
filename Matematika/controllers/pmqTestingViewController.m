@@ -112,7 +112,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //[self prepareTest];
+
+    if (self.masterPopoverController != nil) {
+        [self.masterPopoverController dismissPopoverAnimated:YES];
+    }
+
 }
 
 - (IBAction)btnStartAction:(id)sender {
@@ -145,15 +149,18 @@
             @catch (NSException *exception) {
                 isNew = NO;
                 [self btnStartAction:nil];
-                [self realignView];
+                [self performSelector:@selector(realignView) withObject:nil afterDelay:0.15];
             }
             @finally {
             }
+        } else {
+            isNew = NO;
+            [self btnStartAction:nil];
+            [self performSelector:@selector(realignView) withObject:nil afterDelay:0.15];
         }
     } else {
         [self.navigationController popViewControllerAnimated:YES];
     }
-    
 }
 
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
@@ -240,8 +247,13 @@
 -(void)setData:(Tests *)data{
     _data = data;
     
-    _q = [data.relationship_question allObjects];
-    
+    if (data.relationship_lesson){
+        _q = [data.relationship_question allObjects];
+    }else {
+        pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+        _q = [d.data.questions fetchedObjects];
+    }
+        
     mark_size = (_marks.frame.size.width - 180) / [_data.test_length intValue];
     
     self.navigationItem.title = data.relationship_lesson.name;
@@ -625,11 +637,10 @@
         } else {
             
             pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
-            Results *r = _data.relationship_results;
-            if (!r && _data){
-                r = [d.data newResults];
-                _data.relationship_results = r;
-            }
+            Results *r = [d.data newResults];
+            [_data addRelationship_resultsObject:r];
+            r.relationship_test = _data;
+
             NSArray *rq = [r.relationship_questions allObjects];
             for (Questions *q in rq) {
                 [r removeRelationship_questionsObject:q];

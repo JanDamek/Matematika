@@ -177,9 +177,24 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    [self.detailViewController.navigationController popToRootViewControllerAnimated:NO];
+    
     if ([[segue identifier] isEqualToString:@"procvicovani"]) {
         pmqTestingViewController *t = [segue destinationViewController];
+        t.masterPopoverController = self.detailViewController.masterPopoverController;
+
+//        pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+//        Tests *da = [d.data newTests];
+//        da.relationship_lesson = nil;
+//        da.test_length = [NSNumber numberWithInt:12];
+//        da.time_limit = [NSNumber numberWithInt:10];
+//        t.data = da;
+        
         t.testMode = tmTestOverAllFail;
+        
+    } else if ([[segue identifier] isEqualToString:@"all_res"]) {
+        pmqResultViewController *r = [segue destinationViewController];
+        r.masterPopoverController = self.detailViewController.masterPopoverController;
     }
 }
 
