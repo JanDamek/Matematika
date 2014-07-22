@@ -235,6 +235,7 @@
 		F5C5653119410CD100C78F5C /* boy23.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5652C19410CD100C78F5C /* boy23.png */; };
 		F5C5653219410CD100C78F5C /* boy24.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5652D19410CD100C78F5C /* boy24.png */; };
 		F5C5653319410CD100C78F5C /* boy25.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5652E19410CD100C78F5C /* boy25.png */; };
+		F5CA7069197E57E200C3DAC9 /* splash_cz_m_1024x768@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CA7068197E57E200C3DAC9 /* splash_cz_m_1024x768@2x.png */; };
 		F5E0153B1977CCAD0090125A /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E0153A1977CCAD0090125A /* Questions.m */; };
 		F5E0153E1977CCAE0090125A /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E0153D1977CCAE0090125A /* Intros.m */; };
 		F5E015411977CCAE0090125A /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E015401977CCAE0090125A /* Lessons.m */; };
@@ -1111,6 +1112,7 @@
 		F5C5652C19410CD100C78F5C /* boy23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy23.png; sourceTree = "<group>"; };
 		F5C5652D19410CD100C78F5C /* boy24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy24.png; sourceTree = "<group>"; };
 		F5C5652E19410CD100C78F5C /* boy25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy25.png; sourceTree = "<group>"; };
+		F5CA7068197E57E200C3DAC9 /* splash_cz_m_1024x768@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_cz_m_1024x768@2x.png"; sourceTree = "<group>"; };
 		F5E015391977CCAD0090125A /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
 		F5E0153A1977CCAD0090125A /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
 		F5E0153C1977CCAE0090125A /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
@@ -1281,6 +1283,7 @@
 			isa = PBXGroup;
 			children = (
 				F50B9885197D803A004F3898 /* Default-568h@2x.png */,
+				F5CA7068197E57E200C3DAC9 /* splash_cz_m_1024x768@2x.png */,
 				F50B9886197D803A004F3898 /* splash_cz_m_768x1024.png */,
 				F50B9887197D803A004F3898 /* splash_cz_m_768x1024@2x.png */,
 				F50B9888197D803A004F3898 /* splash_cz_m_1024x768.png */,
@@ -2037,6 +2040,7 @@
 				F5A58C3D1957374000B24EC1 /* 97.aac in Resources */,
 				F50B98A3197DA23E004F3898 /* 10#@2x.png in Resources */,
 				F5A58C031957374000B24EC1 /* 44.aac in Resources */,
+				F5CA7069197E57E200C3DAC9 /* splash_cz_m_1024x768@2x.png in Resources */,
 				F506195519573ABA00D8F04E /* plus.aac in Resources */,
 				F53E60F9193C940C00E3EE3E /* result_2.png in Resources */,
 				F5A58C121957374000B24EC1 /* 58.aac in Resources */,
