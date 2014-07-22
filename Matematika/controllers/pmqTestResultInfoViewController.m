@@ -68,25 +68,76 @@
     
     
     self.starsResult.image = [UIImage imageNamed:[NSString stringWithFormat:@"status_%istar", r ]];
-    self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"result_%i", r ]];
+    //self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"result_%i", r ]];
     
-    if (r==5){
+    if (r<=1){
         self.resultImage.animationImages = [NSArray arrayWithObjects:
-                                            [UIImage imageNamed:@"boy21.png"],
-                                            [UIImage imageNamed:@"boy22.png"],
-                                            [UIImage imageNamed:@"boy23.png"],
-                                            [UIImage imageNamed:@"boy24.png"],
-                                            [UIImage imageNamed:@"boy25.png"],
-                                            [UIImage imageNamed:@"boy24.png"],
-                                            [UIImage imageNamed:@"boy23.png"],
-                                            [UIImage imageNamed:@"boy22.png"],
-                                            [UIImage imageNamed:@"boy21.png"]
-                                            ,nil
+                                            [UIImage imageNamed:@"boy11.png"],
+                                            [UIImage imageNamed:@"boy12.png"],
+                                            [UIImage imageNamed:@"boy13.png"],
+                                            [UIImage imageNamed:@"boy14.png"],
+                                            [UIImage imageNamed:@"boy15.png"],
+                                            [UIImage imageNamed:@"boy14.png"],
+                                            [UIImage imageNamed:@"boy13.png"],
+                                            [UIImage imageNamed:@"boy12.png"],
+                                            nil
                                             ];
-        self.resultImage.animationRepeatCount = -1;
-        self.resultImage.animationDuration = 1.75;
-        [self.resultImage startAnimating];
-    }
+    } else
+        if (r==2){
+            self.resultImage.animationImages = [NSArray arrayWithObjects:
+                                                [UIImage imageNamed:@"boy21.png"],
+                                                [UIImage imageNamed:@"boy22.png"],
+                                                [UIImage imageNamed:@"boy23.png"],
+                                                [UIImage imageNamed:@"boy24.png"],
+                                                [UIImage imageNamed:@"boy25.png"],
+                                                [UIImage imageNamed:@"boy24.png"],
+                                                [UIImage imageNamed:@"boy23.png"],
+                                                [UIImage imageNamed:@"boy22.png"],
+                                                nil
+                                                ];
+        }else
+            if (r==3){
+                self.resultImage.animationImages = [NSArray arrayWithObjects:
+                                                    [UIImage imageNamed:@"boy31.png"],
+                                                    [UIImage imageNamed:@"boy32.png"],
+                                                    [UIImage imageNamed:@"boy33.png"],
+                                                    [UIImage imageNamed:@"boy34.png"],
+                                                    [UIImage imageNamed:@"boy35.png"],
+                                                    [UIImage imageNamed:@"boy34.png"],
+                                                    [UIImage imageNamed:@"boy33.png"],
+                                                    [UIImage imageNamed:@"boy32.png"],
+                                                    nil
+                                                    ];
+            } else
+                if (r==4){
+                    self.resultImage.animationImages = [NSArray arrayWithObjects:
+                                                        [UIImage imageNamed:@"boy41.png"],
+                                                        [UIImage imageNamed:@"boy42.png"],
+                                                        [UIImage imageNamed:@"boy43.png"],
+                                                        [UIImage imageNamed:@"boy44.png"],
+                                                        [UIImage imageNamed:@"boy45.png"],
+                                                        [UIImage imageNamed:@"boy44.png"],
+                                                        [UIImage imageNamed:@"boy43.png"],
+                                                        [UIImage imageNamed:@"boy42.png"],
+                                                        nil
+                                                        ];
+                } else
+                    if (r>=5){
+                        self.resultImage.animationImages = [NSArray arrayWithObjects:
+                                                            [UIImage imageNamed:@"boy51.png"],
+                                                            [UIImage imageNamed:@"boy52.png"],
+                                                            [UIImage imageNamed:@"boy53.png"],
+                                                            [UIImage imageNamed:@"boy54.png"],
+                                                            [UIImage imageNamed:@"boy55.png"],
+                                                            [UIImage imageNamed:@"boy54.png"],
+                                                            [UIImage imageNamed:@"boy53.png"],
+                                                            [UIImage imageNamed:@"boy52.png"],
+                                                            nil
+                                                            ];
+                    }
+    self.resultImage.animationRepeatCount = -1;
+    self.resultImage.animationDuration = 1.75;
+    [self.resultImage startAnimating];
     
     NSString *s = [NSString stringWithFormat:@"result_%i", r ];
     self.labelResult.text = NSLocalizedString(s, nil);
