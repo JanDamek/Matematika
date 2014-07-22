@@ -866,21 +866,6 @@
                                 <rect key="frame" x="333" y="181" width="65" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-XB-oNw">
-                                <rect key="frame" x="276" y="771" width="151" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="vRW-KT-2Lj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnStartAction:" destination="YSQ-WZ-sxf" eventType="touchUpInside" id="ZjX-9G-tps"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kC0-Q6-1g1">
                                 <rect key="frame" x="611" y="321" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -898,13 +883,10 @@
                             <constraint firstItem="y4k-Or-HHz" firstAttribute="leading" secondItem="JYI-hd-AgM" secondAttribute="trailing" constant="25" id="Ctv-p4-vOD"/>
                             <constraint firstAttribute="bottom" secondItem="DuD-fu-qCy" secondAttribute="bottom" id="FIw-Kj-U8j"/>
                             <constraint firstAttribute="trailing" secondItem="9CB-So-AXO" secondAttribute="trailing" constant="103" id="HZU-Mb-tQY"/>
-                            <constraint firstAttribute="bottom" secondItem="gGr-XB-oNw" secondAttribute="bottom" constant="163" id="Idf-Fc-MZE"/>
                             <constraint firstItem="9CB-So-AXO" firstAttribute="top" secondItem="X5S-x8-7QN" secondAttribute="top" constant="86" id="NLL-EK-vP6"/>
-                            <constraint firstAttribute="trailing" secondItem="gGr-XB-oNw" secondAttribute="trailing" constant="277" id="PHE-EW-FPC"/>
                             <constraint firstAttribute="trailing" secondItem="DuD-fu-qCy" secondAttribute="trailing" id="RUC-GQ-r3o"/>
                             <constraint firstItem="9CB-So-AXO" firstAttribute="leading" secondItem="X5S-x8-7QN" secondAttribute="leading" constant="102" id="TL2-Jq-WtR"/>
                             <constraint firstItem="0zO-4R-Ocx" firstAttribute="leading" secondItem="y4k-Or-HHz" secondAttribute="trailing" constant="25" id="Zzn-vG-6vG"/>
-                            <constraint firstItem="gGr-XB-oNw" firstAttribute="leading" secondItem="X5S-x8-7QN" secondAttribute="leading" constant="276" id="eon-mZ-uAg"/>
                             <constraint firstAttribute="centerX" secondItem="SoF-JP-Mc0" secondAttribute="centerX" id="g0b-qV-cHU"/>
                             <constraint firstItem="iJU-dx-dzl" firstAttribute="leading" secondItem="SoF-JP-Mc0" secondAttribute="trailing" constant="25" id="qJ7-QH-gMQ"/>
                             <constraint firstAttribute="centerX" secondItem="y4k-Or-HHz" secondAttribute="centerX" id="tIB-xT-hHY"/>
@@ -916,7 +898,6 @@
                         <barButtonItem key="backBarButtonItem" title="Zpět" id="4Ww-nh-lKS"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnStart" destination="gGr-XB-oNw" id="huw-d2-y9L"/>
                         <outlet property="labelAnswer" destination="Ico-wp-wzE" id="SKV-V3-6pu"/>
                         <outlet property="marks" destination="9CB-So-AXO" id="oTH-Yl-gx7"/>
                         <outlet property="questionLabel1" destination="TFg-JS-Ee1" id="Pfj-Xm-tK7"/>

@@ -43,8 +43,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *timeOutImage;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButtons;
-@property (weak, nonatomic) IBOutlet UIButton *btnStart;
-@property (weak, nonatomic) IBOutlet UILabel *lblStart;
 
 @end
 
@@ -85,8 +83,6 @@
     _timerView.delegate = self;
     mark_size = (_marks.frame.size.width - 180) / 12;
     
-    self.btnStart.layer.cornerRadius = 10;
-    
     for (UIButton *b in self.answerButtons) {
         b.layer.cornerRadius = 10;
     }
@@ -105,9 +101,6 @@
     [_questionMark setHidden:YES];
     [_timerView setHidden:YES];
     [_labelAnswer setHidden:YES];
-    
-    [self.lblStart setHidden:YES];
-    [self.btnStart setHidden:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -120,8 +113,6 @@
 }
 
 - (IBAction)btnStartAction:(id)sender {
-    [self.lblStart setHidden:YES];
-    [self.btnStart setHidden:YES];
     [_questionLabel1 setHidden:NO];
     [_questionLabel2 setHidden:NO];
     
@@ -266,9 +257,6 @@
 -(void)setTestMode:(enum TestMode)testMode{
     answered = 0;
     [_marks reloadData];
-    
-    [self.lblStart setHidden:NO];
-    [self.btnStart setHidden:NO];
     
     [self.questionLabel1 setHidden:YES];
     [self.timerView setHidden:YES];
@@ -528,7 +516,7 @@
     if ([(NSString*)anim isEqualToString:@"answer"]){
         [self performSelector:@selector(markCorrect) withObject:nil afterDelay:time_to_show_answer / 5];
     } else if ( [(NSString*)anim isEqualToString:@"correct"] ){
-        [_labelAnswer setTextColor:[UIColor blackColor]];
+        [_labelAnswer setTextColor:[UIColor whiteColor]];
         [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:time_to_show_answer];
     }
 }

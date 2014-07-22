@@ -53,7 +53,7 @@
     [self addSubview:_text];
     
     _text.font = [UIFont fontWithName: @"Helvetica-Bold" size: fontSize * 0.95];
-    [_text setTextColor:[UIColor blackColor]];
+    [_text setTextColor:[UIColor whiteColor]];
     [_text setTextAlignment:NSTextAlignmentCenter];
     
     // Determine our start and stop angles for the arc (in radians)
@@ -63,7 +63,7 @@
     _roundColor = [UIColor grayColor];
     _fillColor = [UIColor lightGrayColor];
     _circleColor = [UIColor blackColor];
-    _textColor = [UIColor blackColor];
+    _textColor = [UIColor whiteColor];
     
     _timeLeft = 0;
     _timeToCount = 10;

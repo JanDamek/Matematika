@@ -973,18 +973,6 @@
                                 <rect key="frame" x="203" y="179" width="26" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3F-U4-6eO">
-                                <rect key="frame" x="94" y="317" width="133" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnStartAction:" destination="DGS-M5-6W6" eventType="touchUpInside" id="8Pp-dR-lj7"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtJ-jg-qGM">
                                 <rect key="frame" x="611" y="321" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1015,7 +1003,6 @@
                             <constraint firstItem="29f-Lt-qgf" firstAttribute="trailing" secondItem="6Gv-RD-avt" secondAttribute="trailing" id="IIF-B0-ski"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="20" id="Isb-gN-Tbn"/>
                             <constraint firstItem="6Gv-RD-avt" firstAttribute="bottom" secondItem="NUq-CI-s6g" secondAttribute="bottom" id="JOG-cL-Ipu"/>
-                            <constraint firstItem="N3F-U4-6eO" firstAttribute="centerX" secondItem="RE7-Ld-yMu" secondAttribute="centerX" id="JZX-aW-OeB"/>
                             <constraint firstItem="29f-Lt-qgf" firstAttribute="top" secondItem="6Gv-RD-avt" secondAttribute="bottom" constant="30" id="JiY-6X-cnL"/>
                             <constraint firstItem="RE7-Ld-yMu" firstAttribute="leading" secondItem="6Gv-RD-avt" secondAttribute="leading" id="LoA-Dg-Vov"/>
                             <constraint firstItem="NUq-CI-s6g" firstAttribute="leading" secondItem="6Gv-RD-avt" secondAttribute="trailing" constant="7" id="Q0Z-KL-MJ3"/>
@@ -1024,7 +1011,6 @@
                             <constraint firstItem="29f-Lt-qgf" firstAttribute="bottom" secondItem="bIH-Y7-JKS" secondAttribute="bottom" id="TAl-qO-sK4"/>
                             <constraint firstItem="29f-Lt-qgf" firstAttribute="top" secondItem="ePR-zl-3nI" secondAttribute="top" id="ThQ-4D-Em9"/>
                             <constraint firstItem="29f-Lt-qgf" firstAttribute="bottom" secondItem="ePR-zl-3nI" secondAttribute="bottom" id="UHc-uX-oDk"/>
-                            <constraint firstItem="N3F-U4-6eO" firstAttribute="leading" secondItem="t0x-Cy-ePR" secondAttribute="leading" constant="94" id="a4y-21-vZa"/>
                             <constraint firstItem="uKV-de-b9x" firstAttribute="top" secondItem="RE7-Ld-yMu" secondAttribute="bottom" constant="27" id="ao6-iJ-Oua"/>
                             <constraint firstAttribute="trailing" secondItem="RE7-Ld-yMu" secondAttribute="trailing" constant="20" id="b83-eg-XWS"/>
                             <constraint firstItem="Nzd-Nw-88f" firstAttribute="leading" secondItem="bIH-Y7-JKS" secondAttribute="leading" id="brh-bI-coA"/>
@@ -1045,7 +1031,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="8pq-un-uV1"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnStart" destination="N3F-U4-6eO" id="a4k-Vs-E2M"/>
                         <outlet property="labelAnswer" destination="Tct-wL-bs7" id="OZE-Lk-hoy"/>
                         <outlet property="marks" destination="RE7-Ld-yMu" id="ZFC-Ps-5sk"/>
                         <outlet property="questionLabel1" destination="uKV-de-b9x" id="laI-pV-2wu"/>
