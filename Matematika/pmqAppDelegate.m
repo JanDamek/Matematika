@@ -24,12 +24,13 @@
     
 #pragma mark - nastaveni NavigationBar
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
-    [titleBarAttributes setValue:[UIFont fontWithName:@"Bradley Hand" size:25] forKey:NSFontAttributeName];
-    [titleBarAttributes setValue:[UIColor greenColor] forKey:NSForegroundColorAttributeName ];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"System" size:25] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
     [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
  
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal]];
-    [attributes setValue:[UIFont fontWithName:@"Bradley Hand" size:18] forKey:NSFontAttributeName];
+    [attributes setValue:[UIFont fontWithName:@"System" size:18] forKey:NSFontAttributeName];
+    [attributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
 #pragma mark - vytvoreni controleru pro iPhone nebo iPad
