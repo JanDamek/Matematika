@@ -65,6 +65,7 @@
     _textColor = [UIColor whiteColor];
     [_text setTextColor:_textColor];
     
+    
     _timeLeft = 0;
     _timeToCount = 10;
     _countDown = YES;
