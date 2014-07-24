@@ -107,6 +107,7 @@
 		F53E60FF193C940C00E3EE3E /* star_err_old.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60E8193C940C00E3EE3E /* star_err_old.png */; };
 		F53E6100193C940C00E3EE3E /* star_ok_old.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60E9193C940C00E3EE3E /* star_ok_old.png */; };
 		F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F582819338BA600956AEB /* StoreKit.framework */; };
+		F57C8686198136CC000DA1DB /* Matematika-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5276407192E0E98001BEC6B /* Matematika-Info.plist */; };
 		F5A586B0195732B400B24EC1 /* title_hp.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A586B2195732B400B24EC1 /* title_hp.png */; };
 		F5A586B81957330C00B24EC1 /* title_mm.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A586BA1957330C00B24EC1 /* title_mm.png */; };
 		F5A586C01957336A00B24EC1 /* game_definition.xml in Resources */ = {isa = PBXBuildFile; fileRef = F5A586C21957336A00B24EC1 /* game_definition.xml */; };
@@ -394,7 +395,7 @@
 		F50B98A1197DA23E004F3898 /* 9#@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9#@2x.png"; sourceTree = "<group>"; };
 		F52269641956C0C00064F6FC /* btn_pmq_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pmq_mini.png; sourceTree = "<group>"; };
 		F52269791956E2740064F6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F52763FA192E0E98001BEC6B /* Matematika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matematika.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52763FA192E0E98001BEC6B /* calculations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52763FD192E0E98001BEC6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F52763FF192E0E98001BEC6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F5276401192E0E98001BEC6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1296,7 +1297,7 @@
 		F52763FB192E0E98001BEC6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F52763FA192E0E98001BEC6B /* Matematika.app */,
+				F52763FA192E0E98001BEC6B /* calculations.app */,
 				F5276426192E0E98001BEC6B /* MatematikaTests.xctest */,
 			);
 			name = Products;
@@ -1750,9 +1751,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F52763F9192E0E98001BEC6B /* Matematika */ = {
+		F52763F9192E0E98001BEC6B /* calculations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5276438192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "Matematika" */;
+			buildConfigurationList = F5276438192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "calculations" */;
 			buildPhases = (
 				F52763F6192E0E98001BEC6B /* Sources */,
 				F52763F7192E0E98001BEC6B /* Frameworks */,
@@ -1762,9 +1763,9 @@
 			);
 			dependencies = (
 			);
-			name = Matematika;
+			name = calculations;
 			productName = Matematika;
-			productReference = F52763FA192E0E98001BEC6B /* Matematika.app */;
+			productReference = F52763FA192E0E98001BEC6B /* calculations.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F5276425192E0E98001BEC6B /* MatematikaTests */ = {
@@ -1811,7 +1812,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "Matematika" */;
+			buildConfigurationList = F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "calculations" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1828,7 +1829,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F52763F9192E0E98001BEC6B /* Matematika */,
+				F52763F9192E0E98001BEC6B /* calculations */,
 				F5276425192E0E98001BEC6B /* MatematikaTests */,
 			);
 		};
@@ -2057,6 +2058,7 @@
 				F5A58C1E1957374000B24EC1 /* 69.aac in Resources */,
 				F53E60D0193C67A100E3EE3E /* fg_answer_bar_red.9.png in Resources */,
 				F5A58C0E1957374000B24EC1 /* 54.aac in Resources */,
+				F57C8686198136CC000DA1DB /* Matematika-Info.plist in Resources */,
 				F50B98A8197DA23E004F3898 /* 3#.png in Resources */,
 				F53E60EE193C940C00E3EE3E /* ico_results.png in Resources */,
 				F5CA708D197E5F4300C3DAC9 /* boy31.png in Resources */,
@@ -2144,7 +2146,7 @@
 /* Begin PBXTargetDependency section */
 		F527642D192E0E98001BEC6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F52763F9192E0E98001BEC6B /* Matematika */;
+			target = F52763F9192E0E98001BEC6B /* calculations */;
 			targetProxy = F527642C192E0E98001BEC6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -3792,8 +3794,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
@@ -3847,7 +3849,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "Matematika" */ = {
+		F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "calculations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5276436192E0E98001BEC6B /* Debug */,
@@ -3856,7 +3858,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5276438192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "Matematika" */ = {
+		F5276438192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "calculations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5276439192E0E98001BEC6B /* Debug */,

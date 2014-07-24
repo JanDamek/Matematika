@@ -21,7 +21,7 @@
 
 @synthesize ani;
 
-#define kProductIdentifier @"eu.pmq-software.matematika"
+#define kProductIdentifier @"com.pmqsoftware.math.calculations"
 
 -(void)viewDidLoad{
     [super viewDidLoad];

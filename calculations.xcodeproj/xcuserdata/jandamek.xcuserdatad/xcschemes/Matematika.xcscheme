@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F52763F9192E0E98001BEC6B"
                BuildableName = "Matematika.app"
-               BlueprintName = "Matematika"
-               ReferencedContainer = "container:Matematika.xcodeproj">
+               BlueprintName = "calculations"
+               ReferencedContainer = "container:calculations.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "F5276425192E0E98001BEC6B"
                BuildableName = "MatematikaTests.xctest"
                BlueprintName = "MatematikaTests"
-               ReferencedContainer = "container:Matematika.xcodeproj">
+               ReferencedContainer = "container:calculations.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F52763F9192E0E98001BEC6B"
             BuildableName = "Matematika.app"
-            BlueprintName = "Matematika"
-            ReferencedContainer = "container:Matematika.xcodeproj">
+            BlueprintName = "calculations"
+            ReferencedContainer = "container:calculations.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F52763F9192E0E98001BEC6B"
             BuildableName = "Matematika.app"
-            BlueprintName = "Matematika"
-            ReferencedContainer = "container:Matematika.xcodeproj">
+            BlueprintName = "calculations"
+            ReferencedContainer = "container:calculations.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F52763F9192E0E98001BEC6B"
             BuildableName = "Matematika.app"
-            BlueprintName = "Matematika"
-            ReferencedContainer = "container:Matematika.xcodeproj">
+            BlueprintName = "calculations"
+            ReferencedContainer = "container:calculations.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
