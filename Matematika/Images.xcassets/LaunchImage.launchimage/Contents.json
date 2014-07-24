@@ -53,7 +53,7 @@
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
-      "filename" : "splash_cz_m_320_480.png",
+      "filename" : "splash_cz_m_320x480.png",
       "scale" : "1x"
     },
     {
@@ -117,7 +117,7 @@
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "splash_cz_m_2048x1496.png",
+      "filename" : "splash_cz_m_1024x748@2x.png",
       "scale" : "2x"
     },
     {
