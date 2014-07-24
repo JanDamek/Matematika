@@ -136,7 +136,7 @@
              
              Results *object = [[self results] objectAtIndexPath:indexPath];
              [(pmqTestingViewController*)[segue destinationViewController] setData:object.relationship_test];
-             [(pmqTestingViewController*)[segue destinationViewController] setTestMode:tmTestFails];
+             [(pmqTestingViewController*)[segue destinationViewController] setTestMode:tmPracticeFails];
          }
  }
 

@@ -190,7 +190,7 @@
 //        da.time_limit = [NSNumber numberWithInt:10];
 //        t.data = da;
         
-        t.testMode = tmTestOverAllFail;
+        t.testMode = tmPracticeOverAllFail;
         
     } else if ([[segue identifier] isEqualToString:@"all_res"]) {
         pmqResultViewController *r = [segue destinationViewController];

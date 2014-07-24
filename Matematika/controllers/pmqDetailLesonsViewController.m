@@ -124,7 +124,7 @@
         ((pmqIntrosViewController*)[segue destinationViewController]).data = object;
     }else if ([[segue identifier] isEqualToString:@"p_detail"]) {
         ((pmqTestingViewController*)[segue destinationViewController]).data = l.relationship_test;
-        ((pmqTestingViewController*)[segue destinationViewController]).testMode = tmTest;
+        ((pmqTestingViewController*)[segue destinationViewController]).testMode = tmPractice;
     }if ([[segue identifier] isEqualToString:@"znc_detail"]) {
         ((pmqTestingViewController*)[segue destinationViewController]).data = l.relationship_test;
         ((pmqTestingViewController*)[segue destinationViewController]).testMode = tmTestOnTime;
@@ -141,7 +141,7 @@
 
     pmqTestingViewController *t = [self.storyboard instantiateViewControllerWithIdentifier:@"procvicovani"];
    t.data = l.relationship_test;
-   t.testMode = tmTest;
+   t.testMode = tmPractice;
    [self.navigationController pushViewController:t animated:YES];
 }
 

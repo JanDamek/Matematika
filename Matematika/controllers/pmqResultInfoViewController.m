@@ -173,7 +173,7 @@
     if ([[segue identifier] isEqualToString:@"testErrors"]) {
         pmqTestingViewController *t = [segue destinationViewController];
         t.data = self.dataResult.relationship_test;
-        t.testMode = tmTestFails;
+        t.testMode = tmPracticeFails;
     }
 }
 

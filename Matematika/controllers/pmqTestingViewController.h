@@ -14,7 +14,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 enum TestMode {
-    tmNone, tmTest, tmTestOnTime, tmTestFails, tmTestOverAll, tmTestOverAllFail
+    tmNone, tmPractice, tmTestOnTime, tmPracticeFails, tmPracticeOverAllFail
 };
 
 @interface pmqTestingViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UIArcTimerViewDelegate, AVAudioPlayerDelegate>

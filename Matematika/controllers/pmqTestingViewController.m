@@ -357,7 +357,7 @@
         v.origin.x = pos;
         _questionLabel1.frame = v;
         
-        if (_testMode == tmTest){
+        if (_testMode != tmTestOnTime){
             [_questionMark setHidden:NO];
             [_timerView setHidden:YES];
             
@@ -437,30 +437,16 @@
     pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
     
     switch (_testMode) {
-        case tmTest:
+        case tmPractice:
         case tmTestOnTime:
             [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:NO];
             break;
             
-        case tmTestFails:
+        case tmPracticeFails:
             [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy]firstFail:YES];
             break;
             
-        case tmTestOverAll:{
-            Tests *te;
-            for (Lessons *l in [d.data.lessons fetchedObjects]) {
-                if ([l.order intValue] == 16959){
-                    te =l.relationship_test;
-                    break;
-                }
-            }
-            self.data = te;
-
-            [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:NO];
-            break;
-        }
-            
-        case tmTestOverAllFail:{
+        case tmPracticeOverAllFail:{
             Tests *te;
             for (Lessons *l in [d.data.lessons fetchedObjects]) {
                 if ([l.order intValue] == 16959){
@@ -552,7 +538,7 @@
         } else [b setHidden:YES];
     }
     
-    if (_testMode ==  tmTest) {
+    if (_testMode !=  tmTestOnTime) {
         [_questionMark setHidden:YES];
         [_labelAnswer setHidden:NO];
     }else{
@@ -567,7 +553,7 @@
     
     [_timerView invalidateTimer];
     
-    if (_testMode==tmTest){
+    if (_testMode!=tmTestOnTime){
         _labelAnswer.frame = _questionMark.frame;
     } else
         _labelAnswer.frame = _timerView.frame;
@@ -617,11 +603,13 @@
 
 -(void)makeResult{
     {
-        if (_testMode==tmTest) {
+        if (_testMode==tmPractice) {
             
             self.testMode = tmTestOnTime;
             //            [self prepareTest];
             //            [self loadFromLastTest];
+        } else if (_testMode != tmTestOnTime) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
             
             pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
