@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Results.h"
 #import <AVFoundation/AVFoundation.h>
+#import "pmqTestingViewController.h"
 
 @interface pmqTestResultInfoViewController : UIViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) Results *result;
+@property enum TestMode testMode;
 
 @end

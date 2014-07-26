@@ -105,11 +105,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }
-
+    
 }
 
 - (IBAction)btnStartAction:(id)sender {
@@ -244,7 +244,7 @@
         pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
         _q = [d.data.questions fetchedObjects];
     }
-        
+    
     mark_size = (_marks.frame.size.width - 180) / [_data.test_length intValue];
     
     self.navigationItem.title = data.relationship_lesson.name;
@@ -275,6 +275,7 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
+    _timerView.delegate = nil;
     [_timerView invalidateTimer];
 }
 
@@ -455,7 +456,7 @@
                 }
             }
             self.data = te;
-
+            
             [self prepareQuestions:[[_data.relationship_question allObjects] mutableCopy] firstFail:YES];
             break;
         }
@@ -606,8 +607,10 @@
         if (_testMode==tmPractice) {
             
             self.testMode = tmTestOnTime;
-            //            [self prepareTest];
-            //            [self loadFromLastTest];
+            
+            [self btnStartAction:nil];
+            [self performSelector:@selector(realignView) withObject:nil afterDelay:0.1];
+            
         } else if (_testMode != tmTestOnTime) {
             [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
@@ -616,7 +619,7 @@
             Results *r = [d.data newResults];
             [_data addRelationship_resultsObject:r];
             r.relationship_test = _data;
-
+            
             NSArray *rq = [r.relationship_questions allObjects];
             for (Questions *q in rq) {
                 [r removeRelationship_questionsObject:q];
@@ -637,7 +640,7 @@
             
             int test_length = [r.relationship_test.test_length intValue];
             float rate =5 * ((float)test_length - (float)bad_answer)/(float)test_length;
-
+            
             //Pouze pro vysledek testu v zavislosti take na rychlosti odpovedi
             //float max_time = [r.relationship_test.time_limit intValue]*test_length;
             //rate -= 2 * (total_time/max_time);
@@ -656,8 +659,9 @@
             [d.data.lessons performFetch:&error];
             NSAssert(!error, @"Error performing fetch request: %@", error);
             
-            UIViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"TestResult"];
-            [(pmqTestResultInfoViewController*)c setResult:r];
+            pmqTestResultInfoViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"TestResult"];
+            c.result = r;
+            c.testMode = _testMode;
             [self.navigationController pushViewController:c animated:YES];
         }
     }

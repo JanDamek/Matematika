@@ -60,8 +60,8 @@
     endAngle = startAngle + (M_PI * 2);
     
     _roundColor = [UIColor grayColor];
-    _fillColor = [UIColor lightGrayColor];
-    _circleColor = [UIColor blackColor];
+    _fillColor = [UIColor clearColor];
+    _circleColor = [UIColor whiteColor];
     _textColor = [UIColor whiteColor];
     [_text setTextColor:_textColor];
     

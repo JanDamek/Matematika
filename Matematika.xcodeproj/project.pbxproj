@@ -104,8 +104,6 @@
 		F53E60F6193C940C00E3EE3E /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60DF193C940C00E3EE3E /* progress.png */; };
 		F53E60FD193C940C00E3EE3E /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60E6193C940C00E3EE3E /* splash.png */; };
 		F53E60FE193C940C00E3EE3E /* star_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60E7193C940C00E3EE3E /* star_bg.png */; };
-		F53E60FF193C940C00E3EE3E /* star_err_old.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60E8193C940C00E3EE3E /* star_err_old.png */; };
-		F53E6100193C940C00E3EE3E /* star_ok_old.png in Resources */ = {isa = PBXBuildFile; fileRef = F53E60E9193C940C00E3EE3E /* star_ok_old.png */; };
 		F53F582919338BA600956AEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53F582819338BA600956AEB /* StoreKit.framework */; };
 		F57C8686198136CC000DA1DB /* Matematika-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5276407192E0E98001BEC6B /* Matematika-Info.plist */; };
 		F5A586B0195732B400B24EC1 /* title_hp.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A586B2195732B400B24EC1 /* title_hp.png */; };
@@ -395,7 +393,7 @@
 		F50B98A1197DA23E004F3898 /* 9#@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9#@2x.png"; sourceTree = "<group>"; };
 		F52269641956C0C00064F6FC /* btn_pmq_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pmq_mini.png; sourceTree = "<group>"; };
 		F52269791956E2740064F6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F52763FA192E0E98001BEC6B /* calculations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52763FA192E0E98001BEC6B /* Matematika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matematika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52763FD192E0E98001BEC6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F52763FF192E0E98001BEC6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F5276401192E0E98001BEC6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -465,8 +463,6 @@
 		F53E60DF193C940C00E3EE3E /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
 		F53E60E6193C940C00E3EE3E /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		F53E60E7193C940C00E3EE3E /* star_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_bg.png; sourceTree = "<group>"; };
-		F53E60E8193C940C00E3EE3E /* star_err_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_err_old.png; sourceTree = "<group>"; };
-		F53E60E9193C940C00E3EE3E /* star_ok_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_ok_old.png; sourceTree = "<group>"; };
 		F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Matematika 2.xcdatamodel"; sourceTree = "<group>"; };
 		F53F582819338BA600956AEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F5A586B1195732B400B24EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/title_hp.png; sourceTree = "<group>"; };
@@ -1297,7 +1293,7 @@
 		F52763FB192E0E98001BEC6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F52763FA192E0E98001BEC6B /* calculations.app */,
+				F52763FA192E0E98001BEC6B /* Matematika.app */,
 				F5276426192E0E98001BEC6B /* MatematikaTests.xctest */,
 			);
 			name = Products;
@@ -1671,8 +1667,6 @@
 				F53E60DF193C940C00E3EE3E /* progress.png */,
 				F53E60E6193C940C00E3EE3E /* splash.png */,
 				F53E60E7193C940C00E3EE3E /* star_bg.png */,
-				F53E60E8193C940C00E3EE3E /* star_err_old.png */,
-				F53E60E9193C940C00E3EE3E /* star_ok_old.png */,
 				F53E6099193C67A100E3EE3E /* bg_answer_bar.9.png */,
 				F53E609A193C67A100E3EE3E /* bg_base.png */,
 				F53E609B193C67A100E3EE3E /* bg_beams_nums.png */,
@@ -1765,7 +1759,7 @@
 			);
 			name = calculations;
 			productName = Matematika;
-			productReference = F52763FA192E0E98001BEC6B /* calculations.app */;
+			productReference = F52763FA192E0E98001BEC6B /* Matematika.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F5276425192E0E98001BEC6B /* MatematikaTests */ = {
@@ -1812,7 +1806,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "calculations" */;
+			buildConfigurationList = F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "Matematika" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1848,8 +1842,6 @@
 				F5CA708B197E5F4300C3DAC9 /* boy24.png in Resources */,
 				F5A58C071957374000B24EC1 /* 48.aac in Resources */,
 				F50B98A4197DA23E004F3898 /* 1#.png in Resources */,
-				F53E60FF193C940C00E3EE3E /* star_err_old.png in Resources */,
-				F53E6100193C940C00E3EE3E /* star_ok_old.png in Resources */,
 				F5F0F27E19364542003C4FFA /* icon_repeat.png in Resources */,
 				F5E015531977D8B60090125A /* star_err.png in Resources */,
 				F53E60B8193C67A100E3EE3E /* bg_base.png in Resources */,
@@ -3732,7 +3724,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3765,7 +3757,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3783,7 +3775,7 @@
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Matematika;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3800,7 +3792,7 @@
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Matematika;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3849,7 +3841,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "calculations" */ = {
+		F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "Matematika" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5276436192E0E98001BEC6B /* Debug */,
