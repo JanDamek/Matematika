@@ -408,7 +408,7 @@
 		F5276415192E0E98001BEC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		F5276418192E0E98001BEC6B /* Matematika.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Matematika.xcdatamodel; sourceTree = "<group>"; };
 		F5276420192E0E98001BEC6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F5276426192E0E98001BEC6B /* MatematikaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatematikaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5276426192E0E98001BEC6B /* calculationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5276427192E0E98001BEC6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F5276430192E0E98001BEC6B /* MatematikaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MatematikaTests-Info.plist"; sourceTree = "<group>"; };
 		F5276432192E0E98001BEC6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1294,7 +1294,7 @@
 			isa = PBXGroup;
 			children = (
 				F52763FA192E0E98001BEC6B /* Matematika.app */,
-				F5276426192E0E98001BEC6B /* MatematikaTests.xctest */,
+				F5276426192E0E98001BEC6B /* calculationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1762,9 +1762,9 @@
 			productReference = F52763FA192E0E98001BEC6B /* Matematika.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5276425192E0E98001BEC6B /* MatematikaTests */ = {
+		F5276425192E0E98001BEC6B /* calculationsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F527643B192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "MatematikaTests" */;
+			buildConfigurationList = F527643B192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "calculationsTests" */;
 			buildPhases = (
 				F5276422192E0E98001BEC6B /* Sources */,
 				F5276423192E0E98001BEC6B /* Frameworks */,
@@ -1775,9 +1775,9 @@
 			dependencies = (
 				F527642D192E0E98001BEC6B /* PBXTargetDependency */,
 			);
-			name = MatematikaTests;
+			name = calculationsTests;
 			productName = MatematikaTests;
-			productReference = F5276426192E0E98001BEC6B /* MatematikaTests.xctest */;
+			productReference = F5276426192E0E98001BEC6B /* calculationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1806,7 +1806,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "Matematika" */;
+			buildConfigurationList = F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "calculations" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1824,7 +1824,7 @@
 			projectRoot = "";
 			targets = (
 				F52763F9192E0E98001BEC6B /* calculations */,
-				F5276425192E0E98001BEC6B /* MatematikaTests */,
+				F5276425192E0E98001BEC6B /* calculationsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3775,7 +3775,7 @@
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = Matematika;
+				PRODUCT_NAME = calculations;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3792,7 +3792,7 @@
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = Matematika;
+				PRODUCT_NAME = calculations;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3814,7 +3814,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "MatematikaTests/MatematikaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = calculationsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -3832,7 +3832,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "MatematikaTests/MatematikaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = calculationsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -3841,7 +3841,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "Matematika" */ = {
+		F52763F5192E0E98001BEC6B /* Build configuration list for PBXProject "calculations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5276436192E0E98001BEC6B /* Debug */,
@@ -3859,7 +3859,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F527643B192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "MatematikaTests" */ = {
+		F527643B192E0E98001BEC6B /* Build configuration list for PBXNativeTarget "calculationsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F527643C192E0E98001BEC6B /* Debug */,
