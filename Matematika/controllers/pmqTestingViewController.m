@@ -550,7 +550,6 @@
 }
 
 - (IBAction)answerButtonAction:(UIButton *)sender {
-    
     [_timerView invalidateTimer];
     
     if (_testMode!=tmTestOnTime){
@@ -601,111 +600,51 @@
 }
 
 -(void)makeResult{
-    {
-        if (_testMode==tmPractice) {
-//            self.testMode = tmTestOnTime;            
-//            [self btnStartAction:nil];
-//            [self performSelector:@selector(realignView) withObject:nil afterDelay:0.1];
-            pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
-            Results *r = [d.data newResults];
-            [_data addRelationship_resultsObject:r];
-            r.relationship_test = _data;
-            
-            NSArray *rq = [r.relationship_questions allObjects];
-            for (Questions *q in rq) {
-                [r removeRelationship_questionsObject:q];
-            }
-            float total_time = 0;
-            int bad_answer = 0;
-            for (int i=0; i<[_questions count]; i++) {
-                Questions *q = [_questions objectAtIndex:i];
-                total_time += [q.time_of_answer floatValue];
-                if ([q.last_answer integerValue]==0){
-                    bad_answer++;
-                }
-                [r addRelationship_questionsObject:q];
-            }
-            r.total_time = [NSNumber numberWithFloat:total_time];
-            r.bad_answers = [NSNumber numberWithInt:bad_answer];
-            r.date = [NSDate date];
-            
-            int test_length = [r.relationship_test.test_length intValue];
-            float rate =5 * ((float)test_length - (float)bad_answer)/(float)test_length;
-            
-            //Pouze pro vysledek testu v zavislosti take na rychlosti odpovedi
-            //float max_time = [r.relationship_test.time_limit intValue]*test_length;
-            //rate -= 2 * (total_time/max_time);
-            rate = floorf(rate+0.49);
-            
-            r.rate = [NSNumber numberWithInt:(int)rate];
-            
-            r.relationship_test.relationship_lesson.rating = r.rate;
-            
-            NSError *error =nil;
-            [d.data.results performFetch:&error];
-            NSAssert(!error, @"Error performing fetch request: %@", error);
-            [d.data.lessons performFetch:&error];
-            NSAssert(!error, @"Error performing fetch request: %@", error);
-            
-            pmqTestResultInfoViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"TestResult"];
-            c.result = r;
-            c.testMode = _testMode;
-            [self.navigationController pushViewController:c animated:YES];
-            self.testMode = tmTestOnTime;
-            self.isNew = YES;
-        } else if (_testMode != tmTestOnTime) {
-            [self.navigationController popToRootViewControllerAnimated:YES];
-        } else {
-            pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
-            Results *r = [d.data newResults];
-            [_data addRelationship_resultsObject:r];
-            r.relationship_test = _data;
-            
-            NSArray *rq = [r.relationship_questions allObjects];
-            for (Questions *q in rq) {
-                [r removeRelationship_questionsObject:q];
-            }
-            float total_time = 0;
-            int bad_answer = 0;
-            for (int i=0; i<[_questions count]; i++) {
-                Questions *q = [_questions objectAtIndex:i];
-                total_time += [q.time_of_answer floatValue];
-                if ([q.last_answer integerValue]==0){
-                    bad_answer++;
-                }
-                [r addRelationship_questionsObject:q];
-            }
-            r.total_time = [NSNumber numberWithFloat:total_time];
-            r.bad_answers = [NSNumber numberWithInt:bad_answer];
-            r.date = [NSDate date];
-            
-            int test_length = [r.relationship_test.test_length intValue];
-            float rate =5 * ((float)test_length - (float)bad_answer)/(float)test_length;
-            
-            //Pouze pro vysledek testu v zavislosti take na rychlosti odpovedi
-            //float max_time = [r.relationship_test.time_limit intValue]*test_length;
-            //rate -= 2 * (total_time/max_time);
-            rate = floorf(rate+0.49);
-            
-            r.rate = [NSNumber numberWithInt:(int)rate];
-            
-            r.relationship_test.relationship_lesson.rating = r.rate;
-            
-            [d.data saveLessons];
-            [d.data saveResults];
-            
-            NSError *error =nil;
-            [d.data.results performFetch:&error];
-            NSAssert(!error, @"Error performing fetch request: %@", error);
-            [d.data.lessons performFetch:&error];
-            NSAssert(!error, @"Error performing fetch request: %@", error);
-            
-            pmqTestResultInfoViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"TestResult"];
-            c.result = r;
-            c.testMode = _testMode;
-            [self.navigationController pushViewController:c animated:YES];
-        }
+    pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+    Results *r = [d.data newResults];
+    [_data addRelationship_resultsObject:r];
+    r.relationship_test = _data;
+    
+    NSArray *rq = [r.relationship_questions allObjects];
+    for (Questions *q in rq) {
+        [r removeRelationship_questionsObject:q];
     }
+    float total_time = 0;
+    int bad_answer = 0;
+    for (int i=0; i<[_questions count]; i++) {
+        Questions *q = [_questions objectAtIndex:i];
+        total_time += [q.time_of_answer floatValue];
+        if ([q.last_answer integerValue]==0){
+            bad_answer++;
+        }
+        [r addRelationship_questionsObject:q];
+    }
+    r.total_time = [NSNumber numberWithFloat:total_time];
+    r.bad_answers = [NSNumber numberWithInt:bad_answer];
+    r.date = [NSDate date];
+    
+    int test_length = [r.relationship_test.test_length intValue];
+    float rate =5 * ((float)test_length - (float)bad_answer)/(float)test_length;
+    
+    //Pouze pro vysledek testu v zavislosti take na rychlosti odpovedi
+    //float max_time = [r.relationship_test.time_limit intValue]*test_length;
+    //rate -= 2 * (total_time/max_time);
+    rate = floorf(rate+0.49);
+    
+    r.rate = [NSNumber numberWithInt:(int)rate];
+    
+    r.relationship_test.relationship_lesson.rating = r.rate;
+    
+    NSError *error =nil;
+    [d.data.results performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
+    [d.data.lessons performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
+    
+    pmqTestResultInfoViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"TestResult"];
+    c.result = r;
+    c.testMode = _testMode;
+    [self.navigationController pushViewController:c animated:YES];
 }
 
 #pragma mark - collection delegate & dataSource

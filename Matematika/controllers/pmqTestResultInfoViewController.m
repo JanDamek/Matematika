@@ -10,6 +10,7 @@
 #import "pmqResultInfoViewController.h"
 #import "Tests.h"
 #import <QuartzCore/QuartzCore.h>
+#import "pmqAppDelegate.h"
 
 @interface pmqTestResultInfoViewController (){
     AVAudioPlayer *_player;
@@ -39,6 +40,42 @@
         // Custom initialization
     }
     return self;
+}
+- (IBAction)nextAction:(UIButton *)sender {
+    int i = [self.navigationController.viewControllers count]-2;
+    pmqTestingViewController *c = [self.navigationController.viewControllers objectAtIndex:i];
+    c.isNew = YES;
+    
+    if (c.testMode==tmPractice){
+        c.testMode = tmTestOnTime;
+    }else{
+        Lessons *l = c.data.relationship_lesson;
+        pmqAppDelegate *d = [[UIApplication sharedApplication]delegate];
+        NSIndexPath *i = [d.data.lessons indexPathForObject:l];
+        int r = i.row;
+        r++;
+        i = [NSIndexPath indexPathForRow:r inSection:i.section];
+        l = [d.data.lessons objectAtIndexPath:i];
+        
+        c.data = l.relationship_test;
+        c.isNew = YES;
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)repeatAction:(UIButton *)sender {
+    int i = [self.navigationController.viewControllers count]-2;
+    pmqTestingViewController *c = [self.navigationController.viewControllers objectAtIndex:i];
+    c.isNew = YES;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    //proces pri ukonceni
 }
 
 - (void)viewDidLoad
@@ -153,7 +190,20 @@
     self.totalQuestion.text = [NSString stringWithFormat:@"%lu", (unsigned long)[_result.relationship_questions count]];
     
     [_btnRetry setHidden: ([_result.bad_answers intValue]==0)];
-    [_btnNext setHidden:_testMode!=tmPractice];
+    switch (_testMode) {
+        case tmPractice:
+            [_btnNext setHidden:[_result.bad_answers intValue]!=0];
+            break;
+        case tmNone:
+        case tmPracticeFails:
+        case tmPracticeOverAllFail:
+            [_btnNext setHidden:YES];
+            break;
+        case tmTestOnTime:
+            [_btnNext setHidden:[_result.bad_answers intValue]!=0];
+            break;
+    }
+    
     [_btnTestResult setHidden:_result.relationship_test == nil];
     
     [self playResult];
@@ -186,7 +236,7 @@
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
     if (playStatus==1){
         playStatus = 2;
-        NSNumber *ok = [NSNumber numberWithInt:12-[_result.bad_answers intValue]];
+        NSNumber *ok = [NSNumber numberWithInt:(12 - [_result.bad_answers intValue])];
         NSString *file = [ok stringValue];
         NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                              pathForResource:file

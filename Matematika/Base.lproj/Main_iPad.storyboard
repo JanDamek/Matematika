@@ -1045,6 +1045,9 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <state key="normal" image="gly_refresh.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="repeatAction:" destination="sZK-Wx-Mxi" eventType="touchUpInside" id="H5P-BD-VB4"/>
+                                </connections>
                             </button>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_beams.png" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-J1-aCZ">
                                 <rect key="frame" x="57" y="117" width="591" height="544"/>
