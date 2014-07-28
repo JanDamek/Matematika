@@ -70,7 +70,6 @@
 -(void)setViews{
     int r = [_result.rate intValue];
     
-    
     self.starsResult.image = [UIImage imageNamed:[NSString stringWithFormat:@"5stars_fg%i_684x148", r ]];
     self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"boy%i1", r ]];
     
@@ -154,7 +153,8 @@
     self.totalQuestion.text = [NSString stringWithFormat:@"%lu", (unsigned long)[_result.relationship_questions count]];
     
     [_btnRetry setHidden: ([_result.bad_answers intValue]==0)];
-    [_btnNext setHidden:YES]; //_result.relationship_test.relationship_lesson
+    [_btnNext setHidden:_testMode!=tmPractice];
+    [_btnTestResult setHidden:_result.relationship_test == nil];
     
     [self playResult];
 }

@@ -165,11 +165,6 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    //allResults
-
     if ([[segue identifier] isEqualToString:@"testErrors"]) {
         pmqTestingViewController *t = [segue destinationViewController];
         t.data = self.dataResult.relationship_test;

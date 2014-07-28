@@ -268,28 +268,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
-                                <rect key="frame" x="105" y="122" width="110" height="80"/>
+                                <rect key="frame" x="80" y="89" width="160" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="1AK-XZ-Egd"/>
-                                    <constraint firstAttribute="height" constant="80" id="AbK-Do-JTO"/>
+                                    <constraint firstAttribute="height" constant="106" id="v1n-S4-Oa9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="45" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="gly_howto.png"/>
+                                <state key="normal" image="gly_howto.png" backgroundImage="btn_yellow_up_1133x348.png"/>
                                 <connections>
                                     <segue destination="06h-WC-F2r" kind="push" identifier="jnt_detail" id="lgw-Tx-iLy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-d8-vDs">
-                                <rect key="frame" x="105" y="221" width="110" height="80"/>
+                                <rect key="frame" x="80" y="229" width="160" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="zNk-5m-0ds"/>
+                                    <constraint firstAttribute="height" constant="110" id="JFS-rc-3cf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="55" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="gly_practice.png">
+                                <state key="normal" image="gly_practice.png" backgroundImage="btn_green_up_1133x348.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -297,11 +296,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX4-iB-AnY">
-                                <rect key="frame" x="105" y="326" width="110" height="80"/>
+                                <rect key="frame" x="80" y="350" width="160" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="EjB-CO-eqD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="45" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="gly_time_test.png">
+                                <state key="normal" image="gly_time_test.png" backgroundImage="btn_violet_up_1133x348.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -311,18 +313,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GX4-iB-AnY" firstAttribute="top" secondItem="xgl-d8-vDs" secondAttribute="bottom" constant="25" id="AVb-Tn-uXJ"/>
-                            <constraint firstItem="D2D-fd-kW6" firstAttribute="trailing" secondItem="xgl-d8-vDs" secondAttribute="trailing" id="IeR-jD-V9k"/>
-                            <constraint firstItem="xgl-d8-vDs" firstAttribute="trailing" secondItem="GX4-iB-AnY" secondAttribute="trailing" id="JmN-62-uEC"/>
-                            <constraint firstAttribute="trailing" secondItem="pS2-mG-LcC" secondAttribute="trailing" id="Q6w-yt-kNj"/>
-                            <constraint firstItem="pS2-mG-LcC" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" id="Xnv-tu-Lco"/>
-                            <constraint firstItem="xgl-d8-vDs" firstAttribute="top" secondItem="D2D-fd-kW6" secondAttribute="bottom" constant="19" id="ZTY-fy-J9B"/>
-                            <constraint firstItem="D2D-fd-kW6" firstAttribute="top" secondItem="Bos-5b-LJT" secondAttribute="bottom" constant="58" id="ZiO-yo-tVK"/>
-                            <constraint firstItem="pS2-mG-LcC" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" id="aKG-c2-7Sy"/>
-                            <constraint firstItem="xgl-d8-vDs" firstAttribute="leading" secondItem="GX4-iB-AnY" secondAttribute="leading" id="g5a-bx-aTb"/>
-                            <constraint firstAttribute="bottom" secondItem="pS2-mG-LcC" secondAttribute="bottom" constant="-88" id="gvD-dP-5a0"/>
-                            <constraint firstItem="D2D-fd-kW6" firstAttribute="centerX" secondItem="pS2-mG-LcC" secondAttribute="centerX" id="oML-qE-XHj"/>
-                            <constraint firstItem="D2D-fd-kW6" firstAttribute="leading" secondItem="xgl-d8-vDs" secondAttribute="leading" id="ted-20-rTh"/>
+                            <constraint firstItem="GX4-iB-AnY" firstAttribute="top" relation="lessThanOrEqual" secondItem="xgl-d8-vDs" secondAttribute="bottom" constant="55" id="1bj-EQ-Uw8"/>
+                            <constraint firstItem="xgl-d8-vDs" firstAttribute="trailing" secondItem="GX4-iB-AnY" secondAttribute="trailing" id="2TK-xM-HSF"/>
+                            <constraint firstItem="D2D-fd-kW6" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" constant="80" id="6Yf-ad-h0R"/>
+                            <constraint firstItem="pS2-mG-LcC" firstAttribute="centerX" secondItem="xgl-d8-vDs" secondAttribute="centerX" id="7wo-aG-Okg"/>
+                            <constraint firstAttribute="bottom" secondItem="pS2-mG-LcC" secondAttribute="bottom" constant="-88" id="8nX-EH-OhM"/>
+                            <constraint firstItem="D2D-fd-kW6" firstAttribute="leading" secondItem="xgl-d8-vDs" secondAttribute="leading" id="EDq-eC-4xa"/>
+                            <constraint firstItem="D2D-fd-kW6" firstAttribute="trailing" secondItem="xgl-d8-vDs" secondAttribute="trailing" id="EXb-ZO-CGI"/>
+                            <constraint firstItem="pS2-mG-LcC" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" id="LKm-Hi-cfY"/>
+                            <constraint firstItem="pS2-mG-LcC" firstAttribute="centerY" secondItem="xgl-d8-vDs" secondAttribute="centerY" id="Rqo-s9-lwS"/>
+                            <constraint firstItem="D2D-fd-kW6" firstAttribute="top" secondItem="Bos-5b-LJT" secondAttribute="bottom" constant="25" id="aft-IC-1dZ"/>
+                            <constraint firstItem="pS2-mG-LcC" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" id="bdl-00-L3n"/>
+                            <constraint firstItem="GX4-iB-AnY" firstAttribute="leading" secondItem="xgl-d8-vDs" secondAttribute="leading" id="dlV-l4-HIy"/>
+                            <constraint firstAttribute="trailing" secondItem="pS2-mG-LcC" secondAttribute="trailing" id="fwP-iw-8Op"/>
+                            <constraint firstItem="xgl-d8-vDs" firstAttribute="top" relation="lessThanOrEqual" secondItem="D2D-fd-kW6" secondAttribute="bottom" constant="78" id="tof-93-ubR"/>
+                            <constraint firstAttribute="bottom" secondItem="GX4-iB-AnY" secondAttribute="bottom" constant="20" symbolic="YES" id="xjJ-cQ-0F3"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1431,9 +1436,12 @@
         <image name="bg_overlay.png" width="160" height="256"/>
         <image name="boy11.png" width="818" height="1009"/>
         <image name="btn_192x124_up.png" width="192" height="124"/>
+        <image name="btn_green_up_1133x348.png" width="566" height="174"/>
         <image name="btn_next_base.png" width="80" height="97"/>
         <image name="btn_next_pressed.png" width="80" height="97"/>
         <image name="btn_pmq_mini.png" width="44" height="22"/>
+        <image name="btn_violet_up_1133x348.png" width="566" height="174"/>
+        <image name="btn_yellow_up_1133x348.png" width="566" height="174"/>
         <image name="gly_howto.png" width="43" height="76"/>
         <image name="gly_practice.png" width="142" height="64"/>
         <image name="gly_time_test.png" width="73" height="80"/>
