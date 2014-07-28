@@ -150,7 +150,7 @@
             [self performSelector:@selector(realignView) withObject:nil afterDelay:0.15];
         }
     } else {
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:NO];
     }
 }
 

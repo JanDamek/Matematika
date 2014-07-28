@@ -50,8 +50,6 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-    [self setViews];
-    
     self.btnNext.layer.cornerRadius = 10;
     self.btnRetry.layer.cornerRadius = 10;
     self.btnTestResult.layer.cornerRadius = 10;
@@ -63,36 +61,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self setViews];
+}
+
 -(void)setViews{
     int r = [_result.rate intValue];
     
     
     self.starsResult.image = [UIImage imageNamed:[NSString stringWithFormat:@"status_%istar", r ]];
-    //self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"result_%i", r ]];
+    self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"boy%i1", r ]];
     
     if (r<=1){
         self.resultImage.animationImages = [NSArray arrayWithObjects:
-                                            [UIImage imageNamed:@"boy11.png"],
-                                            [UIImage imageNamed:@"boy12.png"],
-                                            [UIImage imageNamed:@"boy13.png"],
-                                            [UIImage imageNamed:@"boy14.png"],
-                                            [UIImage imageNamed:@"boy15.png"],
-                                            [UIImage imageNamed:@"boy14.png"],
-                                            [UIImage imageNamed:@"boy13.png"],
-                                            [UIImage imageNamed:@"boy12.png"],
+                                            [UIImage imageNamed:@"boy51.png"],
+                                            [UIImage imageNamed:@"boy52.png"],
+                                            [UIImage imageNamed:@"boy53.png"],
+                                            [UIImage imageNamed:@"boy54.png"],
+                                            [UIImage imageNamed:@"boy55.png"],
+                                            [UIImage imageNamed:@"boy54.png"],
+                                            [UIImage imageNamed:@"boy53.png"],
+                                            [UIImage imageNamed:@"boy52.png"],
                                             nil
                                             ];
     } else
         if (r==2){
             self.resultImage.animationImages = [NSArray arrayWithObjects:
-                                                [UIImage imageNamed:@"boy21.png"],
-                                                [UIImage imageNamed:@"boy22.png"],
-                                                [UIImage imageNamed:@"boy23.png"],
-                                                [UIImage imageNamed:@"boy24.png"],
-                                                [UIImage imageNamed:@"boy25.png"],
-                                                [UIImage imageNamed:@"boy24.png"],
-                                                [UIImage imageNamed:@"boy23.png"],
-                                                [UIImage imageNamed:@"boy22.png"],
+                                                [UIImage imageNamed:@"boy41.png"],
+                                                [UIImage imageNamed:@"boy42.png"],
+                                                [UIImage imageNamed:@"boy43.png"],
+                                                [UIImage imageNamed:@"boy44.png"],
+                                                [UIImage imageNamed:@"boy45.png"],
+                                                [UIImage imageNamed:@"boy44.png"],
+                                                [UIImage imageNamed:@"boy43.png"],
+                                                [UIImage imageNamed:@"boy42.png"],
                                                 nil
                                                 ];
         }else
@@ -111,30 +115,30 @@
             } else
                 if (r==4){
                     self.resultImage.animationImages = [NSArray arrayWithObjects:
-                                                        [UIImage imageNamed:@"boy41.png"],
-                                                        [UIImage imageNamed:@"boy42.png"],
-                                                        [UIImage imageNamed:@"boy43.png"],
-                                                        [UIImage imageNamed:@"boy44.png"],
-                                                        [UIImage imageNamed:@"boy45.png"],
-                                                        [UIImage imageNamed:@"boy44.png"],
-                                                        [UIImage imageNamed:@"boy43.png"],
-                                                        [UIImage imageNamed:@"boy42.png"],
+                                                        [UIImage imageNamed:@"boy21.png"],
+                                                        [UIImage imageNamed:@"boy22.png"],
+                                                        [UIImage imageNamed:@"boy23.png"],
+                                                        [UIImage imageNamed:@"boy24.png"],
+                                                        [UIImage imageNamed:@"boy25.png"],
+                                                        [UIImage imageNamed:@"boy24.png"],
+                                                        [UIImage imageNamed:@"boy23.png"],
+                                                        [UIImage imageNamed:@"boy22.png"],
                                                         nil
                                                         ];
-                } else
-                    if (r>=5){
-                        self.resultImage.animationImages = [NSArray arrayWithObjects:
-                                                            [UIImage imageNamed:@"boy51.png"],
-                                                            [UIImage imageNamed:@"boy52.png"],
-                                                            [UIImage imageNamed:@"boy53.png"],
-                                                            [UIImage imageNamed:@"boy54.png"],
-                                                            [UIImage imageNamed:@"boy55.png"],
-                                                            [UIImage imageNamed:@"boy54.png"],
-                                                            [UIImage imageNamed:@"boy53.png"],
-                                                            [UIImage imageNamed:@"boy52.png"],
-                                                            nil
-                                                            ];
-                    }
+                } else {
+                    self.resultImage.animationImages = [NSArray arrayWithObjects:
+                                                        [UIImage imageNamed:@"boy11.png"],
+                                                        [UIImage imageNamed:@"boy12.png"],
+                                                        [UIImage imageNamed:@"boy13.png"],
+                                                        [UIImage imageNamed:@"boy14.png"],
+                                                        [UIImage imageNamed:@"boy15.png"],
+                                                        [UIImage imageNamed:@"boy14.png"],
+                                                        [UIImage imageNamed:@"boy13.png"],
+                                                        [UIImage imageNamed:@"boy12.png"],
+                                                        nil
+                                                        ];
+                }
+    
     self.resultImage.animationRepeatCount = -1;
     self.resultImage.animationDuration = 1.75;
     [self.resultImage startAnimating];
@@ -157,7 +161,6 @@
 
 -(void)setResult:(Results *)result{
     _result = result;
-    [self setViews];
 }
 
 -(void)playResult{

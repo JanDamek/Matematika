@@ -244,7 +244,7 @@
             [cell.lab setTextColor:[UIColor purpleColor]];
         } else{
             s = object;
-            [cell.lab setTextColor:[UIColor blackColor]];
+            [cell.lab setTextColor:[UIColor whiteColor]];
         }
         cell.lab.text = s;
         [cell.lab setFont:_font];
