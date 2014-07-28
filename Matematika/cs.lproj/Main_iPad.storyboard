@@ -221,7 +221,6 @@
                                             <constraint firstAttribute="height" constant="161" id="k2v-2c-4pI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="120" maxY="0.0"/>
                                         <state key="normal" title="Procvičování" image="gly_practice.png" backgroundImage="btn_green_up_1133x348.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,7 +238,7 @@
                                             <constraint firstAttribute="height" constant="161" id="w45-98-AeD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <inset key="titleEdgeInsets" minX="116" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="160" maxY="0.0"/>
                                         <state key="normal" title="Jak na to?" image="gly_howto.png" backgroundImage="btn_yellow_up_1133x348.png"/>
                                         <state key="selected" backgroundImage="btn_yellow_dwn_1133x348.png"/>
@@ -254,7 +253,7 @@
                                             <constraint firstAttribute="height" constant="161" id="1NR-Np-d4s"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
-                                        <inset key="titleEdgeInsets" minX="170" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="130" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
                                         <state key="normal" title="Zkoušení na čas" image="gly_time_test.png" backgroundImage="btn_violet_up_1133x348.png"/>
                                         <state key="selected" backgroundImage="btn_violet_dwn_1133x348.png"/>
