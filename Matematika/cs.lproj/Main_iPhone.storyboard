@@ -266,52 +266,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_board_square.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-uZ-lOD">
-                                <rect key="frame" x="20" y="89" width="280" height="344"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-fd-kW6">
-                                <rect key="frame" x="42" y="122" width="236" height="80"/>
+                                <rect key="frame" x="80" y="111" width="160" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="45" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Jak na to?" image="img_intro.png"/>
+                                <state key="normal" image="gly_howto.png" backgroundImage="btn_yellow_up_1133x348.png"/>
+                                <state key="selected" backgroundImage="btn_yellow_dwn_1133x348.png"/>
                                 <connections>
                                     <segue destination="06h-WC-F2r" kind="push" identifier="jnt_detail" id="lgw-Tx-iLy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-d8-vDs">
-                                <rect key="frame" x="35" y="221" width="250" height="80"/>
+                                <rect key="frame" x="80" y="229" width="160" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="55" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Procvičování" image="img_trial.png">
+                                <state key="normal" image="gly_practice.png" backgroundImage="btn_green_up_1133x348.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="btn_green_dwn_1133x348.png"/>
                                 <connections>
                                     <segue destination="DGS-M5-6W6" kind="push" identifier="p_detail" id="Zbr-Vh-iGv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX4-iB-AnY">
-                                <rect key="frame" x="29" y="326" width="262" height="80"/>
+                                <rect key="frame" x="80" y="347" width="160" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="45" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Zkoušení na čas" image="img_exercise.png">
+                                <state key="normal" image="gly_time_test.png" backgroundImage="btn_violet_up_1133x348.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="btn_violet_dwn_1133x348.png"/>
                                 <connections>
                                     <segue destination="DGS-M5-6W6" kind="push" identifier="znc_detail" id="4Wn-qj-xVy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="leading" secondItem="a1h-WL-wso" secondAttribute="leading" constant="20" id="FeA-GA-nfK"/>
-                            <constraint firstItem="Fv8-uZ-lOD" firstAttribute="top" secondItem="a1h-WL-wso" secondAttribute="top" constant="89" id="QWj-fb-1ke"/>
-                            <constraint firstAttribute="bottom" secondItem="Fv8-uZ-lOD" secondAttribute="bottom" constant="47" id="QbI-sa-NZO"/>
-                            <constraint firstAttribute="trailing" secondItem="Fv8-uZ-lOD" secondAttribute="trailing" constant="20" id="Yqp-63-5J4"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="ldb-GH-sFe">
@@ -840,7 +830,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpG-K6-zUt" customClass="UIArcTimerView">
-                                <rect key="frame" x="268" y="222" width="42" height="42"/>
+                                <rect key="frame" x="139" y="168" width="42" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -894,7 +884,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" backgroundImage="btn_192x124_up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -906,7 +896,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" backgroundImage="btn_192x124_up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -922,7 +912,7 @@
                                     <constraint firstAttribute="height" constant="50" id="SfF-Ol-xPW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" backgroundImage="btn_192x124_up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -937,7 +927,7 @@
                                     <constraint firstAttribute="width" constant="90" id="QCV-Er-Ske"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" backgroundImage="btn_192x124_up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -949,7 +939,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" backgroundImage="btn_192x124_up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -961,7 +951,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" backgroundImage="btn_192x124_up.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -969,7 +959,7 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="CPu-bx-OkP">
-                                <rect key="frame" x="203" y="179" width="26" height="43"/>
+                                <rect key="frame" x="189" y="164" width="26" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtJ-jg-qGM">
@@ -1377,19 +1367,25 @@
     <resources>
         <image name="bg_beams.png" width="320" height="411"/>
         <image name="bg_board_pn.9.png" width="801" height="282"/>
-        <image name="bg_board_square.9.png" width="681" height="94"/>
         <image name="bg_list2_even.9.png" width="260" height="64"/>
         <image name="bg_list_even.9.png" width="260" height="64"/>
         <image name="bg_overlay.png" width="160" height="256"/>
         <image name="boy11.png" width="818" height="1009"/>
+        <image name="btn_192x124_up.png" width="192" height="124"/>
+        <image name="btn_green_dwn_1133x348.png" width="566" height="174"/>
+        <image name="btn_green_up_1133x348.png" width="566" height="174"/>
         <image name="btn_next_base.png" width="80" height="97"/>
         <image name="btn_next_pressed.png" width="80" height="97"/>
         <image name="btn_pmq_mini.png" width="44" height="22"/>
+        <image name="btn_violet_dwn_1133x348.png" width="566" height="174"/>
+        <image name="btn_violet_up_1133x348.png" width="566" height="174"/>
+        <image name="btn_yellow_dwn_1133x348.png" width="566" height="174"/>
+        <image name="btn_yellow_up_1133x348.png" width="566" height="174"/>
+        <image name="gly_howto.png" width="43" height="76"/>
+        <image name="gly_practice.png" width="142" height="64"/>
+        <image name="gly_time_test.png" width="73" height="80"/>
         <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
-        <image name="img_exercise.png" width="81" height="80"/>
-        <image name="img_intro.png" width="81" height="80"/>
-        <image name="img_trial.png" width="81" height="80"/>
         <image name="list_shadow_bottom.9.png" width="62" height="48"/>
         <image name="list_shadow_top.9.png" width="62" height="48"/>
         <image name="pmq_hp.png" width="145" height="74"/>
@@ -1407,7 +1403,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OFa-8P-az9"/>
+        <segue reference="Zbr-Vh-iGv"/>
         <segue reference="Mfg-ut-3jK"/>
         <segue reference="vqW-OP-tgT"/>
     </inferredMetricsTieBreakers>
