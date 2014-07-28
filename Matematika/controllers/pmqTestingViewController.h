@@ -22,5 +22,6 @@ enum TestMode {
 @property (nonatomic, strong) Tests *data;
 @property enum TestMode testMode;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property BOOL isNew;
 
 @end

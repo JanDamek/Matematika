@@ -27,8 +27,6 @@
     
     NSUInteger time_to_show_answer;
     
-    bool isNew;
-    
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *marks;
@@ -57,6 +55,7 @@
 @synthesize questionLabel2 = _questionLabel2;
 @synthesize questionMark = _questionMark;
 @synthesize timeOutImage = _timeOutImage;
+@synthesize isNew = _isNew;
 
 #pragma mark - initialization
 
@@ -73,7 +72,7 @@
 {
     [super viewDidLoad];
     
-    isNew = YES;
+    _isNew = YES;
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
@@ -124,7 +123,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    if (isNew) {
+    if (_isNew) {
         if ([_data.welcome_sound hasSuffix:@"mp3"]) {
             NSString *sound_file = [[_data.welcome_sound lastPathComponent] stringByDeletingPathExtension];
             @try {
@@ -138,14 +137,14 @@
                 [_player play];
             }
             @catch (NSException *exception) {
-                isNew = NO;
+                _isNew = NO;
                 [self btnStartAction:nil];
                 [self performSelector:@selector(realignView) withObject:nil afterDelay:0.15];
             }
             @finally {
             }
         } else {
-            isNew = NO;
+            _isNew = NO;
             [self btnStartAction:nil];
             [self performSelector:@selector(realignView) withObject:nil afterDelay:0.15];
         }
@@ -155,10 +154,10 @@
 }
 
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    if (isNew) {
+    if (_isNew) {
         [self btnStartAction:nil];
         [self performSelector:@selector(realignView) withObject:nil afterDelay:0.1];
-        isNew = NO;
+        _isNew = NO;
     }
 }
 
@@ -597,7 +596,6 @@
     @finally {
         
     }
-    
     
     [self animateAnswer:sender];
 }
