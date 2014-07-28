@@ -71,7 +71,7 @@
     int r = [_result.rate intValue];
     
     
-    self.starsResult.image = [UIImage imageNamed:[NSString stringWithFormat:@"status_%istar", r ]];
+    self.starsResult.image = [UIImage imageNamed:[NSString stringWithFormat:@"5stars_fg%i_684x148", r ]];
     self.resultImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"boy%i1", r ]];
     
     if (r<=1){
