@@ -1006,20 +1006,20 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgz-Pk-S9P">
-                                <rect key="frame" x="533" y="687" width="105" height="62"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgz-Pk-S9P">
+                                <rect key="frame" x="541" y="671" width="97" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.098169479929999998" green="0.29593407849999998" blue="0.95583371350000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="RFC-KI-vEf"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="gly_next.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-u6-x58">
-                                <rect key="frame" x="56" y="687" width="105" height="62"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-u6-x58">
+                                <rect key="frame" x="56" y="671" width="136" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.098169479929999998" green="0.29593407849999998" blue="0.95583371350000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1027,27 +1027,27 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                     <constraint firstAttribute="width" constant="105" id="VWh-pO-o3h"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Test result">
+                                <state key="normal" image="gly_result.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="c0G-mO-t8M" kind="push" identifier="vysledekTestu" id="ltq-Pq-x17"/>
                                 </connections>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV0-29-gBy">
-                                <rect key="frame" x="301" y="687" width="105" height="62"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV0-29-gBy">
+                                <rect key="frame" x="320" y="671" width="67" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.098169479929999998" green="0.29593407849999998" blue="0.95583371350000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="crx-Fa-2mW"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Retry">
+                                <state key="normal" image="gly_refresh.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_beams.png" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-J1-aCZ">
-                                <rect key="frame" x="57" y="117" width="591" height="560"/>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_beams.png" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-J1-aCZ">
+                                <rect key="frame" x="57" y="117" width="591" height="544"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCu-mF-XWa">
@@ -1070,8 +1070,8 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy11.png" translatesAutoresizingMaskIntoConstraints="NO" id="36q-BY-tyn">
-                                <rect key="frame" x="67" y="216" width="570" height="456"/>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="boy11.png" translatesAutoresizingMaskIntoConstraints="NO" id="36q-BY-tyn">
+                                <rect key="frame" x="67" y="216" width="570" height="440"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pekny vysledek." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C2-Cm-Krq">
@@ -1490,7 +1490,10 @@ EFByYWN0aWNpbmfigKhlcnJvcnM
         <image name="btn_yellow_dwn_1133x348.png" width="566" height="174"/>
         <image name="btn_yellow_up_1133x348.png" width="566" height="174"/>
         <image name="gly_howto.png" width="43" height="76"/>
+        <image name="gly_next.png" width="59" height="78"/>
         <image name="gly_practice.png" width="142" height="64"/>
+        <image name="gly_refresh.png" width="67" height="65"/>
+        <image name="gly_result.png" width="136" height="64"/>
         <image name="gly_time_test.png" width="73" height="80"/>
         <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
