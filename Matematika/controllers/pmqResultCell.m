@@ -39,9 +39,9 @@
 
 -(void)setRowNumber:(NSInteger)rowNumber{
     if (rowNumber % 2){
-        _bgImage.image = [UIImage imageNamed:@"bg_list2_even.9.png"];
+        _bgImage.image = [UIImage imageNamed:@"bg_list2_320_even.png"];
     }else{
-        _bgImage.image = [UIImage imageNamed:@"bg_list2_odd.9.png"];
+        _bgImage.image = [UIImage imageNamed:@"bg_list2_320_odd.png"];
     }
     _rowNumber = rowNumber;
 }

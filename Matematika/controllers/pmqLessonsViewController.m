@@ -272,7 +272,10 @@
     UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
     [selectionView setBackgroundColor:[UIColor clearColor]];
     UIImageView *i = [[UIImageView alloc] initWithFrame:selectionView.bounds];
-    i.image = [UIImage imageNamed:@"list_hover.9.png"];
+    if (indexPath.row % 2) {
+            i.image = [UIImage imageNamed:@"bg_list2_320_even.png"];
+    } else
+        i.image = [UIImage imageNamed:@"bg_list2_320_odd.png"];
     [selectionView addSubview:i];
     cell.selectedBackgroundView = selectionView;
     

@@ -117,10 +117,8 @@
                                     <constraint firstAttribute="height" constant="45" id="SYi-PB-Xfc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <inset key="titleEdgeInsets" minX="-118" minY="5" maxX="0.0" maxY="5"/>
-                                <inset key="imageEdgeInsets" minX="70" minY="0.0" maxX="5" maxY="0.0"/>
-                                <state key="normal" title="Výsledky testů" image="ico_results.png">
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="gly_result.png" backgroundImage="btn_192x124_dwn.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -136,10 +134,8 @@
                                     <constraint firstAttribute="width" constant="125" id="zKD-9u-l2f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <inset key="titleEdgeInsets" minX="-119" minY="5" maxX="5" maxY="5"/>
-                                <inset key="imageEdgeInsets" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Procvičování chyb" image="ico_fix.png">
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="gly_practice_ws.png" backgroundImage="btn_192x124_dwn.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -172,7 +168,7 @@
                         <barButtonItem key="leftBarButtonItem" image="btn_pmq_mini.png" id="hdU-9e-cer">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Koupit" id="UWz-oq-GhD">
+                        <barButtonItem key="rightBarButtonItem" image="gly_buy.png" id="UWz-oq-GhD">
                             <connections>
                                 <segue destination="4xC-8U-rRZ" kind="push" identifier="nakup_popover" id="pPs-1D-gDk"/>
                             </connections>
@@ -234,7 +230,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Koupě" id="sAS-RJ-xP4">
                         <barButtonItem key="backBarButtonItem" title="Zpět" id="nEb-tL-CAx"/>
-                        <barButtonItem key="rightBarButtonItem" title="Obnova" id="r1d-od-tGo">
+                        <barButtonItem key="rightBarButtonItem" image="gly_buyagain.png" id="r1d-od-tGo">
                             <connections>
                                 <action selector="restore" destination="4xC-8U-rRZ" id="LQz-3U-FMq"/>
                             </connections>
@@ -384,11 +380,11 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-ac-skg">
-                                                    <rect key="frame" x="229" y="5" width="56" height="46"/>
+                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-ac-skg">
+                                                    <rect key="frame" x="235" y="10" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" title="Practicing errors">
+                                                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                    <state key="normal" image="gly_practice_ws.png" backgroundImage="btn_192x124_dwn.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -468,7 +464,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dc8-76-TRF">
+                            <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dc8-76-TRF">
                                 <rect key="frame" x="20" y="428" width="110" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -492,10 +488,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <inset key="titleEdgeInsets" minX="-119" minY="5" maxX="5" maxY="5"/>
-                                <inset key="imageEdgeInsets" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Procvičování  chyb" image="ico_fix.png">
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="gly_practice_ws.png" backgroundImage="btn_192x124_dwn.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1048,6 +1042,7 @@
                                 <rect key="frame" x="214" y="410" width="90" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.098169479929999998" green="0.29593407849999998" blue="0.95583371350000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="gly_next.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1061,6 +1056,7 @@
                                     <constraint firstAttribute="width" constant="80" id="oaj-Mi-z8v"/>
                                     <constraint firstAttribute="height" constant="40" id="sGl-BS-EC8"/>
                                 </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="gly_result.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1073,6 +1069,7 @@
                                 <rect key="frame" x="115" y="410" width="90" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.098169479929999998" green="0.29593407849999998" blue="0.95583371350000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="gly_refresh.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1370,6 +1367,7 @@
         <image name="bg_list_even.9.png" width="260" height="64"/>
         <image name="bg_overlay.png" width="160" height="256"/>
         <image name="boy11.png" width="818" height="1009"/>
+        <image name="btn_192x124_dwn.png" width="192" height="124"/>
         <image name="btn_192x124_up.png" width="192" height="124"/>
         <image name="btn_green_dwn_1133x348.png" width="566" height="174"/>
         <image name="btn_green_up_1133x348.png" width="566" height="174"/>
@@ -1380,13 +1378,15 @@
         <image name="btn_violet_up_1133x348.png" width="566" height="174"/>
         <image name="btn_yellow_dwn_1133x348.png" width="566" height="174"/>
         <image name="btn_yellow_up_1133x348.png" width="566" height="174"/>
+        <image name="gly_buy.png" width="44" height="32"/>
+        <image name="gly_buyagain.png" width="74" height="39"/>
         <image name="gly_howto.png" width="43" height="76"/>
         <image name="gly_next.png" width="59" height="78"/>
         <image name="gly_practice.png" width="142" height="64"/>
+        <image name="gly_practice_ws.png" width="139" height="65"/>
         <image name="gly_refresh.png" width="67" height="65"/>
         <image name="gly_result.png" width="136" height="64"/>
         <image name="gly_time_test.png" width="73" height="80"/>
-        <image name="ico_fix.png" width="89" height="110"/>
         <image name="ico_results.png" width="90" height="110"/>
         <image name="list_shadow_bottom.9.png" width="62" height="48"/>
         <image name="list_shadow_top.9.png" width="62" height="48"/>
@@ -1395,7 +1395,7 @@
         <image name="star_bg.png" width="53" height="53"/>
         <image name="status_0star.png" width="166" height="30"/>
         <image name="status_1star.png" width="166" height="30"/>
-        <image name="timeout.png" width="600" height="619"/>
+        <image name="timeout.png" width="47" height="52"/>
         <image name="title_mm.png" width="318" height="90"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1405,8 +1405,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zbr-Vh-iGv"/>
-        <segue reference="Mfg-ut-3jK"/>
         <segue reference="vqW-OP-tgT"/>
+        <segue reference="pxc-6V-N10"/>
+        <segue reference="Bsb-qE-tlr"/>
     </inferredMetricsTieBreakers>
 </document>

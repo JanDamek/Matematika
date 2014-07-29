@@ -51,7 +51,7 @@
 -(void)setRowNumber:(NSInteger)rowNumber{
 //    UIView *v = [[UIView alloc] initWithFrame:self.frame];
     if (rowNumber % 2){
-        _bgImage.image = [UIImage imageNamed:@"bg_list_even.9.png"];
+        _bgImage.image = [UIImage imageNamed:@"bg_list_320_even.png"];
 
 //        UIImageView *s = [[UIImageView alloc] initWithFrame:v.frame];
 //        s.image = [UIImage imageNamed:@"bg_list_odd.9.png"];
@@ -59,7 +59,7 @@
         
 //        self.selectedBackgroundView = v;
     }else{
-        _bgImage.image = [UIImage imageNamed:@"bg_list_odd.9.png"];        
+        _bgImage.image = [UIImage imageNamed:@"bg_list_320_odd.png"];        
 
 //        UIImageView *s = [[UIImageView alloc] initWithFrame:v.frame];
 //        s.image = [UIImage imageNamed:@"bg_list_even.9.png"];
