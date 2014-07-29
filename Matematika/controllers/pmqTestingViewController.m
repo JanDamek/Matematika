@@ -282,8 +282,19 @@
     [super viewDidDisappear:animated];
     
     pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
-    [d.data saveResults];
-    [d.data saveTests];
+    if (_testMode==tmTestOnTime){
+        [d.data saveResults];
+        [d.data saveTests];
+    }else{
+        [[d.data.tests managedObjectContext] rollback];
+        [[d.data.results managedObjectContext] rollback];
+        
+        NSError *error =nil;
+        [d.data.results performFetch:&error];
+        NSAssert(!error, @"Error performing fetch request: %@", error);
+        [d.data.lessons performFetch:&error];
+        NSAssert(!error, @"Error performing fetch request: %@", error);
+    }
 }
 
 #pragma mark - test methods
@@ -299,15 +310,17 @@
     if (test_length==0) {
         test_length = 12;
     }
+    Tests *te=nil;
     _questions = [[NSMutableArray alloc] init];
-    
+    Questions *q;
     if (firstFail){
         int index = 0;
         while ((index<[questions count]) && (count_question<test_length)){
-            Questions *q = (Questions*)[questions objectAtIndex:index];
+            q = (Questions*)[questions objectAtIndex:index];
             if ([q.last_answer intValue]==0){
                 count_question++;
                 [_questions addObject:q];
+                te = [[q.relationship_test objectEnumerator] nextObject];
                 index--;
                 [questions removeObject:q];
             }
@@ -315,6 +328,7 @@
         }
     }
     
+    questions = [[te.relationship_question allObjects] mutableCopy];
     while (count_question<test_length) {
         int div = RAND_MAX / [questions count];
         int index = rand() / div;
@@ -323,10 +337,11 @@
             q = (Questions*)[questions objectAtIndex:index];
         } else q = nil;
         
-        count_question++;
-        if (q)
-            [_questions addObject:q];
+            count_question++;
+            if (q)
+                [_questions addObject:q];
         [questions removeObject:q];
+        
     }
 }
 
@@ -633,7 +648,9 @@
     
     r.rate = [NSNumber numberWithInt:(int)rate];
     
-    r.relationship_test.relationship_lesson.rating = r.rate;
+    if (_testMode==tmTestOnTime) {
+        r.relationship_test.relationship_lesson.rating = r.rate;
+    }
     
     NSError *error =nil;
     [d.data.results performFetch:&error];

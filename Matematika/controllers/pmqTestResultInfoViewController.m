@@ -204,7 +204,7 @@
             break;
     }
     
-    [_btnTestResult setHidden:_result.relationship_test == nil];
+    [_btnTestResult setHidden:_testMode!=tmTestOnTime];
     
     [self playResult];
 }

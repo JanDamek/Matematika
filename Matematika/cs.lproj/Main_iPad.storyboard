@@ -360,7 +360,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-PR-ECI">
-                                                    <rect key="frame" x="452" y="7" width="42" height="21"/>
+                                                    <rect key="frame" x="452" y="7" width="21" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
@@ -411,7 +411,7 @@
                                                 <constraint firstItem="AFi-l4-P1G" firstAttribute="top" secondItem="Yt6-LP-8RU" secondAttribute="top" constant="30" id="s8H-fU-u89"/>
                                                 <constraint firstAttribute="trailing" secondItem="L9R-mS-olZ" secondAttribute="trailing" constant="71" id="tny-CC-vHi"/>
                                                 <constraint firstItem="8he-L3-yzu" firstAttribute="leading" secondItem="Yt6-LP-8RU" secondAttribute="leading" id="vLQ-Le-c27"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wwo-PR-ECI" secondAttribute="trailing" constant="169" id="wGi-XU-CZh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wwo-PR-ECI" secondAttribute="trailing" constant="190" id="wGi-XU-CZh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
