@@ -1,8 +1,8 @@
 //
 //  Questions.h
-//  Matematika
+//  calculations
 //
-//  Created by Jan Damek on 17.07.14.
+//  Created by Jan Damek on 29.07.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * content;
 @property (nonatomic, retain) NSNumber * last_answer;
 @property (nonatomic, retain) NSNumber * time_of_answer;
+@property (nonatomic, retain) NSNumber * lesson_id;
 @property (nonatomic, retain) NSSet *relationship_result;
 @property (nonatomic, retain) NSSet *relationship_test;
 @end

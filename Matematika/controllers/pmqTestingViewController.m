@@ -310,7 +310,8 @@
     if (test_length==0) {
         test_length = 12;
     }
-    Tests *te=nil;
+    
+    int lesson_id=[[(Questions*)[questions objectAtIndex:0]lesson_id]intValue];
     _questions = [[NSMutableArray alloc] init];
     Questions *q;
     if (firstFail){
@@ -320,28 +321,32 @@
             if ([q.last_answer intValue]==0){
                 count_question++;
                 [_questions addObject:q];
-                te = [[q.relationship_test objectEnumerator] nextObject];
                 index--;
                 [questions removeObject:q];
+                lesson_id = [q.lesson_id intValue];
             }
             index++;
         }
     }
     
-    questions = [[te.relationship_question allObjects] mutableCopy];
     while (count_question<test_length) {
         int div = RAND_MAX / [questions count];
         int index = rand() / div;
         Questions *q;
         if (index<[questions count]) {
             q = (Questions*)[questions objectAtIndex:index];
-        } else q = nil;
-        
+        } else {
+            q = nil;
+            count_question++;
+        };
+        int l = [q.lesson_id intValue];
+        if (l==lesson_id) {
             count_question++;
             if (q)
                 [_questions addObject:q];
-        [questions removeObject:q];
-        
+            [questions removeObject:q];
+        } else
+            [questions removeObject:q];
     }
 }
 

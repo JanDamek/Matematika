@@ -134,6 +134,7 @@
             [test addRelationship_questionObject:q];
             
             q.content = [question valueForKey:@"text"];
+            q.lesson_id = [NSNumber numberWithInt:lesson_id];
             q.content = [q.content stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n "]];
             [self.d saveQuestions];
         }
