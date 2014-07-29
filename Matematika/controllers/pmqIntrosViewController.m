@@ -121,7 +121,11 @@
         h = 50;
         [_explainGrid setHidden:YES];
         [_webView setHidden:NO];
-        [_webView loadHTMLString:_pages.content baseURL:[NSURL URLWithString:@""]];
+        NSString *htmlString = [NSString stringWithFormat:@"<span style=\"font-size: %i; color:white\">%@</span>",
+                      24,
+                      _pages.content];
+        NSURL *baseUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
+        [_webView loadHTMLString:htmlString baseURL:baseUrl];
     }else{
         [_webView setHidden:YES];
         [_explainGrid setHidden:NO];
