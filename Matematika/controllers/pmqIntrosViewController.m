@@ -107,6 +107,9 @@
     
     [self next:_btnNext];
 }
+- (IBAction)backBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {

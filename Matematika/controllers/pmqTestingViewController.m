@@ -68,6 +68,10 @@
     return self;
 }
 
+- (IBAction)backBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -442,6 +446,7 @@
             } else {
                 [b setHidden:YES];
                 [b setEnabled:NO];
+                [b setTag:0];
                 [b setTitle:@"" forState:UIControlStateNormal];
                 
             }
@@ -667,6 +672,16 @@
     c.result = r;
     c.testMode = _testMode;
     [self.navigationController pushViewController:c animated:YES];
+    
+    [_labelAnswer setHidden:YES];
+    [_questionLabel1 setHidden:YES];
+    [_questionLabel2 setHidden:YES];
+    [_questionMark setHidden:YES];
+    [_timerView setHidden:YES];
+    
+    for (UIButton *b in _answerButtons) {
+        [b setHidden:YES];
+    }
 }
 
 #pragma mark - collection delegate & dataSource

@@ -78,6 +78,10 @@
     //proces pri ukonceni
 }
 
+- (IBAction)backBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -87,9 +91,9 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-    self.btnNext.layer.cornerRadius = 10;
-    self.btnRetry.layer.cornerRadius = 10;
-    self.btnTestResult.layer.cornerRadius = 10;
+//    self.btnNext.layer.cornerRadius = 10;
+//    self.btnRetry.layer.cornerRadius = 10;
+//    self.btnTestResult.layer.cornerRadius = 10;
 }
 
 - (void)didReceiveMemoryWarning

@@ -55,8 +55,8 @@
 //    v.contentMode = UIViewContentModeScaleAspectFit;
 //    self.navigationItem.titleView = v;
     
-    self.btnProcvicovaniChyb.layer.cornerRadius = 7;
-    self.btnVysledkyTestu.layer.cornerRadius = 7;
+//    self.btnProcvicovaniChyb.layer.cornerRadius = 7;
+//    self.btnVysledkyTestu.layer.cornerRadius = 7;
     
     self.detailViewController = (pmqDetailLesonsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     

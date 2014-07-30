@@ -55,8 +55,8 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-    self.btnAllResults.layer.cornerRadius = 10;
-    self.btnPracticeErrors.layer.cornerRadius = 10;
+//    self.btnAllResults.layer.cornerRadius = 10;
+//    self.btnPracticeErrors.layer.cornerRadius = 10;
 
     [self.btnPracticeErrors setHidden:([_dataResult.bad_answers intValue]==0)];
     
@@ -109,6 +109,10 @@
 
 #pragma mark - Navigation
 
+- (IBAction)backBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [questions count];
 }
@@ -141,7 +145,7 @@
     CGRect r = cell.progress.frame;
     r.size.height +=2;
     cell.progress.frame = r;
-    cell.progress.layer.cornerRadius = 10;
+//    cell.progress.layer.cornerRadius = 10;
     
     cell.question.textColor = answerColor;
     if ([q.last_answer boolValue]) {
