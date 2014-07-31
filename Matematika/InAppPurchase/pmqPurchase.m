@@ -62,6 +62,10 @@
     return i;
 }
 
+- (IBAction)backBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nakupCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
@@ -147,6 +151,14 @@
                 //called when the transaction does not finnish
                 if(transaction.error.code != SKErrorPaymentCancelled){
                     NSLog(@"Transaction state -> Cancelled");
+                    //the user cancelled the payment ;(
+                }
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateDeferred:
+                //called when the transaction does not finnish
+                if(transaction.error.code != SKErrorPaymentNotAllowed){
+                    NSLog(@"Transaction state -> NotAllowed");
                     //the user cancelled the payment ;(
                 }
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];

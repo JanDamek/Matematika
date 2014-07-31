@@ -48,7 +48,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }
@@ -79,7 +79,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     pmqResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell" forIndexPath:indexPath];
-
+    
     cell.backgroundColor = [UIColor clearColor];
     
     UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
@@ -88,7 +88,7 @@
     i.image = [UIImage imageNamed:@"list_hover.9.png"];
     [selectionView addSubview:i];
     cell.selectedBackgroundView = selectionView;
-
+    
     cell.rowNumber = indexPath.row;
     
     Results *r = [self.results objectAtIndexPath:indexPath];
@@ -102,13 +102,13 @@
     cell.dateOfTest.text = convertedString;
     
     cell.testOk.text = [NSString stringWithFormat:@"%i", [r.bad_answers intValue]];
-
+    
     cell.testCount.text = [NSString stringWithFormat:@"%i", [r.relationship_test.test_length intValue]];
     
     int min = [r.total_time floatValue] / 60;
     int sec = [r.total_time floatValue] - (min*60);
     cell.testTime.text = [NSString stringWithFormat:@"%02i:%02i", min, sec];
-
+    
     if ([r.bad_answers intValue]>0){
         [cell.btnTest setHidden:NO];
     } else
@@ -121,27 +121,32 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
-     if ([[segue identifier] isEqualToString:@"resultInfo"]) {
-         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-         
-         Results *object = [[self results] objectAtIndexPath:indexPath];
-         [(pmqResultInfoViewController*)[segue destinationViewController] setDataResult:object];
-     }
-     else
-         if ([[segue identifier] isEqualToString:@"procvicovaniChyb"]) {
-             UIButton *b = (UIButton*)sender;
-             UITableViewCell *cell = (UITableViewCell *)b.superview.superview.superview;
-             NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-             
-             Results *object = [[self results] objectAtIndexPath:indexPath];
-             [(pmqTestingViewController*)[segue destinationViewController] setData:object.relationship_test];
-             [(pmqTestingViewController*)[segue destinationViewController] setTestMode:tmPracticeFails];
-         }
- }
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"resultInfo"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        Results *object = [[self results] objectAtIndexPath:indexPath];
+        [(pmqResultInfoViewController*)[segue destinationViewController] setDataResult:object];
+    }
+    else
+        if ([[segue identifier] isEqualToString:@"procvicovaniChyb"]) {
+            UIButton *b = (UIButton*)sender;
+            UITableViewCell *cell;
+            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                cell = (UITableViewCell *)b.superview.superview.superview;
+            }else{
+                cell = (UITableViewCell *)b.superview.superview;
+            }
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            
+            Results *object = [[self results] objectAtIndexPath:indexPath];
+            [(pmqTestingViewController*)[segue destinationViewController] setData:object.relationship_test];
+            [(pmqTestingViewController*)[segue destinationViewController] setTestMode:tmPracticeFails];
+        }
+}
 
 @end

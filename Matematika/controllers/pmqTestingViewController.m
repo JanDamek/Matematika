@@ -84,7 +84,7 @@
     self.navigationController.navigationBar.translucent = YES;
     
     _timerView.delegate = self;
-    mark_size = (_marks.frame.size.width - 180) / 12;
+    mark_size = (_marks.frame.size.width - 60) / 12;
     
     for (UIButton *b in self.answerButtons) {
         b.layer.cornerRadius = 10;

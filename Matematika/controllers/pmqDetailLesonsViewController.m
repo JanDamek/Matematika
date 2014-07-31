@@ -48,6 +48,10 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)backBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)configureView
 {
     // Update the user interface for the detail item.
