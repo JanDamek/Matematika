@@ -24,10 +24,10 @@
 "×" = "multiply";
 "+" = "plus";
 
-"no InApp purchase items" = "Nenalezené položky k nákupu.";
+"no InApp purchase items" = "Nenalezené žádné položky k nákupu.";
 
 "%i (pocet prikladu %i)" = "%i (počet přikladů %i)";
 
-"allQuestion" = "Lekce ze všeho";
+"allQuestion" = "Procvičování chyb";
 
 "Back" = "Zpět";

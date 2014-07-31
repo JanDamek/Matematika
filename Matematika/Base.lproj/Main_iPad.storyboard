@@ -212,7 +212,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="120" maxY="0.0"/>
-                                        <state key="normal" title="Procvičování" image="gly_practice.png" backgroundImage="btn_green_up_1133x348.png">
+                                        <state key="normal" title="Excercise" image="gly_practice.png" backgroundImage="btn_green_up_1133x348.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -227,7 +227,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="160" maxY="0.0"/>
-                                        <state key="normal" title="Jak na to?" image="gly_howto.png" backgroundImage="btn_yellow_up_1133x348.png"/>
+                                        <state key="normal" title="How to do it?" image="gly_howto.png" backgroundImage="btn_yellow_up_1133x348.png"/>
                                         <connections>
                                             <segue destination="NqH-3d-zu9" kind="push" identifier="jnt_detail" splitViewControllerTargetIndex="1" id="60f-S9-SBu"/>
                                         </connections>
@@ -240,7 +240,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                         <inset key="titleEdgeInsets" minX="130" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
-                                        <state key="normal" title="Zkoušení na čas" image="gly_time_test.png" backgroundImage="btn_violet_up_1133x348.png"/>
+                                        <state key="normal" title="Timed test" image="gly_time_test.png" backgroundImage="btn_violet_up_1133x348.png"/>
                                         <connections>
                                             <segue destination="YSQ-WZ-sxf" kind="push" identifier="znc_detail" splitViewControllerTargetIndex="1" id="08R-al-dZ2"/>
                                         </connections>
@@ -285,7 +285,7 @@
             </objects>
             <point key="canvasLocation" x="-699.5" y="376"/>
         </scene>
-        <!--Výsledky testů-->
+        <!--Tests results-->
         <scene sceneID="HJr-LV-5y6">
             <objects>
                 <viewController id="ybk-Bt-CBy" customClass="pmqResultViewController" sceneMemberID="viewController">
@@ -429,7 +429,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Výsledky testů" id="NiW-eO-hbd">
+                    <navigationItem key="navigationItem" title="Tests results" id="NiW-eO-hbd">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="k3l-cB-4g1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dsa-g6-Y4E">
                                 <rect key="frame" x="16" y="6" width="51" height="32"/>
@@ -453,7 +453,7 @@
             </objects>
             <point key="canvasLocation" x="490.5" y="1403"/>
         </scene>
-        <!--Výsledek testu-->
+        <!--Test result-->
         <scene sceneID="urC-CM-hyp">
             <objects>
                 <viewController id="c0G-mO-t8M" customClass="pmqResultInfoViewController" sceneMemberID="viewController">
@@ -505,19 +505,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-fl-YAy">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-fl-YAy">
                                 <rect key="frame" x="76" y="91" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lekce" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc0-tE-DMF">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lesson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc0-tE-DMF">
                                 <rect key="frame" x="76" y="120" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Počet chyb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sys-Cu-FZf">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of errors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sys-Cu-FZf">
                                 <rect key="frame" x="76" y="149" width="144" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="GoR-hp-rIl"/>
@@ -526,7 +526,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celkový čas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na3-ht-GcG">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na3-ht-GcG">
                                 <rect key="frame" x="76" y="178" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -541,7 +541,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PŘÍKLADY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roD-Cq-0MB">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLES:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roD-Cq-0MB">
                                 <rect key="frame" x="76" y="214" width="105" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="Wgt-Xf-pd7"/>
@@ -667,7 +667,7 @@
                             <constraint firstItem="8Kj-KG-4dj" firstAttribute="baseline" secondItem="Sys-Cu-FZf" secondAttribute="baseline" id="ztx-h6-5ED"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Výsledek testu" id="RJN-sE-PUM">
+                    <navigationItem key="navigationItem" title="Test result" id="RJN-sE-PUM">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="WJz-AW-Rco">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KuD-t1-iLz">
                                 <rect key="frame" x="16" y="6" width="51" height="32"/>
@@ -698,7 +698,7 @@
             </objects>
             <point key="canvasLocation" x="1472.5" y="1403"/>
         </scene>
-        <!--Procvičování-->
+        <!--Excercises-->
         <scene sceneID="gXs-Rn-sdK">
             <objects>
                 <viewController storyboardIdentifier="procvicovani" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YSQ-WZ-sxf" customClass="pmqTestingViewController" sceneMemberID="viewController">
@@ -908,7 +908,7 @@
                             <constraint firstItem="SoF-JP-Mc0" firstAttribute="top" secondItem="Bnn-kG-JSn" secondAttribute="top" id="yUd-2X-Axx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Procvičování" id="Q76-80-yHK">
+                    <navigationItem key="navigationItem" title="Excercises" id="Q76-80-yHK">
                         <barButtonItem key="leftBarButtonItem" id="9Ed-zt-RPJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kqW-gR-UtI">
                                 <rect key="frame" x="16" y="6" width="51" height="32"/>
@@ -965,7 +965,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_beams.png" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-J1-aCZ">
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celkový čas" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCu-mF-XWa">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCu-mF-XWa">
                                 <rect key="frame" x="280" y="215" width="95" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="NGM-TS-ady"/>
@@ -1002,8 +1002,8 @@
                                     <constraint firstAttribute="height" constant="74" id="v6F-KJ-lPf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Máš" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFQ-M3-WZA">
-                                <rect key="frame" x="246" y="186" width="39" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You have" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFQ-M3-WZA">
+                                <rect key="frame" x="201" y="186" width="84" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="kxs-1A-KbL"/>
                                 </constraints>
@@ -1070,7 +1070,7 @@
                                     <segue destination="c0G-mO-t8M" kind="push" identifier="vysledekTestu" splitViewControllerTargetIndex="1" id="ltq-Pq-x17"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chyb z" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfj-lW-ZjB">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfj-lW-ZjB">
                                 <rect key="frame" x="306" y="186" width="55" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="cB2-Hu-Qw5"/>
@@ -1079,8 +1079,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="příkladů" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-Sc-wfN">
-                                <rect key="frame" x="384" y="186" width="74" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="of exaples." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-Sc-wfN">
+                                <rect key="frame" x="384" y="186" width="125" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="pRa-BX-P6R"/>
                                 </constraints>
@@ -1169,7 +1169,7 @@
             </objects>
             <point key="canvasLocation" x="1472.5" y="368"/>
         </scene>
-        <!--Jak na to?-->
+        <!--How to do it?-->
         <scene sceneID="VFI-B7-2hU">
             <objects>
                 <viewController id="NqH-3d-zu9" customClass="pmqIntrosViewController" sceneMemberID="viewController">
@@ -1292,7 +1292,7 @@
                             <constraint firstItem="znS-Sr-3B5" firstAttribute="trailing" secondItem="Rix-gu-SZ2" secondAttribute="trailing" id="rFR-rn-QBd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Jak na to?" id="POy-23-H6K">
+                    <navigationItem key="navigationItem" title="How to do it?" id="POy-23-H6K">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="KiW-Uw-hd8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9dL-KA-csu">
                                 <rect key="frame" x="16" y="6" width="51" height="32"/>
@@ -1334,7 +1334,7 @@
             </objects>
             <point key="canvasLocation" x="-2513" y="-622"/>
         </scene>
-        <!--Koupě-->
+        <!--Purchase-->
         <scene sceneID="1e7-PB-qLJ">
             <objects>
                 <tableViewController id="JWp-eW-b1h" customClass="pmqPurchase" sceneMemberID="viewController">
@@ -1378,7 +1378,7 @@
                             <outlet property="delegate" destination="JWp-eW-b1h" id="MDe-eo-cIS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Koupě" id="vsa-DN-eKP">
+                    <navigationItem key="navigationItem" title="Purchase" id="vsa-DN-eKP">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="KYP-CJ-DhW">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OOA-el-vI8">
                                 <rect key="frame" x="253" y="6" width="51" height="32"/>
@@ -1491,7 +1491,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="lf1-kM-SZV"/>
-        <segue reference="6O9-gP-djd"/>
+        <segue reference="4wz-Zb-sEt"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

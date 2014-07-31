@@ -412,6 +412,14 @@
 		F53F5823193343B800956AEB /* Matematika 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Matematika 2.xcdatamodel"; sourceTree = "<group>"; };
 		F53F582819338BA600956AEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F56F5869198A6B4800172EA2 /* timeout_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeout_big@2x.png"; sourceTree = "<group>"; };
+		F56F586C198A7E1800172EA2 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		F56F586E198A7E1B00172EA2 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		F56F5870198A7E1D00172EA2 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		F56F5872198A7E2000172EA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		F56F5874198A7E2600172EA2 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		F56F5876198A7E2800172EA2 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		F56F5878198A7E3300172EA2 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		F56F587A198A7E3A00172EA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		F5701B7619864EC500E41387 /* gly_howto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gly_howto@2x.png"; sourceTree = "<group>"; };
 		F5701B7719864EC500E41387 /* gly_howto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gly_howto.png; sourceTree = "<group>"; };
 		F5701B7819864EC500E41387 /* gly_practice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gly_practice@2x.png"; sourceTree = "<group>"; };
@@ -2223,6 +2231,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				F59B30A6198A388F0007A916 /* Base */,
+				F56F586C198A7E1800172EA2 /* cs */,
+				F56F586E198A7E1B00172EA2 /* sk */,
+				F56F5870198A7E1D00172EA2 /* pl */,
+				F56F5872198A7E2000172EA2 /* de */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -2231,6 +2243,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				F59B30A8198A38A80007A916 /* Base */,
+				F56F5874198A7E2600172EA2 /* cs */,
+				F56F5876198A7E2800172EA2 /* sk */,
+				F56F5878198A7E3300172EA2 /* pl */,
+				F56F587A198A7E3A00172EA2 /* de */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
