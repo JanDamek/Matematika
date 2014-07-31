@@ -135,11 +135,11 @@
     else
         if ([[segue identifier] isEqualToString:@"procvicovaniChyb"]) {
             UIButton *b = (UIButton*)sender;
-            UITableViewCell *cell;
+            id cell;
             if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-                cell = (UITableViewCell *)b.superview.superview.superview;
+                cell = b.superview.superview.superview;
             }else{
-                cell = (UITableViewCell *)b.superview.superview;
+                cell = b.superview.superview.superview;
             }
             NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
             

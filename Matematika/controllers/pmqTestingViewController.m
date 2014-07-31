@@ -248,7 +248,7 @@
         _q = [d.data.questions fetchedObjects];
     }
     
-    mark_size = (_marks.frame.size.width - 180) / [_data.test_length intValue];
+    mark_size = (_marks.frame.size.width - 60) / [_data.test_length intValue];
     
     self.navigationItem.title = data.relationship_lesson.name;
 }
@@ -369,7 +369,7 @@
         
         _questionLabel2.text = pmqQ.secondPartQuestion;
         [_questionLabel2 sizeToFit];
-        
+
         CGRect v = self.view.frame;
         int pos = v.size.width / 2;
         
@@ -423,14 +423,16 @@
             [_timerView startTimer:[_data.time_limit intValue]];
         }
         _questionLabel2.frame=s;
-        
-        [_questionLabel1 setNeedsDisplay];
-        [_questionLabel1 setHidden:NO];
-        [_questionLabel2 setNeedsDisplay];
-        [_questionLabel2 setHidden:NO];
-        
-        [_timerView setNeedsDisplay];
-        [_questionMark setNeedsDisplay];
+//
+//        [_questionLabel1 setNeedsDisplay];
+//        [_questionLabel1 setHidden:NO];
+//        [_questionLabel2 setNeedsDisplay];
+//        [_questionLabel2 setHidden:NO];
+//        
+//        [_timerView setNeedsDisplay];
+//        [_questionMark setNeedsDisplay];
+
+        [self realignView];
         
         int i=0;
         for (UIButton *b in _answerButtons) {
@@ -530,15 +532,16 @@
         [_labelAnswer setTextColor:[UIColor whiteColor]];
         [self performSelector:@selector(prepareNextQuestion) withObject:nil afterDelay:time_to_show_answer];
     }
+    [self realignView];
 }
 
 -(void)animateAnswer:(UIButton*)button{
     
     [_marks reloadData];
     
-    [UIView beginAnimations:@"answer" context:nil];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationDelegate:self];
+//    [UIView beginAnimations:@"answer" context:nil];
+//    [UIView setAnimationDuration:0.1];
+//    [UIView setAnimationDelegate:self];
     
     if (button.tag==1){
         button.backgroundColor = [UIColor greenColor];
@@ -571,7 +574,8 @@
         [_labelAnswer setHidden:NO];
     }
     
-    [UIView commitAnimations];
+//    [UIView commitAnimations];
+    [self animationDidStop:@"answer" finished:YES];
 }
 
 - (IBAction)answerButtonAction:(UIButton *)sender {

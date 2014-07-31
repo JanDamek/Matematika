@@ -24,23 +24,31 @@
     
 #pragma mark - nastaveni NavigationBar
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
-//    [titleBarAttributes setValue:[UIFont fontWithName:@"System" size:30] forKey:NSFontAttributeName];
+    //    [titleBarAttributes setValue:[UIFont fontWithName:@"System" size:30] forKey:NSFontAttributeName];
     [titleBarAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
     [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
- 
-//    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal]];
-//    [attributes setValue:[UIFont fontWithName:@"Helvetica" size:30.0f] forKey:NSFontAttributeName];
-//    [attributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
-
+    
+    //    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UIBarButtonItem appearance] titleTextAttributesForState:UIControlStateNormal]];
+    //    [attributes setValue:[UIFont fontWithName:@"Helvetica" size:30.0f] forKey:NSFontAttributeName];
+    //    [attributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
+    //    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
     NSShadow* shadow = [NSShadow new];
     shadow.shadowOffset = CGSizeMake(1.0f, 1.0f);
     shadow.shadowColor = [UIColor grayColor];
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                            NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:25.0f],
-                                                            NSShadowAttributeName: shadow
-                                                            }];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                                NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:25.0f],
+                                                                NSShadowAttributeName: shadow
+                                                                }];
+    }else{
+        [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                                NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:20.0f],
+                                                                NSShadowAttributeName: shadow
+                                                                }];
+    }
     
 #pragma mark - vytvoreni controleru pro iPhone nebo iPad
     // Override point for customization after application launch.
