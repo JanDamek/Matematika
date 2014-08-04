@@ -180,4 +180,17 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - proces of purchase complet
+
+-(void)doPurchaseComplet{
+    for (Lessons *l in [self.data.lessons fetchedObjects]) {
+        l.demo = [NSNumber numberWithBool:YES];
+    }
+    [self.data saveLessons];
+    
+    NSError *error =nil;
+    [self.data.lessons performFetch:&error];
+    NSAssert(!error, @"Error performing fetch request: %@", error);
+}
+
 @end

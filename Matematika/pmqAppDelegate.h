@@ -22,4 +22,6 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+-(void)doPurchaseComplet;
+
 @end

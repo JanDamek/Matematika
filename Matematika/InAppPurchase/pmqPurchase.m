@@ -7,6 +7,7 @@
 //
 
 #import "pmqPurchase.h"
+#import "pmqAppDelegate.h"
 
 @interface pmqPurchase(){
     NSArray *products;
@@ -66,6 +67,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SKProduct *p = (SKProduct*)[products objectAtIndex:indexPath.row];
+    [self purchase:p];
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nakupCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
@@ -121,7 +127,7 @@
         if(SKPaymentTransactionStateRestored){
             NSLog(@"Transaction state -> Restored");
             //called when the user successfully restores a purchase
-//            [self doRemoveAds];
+           [self doComplet];
             [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
             break;
         }
@@ -138,7 +144,7 @@
                 break;
             case SKPaymentTransactionStatePurchased:
                 //this is called when the user has successfully purchased the package (Cha-Ching!)
-//                [self doRemoveAds]; //you can add your code for what you want to happen when the user buys the purchase here, for this tutorial we use removing ads
+                [self doComplet]; //you can add your code for what you want to happen when the user buys the purchase here, for this tutorial we use removing ads
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 NSLog(@"Transaction state -> Purchased");
                 break;
@@ -165,6 +171,12 @@
                 break;
         }
     }
+}
+
+-(void)doComplet{
+    //TODO: odblokovani nakupu
+    pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+    [d doPurchaseComplet];
 }
 
 @end
