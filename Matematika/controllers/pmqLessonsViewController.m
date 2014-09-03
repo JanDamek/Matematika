@@ -49,14 +49,8 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-//    CGRect p = self.navigationController.navigationBar.bounds;
-//    UIImageView *v = [[UIImageView alloc] initWithFrame:p];
-//    v.image = [UIImage imageNamed:@"title_hp.png"];
-//    v.contentMode = UIViewContentModeScaleAspectFit;
-//    self.navigationItem.titleView = v;
-    
-//    self.btnProcvicovaniChyb.layer.cornerRadius = 7;
-//    self.btnVysledkyTestu.layer.cornerRadius = 7;
+    pmqAppDelegate *d = (pmqAppDelegate*)[[UIApplication sharedApplication]delegate];
+    d.lessonController = self;
     
     self.detailViewController = (pmqDetailLesonsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
@@ -175,6 +169,10 @@
     [self doSelectRow:indexPath];
 }
 
+-(void)setItemIndex:(NSIndexPath*)indexPath{
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [self.detailViewController.navigationController popToRootViewControllerAnimated:NO];
@@ -229,6 +227,12 @@
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
+            
+        case NSFetchedResultsChangeUpdate:
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            break;
     }
 }
 
@@ -273,11 +277,13 @@
     [selectionView setBackgroundColor:[UIColor clearColor]];
     UIImageView *i = [[UIImageView alloc] initWithFrame:selectionView.bounds];
     if (indexPath.row % 2) {
-            i.image = [UIImage imageNamed:@"bg_list2_320_even.png"];
-    } else
-        i.image = [UIImage imageNamed:@"bg_list2_320_odd.png"];
+        i.image = [UIImage imageNamed:@"bg_list2_320_even"];
+    } else {
+        i.image = [UIImage imageNamed:@"bg_list2_320_odd"];
+    }
     [selectionView addSubview:i];
     cell.selectedBackgroundView = selectionView;
+    [i sizeToFit];
     
     cell.lessonName.text = object.name;
     [cell.lessonName sizeToFit];

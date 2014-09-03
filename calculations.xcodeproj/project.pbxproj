@@ -274,6 +274,9 @@
 		F5BB04F0193FBE510025EBFB /* pmqResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BB04EF193FBE510025EBFB /* pmqResultCell.m */; };
 		F5C565241940C6BA00C78F5C /* pmqTestResultInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C565231940C6BA00C78F5C /* pmqTestResultInfoViewController.m */; };
 		F5C565271940EF0F00C78F5C /* pmqResultQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C565261940EF0F00C78F5C /* pmqResultQuestionCell.m */; };
+		F5DC2A2419B1A8C20082F754 /* pmqQuestionControll.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DC2A2319B1A8C20082F754 /* pmqQuestionControll.m */; };
+		F5DC2A2719B1A8D80082F754 /* btn_51x32_up_bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DC2A2519B1A8D80082F754 /* btn_51x32_up_bcg.png */; };
+		F5DC2A2819B1A8D80082F754 /* btn_51x32_up_popover.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DC2A2619B1A8D80082F754 /* btn_51x32_up_popover.png */; };
 		F5E0153B1977CCAD0090125A /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E0153A1977CCAD0090125A /* Questions.m */; };
 		F5E0153E1977CCAE0090125A /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E0153D1977CCAE0090125A /* Intros.m */; };
 		F5E015411977CCAE0090125A /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E015401977CCAE0090125A /* Lessons.m */; };
@@ -1154,6 +1157,10 @@
 		F5CA7080197E5F4300C3DAC9 /* boy53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boy53.png; path = animace/boy53.png; sourceTree = "<group>"; };
 		F5CA7081197E5F4300C3DAC9 /* boy54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boy54.png; path = animace/boy54.png; sourceTree = "<group>"; };
 		F5CA7082197E5F4300C3DAC9 /* boy55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boy55.png; path = animace/boy55.png; sourceTree = "<group>"; };
+		F5DC2A2219B1A8C20082F754 /* pmqQuestionControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmqQuestionControll.h; sourceTree = "<group>"; };
+		F5DC2A2319B1A8C20082F754 /* pmqQuestionControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqQuestionControll.m; sourceTree = "<group>"; };
+		F5DC2A2519B1A8D80082F754 /* btn_51x32_up_bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_51x32_up_bcg.png; sourceTree = "<group>"; };
+		F5DC2A2619B1A8D80082F754 /* btn_51x32_up_popover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_51x32_up_popover.png; sourceTree = "<group>"; };
 		F5E015391977CCAD0090125A /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
 		F5E0153A1977CCAD0090125A /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
 		F5E0153C1977CCAE0090125A /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
@@ -1437,6 +1444,8 @@
 		F5701B8219864F3C00E41387 /* background */ = {
 			isa = PBXGroup;
 			children = (
+				F5DC2A2519B1A8D80082F754 /* btn_51x32_up_bcg.png */,
+				F5DC2A2619B1A8D80082F754 /* btn_51x32_up_popover.png */,
 				F5701B8419864FCB00E41387 /* btn_192x124_up@2x.png */,
 				F5701B8619864FCB00E41387 /* btn_blue_up_373x334@2x.png */,
 				F5701B8819864FCB00E41387 /* btn_green_up_1133x348@2x.png */,
@@ -1630,6 +1639,15 @@
 			name = animace;
 			sourceTree = "<group>";
 		};
+		F5DC2A2119B1A8AB0082F754 /* questionControll */ = {
+			isa = PBXGroup;
+			children = (
+				F5DC2A2219B1A8C20082F754 /* pmqQuestionControll.h */,
+				F5DC2A2319B1A8C20082F754 /* pmqQuestionControll.m */,
+			);
+			name = questionControll;
+			sourceTree = "<group>";
+		};
 		F5E0154B1977D8960090125A /* img_news */ = {
 			isa = PBXGroup;
 			children = (
@@ -1655,6 +1673,7 @@
 		F5F0F05E19364511003C4FFA /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F5DC2A2119B1A8AB0082F754 /* questionControll */,
 				F5BB04ED193FBE050025EBFB /* cells */,
 				F5F0F05F19364511003C4FFA /* pmqDetailLesonsViewController.h */,
 				F5F0F06019364511003C4FFA /* pmqDetailLesonsViewController.m */,
@@ -1896,6 +1915,7 @@
 				F5701B1519862E8700E41387 /* btn_pmq_mini.png in Resources */,
 				F5701C281986B3E300E41387 /* gly_buy@2x.png in Resources */,
 				F5701B9819864FCB00E41387 /* btn_violet_up_1133x348@2x.png in Resources */,
+				F5DC2A2819B1A8D80082F754 /* btn_51x32_up_popover.png in Resources */,
 				F5701B9A19864FCB00E41387 /* btn_yellow_up_1133x348@2x.png in Resources */,
 				F5701B7D19864EC500E41387 /* gly_howto.png in Resources */,
 				F5701B7C19864EC500E41387 /* gly_howto@2x.png in Resources */,
@@ -1931,6 +1951,7 @@
 				F5701A9B19862E8700E41387 /* 17.aac in Resources */,
 				F5701A9C19862E8700E41387 /* 18.aac in Resources */,
 				F5701A9D19862E8700E41387 /* 19.aac in Resources */,
+				F5DC2A2719B1A8D80082F754 /* btn_51x32_up_bcg.png in Resources */,
 				F5701A9E19862E8700E41387 /* 2.aac in Resources */,
 				F5701A9F19862E8700E41387 /* 20.aac in Resources */,
 				F5701AA019862E8700E41387 /* 21.aac in Resources */,
@@ -2154,6 +2175,7 @@
 				F5BB04F0193FBE510025EBFB /* pmqResultCell.m in Sources */,
 				F5C565271940EF0F00C78F5C /* pmqResultQuestionCell.m in Sources */,
 				F5F0F06B19364511003C4FFA /* pmqDetailLesonsViewController.m in Sources */,
+				F5DC2A2419B1A8C20082F754 /* pmqQuestionControll.m in Sources */,
 				F5E015441977CCAE0090125A /* Pages.m in Sources */,
 				F5F0F06E19364511003C4FFA /* pmqLessonsViewController.m in Sources */,
 				F53E6098193BAA9C00E3EE3E /* pmqLessonTableViewCell.m in Sources */,
