@@ -1,8 +1,8 @@
 //
 //  Tests.m
-//  ceskyjazyk
+//  calculations
 //
-//  Created by Jan Damek on 27.08.14.
+//  Created by Jan Damek on 04.09.14.
 //  Copyright (c) 2014 PMQ-Software. All rights reserved.
 //
 

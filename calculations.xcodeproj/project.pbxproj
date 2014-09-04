@@ -271,18 +271,18 @@
 		F58C02641989550200CA3755 /* intro.aac in Resources */ = {isa = PBXBuildFile; fileRef = F506191519573ABA00D8F04E /* intro.aac */; };
 		F58C02651989550200CA3755 /* math_result1.aac in Resources */ = {isa = PBXBuildFile; fileRef = F506191A19573ABA00D8F04E /* math_result1.aac */; };
 		F58C02661989550200CA3755 /* math_result2.aac in Resources */ = {isa = PBXBuildFile; fileRef = F506191C19573ABA00D8F04E /* math_result2.aac */; };
+		F59E41AF19B8933600AF2497 /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E41AE19B8933600AF2497 /* Pages.m */; };
+		F59E41B219B8933700AF2497 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E41B119B8933700AF2497 /* Questions.m */; };
+		F59E41B519B8933700AF2497 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E41B419B8933700AF2497 /* Results.m */; };
+		F59E41B819B8933700AF2497 /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E41B719B8933700AF2497 /* Intros.m */; };
+		F59E41BB19B8933700AF2497 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E41BA19B8933700AF2497 /* Tests.m */; };
+		F59E41BE19B8933700AF2497 /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E41BD19B8933700AF2497 /* Lessons.m */; };
 		F5BB04F0193FBE510025EBFB /* pmqResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BB04EF193FBE510025EBFB /* pmqResultCell.m */; };
 		F5C565241940C6BA00C78F5C /* pmqTestResultInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C565231940C6BA00C78F5C /* pmqTestResultInfoViewController.m */; };
 		F5C565271940EF0F00C78F5C /* pmqResultQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C565261940EF0F00C78F5C /* pmqResultQuestionCell.m */; };
 		F5DC2A2419B1A8C20082F754 /* pmqQuestionControll.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DC2A2319B1A8C20082F754 /* pmqQuestionControll.m */; };
 		F5DC2A2719B1A8D80082F754 /* btn_51x32_up_bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DC2A2519B1A8D80082F754 /* btn_51x32_up_bcg.png */; };
 		F5DC2A2819B1A8D80082F754 /* btn_51x32_up_popover.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DC2A2619B1A8D80082F754 /* btn_51x32_up_popover.png */; };
-		F5E0153B1977CCAD0090125A /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E0153A1977CCAD0090125A /* Questions.m */; };
-		F5E0153E1977CCAE0090125A /* Intros.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E0153D1977CCAE0090125A /* Intros.m */; };
-		F5E015411977CCAE0090125A /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E015401977CCAE0090125A /* Lessons.m */; };
-		F5E015441977CCAE0090125A /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E015431977CCAE0090125A /* Pages.m */; };
-		F5E015471977CCAE0090125A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E015461977CCAE0090125A /* Tests.m */; };
-		F5E0154A1977CCAE0090125A /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E015491977CCAE0090125A /* Results.m */; };
 		F5F0F00119363ED1003C4FFA /* UIArcTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F00019363ED1003C4FFA /* UIArcTimerView.m */; };
 		F5F0F059193644DB003C4FFA /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F057193644DB003C4FFA /* XMLReader.m */; };
 		F5F0F05D19364500003C4FFA /* pmqPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F0F05C19364500003C4FFA /* pmqPurchase.m */; };
@@ -621,6 +621,19 @@
 		F58C02631989543400CA3755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F59B30A6198A388F0007A916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		F59B30A8198A38A80007A916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		F59E41AC19B88EE400AF2497 /* calculations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "calculations-Bridging-Header.h"; sourceTree = "<group>"; };
+		F59E41AD19B8933600AF2497 /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
+		F59E41AE19B8933600AF2497 /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
+		F59E41B019B8933700AF2497 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
+		F59E41B119B8933700AF2497 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
+		F59E41B319B8933700AF2497 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Matematika/DataModel/Results.h; sourceTree = "<group>"; };
+		F59E41B419B8933700AF2497 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Matematika/DataModel/Results.m; sourceTree = "<group>"; };
+		F59E41B619B8933700AF2497 /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
+		F59E41B719B8933700AF2497 /* Intros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.m; path = Matematika/DataModel/Intros.m; sourceTree = "<group>"; };
+		F59E41B919B8933700AF2497 /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests.h; path = Matematika/DataModel/Tests.h; sourceTree = "<group>"; };
+		F59E41BA19B8933700AF2497 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tests.m; path = Matematika/DataModel/Tests.m; sourceTree = "<group>"; };
+		F59E41BC19B8933700AF2497 /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
+		F59E41BD19B8933700AF2497 /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
 		F5A586C11957336A00B24EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/game_definition.xml; sourceTree = "<group>"; };
 		F5A586C41957337800B24EC1 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = cs; path = cs.lproj/game_definition.xml; sourceTree = "<group>"; };
 		F5A586C51957337900B24EC1 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = sk; path = sk.lproj/game_definition.xml; sourceTree = "<group>"; };
@@ -1161,18 +1174,6 @@
 		F5DC2A2319B1A8C20082F754 /* pmqQuestionControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmqQuestionControll.m; sourceTree = "<group>"; };
 		F5DC2A2519B1A8D80082F754 /* btn_51x32_up_bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_51x32_up_bcg.png; sourceTree = "<group>"; };
 		F5DC2A2619B1A8D80082F754 /* btn_51x32_up_popover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_51x32_up_popover.png; sourceTree = "<group>"; };
-		F5E015391977CCAD0090125A /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Questions.h; path = Matematika/DataModel/Questions.h; sourceTree = "<group>"; };
-		F5E0153A1977CCAD0090125A /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Questions.m; path = Matematika/DataModel/Questions.m; sourceTree = "<group>"; };
-		F5E0153C1977CCAE0090125A /* Intros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.h; path = Matematika/DataModel/Intros.h; sourceTree = "<group>"; };
-		F5E0153D1977CCAE0090125A /* Intros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.m; path = Matematika/DataModel/Intros.m; sourceTree = "<group>"; };
-		F5E0153F1977CCAE0090125A /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = Matematika/DataModel/Lessons.h; sourceTree = "<group>"; };
-		F5E015401977CCAE0090125A /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = Matematika/DataModel/Lessons.m; sourceTree = "<group>"; };
-		F5E015421977CCAE0090125A /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = Matematika/DataModel/Pages.h; sourceTree = "<group>"; };
-		F5E015431977CCAE0090125A /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = Matematika/DataModel/Pages.m; sourceTree = "<group>"; };
-		F5E015451977CCAE0090125A /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests.h; path = Matematika/DataModel/Tests.h; sourceTree = "<group>"; };
-		F5E015461977CCAE0090125A /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tests.m; path = Matematika/DataModel/Tests.m; sourceTree = "<group>"; };
-		F5E015481977CCAE0090125A /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Matematika/DataModel/Results.h; sourceTree = "<group>"; };
-		F5E015491977CCAE0090125A /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Matematika/DataModel/Results.m; sourceTree = "<group>"; };
 		F5E0154C1977D8B60090125A /* star_err@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_err@2x.png"; sourceTree = "<group>"; };
 		F5E0154D1977D8B60090125A /* star_err.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_err.png; sourceTree = "<group>"; };
 		F5E0154E1977D8B60090125A /* star_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_ok.png; sourceTree = "<group>"; };
@@ -1324,6 +1325,7 @@
 				F527642E192E0E98001BEC6B /* calculationsTests */,
 				F52763FC192E0E98001BEC6B /* Frameworks */,
 				F52763FB192E0E98001BEC6B /* Products */,
+				F59E41AC19B88EE400AF2497 /* calculations-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1403,19 +1405,19 @@
 		F527643E192E0F41001BEC6B /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F59E41BC19B8933700AF2497 /* Lessons.h */,
+				F59E41BD19B8933700AF2497 /* Lessons.m */,
+				F59E41B919B8933700AF2497 /* Tests.h */,
+				F59E41BA19B8933700AF2497 /* Tests.m */,
+				F59E41B619B8933700AF2497 /* Intros.h */,
+				F59E41B719B8933700AF2497 /* Intros.m */,
+				F59E41B319B8933700AF2497 /* Results.h */,
+				F59E41B419B8933700AF2497 /* Results.m */,
+				F59E41B019B8933700AF2497 /* Questions.h */,
+				F59E41B119B8933700AF2497 /* Questions.m */,
+				F59E41AD19B8933600AF2497 /* Pages.h */,
+				F59E41AE19B8933600AF2497 /* Pages.m */,
 				F5276417192E0E98001BEC6B /* Matematika.xcdatamodeld */,
-				F5E015481977CCAE0090125A /* Results.h */,
-				F5E015491977CCAE0090125A /* Results.m */,
-				F5E015451977CCAE0090125A /* Tests.h */,
-				F5E015461977CCAE0090125A /* Tests.m */,
-				F5E015421977CCAE0090125A /* Pages.h */,
-				F5E015431977CCAE0090125A /* Pages.m */,
-				F5E0153F1977CCAE0090125A /* Lessons.h */,
-				F5E015401977CCAE0090125A /* Lessons.m */,
-				F5E0153C1977CCAE0090125A /* Intros.h */,
-				F5E0153D1977CCAE0090125A /* Intros.m */,
-				F5E015391977CCAD0090125A /* Questions.h */,
-				F5E0153A1977CCAD0090125A /* Questions.m */,
 			);
 			name = DataModel;
 			path = ..;
@@ -2166,20 +2168,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F0F07C19364524003C4FFA /* pmqParseXMLToData.m in Sources */,
-				F5E015471977CCAE0090125A /* Tests.m in Sources */,
+				F59E41BB19B8933700AF2497 /* Tests.m in Sources */,
 				F527640C192E0E98001BEC6B /* main.m in Sources */,
-				F5E0153E1977CCAE0090125A /* Intros.m in Sources */,
 				F5F0F05D19364500003C4FFA /* pmqPurchase.m in Sources */,
-				F5E0153B1977CCAD0090125A /* Questions.m in Sources */,
-				F5E0154A1977CCAE0090125A /* Results.m in Sources */,
 				F5BB04F0193FBE510025EBFB /* pmqResultCell.m in Sources */,
 				F5C565271940EF0F00C78F5C /* pmqResultQuestionCell.m in Sources */,
 				F5F0F06B19364511003C4FFA /* pmqDetailLesonsViewController.m in Sources */,
 				F5DC2A2419B1A8C20082F754 /* pmqQuestionControll.m in Sources */,
-				F5E015441977CCAE0090125A /* Pages.m in Sources */,
 				F5F0F06E19364511003C4FFA /* pmqLessonsViewController.m in Sources */,
 				F53E6098193BAA9C00E3EE3E /* pmqLessonTableViewCell.m in Sources */,
 				F5F0F07019364511003C4FFA /* pmqTestingViewController.m in Sources */,
+				F59E41B819B8933700AF2497 /* Intros.m in Sources */,
+				F59E41BE19B8933700AF2497 /* Lessons.m in Sources */,
 				F5F0F059193644DB003C4FFA /* XMLReader.m in Sources */,
 				F5276410192E0E98001BEC6B /* pmqAppDelegate.m in Sources */,
 				F5F0F07B19364524003C4FFA /* pmqPages.m in Sources */,
@@ -2188,12 +2188,14 @@
 				F5003C2A1940A6AD0088D9D4 /* pmqResultInfoViewController.m in Sources */,
 				F5F0F06C19364511003C4FFA /* pmqExpleinCell.m in Sources */,
 				F5F0F07D19364524003C4FFA /* pmqQuestions.m in Sources */,
+				F59E41AF19B8933600AF2497 /* Pages.m in Sources */,
 				F5276419192E0E98001BEC6B /* Matematika.xcdatamodeld in Sources */,
 				F5F0F06D19364511003C4FFA /* pmqIntrosViewController.m in Sources */,
 				F53E6095193B969A00E3EE3E /* pmqResultViewController.m in Sources */,
+				F59E41B219B8933700AF2497 /* Questions.m in Sources */,
 				F5F0F06F19364511003C4FFA /* pmqQuestionMarkCell.m in Sources */,
+				F59E41B519B8933700AF2497 /* Results.m in Sources */,
 				F5C565241940C6BA00C78F5C /* pmqTestResultInfoViewController.m in Sources */,
-				F5E015411977CCAE0090125A /* Lessons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3826,14 +3828,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = calculations;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "calculations-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3844,14 +3850,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matematika/Matematika-Prefix.pch";
 				INFOPLIST_FILE = "Matematika/Matematika-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = calculations;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "calculations-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

@@ -179,8 +179,49 @@
         [cell.timeOut setHidden:NO];
     } else [cell.timeOut setHidden:YES];
     
+    bool answer=NO;
+    
+    switch (index){
+        case 0:
+            answer = [_dataResult.answer1 boolValue];
+            break;
+        case 1:
+            answer = [_dataResult.answer2 boolValue];
+            break;
+        case 2:
+            answer = [_dataResult.answer3 boolValue];
+            break;
+        case 3:
+            answer = [_dataResult.answer4 boolValue];
+            break;
+        case 4:
+            answer = [_dataResult.answer5 boolValue];
+            break;
+        case 5:
+            answer = [_dataResult.answer6 boolValue];
+            break;
+        case 6:
+            answer = [_dataResult.answer7 boolValue];
+            break;
+        case 7:
+            answer = [_dataResult.answer8 boolValue];
+            break;
+        case 8:
+            answer = [_dataResult.answer9 boolValue];
+            break;
+        case 9:
+            answer = [_dataResult.answer10 boolValue];
+            break;
+        case 10:
+            answer = [_dataResult.answer11 boolValue];
+            break;
+        case 11:
+            answer = [_dataResult.answer12 boolValue];
+            break;
+    }
+    
     UIColor *answerColor;
-    if ([q.last_answer boolValue]) {
+    if (answer) {
         answerColor = [UIColor whiteColor];
     } else answerColor = [UIColor redColor];
     
